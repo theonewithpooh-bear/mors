@@ -17,7 +17,7 @@ const VisionBox = ({ icon, title, description }) => (
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 flex flex-col">
       {/* Hero Section */}
       <section className="bg-[#1E40AF] text-white py-20">
         <div className="container mx-auto px-4">
@@ -30,7 +30,7 @@ const Index = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-16">
+      <section className="py-16 flex-grow">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-semibold mb-12 text-center text-[#1E40AF]">Our Vision</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -63,6 +63,13 @@ const Index = () => {
           </Link>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-[#1E40AF] text-white py-4">
+        <div className="container mx-auto px-4 text-center">
+          <p>&copy; {new Date().getFullYear()} Movement of Real Skills. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 };
