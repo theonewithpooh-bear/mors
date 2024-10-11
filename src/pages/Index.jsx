@@ -3,32 +3,34 @@ import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ThemeToggle from '../components/ThemeToggle';
 
 const FeatureBox = ({ icon, title, description }) => (
   <motion.div
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
-    className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+    className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
   >
     <div className="flex items-center mb-6">
-      <div className="bg-black p-4 rounded-full mr-4">
-        {React.cloneElement(icon, { className: "w-8 h-8 text-white" })}
+      <div className="bg-black dark:bg-white p-4 rounded-full mr-4">
+        {React.cloneElement(icon, { className: "w-8 h-8 text-white dark:text-black" })}
       </div>
-      <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
+      <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{title}</h3>
     </div>
-    <p className="text-gray-600 leading-relaxed text-lg">{description}</p>
+    <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">{description}</p>
   </motion.div>
 );
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
+      <ThemeToggle />
       {/* Hero Section */}
       <motion.section 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className="relative h-screen flex items-center justify-center overflow-hidden bg-black text-white"
+        className="relative h-screen flex items-center justify-center overflow-hidden bg-black dark:bg-white text-white dark:text-black"
       >
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.h1 
@@ -48,7 +50,7 @@ const Index = () => {
             Transforming education to prioritize practical, real-world skills for a brighter future
           </motion.p>
           <Link to="/learn-more">
-            <Button variant="outline" size="lg" className="group text-xl px-8 py-4 rounded-full bg-white text-black hover:bg-gray-200 transition-all duration-300">
+            <Button variant="outline" size="lg" className="group text-xl px-8 py-4 rounded-full bg-white dark:bg-black text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-all duration-300">
               Learn More
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -63,11 +65,11 @@ const Index = () => {
         transition={{ delay: 1.5, duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
       >
-        <ChevronDown className="w-12 h-12 text-white" />
+        <ChevronDown className="w-12 h-12 text-white dark:text-black" />
       </motion.div>
 
       {/* Main Content */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -102,13 +104,13 @@ const Index = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="bg-black text-white py-24"
+        className="bg-black dark:bg-white text-white dark:text-black py-24"
       >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-6xl font-bold mb-8">Join the Movement</h2>
           <p className="mb-12 text-2xl max-w-3xl mx-auto">Help us reshape education for a better, more skilled future. Together, we can create a world where every student's potential is fully realized.</p>
           <Link to="/get-involved">
-            <Button size="lg" variant="secondary" className="group text-xl px-10 py-6 rounded-full bg-white text-black hover:bg-gray-200 transition-all duration-300">
+            <Button size="lg" variant="secondary" className="group text-xl px-10 py-6 rounded-full bg-white dark:bg-black text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-all duration-300">
               Get Involved
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -117,7 +119,7 @@ const Index = () => {
       </motion.section>
 
       {/* Footer */}
-      <footer className="bg-gray-100 text-gray-600 py-8">
+      <footer className="bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-lg">&copy; {new Date().getFullYear()} Movement of Real Skills. All rights reserved.</p>
         </div>
