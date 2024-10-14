@@ -78,77 +78,25 @@
 .glow-text {
   color: #fff;
   text-shadow: 
-    0 0 2px #fff,
-    0 0 4px #fff,
-    0 0 6px #fff,
-    0 0 8px #fff,
-    0 0 12px #ffebcd,
-    0 0 16px #ffebcd,
-    0 0 20px #ffc0cb,
-    0 0 24px #ffc0cb;
-  animation: glow 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 
-      0 0 1px #fff,
-      0 0 2px #fff,
-      0 0 3px #fff,
-      0 0 4px #fff,
-      0 0 6px #ffebcd,
-      0 0 8px #ffebcd,
-      0 0 10px #ffc0cb,
-      0 0 12px #ffc0cb;
-  }
-  to {
-    text-shadow: 
-      0 0 2px #fff,
-      0 0 4px #fff,
-      0 0 6px #fff,
-      0 0 8px #fff,
-      0 0 12px #ffebcd,
-      0 0 16px #ffebcd,
-      0 0 20px #ffc0cb,
-      0 0 24px #ffc0cb;
-  }
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 30px #fff,
+    0 0 40px #ffd700,
+    0 0 70px #ffd700,
+    0 0 80px #ffd700,
+    0 0 100px #ffd700,
+    0 0 150px #ffd700;
 }
 
 .dark .glow-text {
-  color: #000;
+  color: #fff;
   text-shadow: 
-    0 0 2px #fff,
-    0 0 4px #fff,
-    0 0 6px #fff,
-    0 0 8px #fff,
-    0 0 12px #90ee90,
-    0 0 16px #90ee90,
-    0 0 20px #00ff00,
-    0 0 24px #00ff00;
-  animation: glow-dark 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes glow-dark {
-  from {
-    text-shadow: 
-      0 0 1px #fff,
-      0 0 2px #fff,
-      0 0 3px #fff,
-      0 0 4px #fff,
-      0 0 6px #90ee90,
-      0 0 8px #90ee90,
-      0 0 10px #00ff00,
-      0 0 12px #00ff00;
-  }
-  to {
-    text-shadow: 
-      0 0 2px #fff,
-      0 0 4px #fff,
-      0 0 6px #fff,
-      0 0 8px #fff,
-      0 0 12px #90ee90,
-      0 0 16px #90ee90,
-      0 0 20px #00ff00,
-      0 0 24px #00ff00;
-  }
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 30px #fff,
+    0 0 40px #00ff00,
+    0 0 70px #00ff00,
+    0 0 80px #00ff00,
+    0 0 100px #00ff00,
+    0 0 150px #00ff00;
 }
