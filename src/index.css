@@ -88,11 +88,28 @@
     0 0 75px #ffa500;
 }
 
-@keyframes flicker {
+@keyframes violent-flicker {
   0%, 100% { opacity: 1; }
+  10% { opacity: 0.2; }
+  20% { opacity: 0.8; }
+  30% { opacity: 0.1; }
+  40% { opacity: 0.9; }
   50% { opacity: 0.3; }
+  60% { opacity: 1; }
+  70% { opacity: 0.2; }
+  80% { opacity: 0.7; }
+  90% { opacity: 0.4; }
 }
 
 .flicker-animation {
-  animation: flicker 0.5s ease-in-out infinite;
+  animation: violent-flicker 0.3s ease-in-out infinite;
+}
+
+.emergency-glow {
+  color: #fff;
+  text-shadow: 
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 3px #fff;
+  transition: text-shadow 0.5s ease-in-out;
 }

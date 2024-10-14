@@ -27,7 +27,7 @@ const Index = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsFlickering(false);
-    }, 3000); // Increased to 3 seconds for more visibility
+    }, 3000); // 3 seconds of flickering
 
     return () => clearTimeout(timer);
   }, []);
@@ -47,9 +47,9 @@ const Index = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className={`text-8xl font-bold mb-6 leading-tight ${isFlickering ? 'glow-text flicker-animation' : 'glow-text'}`}
+            className="text-8xl font-bold mb-6 leading-tight glow-text"
           >
-            Movement of Real <span>Skills</span>
+            Movement of Re<span className={isFlickering ? 'flicker-animation' : 'emergency-glow'}>a</span>l <span>Skills</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -134,6 +134,11 @@ const Index = () => {
           <p className="text-lg">&copy; {new Date().getFullYear()} Movement of Real Skills. All rights reserved.</p>
         </div>
       </footer>
+    </div>
+  );
+};
+
+export default Index;
     </div>
   );
 };
