@@ -71,6 +71,14 @@
     0 0 30px #ffa500;
 }
 
+.glow-a {
+  color: #000;
+  text-shadow: 
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 3px #fff;
+}
+
 @keyframes violent-flicker {
   0%, 100% { opacity: 1; }
   10% { opacity: 0.2; }
@@ -86,14 +94,4 @@
 
 .flicker-animation {
   animation: violent-flicker 0.3s ease-in-out infinite;
-}
-
-.emergency-glow {
-  color: transparent;
-  text-shadow: 
-    -1px -1px 0 #fff,
-    1px -1px 0 #fff,
-    -1px 1px 0 #fff,
-    1px 1px 0 #fff;
-  transition: text-shadow 0.5s ease-in-out;
 }
