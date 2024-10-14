@@ -78,25 +78,23 @@
 .glow-text {
   color: #fff;
   text-shadow: 
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 30px #fff,
-    0 0 40px #ffd700,
-    0 0 70px #ffd700,
-    0 0 80px #ffd700,
-    0 0 100px #ffd700,
-    0 0 150px #ffd700;
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 3px #ffd700,
+    0 0 4px #ffd700,
+    0 0 5px #ffd700,
+    0 0 10px #ffd700,
+    0 0 20px #ffd700;
 }
 
 .dark .glow-text {
   color: #fff;
   text-shadow: 
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 30px #fff,
-    0 0 40px #00ff00,
-    0 0 70px #00ff00,
-    0 0 80px #00ff00,
-    0 0 100px #00ff00,
-    0 0 150px #00ff00;
+    0 0 1px #fff,
+    0 0 2px #fff,
+    0 0 3px #00ff00,
+    0 0 4px #00ff00,
+    0 0 5px #00ff00,
+    0 0 10px #00ff00,
+    0 0 20px #00ff00;
 }
