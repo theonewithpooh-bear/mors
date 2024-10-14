@@ -61,10 +61,10 @@
 .faint-glow {
   color: #fff;
   text-shadow: 
-    0 0 1.95px #fff,
-    0 0 3.9px #fff,
-    0 0 5.85px #ffa500,
-    0 0 7.8px #ffa500;
+    0 0 2.925px #fff,
+    0 0 5.85px #fff,
+    0 0 8.775px #ffa500,
+    0 0 11.7px #ffa500;
 }
 
 @keyframes violent-flicker {
@@ -82,4 +82,33 @@
 
 .flicker-animation {
   animation: violent-flicker 0.3s ease-in-out infinite;
+}
+
+/* Consistent styles for all pages */
+.page-container {
+  @apply min-h-screen bg-background text-foreground p-8;
+}
+
+.page-title {
+  @apply text-4xl font-bold mb-6 text-primary;
+}
+
+.page-content {
+  @apply max-w-4xl mx-auto;
+}
+
+.section-title {
+  @apply text-2xl font-semibold mb-4 text-secondary;
+}
+
+.paragraph {
+  @apply mb-4 text-lg leading-relaxed;
+}
+
+.link {
+  @apply text-primary hover:underline transition-colors duration-200;
+}
+
+.button {
+  @apply px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-200;
 }

@@ -4,12 +4,25 @@ import { Link } from 'react-router-dom';
 
 const LearnMore = () => {
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <h1 className="text-4xl font-bold mb-6">Learn More About MORS</h1>
-      <p className="mb-6">Here you can find more detailed information about the Movement of Real Skills and our vision for transforming education.</p>
-      <Link to="/">
-        <Button variant="outline">Back to Home</Button>
-      </Link>
+    <div className="page-container">
+      <div className="page-content">
+        <h1 className="page-title">Learn More About MORS</h1>
+        <section>
+          <h2 className="section-title">Our Vision</h2>
+          <p className="paragraph">
+            The Movement of Real Skills (MORS) is dedicated to transforming education by prioritizing practical, real-world skills. We believe in preparing students for the challenges of tomorrow through hands-on learning experiences and innovative teaching methods.
+          </p>
+        </section>
+        <section>
+          <h2 className="section-title">Our Approach</h2>
+          <p className="paragraph">
+            We focus on developing critical thinking, problem-solving, and adaptability skills that are essential in today's rapidly changing world. Our curriculum integrates project-based learning, internships, and mentorship programs to provide a well-rounded educational experience.
+          </p>
+        </section>
+        <Link to="/" className="link">
+          <Button variant="outline" className="button">Back to Home</Button>
+        </Link>
+      </div>
     </div>
   );
 };
