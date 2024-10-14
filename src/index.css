@@ -58,17 +58,13 @@
   }
 }
 
-.glow-text {
+.faint-glow {
   color: #fff;
   text-shadow: 
+    0 0 1px #fff,
     0 0 2px #fff,
-    0 0 4px #fff,
-    0 0 6px #fff,
-    0 0 8px #ffa500,
-    0 0 14px #ffa500,
-    0 0 16px #ffa500,
-    0 0 20px #ffa500,
-    0 0 30px #ffa500;
+    0 0 3px #ffa500,
+    0 0 4px #ffa500;
 }
 
 .glow-a {
