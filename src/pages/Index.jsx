@@ -27,7 +27,7 @@ const Index = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsFlickering(false);
-    }, 1500); // 1.5 seconds of flickering
+    }, 3000); // Increased to 3 seconds for more visibility
 
     return () => clearTimeout(timer);
   }, []);
@@ -47,7 +47,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className={`text-8xl font-bold mb-6 leading-tight glow-text ${isFlickering ? 'flicker-animation' : ''}`}
+            className={`text-8xl font-bold mb-6 leading-tight ${isFlickering ? 'glow-text flicker-animation' : 'glow-text'}`}
           >
             Movement of Real <span>Skills</span>
           </motion.h1>
