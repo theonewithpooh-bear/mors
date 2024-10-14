@@ -84,7 +84,9 @@
     1px 1px 2px #ffa500,
     1px -1px 2px #ffa500,
     -1px 1px 2px #ffa500,
-    -1px -1px 2px #ffa500;
+    -1px -1px 2px #ffa500,
+    0 0 5px #ffa500,
+    0 0 10px #ffa500;
 }
 
 .dark .glow-text {
@@ -96,5 +98,8 @@
     1px 1px 2px #ffa500,
     1px -1px 2px #ffa500,
     -1px 1px 2px #ffa500,
-    -1px -1px 2px #ffa500;
+    -1px -1px 2px #ffa500,
+    0 0 5px #ffa500,
+    0 0 10px #ffa500,
+    0 0 15px rgba(255, 165, 0, 0.5);
 }
