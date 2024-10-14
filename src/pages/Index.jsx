@@ -39,7 +39,7 @@ const Index = () => {
             transition={{ delay: 0.5, duration: 1 }}
             className="text-8xl font-bold mb-6 leading-tight"
           >
-            Movement of Real Skills
+            Movement of Real <span className="glow-text">Skills</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
