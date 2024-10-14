@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from 'lucide-react';
@@ -22,6 +22,16 @@ const FeatureBox = ({ icon, title, description }) => (
 );
 
 const Index = () => {
+  const [isFlickering, setIsFlickering] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsFlickering(false);
+    }, 1500); // 1.5 seconds of flickering
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
       <ThemeToggle />
@@ -37,9 +47,9 @@ const Index = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="text-8xl font-bold mb-6 leading-tight"
+            className={`text-8xl font-bold mb-6 leading-tight glow-text ${isFlickering ? 'flicker-animation' : ''}`}
           >
-            Movement of Real <span className="glow-text">Skills</span>
+            Movement of Real <span>Skills</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}

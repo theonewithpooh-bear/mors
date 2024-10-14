@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -64,8 +64,7 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
-}
- 
+
 @layer base {
   * {
     @apply border-border;
@@ -78,31 +77,21 @@
 .glow-text {
   color: #fff;
   text-shadow: 
-    0 0 4px #fff,
-    0 0 8px #fff,
-    0 0 12px #fff,
-    2px 2px 8px #ffa500,
-    2px -2px 8px #ffa500,
-    -2px 2px 8px #ffa500,
-    -2px -2px 8px #ffa500,
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #fff,
     0 0 20px #ffa500,
+    0 0 35px #ffa500,
     0 0 40px #ffa500,
-    0 0 60px rgba(255, 165, 0, 0.9),
-    0 0 80px rgba(255, 165, 0, 0.8);
+    0 0 50px #ffa500,
+    0 0 75px #ffa500;
 }
 
-.dark .glow-text {
-  color: #fff;
-  text-shadow: 
-    0 0 6px #fff,
-    0 0 12px #fff,
-    0 0 18px #fff,
-    3px 3px 12px #ffa500,
-    3px -3px 12px #ffa500,
-    -3px 3px 12px #ffa500,
-    -3px -3px 12px #ffa500,
-    0 0 40px #ffa500,
-    0 0 80px #ffa500,
-    0 0 120px rgba(255, 165, 0, 0.95),
-    0 0 160px rgba(255, 165, 0, 0.9);
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.flicker-animation {
+  animation: flicker 0.5s ease-in-out 3;
 }
