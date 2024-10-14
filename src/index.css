@@ -79,6 +79,17 @@
     0 0 3px #fff;
 }
 
+.dim-glow {
+  color: #fff;
+  text-shadow: 
+    0 0 1px rgba(255, 255, 255, 0.3),
+    0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.increased-letter-spacing {
+  letter-spacing: 1.2em;
+}
+
 @keyframes violent-flicker {
   0%, 100% { opacity: 1; }
   10% { opacity: 0.2; }
