@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ThemeToggle from '../components/ThemeToggle';
 
@@ -22,20 +22,34 @@ const FeatureBox = ({ icon, title, description }) => (
 );
 
 const Index = () => {
+  const [isFlickering, setIsFlickering] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsFlickering(false);
+    }, 3000); // 3 seconds of flickering
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
       <ThemeToggle />
-      
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-black text-black dark:text-white">
+      <motion.section 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className="relative h-screen flex items-center justify-center overflow-hidden bg-black dark:bg-white text-white dark:text-black"
+      >
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="text-8xl font-bold mb-6 leading-tight"
+            className="text-8xl font-bold mb-6 leading-tight faint-glow"
           >
-            Movement of <span className="text-blue-500">Real Skills</span>
+            Movement of Real Skills
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -46,16 +60,25 @@ const Index = () => {
             Transforming education to prioritize practical, real-world skills for a brighter future
           </motion.p>
           <Link to="/learn-more">
-            <Button size="lg" className="group text-xl px-8 py-4 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition-all duration-300">
+            <Button variant="outline" size="lg" className="group text-xl px-8 py-4 rounded-full bg-white dark:bg-black text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-all duration-300">
               Learn More
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
         </div>
-      </section>
+      </motion.section>
+
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.5, duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+      >
+        <ChevronDown className="w-12 h-12 text-white dark:text-black" />
+      </motion.div>
 
       {/* Main Content */}
-      <section className="py-24 bg-gray-100 dark:bg-gray-800">
+      <section className="py-24 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -63,7 +86,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-6xl font-bold mb-20 text-center"
           >
-            Our <span className="text-blue-500">Vision</span>
+            Our Vision
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <FeatureBox
@@ -90,13 +113,13 @@ const Index = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="bg-blue-500 text-white py-24"
+        className="bg-black dark:bg-white text-white dark:text-black py-24"
       >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-6xl font-bold mb-8">Join the Movement</h2>
-          <p className="mb-12 text-2xl max-w-3xl mx-auto font-light">Help us reshape education for a better, more skilled future. Together, we can create a world where every student's potential is fully realized.</p>
+          <p className="mb-12 text-2xl max-w-3xl mx-auto">Help us reshape education for a better, more skilled future. Together, we can create a world where every student's potential is fully realized.</p>
           <Link to="/get-involved">
-            <Button size="lg" variant="secondary" className="group text-xl px-10 py-6 rounded-full bg-white text-blue-500 hover:bg-gray-100 transition-all duration-300">
+            <Button size="lg" variant="secondary" className="group text-xl px-10 py-6 rounded-full bg-white dark:bg-black text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-all duration-300">
               Get Involved
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
