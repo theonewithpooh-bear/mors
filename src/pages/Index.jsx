@@ -47,7 +47,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="text-8xl font-bold mb-6 leading-tight dim-glow increased-letter-spacing"
+            className="text-8xl font-bold mb-6 leading-tight glow-text"
           >
             Movement of Re<span className={`${isFlickering ? 'flicker-animation' : ''} text-black dark:text-white glow-a`}>a</span>l <span>Skills</span>
           </motion.h1>
