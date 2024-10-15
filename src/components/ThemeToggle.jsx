@@ -15,7 +15,7 @@ const ThemeToggle = () => {
   const toggleTheme = () => {
     setIsTransitioning(true);
     setIsDark(!isDark);
-    setTimeout(() => setIsTransitioning(false), 600000); // 10 minutes
+    setTimeout(() => setIsTransitioning(false), 10000); // 10 seconds
   };
 
   return (

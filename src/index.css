@@ -59,11 +59,11 @@
 }
 
 .theme-transition {
-  transition: background-color 600s, color 600s, border-color 600s, box-shadow 600s;
+  transition: background-color 10s, color 10s, border-color 10s, box-shadow 10s;
 }
 
 .theme-transition * {
-  transition: background-color 600s, color 600s, border-color 600s, box-shadow 600s !important;
+  transition: background-color 10s, color 10s, border-color 10s, box-shadow 10s !important;
 }
 
 .faint-glow {
@@ -120,4 +120,3 @@
 .button {
   @apply px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-200;
 }
-
