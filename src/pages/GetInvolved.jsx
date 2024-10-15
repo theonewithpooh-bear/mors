@@ -8,38 +8,38 @@ const GetInvolved = () => {
     {
       title: "Become a Skill Superhero",
       description: "Mentor students and share your real-world expertise.",
-      icon: "🦸‍♂️"
+      icon: "★"
     },
     {
       title: "Offer Mind-Blowing Internships",
       description: "Provide hands-on learning experiences in your organization.",
-      icon: "🚀"
+      icon: "⚡"
     },
     {
       title: "Join Our Epic Workshops",
       description: "Participate in or lead skill-building workshops.",
-      icon: "🛠️"
+      icon: "⚙"
     },
     {
       title: "Spread the MORS Magic",
       description: "Share our mission on social media and in your networks.",
-      icon: "✨"
+      icon: "✦"
     },
     {
       title: "Fuel the Revolution",
       description: "Donate to support our programs and initiatives.",
-      icon: "🔥"
+      icon: "⬢"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 text-white">
+    <div className="min-h-screen bg-black text-white">
       <div className="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <motion.h1 
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-6xl font-extrabold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500"
+          className="text-6xl font-extrabold mb-12 text-center"
         >
           Join the MORS Adventure!
         </motion.h1>
@@ -50,7 +50,7 @@ const GetInvolved = () => {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="mb-16 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white border-opacity-20"
         >
-          <h2 className="text-4xl font-bold mb-6 text-yellow-300">Embark on the Quest</h2>
+          <h2 className="text-4xl font-bold mb-6 text-gray-300">Embark on the Quest</h2>
           <p className="text-xl leading-relaxed mb-6">
             Ready to be part of something extraordinary? Whether you're a wisdom-wielding educator, a curious student, a supportive parent, or an industry guru, your unique powers can help us reshape the future of education!
           </p>
@@ -62,7 +62,7 @@ const GetInvolved = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="mb-16 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white border-opacity-20"
         >
-          <h2 className="text-4xl font-bold mb-6 text-green-300">Choose Your Superpower</h2>
+          <h2 className="text-4xl font-bold mb-6 text-gray-300">Choose Your Superpower</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {involvementOptions.map((option, index) => (
               <motion.div 
@@ -72,10 +72,10 @@ const GetInvolved = () => {
                 transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
                 className="flex items-start space-x-4"
               >
-                <span className="text-4xl">{option.icon}</span>
+                <span className="text-4xl text-gray-400">{option.icon}</span>
                 <div>
                   <h3 className="text-2xl font-semibold mb-2">{option.title}</h3>
-                  <p className="text-lg">{option.description}</p>
+                  <p className="text-lg text-gray-300">{option.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -89,7 +89,7 @@ const GetInvolved = () => {
           className="text-center"
         >
           <Link to="/" className="inline-block">
-            <Button variant="outline" className="text-xl px-10 py-6 rounded-full bg-gradient-to-r from-green-400 to-blue-500 text-white hover:from-green-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-110 hover:rotate-3 shadow-lg">
+            <Button variant="outline" className="text-xl px-10 py-6 rounded-full bg-white text-black hover:bg-gray-200 transition-all duration-300 transform hover:scale-110 hover:rotate-3 shadow-lg">
               Return to Home Base
             </Button>
           </Link>
