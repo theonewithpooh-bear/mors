@@ -13,9 +13,9 @@ const ThemeToggle = () => {
   return (
     <motion.button
       onClick={toggleTheme}
-      className="fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg"
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
+      className="bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg w-16 h-8 flex items-center justify-center"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
     >
       <motion.div
         initial={false}
@@ -23,9 +23,9 @@ const ThemeToggle = () => {
         transition={{ duration: 0.7, type: 'spring', stiffness: 200 }}
       >
         {isDark ? (
-          <Sun className="w-6 h-6 text-yellow-400" />
+          <Sun className="w-5 h-5 text-yellow-400" />
         ) : (
-          <Moon className="w-6 h-6 text-gray-700" />
+          <Moon className="w-5 h-5 text-gray-700" />
         )}
       </motion.div>
     </motion.button>
