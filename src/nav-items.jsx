@@ -1,7 +1,8 @@
-import { HomeIcon, BookOpenIcon, UsersIcon } from "lucide-react";
+import { HomeIcon, BookOpenIcon, UsersIcon, GraduationCapIcon } from "lucide-react";
 import Index from "./pages/Index.jsx";
 import LearnMore from "./pages/LearnMore.jsx";
 import GetInvolved from "./pages/GetInvolved.jsx";
+import SubjectReforms from "./pages/SubjectReforms.jsx";
 
 export const navItems = [
   {
@@ -21,5 +22,11 @@ export const navItems = [
     to: "/get-involved",
     icon: <UsersIcon className="h-4 w-4" />,
     page: <GetInvolved />,
+  },
+  {
+    title: "Subject Reforms",
+    to: "/subject-reforms",
+    icon: <GraduationCapIcon className="h-4 w-4" />,
+    page: <SubjectReforms />,
   },
 ];
