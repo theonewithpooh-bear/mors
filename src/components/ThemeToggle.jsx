@@ -22,7 +22,7 @@ const ThemeToggle = () => {
     <div className="relative">
       <motion.button
         onClick={toggleTheme}
-        className="bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg w-16 h-8 flex items-center justify-center z-10 relative"
+        className={`bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg w-16 h-8 flex items-center justify-center z-10 relative ${isTransitioning ? 'opacity-0' : 'opacity-100'} transition-opacity duration-500`}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -39,7 +39,7 @@ const ThemeToggle = () => {
         </motion.div>
       </motion.button>
       {isTransitioning && (
-        <div className="absolute top-0 left-0 w-screen h-64 overflow-hidden transition-all duration-10000 ease-in-out">
+        <div className="fixed top-0 left-0 w-full h-64 overflow-hidden transition-all duration-10000 ease-in-out z-50">
           <div className={`landscape ${isDark ? 'landscape-night' : 'landscape-day'}`}>
             <div className="sun-moon"></div>
             <div className="stars"></div>
