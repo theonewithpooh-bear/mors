@@ -11,6 +11,7 @@ const NavBar = () => (
       <li><Link to="/" className="hover:text-gray-300">Home</Link></li>
       <li><Link to="/learn-more" className="hover:text-gray-300">Learn More</Link></li>
       <li><Link to="/get-involved" className="hover:text-gray-300">Get Involved</Link></li>
+      <li><Link to="/subject-reforms" className="hover:text-gray-300">Subject Reforms</Link></li>
     </ul>
     <ThemeToggle />
   </nav>
