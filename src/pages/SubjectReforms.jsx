@@ -1,7 +1,8 @@
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { BookOpen, Calculator, Languages, Microscope, Palette, Globe, Music, Activity, Brain, PieChart, Film, Mountain } from 'lucide-react';
+import { BookOpen, Calculator, Language, Microscope, Palette, Globe, Music, Running, Brain, PieChart, Film, Mountain } from 'lucide-react';
 
 const subjects = [
   { name: "Mathematics", description: "Develop problem-solving skills and numerical literacy", icon: <Calculator className="w-6 h-6" /> },
@@ -11,9 +12,9 @@ const subjects = [
   { name: "Art and Design", description: "Express creativity through various artistic mediums", icon: <Palette className="w-6 h-6" /> },
   { name: "Geography", description: "Understand physical and human geographical processes", icon: <Globe className="w-6 h-6" /> },
   { name: "History", description: "Analyze past events and their impact on society", icon: <BookOpen className="w-6 h-6" /> },
-  { name: "Modern Languages", description: "Learn to communicate in a foreign language", icon: <Languages className="w-6 h-6" /> },
+  { name: "Modern Languages", description: "Learn to communicate in a foreign language", icon: <Language className="w-6 h-6" /> },
   { name: "Music", description: "Develop musical skills and appreciate various genres", icon: <Music className="w-6 h-6" /> },
-  { name: "Physical Education", description: "Improve physical fitness and sports knowledge", icon: <Activity className="w-6 h-6" /> },
+  { name: "Physical Education", description: "Improve physical fitness and sports knowledge", icon: <Running className="w-6 h-6" /> },
   { name: "Psychology", description: "Study human behavior and mental processes", icon: <Brain className="w-6 h-6" /> },
   { name: "Computer Science", description: "Learn programming and computational thinking", icon: <PieChart className="w-6 h-6" /> },
   { name: "Film Studies", description: "Analyze cinematic techniques and film history", icon: <Film className="w-6 h-6" /> },
