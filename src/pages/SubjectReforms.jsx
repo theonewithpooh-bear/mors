@@ -36,7 +36,7 @@ const SubjectReforms = () => {
 
   const renderSubjects = (subjects) => {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
         {subjects.map((subject, index) => (
           <motion.div
             key={index}
@@ -63,13 +63,13 @@ const SubjectReforms = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black flex flex-col items-center justify-center z-50"
+            className="fixed inset-0 bg-black flex flex-col items-center justify-center z-50 p-4"
           >
             <motion.h2
               initial={{ y: -50 }}
               animate={{ y: 0 }}
               exit={{ y: 50 }}
-              className="text-4xl font-bold text-white mb-8"
+              className="text-2xl sm:text-4xl font-bold text-white mb-8 text-center"
             >
               No reforms uploaded for {selectedSubject}
             </motion.h2>
@@ -94,11 +94,11 @@ const SubjectReforms = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <h1 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">Subject Reforms</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">Subject Reforms</h1>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">GCSE Reforms</h2>
+                <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">GCSE Reforms</h2>
                 <p className="mb-4 text-gray-600 dark:text-gray-400">
                   Our proposed reforms for GCSE subjects focus on integrating practical skills and project-based learning.
                 </p>
@@ -111,7 +111,7 @@ const SubjectReforms = () => {
               </div>
               
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">A-Level Reforms</h2>
+                <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-900 dark:text-white">A-Level Reforms</h2>
                 <p className="mb-4 text-gray-600 dark:text-gray-400">
                   For A-Levels, we're emphasizing interdisciplinary approaches and real-world applications of knowledge.
                 </p>
@@ -126,14 +126,14 @@ const SubjectReforms = () => {
 
             {activeReform === 'gcse' && (
               <div className="mt-12">
-                <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">GCSE Subject Reforms</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900 dark:text-white">GCSE Subject Reforms</h2>
                 {renderSubjects(gcseSubjects)}
               </div>
             )}
 
             {activeReform === 'alevel' && (
               <div className="mt-12">
-                <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">A-Level Subject Reforms</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900 dark:text-white">A-Level Subject Reforms</h2>
                 {renderSubjects(aLevelSubjects)}
               </div>
             )}
