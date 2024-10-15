@@ -1,9 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ThemeToggle from '../components/ThemeToggle';
+
+const NavBar = () => (
+  <nav className="bg-black bg-opacity-80 text-white py-2 px-4 fixed top-0 left-0 right-0 z-50">
+    <ul className="flex justify-center space-x-8">
+      <li><Link to="/" className="hover:text-gray-300">Home</Link></li>
+      <li><Link to="/learn-more" className="hover:text-gray-300">Learn More</Link></li>
+      <li><Link to="/get-involved" className="hover:text-gray-300">Get Involved</Link></li>
+    </ul>
+  </nav>
+);
 
 const FeatureBox = ({ icon, title, description }) => (
   <motion.div
@@ -22,19 +32,10 @@ const FeatureBox = ({ icon, title, description }) => (
 );
 
 const Index = () => {
-  const [isFlickering, setIsFlickering] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsFlickering(false);
-    }, 3000); // 3 seconds of flickering
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
       <ThemeToggle />
+      <NavBar />
       {/* Hero Section */}
       <motion.section 
         initial={{ opacity: 0 }}
@@ -67,15 +68,6 @@ const Index = () => {
           </Link>
         </div>
       </motion.section>
-
-      <motion.div 
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-      >
-        <ChevronDown className="w-12 h-12 text-white dark:text-black" />
-      </motion.div>
 
       {/* Main Content */}
       <section className="py-24 bg-white dark:bg-gray-800">
