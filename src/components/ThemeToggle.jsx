@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Sun, Moon } from 'lucide-react';
 
 const ThemeToggle = () => {
   const [isDark, setIsDark] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    const htmlElement = document.documentElement;
+    htmlElement.classList.toggle('dark', isDark);
+    htmlElement.classList.toggle('theme-transition', isTransitioning);
+  }, [isDark, isTransitioning]);
 
   const toggleTheme = () => {
+    setIsTransitioning(true);
     setIsDark(!isDark);
-    document.documentElement.classList.toggle('dark');
+    setTimeout(() => setIsTransitioning(false), 600000); // 10 minutes
   };
 
   return (
