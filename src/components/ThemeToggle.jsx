@@ -19,24 +19,35 @@ const ThemeToggle = () => {
   };
 
   return (
-    <motion.button
-      onClick={toggleTheme}
-      className="bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg w-16 h-8 flex items-center justify-center"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      <motion.div
-        initial={false}
-        animate={{ rotate: isDark ? 180 : 0 }}
-        transition={{ duration: 0.7, type: 'spring', stiffness: 200 }}
+    <div className="relative">
+      <motion.button
+        onClick={toggleTheme}
+        className="bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg w-16 h-8 flex items-center justify-center z-10 relative"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
       >
-        {isDark ? (
-          <Sun className="w-5 h-5 text-yellow-400" />
-        ) : (
-          <Moon className="w-5 h-5 text-gray-700" />
-        )}
-      </motion.div>
-    </motion.button>
+        <motion.div
+          initial={false}
+          animate={{ rotate: isDark ? 180 : 0 }}
+          transition={{ duration: 0.7, type: 'spring', stiffness: 200 }}
+        >
+          {isDark ? (
+            <Moon className="w-5 h-5 text-yellow-400" />
+          ) : (
+            <Sun className="w-5 h-5 text-gray-700" />
+          )}
+        </motion.div>
+      </motion.button>
+      {isTransitioning && (
+        <div className="absolute top-0 left-0 w-screen h-64 overflow-hidden transition-all duration-10000 ease-in-out">
+          <div className={`landscape ${isDark ? 'landscape-night' : 'landscape-day'}`}>
+            <div className="sun-moon"></div>
+            <div className="stars"></div>
+            <div className="ground"></div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 
