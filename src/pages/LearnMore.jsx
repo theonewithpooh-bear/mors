@@ -81,6 +81,25 @@ const LearnMore = () => {
             ))}
           </div>
         </motion.section>
+
+        <motion.section 
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+          className="mb-16 bg-gray-100 rounded-3xl shadow-2xl p-8 border border-gray-200"
+        >
+          <h2 className="text-4xl font-bold mb-6 text-gray-800">Suggested Subject Reforms</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-2xl font-semibold mb-2 text-gray-800">GCSE Reforms</h3>
+              <p className="text-lg text-gray-600">No subject reforms have been suggested yet for GCSE. Stay tuned for updates as we work on innovative changes to enhance the curriculum.</p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold mb-2 text-gray-800">A-level Reforms</h3>
+              <p className="text-lg text-gray-600">We are currently in the process of developing reforms for A-level subjects. Check back soon for our proposed changes aimed at better preparing students for future challenges.</p>
+            </div>
+          </div>
+        </motion.section>
         
         <motion.div
           initial={{ opacity: 0, y: 50 }}
