@@ -6,7 +6,9 @@ import {
 } from 'lucide-react';
 
 export const gcseSubjects = [
-  { name: "Mathematics", icon: Calculator },
+  { name: "Mathematics", icon: Calculator }, // Regular Mathematics
+  { name: "Mathematics Foundation", icon: Calculator },
+  { name: "Further Mathematics", icon: Calculator },
   { name: "English Language", icon: BookOpen },
   { name: "English Literature", icon: Book },
   { name: "Combined Science", icon: FlaskConical },
