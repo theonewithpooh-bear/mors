@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
   Calculator, BookOpen, Book, FlaskConical, Palette, Briefcase, Computer, Music,
-  Tools, Theater, TrendingUp, Cog, Utensils, Flag, Map, History, Film, Basketball,
-  Brain, Church, Users, BarChart, Star, Mountain
+  Theater, TrendingUp, Cog, Utensils, Flag, Map, History, Film, Basketball,
+  Brain, Church, Users, BarChart, Star, Mountain, Wrench
 } from 'lucide-react';
 
 const gcseSubjects = [
@@ -17,7 +17,7 @@ const gcseSubjects = [
   { name: "Business Studies", icon: <Briefcase className="w-5 h-5" /> },
   { name: "Computer Science", icon: <Computer className="w-5 h-5" /> },
   { name: "Dance", icon: <Music className="w-5 h-5" /> },
-  { name: "Design and Technology", icon: <Tools className="w-5 h-5" /> },
+  { name: "Design and Technology", icon: <Wrench className="w-5 h-5" /> },
   { name: "Drama", icon: <Theater className="w-5 h-5" /> },
   { name: "Economics", icon: <TrendingUp className="w-5 h-5" /> },
   { name: "Engineering", icon: <Cog className="w-5 h-5" /> },
