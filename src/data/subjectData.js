@@ -1,7 +1,8 @@
 import {
   Calculator, BookOpen, Book, FlaskConical, Palette, Briefcase, Computer, Music,
   Theater, TrendingUp, Cog, Utensils, Flag, Map, History, Film,
-  Brain, Church, Users, BarChart, Star, Mountain, Wrench, Activity
+  Brain, Church, Users, BarChart, Star, Mountain, Wrench, Activity,
+  TestTube, Atom, Microscope // Added new icons for Triple Science
 } from 'lucide-react';
 
 export const gcseSubjects = [
@@ -9,6 +10,9 @@ export const gcseSubjects = [
   { name: "English Language", icon: BookOpen },
   { name: "English Literature", icon: Book },
   { name: "Combined Science", icon: FlaskConical },
+  { name: "Biology (Triple Science)", icon: Microscope },
+  { name: "Chemistry (Triple Science)", icon: TestTube },
+  { name: "Physics (Triple Science)", icon: Atom },
   { name: "Art and Design", icon: Palette },
   { name: "Business Studies", icon: Briefcase },
   { name: "Computer Science", icon: Computer },
