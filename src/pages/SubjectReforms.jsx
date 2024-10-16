@@ -29,7 +29,7 @@ const SubjectReforms = () => {
             onClick={() => handleSubjectClick(subject.name)}
           >
             <div className="mr-3 text-gray-600 dark:text-gray-400">
-              {subject.icon}
+              {subject.icon && <subject.icon className="w-5 h-5" />}
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-1">{subject.name}</h3>
