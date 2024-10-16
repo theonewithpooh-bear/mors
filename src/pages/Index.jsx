@@ -3,19 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import ThemeToggle from '../components/ThemeToggle';
-
-const NavBar = () => (
-  <nav className="bg-black bg-opacity-80 text-white py-2 px-4 fixed top-0 left-0 right-0 z-50 flex justify-between items-center">
-    <ul className="flex justify-center space-x-8">
-      <li><Link to="/" className="hover:text-gray-300">Home</Link></li>
-      <li><Link to="/learn-more" className="hover:text-gray-300">Learn More</Link></li>
-      <li><Link to="/get-involved" className="hover:text-gray-300">Get Involved</Link></li>
-      <li><Link to="/subject-reforms" className="hover:text-gray-300">Subject Reforms</Link></li>
-    </ul>
-    <ThemeToggle />
-  </nav>
-);
+import Header from '../components/Header';
 
 const FeatureBox = ({ icon, title, description }) => (
   <motion.div
@@ -36,7 +24,7 @@ const FeatureBox = ({ icon, title, description }) => (
 const Index = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
-      <NavBar />
+      <Header />
       {/* Hero Section */}
       <motion.section 
         initial={{ opacity: 0 }}

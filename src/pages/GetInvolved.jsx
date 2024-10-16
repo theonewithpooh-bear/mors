@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Header from '../components/Header';
 
 const GetInvolved = () => {
   const involvementOptions = [
@@ -34,6 +35,7 @@ const GetInvolved = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      <Header />
       <div className="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <motion.h1 
           initial={{ opacity: 0, y: -50 }}

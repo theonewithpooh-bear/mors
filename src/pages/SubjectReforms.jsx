@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { gcseSubjects, aLevelSubjects } from '../data/subjectData';
 import { Star } from 'lucide-react';
+import Header from '../components/Header';
 import {
   Dialog,
   DialogContent,
@@ -123,6 +124,7 @@ const SubjectReforms = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+      <Header />
       <AnimatePresence>
         {selectedSubject ? (
           <motion.div
