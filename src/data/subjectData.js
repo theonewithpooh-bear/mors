@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 
 export const gcseSubjects = [
-  { name: "Mathematics", icon: Calculator }, // Regular Mathematics
+  { name: "Mathematics", icon: Calculator },
   { name: "Mathematics Foundation", icon: Calculator },
   { name: "Further Mathematics", icon: Calculator },
   { name: "English Language", icon: BookOpen },
@@ -24,18 +24,15 @@ export const gcseSubjects = [
   { name: "Economics", icon: TrendingUp },
   { name: "Engineering", icon: Cog },
   { name: "Hospitality and Catering", icon: ChefHat },
-  { name: "French", icon: Flag },
+  { name: "Languages", icon: Flag },
   { name: "Geography", icon: Map },
-  { name: "German", icon: Flag },
   { name: "History", icon: History },
-  { name: "Latin", icon: Book },
   { name: "Media Studies", icon: Film },
   { name: "Music", icon: Music },
   { name: "Physical Education", icon: Activity },
   { name: "Psychology", icon: Brain },
   { name: "Religious Studies", icon: Church },
   { name: "Sociology", icon: Users },
-  { name: "Spanish", icon: Flag },
   { name: "Statistics", icon: BarChart },
   { name: "Astronomy", icon: Star },
   { name: "Film Studies", icon: Film },
