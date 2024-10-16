@@ -1,8 +1,8 @@
 import {
   Calculator, BookOpen, Book, FlaskConical, Palette, Briefcase, Computer, Music,
-  Theater, TrendingUp, Cog, Utensils, Flag, Map, History, Film,
+  Theater, TrendingUp, Cog, ChefHat, Flag, Map, History, Film,
   Brain, Church, Users, BarChart, Star, Mountain, Wrench, Activity,
-  TestTube, Atom, Microscope, Camera // Added Camera icon for photography
+  TestTube, Atom, Microscope, Camera
 } from 'lucide-react';
 
 export const gcseSubjects = [
@@ -23,7 +23,7 @@ export const gcseSubjects = [
   { name: "Drama", icon: Theater },
   { name: "Economics", icon: TrendingUp },
   { name: "Engineering", icon: Cog },
-  { name: "Food Preparation and Nutrition", icon: Utensils },
+  { name: "Hospitality and Catering", icon: ChefHat },
   { name: "French", icon: Flag },
   { name: "Geography", icon: Map },
   { name: "German", icon: Flag },
@@ -40,7 +40,7 @@ export const gcseSubjects = [
   { name: "Astronomy", icon: Star },
   { name: "Film Studies", icon: Film },
   { name: "Geology", icon: Mountain },
-  { name: "Photography", icon: Camera } // Added Photography with Camera icon
+  { name: "Photography", icon: Camera }
 ];
 
 export const aLevelSubjects = [
