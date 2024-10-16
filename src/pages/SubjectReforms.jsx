@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { gcseSubjects, aLevelSubjects } from '../data/subjectData';
+import { Star } from 'lucide-react'; // Import the Star icon
 
 const SubjectReforms = () => {
   const [activeReform, setActiveReform] = useState(null);
@@ -132,12 +133,22 @@ const SubjectReforms = () => {
                 <p className="mb-4 text-gray-600 dark:text-gray-400">
                   Our proposed reforms for GCSE subjects focus on integrating practical skills and project-based learning.
                 </p>
-                <Button 
-                  onClick={() => handleViewReforms('gcse')}
-                  className="w-full"
-                >
-                  View GCSE Reforms
-                </Button>
+                <div className="flex space-x-4">
+                  <Button 
+                    onClick={() => handleViewReforms('gcse')}
+                    className="flex-grow"
+                  >
+                    View GCSE Reforms
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="flex items-center space-x-2"
+                    onClick={() => {/* Add grading system logic here */}}
+                  >
+                    <Star className="w-4 h-4" />
+                    <span>Grading System</span>
+                  </Button>
+                </div>
               </div>
               
               <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
