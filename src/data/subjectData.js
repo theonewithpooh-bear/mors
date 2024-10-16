@@ -1,6 +1,6 @@
 import {
   Calculator, BookOpen, Book, FlaskConical, Palette, Briefcase, Computer, Music,
-  Theater, TrendingUp, Cog, ChefHat, Flag, Map, History, Film,
+  Theater, TrendingUp, Cog, ChefHat, Mic, Map, History, Film,
   Brain, Church, Users, BarChart, Star, Mountain, Wrench, Activity,
   TestTube, Atom, Microscope, Camera
 } from 'lucide-react';
@@ -24,7 +24,7 @@ export const gcseSubjects = [
   { name: "Economics", icon: TrendingUp },
   { name: "Engineering", icon: Cog },
   { name: "Hospitality and Catering", icon: ChefHat },
-  { name: "Languages", icon: Flag },
+  { name: "Languages", icon: Mic },
   { name: "Geography", icon: Map },
   { name: "History", icon: History },
   { name: "Media Studies", icon: Film },
