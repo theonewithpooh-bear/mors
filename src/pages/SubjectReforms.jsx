@@ -3,11 +3,21 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { gcseSubjects, aLevelSubjects } from '../data/subjectData';
-import { Star } from 'lucide-react'; // Import the Star icon
+import { Star } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const SubjectReforms = () => {
   const [activeReform, setActiveReform] = useState(null);
   const [selectedSubject, setSelectedSubject] = useState(null);
+  const [isGradingModalOpen, setIsGradingModalOpen] = useState(false);
+  const [gradingType, setGradingType] = useState('');
 
   const handleViewReforms = (reformType) => {
     setActiveReform(reformType);
@@ -16,6 +26,11 @@ const SubjectReforms = () => {
 
   const handleSubjectClick = (subject) => {
     setSelectedSubject(subject);
+  };
+
+  const handleGradingSystemClick = (type) => {
+    setGradingType(type);
+    setIsGradingModalOpen(true);
   };
 
   const renderSubjects = (subjects) => {
@@ -83,6 +98,29 @@ const SubjectReforms = () => {
     </div>
   );
 
+  const GradingSystemModal = () => (
+    <Dialog open={isGradingModalOpen} onOpenChange={setIsGradingModalOpen}>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>{gradingType} Grading System</DialogTitle>
+          <DialogDescription>
+            {gradingType === 'GCSE' ? (
+              <p>
+                GCSEs are graded on a 9-1 scale, with 9 being the highest grade.
+                Grade 4 is considered a 'standard pass' and grade 5 a 'strong pass'.
+              </p>
+            ) : (
+              <p>
+                A-levels are graded on an A*-E scale, with A* being the highest grade.
+                Grades A*-E are passing grades, while U is unclassified (fail).
+              </p>
+            )}
+          </DialogDescription>
+        </DialogHeader>
+      </DialogContent>
+    </Dialog>
+  );
+
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
       <AnimatePresence>
@@ -143,7 +181,7 @@ const SubjectReforms = () => {
                   <Button
                     variant="outline"
                     className="flex items-center space-x-2"
-                    onClick={() => {/* Add grading system logic here */}}
+                    onClick={() => handleGradingSystemClick('GCSE')}
                   >
                     <Star className="w-4 h-4" />
                     <span>Grading System</span>
@@ -166,7 +204,7 @@ const SubjectReforms = () => {
                   <Button
                     variant="outline"
                     className="flex items-center space-x-2"
-                    onClick={() => {/* Add grading system logic here */}}
+                    onClick={() => handleGradingSystemClick('A-Level')}
                   >
                     <Star className="w-4 h-4" />
                     <span>Grading System</span>
@@ -191,6 +229,7 @@ const SubjectReforms = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      <GradingSystemModal />
     </div>
   );
 };
