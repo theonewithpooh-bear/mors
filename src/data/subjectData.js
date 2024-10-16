@@ -2,7 +2,7 @@ import {
   Calculator, BookOpen, Book, FlaskConical, Palette, Briefcase, Computer, Music,
   Theater, TrendingUp, Cog, Utensils, Flag, Map, History, Film,
   Brain, Church, Users, BarChart, Star, Mountain, Wrench, Activity,
-  TestTube, Atom, Microscope // Added new icons for Triple Science
+  TestTube, Atom, Microscope, Camera // Added Camera icon for photography
 } from 'lucide-react';
 
 export const gcseSubjects = [
@@ -37,7 +37,8 @@ export const gcseSubjects = [
   { name: "Statistics", icon: BarChart },
   { name: "Astronomy", icon: Star },
   { name: "Film Studies", icon: Film },
-  { name: "Geology", icon: Mountain }
+  { name: "Geology", icon: Mountain },
+  { name: "Photography", icon: Camera } // Added Photography with Camera icon
 ];
 
 export const aLevelSubjects = [
