@@ -156,12 +156,22 @@ const SubjectReforms = () => {
                 <p className="mb-4 text-gray-600 dark:text-gray-400">
                   For A-Levels, we're emphasizing interdisciplinary approaches and real-world applications of knowledge.
                 </p>
-                <Button 
-                  onClick={() => handleViewReforms('alevel')}
-                  className="w-full"
-                >
-                  View A-Level Reforms
-                </Button>
+                <div className="flex space-x-4">
+                  <Button 
+                    onClick={() => handleViewReforms('alevel')}
+                    className="flex-grow"
+                  >
+                    View A-Level Reforms
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="flex items-center space-x-2"
+                    onClick={() => {/* Add grading system logic here */}}
+                  >
+                    <Star className="w-4 h-4" />
+                    <span>Grading System</span>
+                  </Button>
+                </div>
               </div>
             </div>
 
@@ -175,7 +185,7 @@ const SubjectReforms = () => {
             {activeReform === 'alevel' && (
               <div className="mt-12">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-900 dark:text-white">A-Level Subject Reforms</h2>
-                {renderSubjects(aLevelSubjects.map(subject => ({ name: subject, icon: null })))}
+                {renderSubjects(aLevelSubjects)}
               </div>
             )}
           </motion.div>

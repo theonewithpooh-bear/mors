@@ -2,7 +2,7 @@ import {
   Calculator, BookOpen, Book, FlaskConical, Palette, Briefcase, Computer, Music,
   Theater, TrendingUp, Cog, ChefHat, Mic, Map, History, Film,
   Brain, Church, Users, BarChart, Star, Mountain, Wrench, Activity,
-  TestTube, Atom, Microscope, Camera
+  TestTube, Atom, Microscope, Camera, GraduationCap
 } from 'lucide-react';
 
 export const gcseSubjects = [
@@ -41,9 +41,24 @@ export const gcseSubjects = [
 ];
 
 export const aLevelSubjects = [
-  "Mathematics", "Further Mathematics", "Biology", "Chemistry", "Physics",
-  "English Literature", "History", "Geography", "Economics", "Business Studies",
-  "Psychology", "Sociology", "Politics", "Philosophy", "French", "Spanish",
-  "German", "Art and Design", "Computer Science", "Drama and Theatre", "Music",
-  "Physical Education"
+  { name: "Mathematics", icon: Calculator },
+  { name: "Further Mathematics", icon: Calculator },
+  { name: "Biology", icon: Microscope },
+  { name: "Chemistry", icon: TestTube },
+  { name: "Physics", icon: Atom },
+  { name: "English Literature", icon: Book },
+  { name: "History", icon: History },
+  { name: "Geography", icon: Map },
+  { name: "Economics", icon: TrendingUp },
+  { name: "Business Studies", icon: Briefcase },
+  { name: "Psychology", icon: Brain },
+  { name: "Sociology", icon: Users },
+  { name: "Politics", icon: GraduationCap },
+  { name: "Philosophy", icon: Brain },
+  { name: "Languages", icon: Mic },
+  { name: "Art and Design", icon: Palette },
+  { name: "Computer Science", icon: Computer },
+  { name: "Drama and Theatre", icon: Theater },
+  { name: "Music", icon: Music },
+  { name: "Physical Education", icon: Activity }
 ];
