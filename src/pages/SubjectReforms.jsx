@@ -2,28 +2,55 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import {
+  Calculator, BookOpen, Book, FlaskConical, Palette, Briefcase, Computer, Music,
+  Tools, Theater, TrendingUp, Cog, Utensils, Flag, Map, History, Film, Basketball,
+  Brain, Church, Users, BarChart, Star, Mountain
+} from 'lucide-react';
+
+const gcseSubjects = [
+  { name: "Mathematics", icon: <Calculator className="w-5 h-5" /> },
+  { name: "English Language", icon: <BookOpen className="w-5 h-5" /> },
+  { name: "English Literature", icon: <Book className="w-5 h-5" /> },
+  { name: "Combined Science", icon: <FlaskConical className="w-5 h-5" /> },
+  { name: "Art and Design", icon: <Palette className="w-5 h-5" /> },
+  { name: "Business Studies", icon: <Briefcase className="w-5 h-5" /> },
+  { name: "Computer Science", icon: <Computer className="w-5 h-5" /> },
+  { name: "Dance", icon: <Music className="w-5 h-5" /> },
+  { name: "Design and Technology", icon: <Tools className="w-5 h-5" /> },
+  { name: "Drama", icon: <Theater className="w-5 h-5" /> },
+  { name: "Economics", icon: <TrendingUp className="w-5 h-5" /> },
+  { name: "Engineering", icon: <Cog className="w-5 h-5" /> },
+  { name: "Food Preparation and Nutrition", icon: <Utensils className="w-5 h-5" /> },
+  { name: "French", icon: <Flag className="w-5 h-5" /> },
+  { name: "Geography", icon: <Map className="w-5 h-5" /> },
+  { name: "German", icon: <Flag className="w-5 h-5" /> },
+  { name: "History", icon: <History className="w-5 h-5" /> },
+  { name: "Latin", icon: <Book className="w-5 h-5" /> },
+  { name: "Media Studies", icon: <Film className="w-5 h-5" /> },
+  { name: "Music", icon: <Music className="w-5 h-5" /> },
+  { name: "Physical Education", icon: <Basketball className="w-5 h-5" /> },
+  { name: "Psychology", icon: <Brain className="w-5 h-5" /> },
+  { name: "Religious Studies", icon: <Church className="w-5 h-5" /> },
+  { name: "Sociology", icon: <Users className="w-5 h-5" /> },
+  { name: "Spanish", icon: <Flag className="w-5 h-5" /> },
+  { name: "Statistics", icon: <BarChart className="w-5 h-5" /> },
+  { name: "Astronomy", icon: <Star className="w-5 h-5" /> },
+  { name: "Film Studies", icon: <Film className="w-5 h-5" /> },
+  { name: "Geology", icon: <Mountain className="w-5 h-5" /> }
+];
+
+const aLevelSubjects = [
+  "Mathematics", "Further Mathematics", "Biology", "Chemistry", "Physics",
+  "English Literature", "History", "Geography", "Economics", "Business Studies",
+  "Psychology", "Sociology", "Politics", "Philosophy", "French", "Spanish",
+  "German", "Art and Design", "Computer Science", "Drama and Theatre", "Music",
+  "Physical Education"
+];
 
 const SubjectReforms = () => {
   const [activeReform, setActiveReform] = useState(null);
   const [selectedSubject, setSelectedSubject] = useState(null);
-
-  const gcseSubjects = [
-    "Mathematics", "English Language", "English Literature", "Combined Science",
-    "Art and Design", "Business Studies", "Computer Science", "Dance",
-    "Design and Technology", "Drama", "Economics", "Engineering",
-    "Food Preparation and Nutrition", "French", "Geography", "German",
-    "History", "Latin", "Media Studies", "Music", "Physical Education",
-    "Psychology", "Religious Studies", "Sociology", "Spanish", "Statistics",
-    "Astronomy", "Film Studies", "Geology"
-  ];
-
-  const aLevelSubjects = [
-    "Mathematics", "Further Mathematics", "Biology", "Chemistry", "Physics",
-    "English Literature", "History", "Geography", "Economics", "Business Studies",
-    "Psychology", "Sociology", "Politics", "Philosophy", "French", "Spanish",
-    "German", "Art and Design", "Computer Science", "Drama and Theatre", "Music",
-    "Physical Education"
-  ];
 
   const handleViewReforms = (reformType) => {
     setActiveReform(reformType);
@@ -42,13 +69,18 @@ const SubjectReforms = () => {
             key={index}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow cursor-pointer"
-            onClick={() => handleSubjectClick(subject)}
+            className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow cursor-pointer flex items-center"
+            onClick={() => handleSubjectClick(subject.name)}
           >
-            <h3 className="text-lg font-semibold mb-2">{subject}</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Click to view reforms for {subject}.
-            </p>
+            <div className="mr-3 text-gray-600 dark:text-gray-400">
+              {subject.icon}
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-1">{subject.name}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Click to view reforms
+              </p>
+            </div>
           </motion.div>
         ))}
       </div>
