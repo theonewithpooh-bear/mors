@@ -4,6 +4,19 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
 
+const InvolvementOption = ({ icon, title, description }) => (
+  <motion.div 
+    initial={{ opacity: 0, x: -50 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.5 }}
+    className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white border-opacity-20"
+  >
+    <span className="text-4xl text-gray-400 mb-4 block">{icon}</span>
+    <h3 className="text-2xl font-semibold mb-2">{title}</h3>
+    <p className="text-lg text-gray-300">{description}</p>
+  </motion.div>
+);
+
 const GetInvolved = () => {
   const involvementOptions = [
     {
@@ -34,9 +47,9 @@ const GetInvolved = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-blue-900 text-white">
       <Header />
-      <div className="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
         <motion.h1 
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -62,24 +75,12 @@ const GetInvolved = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="mb-16 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white border-opacity-20"
+          className="mb-16"
         >
-          <h2 className="text-4xl font-bold mb-6 text-gray-300">Choose Your Superpower</h2>
+          <h2 className="text-4xl font-bold mb-6 text-center text-gray-300">Choose Your Superpower</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {involvementOptions.map((option, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
-                className="flex items-start space-x-4"
-              >
-                <span className="text-4xl text-gray-400">{option.icon}</span>
-                <div>
-                  <h3 className="text-2xl font-semibold mb-2">{option.title}</h3>
-                  <p className="text-lg text-gray-300">{option.description}</p>
-                </div>
-              </motion.div>
+              <InvolvementOption key={index} {...option} />
             ))}
           </div>
         </motion.section>
@@ -91,7 +92,7 @@ const GetInvolved = () => {
           className="text-center"
         >
           <Link to="/" className="inline-block">
-            <Button variant="outline" className="text-xl px-10 py-6 rounded-full bg-white text-black hover:bg-gray-200 transition-all duration-300 transform hover:scale-110 hover:rotate-3 shadow-lg">
+            <Button variant="secondary" className="text-xl px-10 py-6 rounded-full bg-white text-blue-500 hover:bg-gray-100 transition-all duration-300 transform hover:scale-110 hover:rotate-3 shadow-lg">
               Return to Home Base
             </Button>
           </Link>
