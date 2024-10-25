@@ -54,7 +54,7 @@ const GetInvolved = () => {
         >
           <h2 className="text-4xl font-bold mb-6 text-gray-300">embark on the quest</h2>
           <p className="text-xl leading-relaxed mb-6">
-            ready to be part of something extraordinary? whether you're a wisdom-wielding educator, a curious student, a supportive parent, or an industry guru, your unique powers can help us reshape the future of education!
+            ready to be part of something extraordinary? whether you're a wisdom-wielding educator, a curious student, a supportive parent, or an industry guru, your unique abilities can help us reshape the future of education!
           </p>
         </motion.section>
         
