@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Header from '../components/Header';
-import { ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 
 const points = [
   {
@@ -63,9 +63,9 @@ const LearnMore = () => {
                 />
               </div>
               <div className="w-full md:w-2/3">
-                <h2 className="text-3xl font-bold mb-4">Meet Our Founder</h2>
+                <h2 className="text-3xl font-bold mb-4">Hey, I'm Monty!</h2>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  Monty Middleton-Burn is the sole employee and founder of our organization. Currently taking his GCSEs and serving as Head Boy, Monty has dedicated his efforts to fostering meaningful dialogue and collaboration among stakeholders. His vision is to create impactful initiatives that drive positive change in our educational landscape.
+                  I started m.o.r.s. while taking my GCSEs (yep, you read that right!) and serving as Head Boy at my school. Right now it's just me and my trusty AI assistant running things - we're quite the duo! I'm super passionate about making real change in education, and I spend my time chatting with everyone who'll listen about how we can make learning more practical and meaningful. It's pretty exciting stuff!
                 </p>
               </div>
             </div>
