@@ -18,7 +18,7 @@ const Communications = () => {
           communications
         </motion.h1>
         
-        <div className="flex flex-col items-center mb-8 bg-white text-black rounded-lg p-8">
+        <div className="flex flex-col items-center mb-8">
           <img 
             src="https://www.education.ox.ac.uk/wp-content/uploads/2024/10/dfe-e1645782405638.png" 
             alt="Department of Education Logo"
