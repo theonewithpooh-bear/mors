@@ -22,25 +22,35 @@ const Communications = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="mb-16 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white border-opacity-20"
+          className="relative mb-16 bg-white/20 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white border-opacity-20"
         >
-          <h2 className="text-4xl font-bold mb-6 text-gray-300">open letters</h2>
-          <p className="text-xl leading-relaxed mb-8">
-            every week, mors sends an open letter to the department of education, highlighting the need for real skills in education and proposing practical solutions.
-          </p>
+          <div className="absolute inset-0 flex items-center justify-center opacity-10">
+            <img 
+              src="https://www.education.ox.ac.uk/wp-content/uploads/2022/06/Department-of-Education-Logo-2022.png" 
+              alt="Department of Education Logo"
+              className="w-96 h-auto object-contain"
+            />
+          </div>
           
-          <div className="flex flex-col items-center space-y-4">
-            <Button
-              variant="outline"
-              className="group relative px-8 py-6 text-lg rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20 transition-all duration-300 hover:scale-105"
-              disabled
-            >
-              view this week's open letter
-              <span className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 flex items-center gap-2 text-yellow-300 animate-bounce">
-                <Construction className="h-5 w-5" />
-                <span className="text-sm">coming soon!</span>
-              </span>
-            </Button>
+          <div className="relative z-10">
+            <h2 className="text-4xl font-bold mb-6 text-gray-100">open letters</h2>
+            <p className="text-xl leading-relaxed mb-8 text-gray-100">
+              every week, mors sends an open letter to the department of education, highlighting the need for real skills in education and proposing practical solutions.
+            </p>
+            
+            <div className="flex flex-col items-center space-y-4">
+              <Button
+                variant="outline"
+                className="group relative px-8 py-6 text-lg rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20 transition-all duration-300 hover:scale-105"
+                disabled
+              >
+                view this week's open letter
+                <span className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 flex items-center gap-2 text-yellow-300 animate-bounce">
+                  <Construction className="h-5 w-5" />
+                  <span className="text-sm">coming soon!</span>
+                </span>
+              </Button>
+            </div>
           </div>
         </motion.section>
       </div>
