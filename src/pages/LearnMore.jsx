@@ -65,7 +65,7 @@ const LearnMore = () => {
               <div className="w-full md:w-2/3">
                 <h2 className="text-3xl font-bold mb-4">Meet Our Founder</h2>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  Monty Middleton-Burn is the sole employee and founder of our organization. With a passion for educational reform and community engagement, Monty has dedicated his efforts to fostering meaningful dialogue and collaboration among stakeholders. His vision is to create impactful initiatives that drive positive change in our educational landscape.
+                  Monty Middleton-Burn is the sole employee and founder of our organization. Currently taking his GCSEs and serving as head boy, Monty has dedicated his efforts to fostering meaningful dialogue and collaboration among stakeholders. His vision is to create impactful initiatives that drive positive change in our educational landscape.
                 </p>
               </div>
             </div>
