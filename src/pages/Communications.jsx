@@ -66,11 +66,11 @@ const Communications = () => {
         <div className="flex flex-col items-center space-y-4 mt-8">
           <Button
             variant="outline"
-            className="group relative px-8 py-6 text-lg rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20 transition-all duration-300 hover:scale-105"
+            className="group relative px-8 py-6 text-lg rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20 transition-all duration-300 hover:scale-105 w-64 text-center"
             disabled
           >
             view this week's open letter
-            <span className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 flex items-center gap-2 text-yellow-300 animate-bounce">
+            <span className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 flex items-center justify-center gap-2 text-yellow-300 animate-bounce w-full">
               <Construction className="h-5 w-5" />
               <span className="text-sm">coming soon!</span>
             </span>
