@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Construction } from 'lucide-react';
 import Header from '../components/Header';
 
 const involvementOptions = [
@@ -57,20 +56,6 @@ const GetInvolved = () => {
           <p className="text-xl leading-relaxed mb-6">
             ready to be part of something extraordinary? whether you're a wisdom-wielding educator, a curious student, a supportive parent, or an industry guru, your unique abilities can help us reshape the future of education!
           </p>
-          
-          <div className="flex flex-col items-center mt-8 space-y-4">
-            <Button
-              variant="outline"
-              className="group relative px-8 py-6 text-lg rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20 transition-all duration-300 hover:scale-105"
-              disabled
-            >
-              weekly open letter to department of education
-              <span className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 flex items-center gap-2 text-yellow-300 animate-bounce">
-                <Construction className="h-5 w-5" />
-                <span className="text-sm">coming soon!</span>
-              </span>
-            </Button>
-          </div>
         </motion.section>
         
         <motion.section 
