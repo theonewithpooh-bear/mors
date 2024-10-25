@@ -48,9 +48,14 @@
 .typewriter {
   overflow: hidden;
   white-space: nowrap;
-  margin: 0 auto;
-  animation: typewriter 3s steps(40, end);
-  border-right: .15em solid transparent;
+  border-right: .15em solid white;
+  width: 0;
+  animation: typing 3.5s steps(40, end) forwards;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
 
 @layer components {

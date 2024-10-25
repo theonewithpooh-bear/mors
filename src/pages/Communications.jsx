@@ -16,10 +16,7 @@ const Communications = () => {
           transition={{ duration: 0.8 }}
           className="flex justify-center mb-12"
         >
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2, ease: "linear" }}
+          <h1
             style={{ 
               fontFamily: "Special Elite",
               fontSize: "4rem",
@@ -28,14 +25,14 @@ const Communications = () => {
             className="typewriter"
           >
             communications
-          </motion.h1>
+          </h1>
         </motion.div>
         
         <div className="flex flex-col items-center mb-8">
           <img 
             src="https://www.education.ox.ac.uk/wp-content/uploads/2024/10/dfe-e1645782405638.png" 
             alt="Department of Education Logo"
-            className="w-60 h-auto object-contain mb-2 invert"
+            className="w-120 h-auto object-contain mb-2 invert"
           />
           <h2 className="text-2xl font-semibold">Department for Education</h2>
         </div>
