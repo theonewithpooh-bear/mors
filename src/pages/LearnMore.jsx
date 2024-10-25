@@ -1,88 +1,122 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-
-const points = [
-  {
-    title: "Real Skills First",
-    description: "We prioritize practical, hands-on learning over traditional theoretical approaches"
-  },
-  {
-    title: "Project-Based Learning",
-    description: "Students learn through real-world projects that demonstrate actual capabilities"
-  },
-  {
-    title: "Industry Integration",
-    description: "Direct collaboration with industries to ensure relevant skill development"
-  }
-];
+import { 
+  BookOpen, 
+  GraduationCap, 
+  LineChart, 
+  Users,
+  ArrowRight
+} from 'lucide-react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 
 const LearnMore = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
+      
       <div className="container mx-auto px-4 py-24">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mx-auto"
+          className="max-w-4xl mx-auto"
         >
-          <h1 className="text-5xl font-bold mb-12 text-center">Our Vision</h1>
-          
-          <div className="space-y-12">
-            {points.map((point, index) => (
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
+              transforming education
+            </h1>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              our mission is to revolutionize the educational landscape by introducing practical, skills-based learning that prepares students for the real world.
+            </p>
+          </div>
+
+          {/* Statistics Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {[
+              { number: "70%", text: "of employers value skills over degrees" },
+              { number: "85%", text: "of jobs in 2030 don't exist yet" },
+              { number: "92%", text: "of students want practical education" }
+            ].map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-lg"
+                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center"
               >
-                <h2 className="text-2xl font-semibold mb-3">{point.title}</h2>
-                <p className="text-gray-400 text-lg">{point.description}</p>
+                <h3 className="text-4xl font-bold text-white mb-2">{stat.number}</h3>
+                <p className="text-gray-400">{stat.text}</p>
               </motion.div>
             ))}
           </div>
 
-          <motion.div
+          {/* Key Principles */}
+          <div className="space-y-8 mb-16">
+            <h2 className="text-3xl font-bold text-center mb-8">key principles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                {
+                  icon: <BookOpen className="h-8 w-8" />,
+                  title: "experiential learning",
+                  description: "hands-on experience through real-world projects"
+                },
+                {
+                  icon: <GraduationCap className="h-8 w-8" />,
+                  title: "skill certification",
+                  description: "recognized credentials for practical abilities"
+                },
+                {
+                  icon: <LineChart className="h-8 w-8" />,
+                  title: "industry alignment",
+                  description: "curriculum designed with industry partners"
+                },
+                {
+                  icon: <Users className="h-8 w-8" />,
+                  title: "collaborative growth",
+                  description: "peer learning and mentorship programs"
+                }
+              ].map((principle, index) => (
+                <Card key={index} className="bg-white/5 border-white/10">
+                  <CardHeader>
+                    <div className="mb-2 text-white">{principle.icon}</div>
+                    <CardTitle className="text-white">{principle.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-gray-400">
+                      {principle.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="mt-24 bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-lg"
+            transition={{ delay: 0.6 }}
+            className="text-center"
           >
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="w-full md:w-1/3">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5HudHdVS4plDNtHqo6jTh7iPg8uoPmPd5lQ&s"
-                  alt="Monty Middleton-Burn"
-                  className="rounded-lg w-full object-cover aspect-square"
-                />
-              </div>
-              <div className="w-full md:w-2/3">
-                <h2 className="text-3xl font-bold mb-4">meet our founder</h2>
-                <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  monty middleton-burn founded m.o.r.s. while taking his GCSEs and serving as head boy at his school. alongside his AI assistant, they form a unique partnership dedicated to educational reform. his passion for making real change in education drives him to engage with stakeholders at all levels, advocating for more practical and meaningful learning approaches.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-            className="mt-12 text-center"
-          >
+            <Separator className="my-8 bg-white/10" />
+            <h2 className="text-2xl font-bold mb-4">ready to make a difference?</h2>
             <Link to="/get-involved">
               <Button 
                 variant="outline" 
-                className="group text-xl px-8 py-6 rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20"
+                className="group text-lg px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20"
               >
-                Join The Movement
+                join our movement
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
