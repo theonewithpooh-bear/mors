@@ -6,25 +6,25 @@ import SubjectReforms from "./pages/SubjectReforms.jsx";
 
 export const navItems = [
   {
-    title: "Home",
+    title: "home",
     to: "/",
     icon: <HomeIcon className="h-4 w-4" />,
     page: <Index />,
   },
   {
-    title: "Learn More",
+    title: "learn more",
     to: "/learn-more",
     icon: <BookOpenIcon className="h-4 w-4" />,
     page: <LearnMore />,
   },
   {
-    title: "Get Involved",
+    title: "get involved",
     to: "/get-involved",
     icon: <UsersIcon className="h-4 w-4" />,
     page: <GetInvolved />,
   },
   {
-    title: "Subject Reforms",
+    title: "subject reforms",
     to: "/subject-reforms",
     icon: <GraduationCapIcon className="h-4 w-4" />,
     page: <SubjectReforms />,

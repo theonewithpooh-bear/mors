@@ -7,28 +7,28 @@ import Header from '../components/Header';
 const GetInvolved = () => {
   const involvementOptions = [
     {
-      title: "Become a Skill Superhero",
-      description: "Mentor students and share your real-world expertise.",
+      title: "become a skill superhero",
+      description: "mentor students and share your real-world expertise.",
       icon: "★"
     },
     {
-      title: "Offer Mind-Blowing Internships",
-      description: "Provide hands-on learning experiences in your organization.",
+      title: "offer mind-blowing internships",
+      description: "provide hands-on learning experiences in your organization.",
       icon: "⚡"
     },
     {
-      title: "Join Our Epic Workshops",
-      description: "Participate in or lead skill-building workshops.",
+      title: "join our epic workshops",
+      description: "participate in or lead skill-building workshops.",
       icon: "⚙"
     },
     {
-      title: "Spread the MORS Magic",
-      description: "Share our mission on social media and in your networks.",
+      title: "spread the mors magic",
+      description: "share our mission on social media and in your networks.",
       icon: "✦"
     },
     {
-      title: "Fuel the Revolution",
-      description: "Donate to support our programs and initiatives.",
+      title: "fuel the revolution",
+      description: "donate to support our programs and initiatives.",
       icon: "⬢"
     }
   ];
@@ -43,7 +43,7 @@ const GetInvolved = () => {
           transition={{ duration: 0.8 }}
           className="text-6xl font-extrabold mb-12 text-center"
         >
-          Join the MORS Adventure!
+          join the mors adventure!
         </motion.h1>
         
         <motion.section 
@@ -52,9 +52,9 @@ const GetInvolved = () => {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="mb-16 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white border-opacity-20"
         >
-          <h2 className="text-4xl font-bold mb-6 text-gray-300">Embark on the Quest</h2>
+          <h2 className="text-4xl font-bold mb-6 text-gray-300">embark on the quest</h2>
           <p className="text-xl leading-relaxed mb-6">
-            Ready to be part of something extraordinary? Whether you're a wisdom-wielding educator, a curious student, a supportive parent, or an industry guru, your unique powers can help us reshape the future of education!
+            ready to be part of something extraordinary? whether you're a wisdom-wielding educator, a curious student, a supportive parent, or an industry guru, your unique powers can help us reshape the future of education!
           </p>
         </motion.section>
         
@@ -64,7 +64,7 @@ const GetInvolved = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="mb-16 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white border-opacity-20"
         >
-          <h2 className="text-4xl font-bold mb-6 text-gray-300">Choose Your Superpower</h2>
+          <h2 className="text-4xl font-bold mb-6 text-gray-300">choose your superpower</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {involvementOptions.map((option, index) => (
               <motion.div 
@@ -92,7 +92,7 @@ const GetInvolved = () => {
         >
           <Link to="/" className="inline-block">
             <Button variant="outline" className="text-xl px-10 py-6 rounded-full bg-white text-black hover:bg-gray-200 transition-all duration-300 transform hover:scale-110 hover:rotate-3 shadow-lg">
-              Return to Home Base
+              return to home base
             </Button>
           </Link>
         </motion.div>
