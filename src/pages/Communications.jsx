@@ -9,14 +9,18 @@ const Communications = () => {
     <div className="min-h-screen bg-black text-white">
       <Header />
       <div className="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-        <motion.h1 
+        <motion.div 
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-6xl font-extrabold mb-12 text-center"
+          className="flex justify-center mb-12"
         >
-          communications
-        </motion.h1>
+          <img 
+            src="https://lh7-rt.googleusercontent.com/slidesz/AGV_vUfiGCG7PgVn1wL1lkE9YfnenZ7aOiOrn6qstBzuNwfRWfNwQXLg7dHHKkcpSvslfz1ZiFK2KjTjlF-FH6lkY-EwxwQF9SMvnePa-z4hsexph5S9TlKTRnJ1GeeYweOzVCKozy10qXWrJkF_hkTMq2MK9sUGUNk=s2048?key=eKQKisBXqXxItxT7ctiz3A"
+            alt="Communications Header"
+            className="w-96 h-auto object-contain invert"
+          />
+        </motion.div>
         
         <div className="flex flex-col items-center mb-8">
           <img 
