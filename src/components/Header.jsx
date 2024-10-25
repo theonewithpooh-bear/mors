@@ -6,10 +6,10 @@ const Header = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex h-16 items-center justify-center">
         <ul className="flex space-x-8">
-          <li><Link to="/" className="nav-link text-gray-200 hover:text-white">Home</Link></li>
-          <li><Link to="/learn-more" className="nav-link text-gray-200 hover:text-white">Learn More</Link></li>
-          <li><Link to="/get-involved" className="nav-link text-gray-200 hover:text-white">Get Involved</Link></li>
-          <li><Link to="/subject-reforms" className="nav-link text-gray-200 hover:text-white">Subject Reforms</Link></li>
+          <li><Link to="/" className="nav-link text-gray-200 hover:text-white">home</Link></li>
+          <li><Link to="/learn-more" className="nav-link text-gray-200 hover:text-white">learn more</Link></li>
+          <li><Link to="/get-involved" className="nav-link text-gray-200 hover:text-white">get involved</Link></li>
+          <li><Link to="/subject-reforms" className="nav-link text-gray-200 hover:text-white">subject reforms</Link></li>
         </ul>
       </div>
     </div>
