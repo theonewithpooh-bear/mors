@@ -16,16 +16,22 @@ const Communications = () => {
           transition={{ duration: 0.8 }}
           className="flex justify-center mb-12"
         >
-          <h1
-            style={{ 
-              fontFamily: "Special Elite",
-              fontSize: "4rem",
-              letterSpacing: "0.1em"
-            }}
-            className="typewriter"
-          >
-            communications
-          </h1>
+          <div className="relative flex justify-center w-full">
+            <h1
+              style={{ 
+                fontFamily: "Special Elite",
+                fontSize: "4rem",
+                letterSpacing: "0.1em",
+                width: "fit-content",
+                overflow: "hidden",
+                whiteSpace: "nowrap",
+                borderRight: ".15em solid white",
+                animation: "typing 2s steps(14, end), blink .75s step-end infinite"
+              }}
+            >
+              communications
+            </h1>
+          </div>
         </motion.div>
         
         <div className="flex flex-col items-center mb-8">

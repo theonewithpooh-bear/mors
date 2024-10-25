@@ -55,7 +55,12 @@
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 100% }
+  to { width: 14ch }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: white }
 }
 
 @layer components {
