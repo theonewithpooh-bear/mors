@@ -22,7 +22,7 @@ const Communications = () => {
           <img 
             src="https://www.education.ox.ac.uk/wp-content/uploads/2024/10/dfe-e1645782405638.png" 
             alt="Department of Education Logo"
-            className="w-48 h-auto object-contain mb-6"
+            className="w-48 h-auto object-contain mb-6 invert"
           />
           <h2 className="text-2xl font-semibold">Department for Education</h2>
         </div>
