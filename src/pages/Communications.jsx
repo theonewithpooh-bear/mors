@@ -126,7 +126,7 @@ const Communications = () => {
               <AccordionItem value="item-4">
                 <AccordionTrigger>what outcomes have been achieved through these letters?</AccordionTrigger>
                 <AccordionContent>
-                  our open letters have initiated formal discussions regarding skills-based education reform and have established a documented foundation for ongoing policy dialogue. they have successfully engaged various stakeholders in the educational sector and created a formal record of proposed reforms and their supporting rationales.
+                  as mors is currently in its launch phase, we have not yet sent our first open letter. however, we have established a comprehensive framework for our communication strategy and are preparing to initiate formal dialogue with key stakeholders in the educational sector. our first open letters will be published soon.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
