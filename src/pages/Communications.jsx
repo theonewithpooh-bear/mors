@@ -18,13 +18,13 @@ const Communications = () => {
           communications
         </motion.h1>
         
-        <div className="flex flex-col items-center mb-8">
+        <div className="flex flex-col items-center mb-8 bg-white text-black rounded-lg p-8">
           <img 
             src="https://www.education.ox.ac.uk/wp-content/uploads/2024/10/dfe-e1645782405638.png" 
             alt="Department of Education Logo"
             className="w-48 h-auto object-contain mb-6"
           />
-          <h2 className="text-2xl font-semibold text-gray-300">Department for Education</h2>
+          <h2 className="text-2xl font-semibold">Department for Education</h2>
         </div>
         
         <motion.section 
