@@ -41,7 +41,7 @@ const Communications = () => {
           className="text-center mb-8"
         >
           <p className="text-xl leading-relaxed mb-8 text-gray-100">
-            every week, mors sends an open letter to the department of education, highlighting the need for real skills in education and proposing practical solutions.
+            mors sends open letters at least once a week to various stakeholders in education - from the department of education to school boards and influential educators. open letters, being public and transparent communications, allow us to openly advocate for change while fostering public dialogue about educational reform. through these letters, we articulate our vision for skills-based education and invite others to join the conversation.
           </p>
         </motion.div>
         
