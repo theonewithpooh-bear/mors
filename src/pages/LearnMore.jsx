@@ -7,16 +7,16 @@ import { Link } from 'react-router-dom';
 
 const points = [
   {
-    title: "real skills first",
-    description: "we prioritize practical, hands-on learning over traditional theoretical approaches"
+    title: "Real Skills First",
+    description: "We prioritize practical, hands-on learning over traditional theoretical approaches"
   },
   {
-    title: "project-based learning",
-    description: "students learn through real-world projects that demonstrate actual capabilities"
+    title: "Project-Based Learning",
+    description: "Students learn through real-world projects that demonstrate actual capabilities"
   },
   {
-    title: "industry integration",
-    description: "direct collaboration with industries to ensure relevant skill development"
+    title: "Industry Integration",
+    description: "Direct collaboration with industries to ensure relevant skill development"
   }
 ];
 
@@ -31,7 +31,7 @@ const LearnMore = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto"
         >
-          <h1 className="text-5xl font-bold mb-12 text-center">our vision</h1>
+          <h1 className="text-5xl font-bold mb-12 text-center">Our Vision</h1>
           
           <div className="space-y-12">
             {points.map((point, index) => (
@@ -65,7 +65,7 @@ const LearnMore = () => {
               <div className="w-full md:w-2/3">
                 <h2 className="text-3xl font-bold mb-4">Meet Our Founder</h2>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  Monty Middleton-Burn is the sole employee and founder of our organization. Currently taking his GCSEs and serving as head boy, Monty has dedicated his efforts to fostering meaningful dialogue and collaboration among stakeholders. His vision is to create impactful initiatives that drive positive change in our educational landscape.
+                  Monty Middleton-Burn is the sole employee and founder of our organization. Currently taking his GCSEs and serving as Head Boy, Monty has dedicated his efforts to fostering meaningful dialogue and collaboration among stakeholders. His vision is to create impactful initiatives that drive positive change in our educational landscape.
                 </p>
               </div>
             </div>
@@ -82,7 +82,7 @@ const LearnMore = () => {
                 variant="outline" 
                 className="group text-xl px-8 py-6 rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20"
               >
-                join the movement
+                Join The Movement
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
