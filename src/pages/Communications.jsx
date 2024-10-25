@@ -26,7 +26,7 @@ const Communications = () => {
         >
           <div className="absolute inset-0 flex items-center justify-center opacity-10">
             <img 
-              src="https://www.education.ox.ac.uk/wp-content/uploads/2022/06/Department-of-Education-Logo-2022.png" 
+              src="https://www.education.ox.ac.uk/wp-content/uploads/2024/10/dfe-e1645782405638.png" 
               alt="Department of Education Logo"
               className="w-96 h-auto object-contain"
             />
