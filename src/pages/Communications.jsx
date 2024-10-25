@@ -89,44 +89,44 @@ const Communications = () => {
             
             <div className="prose prose-invert max-w-none mb-12">
               <p className="text-lg mb-6">
-                imagine you're at a town hall meeting, but instead of speaking to just the people in the room, your voice carries to everyone in the city. that's what an open letter does - it transforms a private conversation into a public dialogue that anyone can join.
+                open letters are formal public communications addressed to specific individuals or organizations but made accessible to the general public. they serve as a transparent medium for addressing important matters while ensuring the wider community remains informed and engaged in the discourse.
               </p>
               
               <p className="text-lg mb-6">
-                when mors writes an open letter, it's like placing our vision for education on a digital town square. just as martin luther king jr.'s "letter from birmingham jail" became a powerful catalyst for civil rights, our open letters aim to spark a movement for educational reform that everyone can see, share, and support.
+                these communications are instrumental in fostering public dialogue and creating meaningful change in educational policy. by making our correspondence public, we establish a documented record of our reform proposals and enable broader participation in the educational reform discussion.
               </p>
               
               <p className="text-lg">
-                these letters serve as both a mirror and a window - reflecting the current state of education while offering a clear view into what it could become. they're not just words on a page; they're invitations for everyone - from policymakers to parents - to join a transparent conversation about transforming education.
+                open letters function as both documentation of our reform initiatives and catalysts for systemic change. they provide a formal platform for presenting well-researched proposals while maintaining transparency in our communication with key decision-makers in the educational sector.
               </p>
             </div>
 
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
-                <AccordionTrigger>why does mors choose open letters?</AccordionTrigger>
+                <AccordionTrigger>what is the purpose of mors' open letters?</AccordionTrigger>
                 <AccordionContent>
-                  open letters align perfectly with our commitment to transparency and collective action. they allow us to share our ideas and concerns publicly, creating opportunities for broader community engagement and support. when we address decision-makers through open letters, we're not just speaking to them - we're speaking with the entire educational community.
+                  mors utilizes open letters as a formal communication channel to present educational reform proposals to key stakeholders. this approach ensures transparency in our advocacy while facilitating public discourse on educational reform. our letters serve to document our positions and recommendations while maintaining accountability in the reform process.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-2">
-                <AccordionTrigger>how do open letters create change?</AccordionTrigger>
+                <AccordionTrigger>how do open letters facilitate change?</AccordionTrigger>
                 <AccordionContent>
-                  open letters work like ripples in a pond - they start with a single point but spread outward, touching everyone in their path. by making our communication public, we create accountability, gather support, and demonstrate the collective desire for change. when others see these letters, they often realize they're not alone in wanting better education, and this shared awareness becomes a powerful force for reform.
+                  open letters function as formal instruments of change by establishing clear documentation of reform proposals and enabling public scrutiny of the dialogue between stakeholders. this transparency creates accountability and allows for broader participation in the reform process, leading to more comprehensive and well-considered educational policies.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-3">
-                <AccordionTrigger>who can engage with mors' open letters?</AccordionTrigger>
+                <AccordionTrigger>who are the intended audiences for these letters?</AccordionTrigger>
                 <AccordionContent>
-                  everyone! our open letters are designed to be accessible to all stakeholders in education - from students and teachers to parents and policymakers. you can read them, share them, discuss them, and use them as starting points for your own advocacy. they're tools for community building and collective action.
+                  our open letters are directed primarily at policy makers and educational authorities, while remaining accessible to all stakeholders in education. this includes teachers, administrators, parents, students, and the general public. the letters are structured to be comprehensible and relevant to this diverse audience while maintaining their formal nature.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-4">
-                <AccordionTrigger>what impact have our open letters had?</AccordionTrigger>
+                <AccordionTrigger>what outcomes have been achieved through these letters?</AccordionTrigger>
                 <AccordionContent>
-                  while we're just beginning our journey, our open letters have already started important conversations about skills-based education. they've helped connect like-minded educators, parents, and students who share our vision. each letter builds upon the last, creating a documented history of our movement and the changes we seek to achieve.
+                  our open letters have initiated formal discussions regarding skills-based education reform and have established a documented foundation for ongoing policy dialogue. they have successfully engaged various stakeholders in the educational sector and created a formal record of proposed reforms and their supporting rationales.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
