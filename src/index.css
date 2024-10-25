@@ -36,57 +36,36 @@
   }
 }
 
-.faint-glow {
-  color: #fff;
-  text-shadow: 
-    0 0 2.925px #fff,
-    0 0 5.85px #fff,
-    0 0 8.775px #ffa500,
-    0 0 11.7px #ffa500;
-}
+@layer components {
+  .page-container {
+    @apply min-h-screen bg-background text-foreground px-4 py-20 sm:px-6 lg:px-8;
+  }
 
-@keyframes violent-flicker {
-  0%, 100% { opacity: 1; }
-  10% { opacity: 0.2; }
-  20% { opacity: 0.8; }
-  30% { opacity: 0.1; }
-  40% { opacity: 0.9; }
-  50% { opacity: 0.3; }
-  60% { opacity: 1; }
-  70% { opacity: 0.2; }
-  80% { opacity: 0.7; }
-  90% { opacity: 0.4; }
-}
+  .section-container {
+    @apply max-w-7xl mx-auto;
+  }
 
-.flicker-animation {
-  animation: violent-flicker 0.3s ease-in-out infinite;
-}
+  .card {
+    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-lg p-6 transition-all duration-300 hover:border-border/80;
+  }
 
-/* Consistent styles for all pages */
-.page-container {
-  @apply min-h-screen bg-background text-foreground p-8;
-}
+  .heading-1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight;
+  }
 
-.page-title {
-  @apply text-4xl font-bold mb-6 text-primary;
-}
+  .heading-2 {
+    @apply text-3xl sm:text-4xl font-bold tracking-tight;
+  }
 
-.page-content {
-  @apply max-w-4xl mx-auto;
-}
+  .heading-3 {
+    @apply text-2xl sm:text-3xl font-semibold;
+  }
 
-.section-title {
-  @apply text-2xl font-semibold mb-4 text-secondary;
-}
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400;
+  }
 
-.paragraph {
-  @apply mb-4 text-lg leading-relaxed;
-}
-
-.link {
-  @apply text-primary hover:underline transition-colors duration-200;
-}
-
-.button {
-  @apply px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors duration-200;
+  .nav-link {
+    @apply text-sm font-medium transition-colors hover:text-primary;
+  }
 }
