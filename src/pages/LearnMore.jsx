@@ -5,22 +5,22 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 
-const LearnMore = () => {
-  const points = [
-    {
-      title: "real skills first",
-      description: "we prioritize practical, hands-on learning over traditional theoretical approaches"
-    },
-    {
-      title: "project-based learning",
-      description: "students learn through real-world projects that demonstrate actual capabilities"
-    },
-    {
-      title: "industry integration",
-      description: "direct collaboration with industries to ensure relevant skill development"
-    }
-  ];
+const points = [
+  {
+    title: "real skills first",
+    description: "we prioritize practical, hands-on learning over traditional theoretical approaches"
+  },
+  {
+    title: "project-based learning",
+    description: "students learn through real-world projects that demonstrate actual capabilities"
+  },
+  {
+    title: "industry integration",
+    description: "direct collaboration with industries to ensure relevant skill development"
+  }
+];
 
+const LearnMore = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
@@ -47,6 +47,29 @@ const LearnMore = () => {
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="mt-24 bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-lg"
+          >
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="w-full md:w-1/3">
+                <img
+                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+                  alt="Monty Middleton-Burn"
+                  className="rounded-lg w-full object-cover aspect-square"
+                />
+              </div>
+              <div className="w-full md:w-2/3">
+                <h2 className="text-3xl font-bold mb-4">Meet Our Founder</h2>
+                <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                  Monty Middleton-Burn is the sole employee and founder of our organization. With a passion for educational reform and community engagement, Monty has dedicated his efforts to fostering meaningful dialogue and collaboration among stakeholders. His vision is to create impactful initiatives that drive positive change in our educational landscape.
+                </p>
+              </div>
+            </div>
+          </motion.div>
 
           <motion.div 
             initial={{ opacity: 0 }}
