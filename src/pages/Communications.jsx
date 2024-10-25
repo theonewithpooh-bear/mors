@@ -18,20 +18,21 @@ const Communications = () => {
           communications
         </motion.h1>
         
+        <div className="flex flex-col items-center mb-8">
+          <img 
+            src="https://www.education.ox.ac.uk/wp-content/uploads/2024/10/dfe-e1645782405638.png" 
+            alt="Department of Education Logo"
+            className="w-48 h-auto object-contain mb-6"
+          />
+          <h2 className="text-2xl font-semibold text-gray-300">Department for Education</h2>
+        </div>
+        
         <motion.section 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
           className="relative mb-16 bg-white/20 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white border-opacity-20"
         >
-          <div className="absolute inset-0 flex items-center justify-center opacity-10">
-            <img 
-              src="https://www.education.ox.ac.uk/wp-content/uploads/2024/10/dfe-e1645782405638.png" 
-              alt="Department of Education Logo"
-              className="w-96 h-auto object-contain"
-            />
-          </div>
-          
           <div className="relative z-10">
             <h2 className="text-4xl font-bold mb-6 text-gray-100">open letters</h2>
             <p className="text-xl leading-relaxed mb-8 text-gray-100">
