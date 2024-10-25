@@ -57,7 +57,7 @@ const LearnMore = () => {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="w-full md:w-1/3">
                 <img
-                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5HudHdVS4plDNtHqo6jTh7iPg8uoPmPd5lQ&s"
                   alt="Monty Middleton-Burn"
                   className="rounded-lg w-full object-cover aspect-square"
                 />
