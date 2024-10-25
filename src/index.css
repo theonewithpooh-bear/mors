@@ -36,6 +36,23 @@
   }
 }
 
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typewriter 3s steps(40, end);
+  border-right: .15em solid transparent;
+}
+
 @layer components {
   .page-container {
     @apply min-h-screen bg-background text-foreground px-4 py-20 sm:px-6 lg:px-8;

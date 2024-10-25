@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Construction } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
+import "@fontsource/special-elite";
 
 const Communications = () => {
   return (
@@ -15,11 +16,19 @@ const Communications = () => {
           transition={{ duration: 0.8 }}
           className="flex justify-center mb-12"
         >
-          <img 
-            src="https://lh7-rt.googleusercontent.com/slidesz/AGV_vUfiGCG7PgVn1wL1lkE9YfnenZ7aOiOrn6qstBzuNwfRWfNwQXLg7dHHKkcpSvslfz1ZiFK2KjTjlF-FH6lkY-EwxwQF9SMvnePa-z4hsexph5S9TlKTRnJ1GeeYweOzVCKozy10qXWrJkF_hkTMq2MK9sUGUNk=s2048?key=eKQKisBXqXxItxT7ctiz3A"
-            alt="Communications Header"
-            className="w-96 h-auto object-contain invert"
-          />
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, ease: "linear" }}
+            style={{ 
+              fontFamily: "Special Elite",
+              fontSize: "4rem",
+              letterSpacing: "0.1em"
+            }}
+            className="typewriter"
+          >
+            communications
+          </motion.h1>
         </motion.div>
         
         <div className="flex flex-col items-center mb-8">
