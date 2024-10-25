@@ -40,9 +40,11 @@ const Communications = () => {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="text-center mb-8"
         >
-          <p className="text-xl leading-relaxed mb-8 text-gray-100">
-            mors sends open letters at least once a week to various stakeholders in education - from the department of education to school boards and influential educators. open letters, being public and transparent communications, allow us to openly advocate for change while fostering public dialogue about educational reform. through these letters, we articulate our vision for skills-based education and invite others to join the conversation.
-          </p>
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 shadow-lg">
+            <p className="text-xl leading-relaxed text-gray-100">
+              mors sends open letters at least once a week to various stakeholders in education - from the department of education to influential organisations, political parties and MPs. open letters, being public and transparent communications, allow us to openly advocate for change while fostering public dialogue about educational reform. through these letters, we articulate our vision for skills-based education and invite others to join the conversation.
+            </p>
+          </div>
         </motion.div>
         
         <div className="flex flex-col items-center mb-8">
