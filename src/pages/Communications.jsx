@@ -14,7 +14,7 @@ const Communications = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex justify-center mb-2"
+          className="flex justify-center mb-2 pt-16"
         >
           <div className="relative flex justify-center w-full">
             <h1
