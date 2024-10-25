@@ -63,9 +63,9 @@ const LearnMore = () => {
                 />
               </div>
               <div className="w-full md:w-2/3">
-                <h2 className="text-3xl font-bold mb-4">Hey, I'm Monty!</h2>
+                <h2 className="text-3xl font-bold mb-4">meet our founder</h2>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  I started m.o.r.s. while taking my GCSEs (yep, you read that right!) and serving as Head Boy at my school. Right now it's just me and my trusty AI assistant running things - we're quite the duo! I'm super passionate about making real change in education, and I spend my time chatting with everyone who'll listen about how we can make learning more practical and meaningful. It's pretty exciting stuff!
+                  monty middleton-burn founded m.o.r.s. while taking his GCSEs and serving as head boy at his school. alongside his AI assistant, they form a unique partnership dedicated to educational reform. his passion for making real change in education drives him to engage with stakeholders at all levels, advocating for more practical and meaningful learning approaches.
                 </p>
               </div>
             </div>
