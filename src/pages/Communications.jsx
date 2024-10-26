@@ -75,6 +75,30 @@ const Communications = () => {
               <p className="text-lg mt-6">
                 our engagement with political entities is always transparent and focused on our core mission: improving the education system through practical, evidence-based reforms.
               </p>
+
+              <div className="mt-8 grid grid-cols-3 gap-8 items-center">
+                <div className="flex justify-center">
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/en/f/f8/Reform_UK_Logo.png"
+                    alt="Reform UK Logo"
+                    className="h-16 object-contain filter brightness-75 hover:brightness-100 transition-all"
+                  />
+                </div>
+                <div className="flex justify-center">
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/sco/thumb/0/05/Logo_Labour_Party.svg/2560px-Logo_Labour_Party.svg.png"
+                    alt="UK Labour Logo"
+                    className="h-16 object-contain filter brightness-75 hover:brightness-100 transition-all"
+                  />
+                </div>
+                <div className="flex justify-center">
+                  <img 
+                    src="https://www.logo.wine/a/logo/Conservative_Party_(UK)/Conservative_Party_(UK)-Logo.wine.svg"
+                    alt="UK Conservatives Logo"
+                    className="h-16 object-contain filter brightness-75 hover:brightness-100 transition-all"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
