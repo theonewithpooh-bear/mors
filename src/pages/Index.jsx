@@ -20,7 +20,7 @@ const Index = () => {
           animate={{ scale: 1, y: 0 }}
           transition={{ 
             duration: 2.5,
-            ease: [0.16, 1, 0.3, 1], // custom bezier curve for a more cinematic feel
+            ease: [0.16, 1, 0.3, 1],
             delay: 0.5
           }}
           className="relative"
@@ -37,8 +37,17 @@ const Index = () => {
                 <div className="relative">
                   <motion.div
                     initial={{ opacity: 1, scale: 2 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 2.5, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
+                    animate={{ 
+                      opacity: 1, 
+                      scale: [2, 1, 0.5],
+                      fontSize: ["4rem", "4rem", "1rem"]
+                    }}
+                    transition={{ 
+                      duration: 3.5,
+                      times: [0, 0.7, 1],
+                      ease: [0.16, 1, 0.3, 1],
+                      delay: 0.5 
+                    }}
                     className="mb-6"
                   >
                     <span className="text-4xl tracking-[0.3em] text-white uppercase font-light">
