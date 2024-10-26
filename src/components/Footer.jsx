@@ -52,13 +52,8 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-semibold text-white mb-4">reforms</h3>
+            <h3 className="font-semibold text-white mb-4">communications</h3>
             <ul className="space-y-3">
-              <li>
-                <Link to="/subject-reforms" className="text-sm text-gray-400 hover:text-white transition-colors">
-                  subject reforms
-                </Link>
-              </li>
               <li>
                 <Link to="/communications" className="text-sm text-gray-400 hover:text-white transition-colors">
                   communications
