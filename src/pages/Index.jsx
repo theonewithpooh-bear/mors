@@ -51,7 +51,7 @@ const Index = () => {
                 variant="outline" 
                 className="group text-lg px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20"
               >
-                join our movement
+                join waitlist
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
