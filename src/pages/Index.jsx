@@ -14,9 +14,9 @@ const Index = () => {
       <div className="container mx-auto px-4 py-32 relative">
         {/* Decorative elements */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-blue-900/10 to-purple-900/10 blur-3xl" />
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#FFD700]/5 rounded-full blur-3xl animate-glow-dance" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#FFD700]/5 rounded-full blur-3xl animate-glow-dance delay-1000" />
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/5 via-blue-900/5 to-purple-900/5 blur-3xl" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#FFD700]/3 rounded-full blur-3xl animate-glow-dance" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#FFD700]/3 rounded-full blur-3xl animate-glow-dance delay-500" />
         </div>
 
         <motion.div 
@@ -35,12 +35,12 @@ const Index = () => {
             >
               <div className="relative">
                 <div className="absolute inset-0 -z-10">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#FFD700]/10 via-[#FFF]/5 to-[#FFD700]/10 blur-3xl animate-glow-dance" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#FFD700]/5 via-[#FFF]/3 to-[#FFD700]/5 blur-3xl animate-glow-dance" />
                 </div>
-                <h1 className="text-7xl sm:text-8xl font-bold mb-16 tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700]/90 via-white to-[#FFD700]/90 animate-gradient-x">
+                <h1 className="text-7xl sm:text-8xl font-bold mb-16 tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700]/80 via-white to-[#FFD700]/80 animate-gradient-x">
                   movement of real skills
                 </h1>
-                <div className="w-48 h-0.5 mx-auto bg-gradient-to-r from-transparent via-[#FFD700]/30 to-transparent mb-8 animate-pulse" />
+                <div className="w-48 h-0.5 mx-auto bg-gradient-to-r from-transparent via-[#FFD700]/20 to-transparent mb-8 animate-pulse" />
                 <p className="text-2xl sm:text-3xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
                   our mission is to revolutionize the educational landscape by introducing practical, skills-based learning that prepares students for the real world.
                 </p>

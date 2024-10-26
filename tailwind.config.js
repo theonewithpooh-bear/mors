@@ -68,23 +68,23 @@ module.exports = {
         "glow-dance": {
           "0%": { 
             transform: "scale(1)",
-            opacity: 0.3
+            opacity: 0.2
           },
           "25%": {
-            transform: "translateY(-10px) scale(1.2)",
-            opacity: 0.7
+            transform: "translateY(-5px) scale(1.1)",
+            opacity: 0.3
           },
           "50%": { 
-            transform: "scale(0.9)",
-            opacity: 0.4
+            transform: "scale(0.95)",
+            opacity: 0.2
           },
           "75%": {
-            transform: "translateY(-10px) scale(1.2)",
-            opacity: 0.7
+            transform: "translateY(-5px) scale(1.1)",
+            opacity: 0.3
           },
           "100%": { 
             transform: "scale(1)",
-            opacity: 0.3
+            opacity: 0.2
           }
         },
         "gradient-x": {
@@ -101,8 +101,8 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "glow-dance": "glow-dance 6s ease-in-out infinite",
-        "gradient-x": "gradient-x 15s ease infinite",
+        "glow-dance": "glow-dance 3s ease-in-out infinite",
+        "gradient-x": "gradient-x 8s ease infinite",
       },
     },
   },
