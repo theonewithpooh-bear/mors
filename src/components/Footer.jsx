@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="relative overflow-hidden bg-gradient-to-b from-black to-gray-900">
       {/* Decorative elements */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[300px] h-[300px] rounded-full bg-[radial-gradient(circle,#3b82f6,transparent)] animate-glow-dance opacity-50" />
+        <div className="w-[300px] h-[300px] bg-[radial-gradient(circle_at_center,#3b82f640_0%,transparent_70%)] animate-glow-dance" />
       </div>
       
       <div className="relative container mx-auto px-6 pt-32 pb-16">
