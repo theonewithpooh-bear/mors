@@ -52,6 +52,33 @@ const Communications = () => {
           </div>
         </div>
 
+        <div className="max-w-3xl mx-auto mb-16">
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 shadow-lg">
+            <h2 className="text-3xl font-bold mb-8 text-center">our non-partisan approach</h2>
+            
+            <div className="prose prose-invert max-w-none mb-12">
+              <p className="text-lg mb-6">
+                mors maintains a strictly non-partisan stance, meaning we work independently of any political party affiliations or ideological biases. our focus is solely on evidence-based educational reform that benefits all students, regardless of political leanings.
+              </p>
+              
+              <p className="text-lg mb-6">
+                while we remain politically neutral, we actively engage with political organizations across the spectrum to raise awareness and advocate for educational reform. this includes communicating with:
+              </p>
+
+              <ul className="list-disc pl-6 space-y-2 text-gray-300">
+                <li>political parties and their education spokespersons</li>
+                <li>parliamentary committees on education</li>
+                <li>local authorities and councils</li>
+                <li>education-focused think tanks and policy groups</li>
+              </ul>
+              
+              <p className="text-lg mt-6">
+                our engagement with political entities is always transparent and focused on our core mission: improving the education system through practical, evidence-based reforms.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div id="open-letters" className="max-w-3xl mx-auto mb-16">
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 shadow-lg">
             <h2 className="text-3xl font-bold mb-8 text-center">understanding open letters</h2>
