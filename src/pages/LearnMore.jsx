@@ -121,6 +121,15 @@ const LearnMore = () => {
           </div>
         </div>
 
+        {/* Opinion Piece */}
+        <div className="max-w-3xl mx-auto mb-16">
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 shadow-lg">
+            <p className="text-xl leading-relaxed text-gray-300 italic">
+              GCSEs. What can I say about them? Well...
+            </p>
+          </div>
+        </div>
+
         {/* Key Principles */}
         <div className="space-y-8 mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">key principles</h2>
