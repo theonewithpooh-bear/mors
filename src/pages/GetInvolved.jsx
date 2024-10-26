@@ -28,7 +28,7 @@ const GetInvolved = () => {
               join our waitlist to be among the first to know when we launch and help shape the future of education.
             </p>
             <a 
-              href="https://forms.gle/your-google-form-url" 
+              href="https://forms.gle/uV182TrQxVq8GwTc6" 
               target="_blank" 
               rel="noopener noreferrer"
             >
