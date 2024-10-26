@@ -4,6 +4,7 @@ import LearnMore from "./pages/LearnMore.jsx";
 import GetInvolved from "./pages/GetInvolved.jsx";
 import SubjectReforms from "./pages/SubjectReforms.jsx";
 import Communications from "./pages/Communications.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 
 export const navItems = [
   {
@@ -36,6 +37,13 @@ export const navItems = [
     to: "/subject-reforms",
     icon: null,
     page: <SubjectReforms />,
+    hidden: true,
+  },
+  {
+    title: "privacy policy",
+    to: "/privacy-policy",
+    icon: null,
+    page: <PrivacyPolicy />,
     hidden: true,
   },
 ];

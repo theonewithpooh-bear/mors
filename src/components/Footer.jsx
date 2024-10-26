@@ -64,12 +64,12 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-semibold text-white mb-4">about</h3>
+            <h3 className="font-semibold text-white mb-4">legal</h3>
             <ul className="space-y-3">
               <li>
-                <span className="text-sm text-gray-400">
-                  transforming education through practical skills
-                </span>
+                <Link to="/privacy-policy" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  privacy policy
+                </Link>
               </li>
             </ul>
           </div>
