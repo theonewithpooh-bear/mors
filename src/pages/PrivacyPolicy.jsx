@@ -19,52 +19,40 @@ const PrivacyPolicy = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-4 text-white">introduction</h2>
               <p>
-                this privacy policy explains how movement of real skills (mors) collects, uses, and protects your personal information when you use our website and services.
+                this privacy policy explains how your data is handled when you use the movement of real skills (mors) website. our website is built and hosted by lovable/gpt engineer, who handles all data collection and processing.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-white">information we collect</h2>
-              <p>we collect information that you voluntarily provide to us when you:</p>
-              <ul className="list-disc list-inside mt-2 ml-4">
-                <li>register your interest through our online form</li>
-                <li>communicate with us via email or other channels</li>
-                <li>interact with our website</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold mb-4 text-white">how we use your information</h2>
-              <p>we use the collected information to:</p>
-              <ul className="list-disc list-inside mt-2 ml-4">
-                <li>communicate updates about our initiative</li>
-                <li>improve our services and website</li>
-                <li>send relevant information about educational reforms</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold mb-4 text-white">data protection</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-white">data collection</h2>
               <p>
-                we implement appropriate security measures to protect your personal information. your data is stored securely and is only accessible to authorized personnel.
+                mors does not directly collect or store any personal information. all data collection and processing is handled by lovable/gpt engineer through their platform. when you interact with our website or submit forms:
+              </p>
+              <ul className="list-disc list-inside mt-2 ml-4">
+                <li>form submissions are processed through google forms</li>
+                <li>website analytics and hosting is managed by lovable/gpt engineer</li>
+                <li>no personal data is stored directly by mors</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold mb-4 text-white">third-party services</h2>
+              <p>
+                we use the following third-party services:
+              </p>
+              <ul className="list-disc list-inside mt-2 ml-4">
+                <li>lovable/gpt engineer for website hosting and analytics</li>
+                <li>google forms for collecting user submissions</li>
+              </ul>
+              <p className="mt-2">
+                please refer to these services' respective privacy policies for information about how they handle your data.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-white">your rights</h2>
-              <p>you have the right to:</p>
-              <ul className="list-disc list-inside mt-2 ml-4">
-                <li>access your personal information</li>
-                <li>request correction of your personal information</li>
-                <li>request deletion of your personal information</li>
-                <li>opt-out of communications</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold mb-4 text-white">contact us</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-white">contact</h2>
               <p>
-                if you have any questions about this privacy policy, please contact us through the provided channels on our website.
+                if you have any questions about how your data is handled, please contact lovable/gpt engineer directly through their platform.
               </p>
             </section>
           </div>
