@@ -5,13 +5,6 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 
 const FeatureBox = ({ icon, title, description }) => (
   <motion.div
@@ -31,12 +24,12 @@ const FeatureBox = ({ icon, title, description }) => (
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+    <div className="min-h-screen bg-black text-white">
       <Header />
       
       <div className="relative">
         <div className="absolute inset-0">
-          <div className="absolute top-[100px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] animate-glow-dance">
+          <div className="absolute top-[300px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] animate-glow-dance">
             <div className="absolute inset-0 bg-[radial-gradient(circle,#3b82f6_0%,transparent_70%)] opacity-50" />
           </div>
         </div>
