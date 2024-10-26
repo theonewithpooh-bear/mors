@@ -4,6 +4,12 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { navItems } from "./nav-items";
 import ScrollToTop from "./components/ScrollToTop";
+import Index from "./pages/Index";
+import LearnMore from "./pages/LearnMore";
+import GetInvolved from "./pages/GetInvolved";
+import Communications from "./pages/Communications";
+import SubjectReforms from "./pages/SubjectReforms";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const queryClient = new QueryClient();
 
@@ -14,9 +20,12 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          {navItems.map(({ to, page }) => (
-            <Route key={to} path={to} element={page} />
-          ))}
+          <Route path="/" element={<Index />} />
+          <Route path="/learn-more" element={<LearnMore />} />
+          <Route path="/get-involved" element={<GetInvolved />} />
+          <Route path="/communications" element={<Communications />} />
+          <Route path="/subject-reforms" element={<SubjectReforms />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
