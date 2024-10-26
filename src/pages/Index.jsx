@@ -25,7 +25,7 @@ const Index = () => {
           }}
           className="relative"
         >
-          <div className="opacity-0 animate-[fade-in_0.5s_ease-in-out_8s_forwards]">
+          <div className="opacity-0 animate-[fade-in_0.5s_ease-in-out_6.5s_forwards]">
             <Header />
           </div>
           
@@ -94,7 +94,7 @@ const Index = () => {
               </motion.div>
             </div>
           </div>
-          <div className="opacity-0 animate-[fade-in_0.5s_ease-in-out_8s_forwards]">
+          <div className="opacity-0 animate-[fade-in_0.5s_ease-in-out_6.5s_forwards]">
             <Footer />
           </div>
         </motion.div>
