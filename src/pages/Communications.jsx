@@ -9,53 +9,48 @@ const Communications = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
-      <div className="max-w-5xl mx-auto px-4 py-2 sm:px-6 lg:px-8">
-        <div className="flex justify-center mb-12 pt-24">
-          <h1 className="text-4xl font-bold">
-            Communications
+      <div className="container mx-auto px-4 py-2 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center mb-16 pt-24">
+          <h1 className="text-5xl font-bold mb-8">
+            communications
           </h1>
-        </div>
-
-        <div className="text-center mb-12">
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 shadow-lg">
+          
+          <div className="max-w-3xl w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 shadow-lg">
             <p className="text-xl leading-relaxed text-gray-100">
               mors plans to send open letters at least once a week to various stakeholders in education - from the department of education to influential organisations, political parties and MPs. these open letters, being public and transparent communications, will allow us to openly advocate for change while fostering public dialogue about educational reform.
             </p>
-            <a 
-              href="#open-letters" 
-              className="inline-block mt-6 text-blue-400 hover:text-blue-300 underline transition-colors"
-            >
-              learn more about open letters
-            </a>
           </div>
         </div>
         
-        <div className="flex flex-col items-center mb-12">
-          <img 
-            src="https://www.education.ox.ac.uk/wp-content/uploads/2024/10/dfe-e1645782405638.png" 
-            alt="Department of Education Logo"
-            className="w-120 h-auto object-contain mb-4 invert"
-          />
-          <h2 className="text-2xl font-semibold">Department for Education</h2>
-        </div>
-        
-        <div className="flex flex-col items-center space-y-4 mb-16">
-          <Button
-            variant="outline"
-            className="px-8 py-6 text-lg rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20 transition-all duration-300"
-            disabled
-          >
-            view this week's open letter
-          </Button>
-          <div className="flex items-center justify-center gap-2 text-yellow-300">
-            <Construction className="h-5 w-5" />
-            <span className="text-sm">coming soon!</span>
+        <div className="flex flex-col items-center space-y-6 mb-16">
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 w-full max-w-2xl">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div className="flex items-center space-x-4">
+                <img 
+                  src="https://www.education.ox.ac.uk/wp-content/uploads/2024/10/dfe-e1645782405638.png" 
+                  alt="Department of Education Logo"
+                  className="w-16 h-16 object-contain invert"
+                />
+                <h2 className="text-2xl font-semibold">Department for Education</h2>
+              </div>
+              <Button
+                variant="outline"
+                className="px-6 py-2 text-base rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20"
+                disabled
+              >
+                view this week's letter
+              </Button>
+            </div>
+            <div className="flex items-center justify-center gap-2 text-yellow-300 mt-4">
+              <Construction className="h-5 w-5" />
+              <span className="text-sm">coming soon!</span>
+            </div>
           </div>
         </div>
 
-        <div id="open-letters" className="mb-16">
+        <div id="open-letters" className="max-w-3xl mx-auto mb-16">
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 shadow-lg">
-            <h2 className="text-3xl font-bold mb-6 text-center">Understanding Open Letters</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">understanding open letters</h2>
             
             <div className="prose prose-invert max-w-none mb-12">
               <p className="text-lg mb-6">
