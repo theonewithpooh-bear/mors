@@ -127,6 +127,9 @@ const LearnMore = () => {
             <p className="text-xl leading-relaxed text-gray-300 italic">
               GCSEs. What can I say about them? Well...
             </p>
+            <p className="text-sm tracking-wide uppercase text-gray-400 mt-6">
+              Written by our founder · Monty Middleton-Burn
+            </p>
           </div>
         </div>
 
