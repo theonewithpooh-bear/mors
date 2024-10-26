@@ -34,13 +34,6 @@ const Communications = () => {
                 <h2 className="text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">Department for Education</h2>
               </div>
               
-              <div className="flex items-center justify-center gap-3">
-                <div className="flex items-center gap-3 px-6 py-2 rounded-full bg-yellow-300/10 text-yellow-300/90">
-                  <Construction className="h-6 w-6" />
-                  <span className="text-base font-medium">coming soon!</span>
-                </div>
-              </div>
-
               <Button
                 variant="outline"
                 className="px-8 py-6 text-lg rounded-full bg-[#222]/50 hover:bg-[#333]/50 text-white/90 border-white/10 hover:border-white/20 transition-all duration-300"
@@ -48,6 +41,13 @@ const Communications = () => {
               >
                 view this week's letter
               </Button>
+
+              <div className="flex items-center justify-center gap-3">
+                <div className="flex items-center gap-3 px-6 py-2 rounded-full bg-yellow-300/10 text-yellow-300/90">
+                  <Construction className="h-6 w-6" />
+                  <span className="text-base font-medium">coming soon!</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
