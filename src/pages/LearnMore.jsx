@@ -54,9 +54,9 @@ const LearnMore = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
-                  className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors"
+                  className="bg-white/5 rounded-lg p-8 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors flex flex-col items-center justify-center text-center"
                 >
-                  <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-4 animate-pulse">58%</h3>
+                  <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-2 leading-none">58%</h3>
                   <p className="text-gray-300">
                     <span className="font-bold">58,000 UK teachers</span> warn: our education system is failing to prepare students for their future
                   </p>
@@ -66,9 +66,9 @@ const LearnMore = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors"
+                  className="bg-white/5 rounded-lg p-8 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors flex flex-col items-center justify-center text-center"
                 >
-                  <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-4 animate-pulse">49%</h3>
+                  <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-2 leading-none">49%</h3>
                   <p className="text-gray-300">
                     <span className="font-bold">49,000 teachers</span> declare GCSEs obsolete and unfit for purpose
                   </p>
@@ -78,9 +78,9 @@ const LearnMore = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 }}
-                  className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors"
+                  className="bg-white/5 rounded-lg p-8 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors flex flex-col items-center justify-center text-center"
                 >
-                  <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-4 animate-pulse">80%</h3>
+                  <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-2 leading-none">80%</h3>
                   <p className="text-gray-300">
                     <span className="font-bold">80,000 educators</span> demand urgent digital skills & AI curriculum reform
                   </p>
@@ -90,7 +90,7 @@ const LearnMore = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.8 }}
-                  className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors"
+                  className="bg-white/5 rounded-lg p-8 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors flex flex-col items-center justify-center text-center"
                 >
                   <div className="flex items-center justify-center mb-4">
                     <LineChart className="w-12 h-12 text-red-400" />
