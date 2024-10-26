@@ -1,16 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, GraduationCap, LineChart, Users } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 const Index = () => {
-  const words = ["movement", "of", "real", "skills"];
-
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
@@ -39,67 +36,6 @@ const Index = () => {
                 our mission is to revolutionize the educational landscape by introducing practical, skills-based learning that prepares students for the real world.
               </p>
             </motion.div>
-          </div>
-
-          {/* Statistics Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {[
-              { number: "70%", text: "of employers value skills over degrees" },
-              { number: "85%", text: "of jobs in 2030 don't exist yet" },
-              { number: "92%", text: "of students want practical education" }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center"
-              >
-                <h3 className="text-4xl font-bold text-white mb-2">{stat.number}</h3>
-                <p className="text-gray-400">{stat.text}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Key Principles */}
-          <div className="space-y-8 mb-16">
-            <h2 className="text-3xl font-bold text-center mb-8">key principles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                {
-                  icon: <BookOpen className="h-8 w-8" />,
-                  title: "experiential learning",
-                  description: "hands-on experience through real-world projects"
-                },
-                {
-                  icon: <GraduationCap className="h-8 w-8" />,
-                  title: "skill certification",
-                  description: "recognized credentials for practical abilities"
-                },
-                {
-                  icon: <LineChart className="h-8 w-8" />,
-                  title: "industry alignment",
-                  description: "curriculum designed with industry partners"
-                },
-                {
-                  icon: <Users className="h-8 w-8" />,
-                  title: "collaborative growth",
-                  description: "peer learning and mentorship programs"
-                }
-              ].map((principle, index) => (
-                <Card key={index} className="bg-white/5 border-white/10">
-                  <CardHeader>
-                    <div className="mb-2 text-white">{principle.icon}</div>
-                    <CardTitle className="text-white">{principle.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-gray-400">
-                      {principle.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
           </div>
 
           {/* Call to Action */}
