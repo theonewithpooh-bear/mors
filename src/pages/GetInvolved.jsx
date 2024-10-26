@@ -3,32 +3,33 @@ import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
+import { Star, Cloud, Cog, Sparkles, Hexagon } from 'lucide-react';
 
 const involvementOptions = [
   {
-    title: "become a skill superhero",
-    description: "mentor students and share your real-world expertise.",
-    icon: "★"
+    title: "mentor the next generation",
+    description: "share your expertise and guide students through real-world challenges.",
+    icon: Star
   },
   {
-    title: "offer mind-blowing internships",
-    description: "provide hands-on learning experiences in your organization.",
-    icon: "☁️"
+    title: "create learning opportunities",
+    description: "open your workplace doors to innovative internship programs.",
+    icon: Cloud
   },
   {
-    title: "join our epic workshops",
-    description: "participate in or lead skill-building workshops.",
-    icon: "⚙"
+    title: "lead skill workshops",
+    description: "bring your industry knowledge to interactive learning sessions.",
+    icon: Cog
   },
   {
-    title: "spread the mors magic",
-    description: "share our mission on social media and in your networks.",
-    icon: "✦"
+    title: "amplify our message",
+    description: "help us reach more people who believe in practical education.",
+    icon: Sparkles
   },
   {
-    title: "fuel the revolution",
-    description: "donate to support our programs and initiatives.",
-    icon: "⬢"
+    title: "support our mission",
+    description: "contribute to building the future of skills-based education.",
+    icon: Hexagon
   }
 ];
 
@@ -52,9 +53,9 @@ const GetInvolved = () => {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="mb-16 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white border-opacity-20"
         >
-          <h2 className="text-4xl font-bold mb-6 text-gray-300">embark on the quest</h2>
+          <h2 className="text-4xl font-bold mb-6 text-gray-300">shape the future of education</h2>
           <p className="text-xl leading-relaxed mb-6">
-            ready to be part of something extraordinary? whether you're a wisdom-wielding educator, a curious student, a supportive parent, or an industry guru, your unique abilities can help us reshape the future of education!
+            we're looking for passionate individuals who want to revolutionize education. whether you're an educator, professional, or supporter, your unique perspective can help transform how we learn.
           </p>
         </motion.section>
         
@@ -64,7 +65,7 @@ const GetInvolved = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="mb-16 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white border-opacity-20"
         >
-          <h2 className="text-4xl font-bold mb-6 text-gray-300">choose your superpower</h2>
+          <h2 className="text-4xl font-bold mb-6 text-gray-300">ways to contribute</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {involvementOptions.map((option, index) => (
               <motion.div 
@@ -74,7 +75,7 @@ const GetInvolved = () => {
                 transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
                 className="flex items-start space-x-4"
               >
-                <span className="text-4xl text-gray-400">{option.icon}</span>
+                <option.icon className="w-8 h-8 text-gray-400" />
                 <div>
                   <h3 className="text-2xl font-semibold mb-2">{option.title}</h3>
                   <p className="text-lg text-gray-300">{option.description}</p>
