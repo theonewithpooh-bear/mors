@@ -7,27 +7,27 @@ const Footer = () => {
   
   return (
     <footer className="bg-gray-900/50 backdrop-blur-sm border-t border-white/10">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          <div>
-            <h3 className="text-white font-bold mb-4">about mors</h3>
-            <p className="text-gray-400 text-sm">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <div className="space-y-4">
+            <h3 className="text-white font-bold text-lg">about mors</h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
               transforming education through practical skills and real-world learning experiences.
             </p>
           </div>
           
-          <div>
-            <h3 className="text-white font-bold mb-4">quick links</h3>
-            <ul className="space-y-2">
-              <li><Link to="/learn-more" className="text-gray-400 hover:text-white text-sm">learn more</Link></li>
-              <li><Link to="/get-involved" className="text-gray-400 hover:text-white text-sm">get involved</Link></li>
-              <li><Link to="/subject-reforms" className="text-gray-400 hover:text-white text-sm">subject reforms</Link></li>
-              <li><Link to="/communications" className="text-gray-400 hover:text-white text-sm">communications</Link></li>
+          <div className="space-y-4">
+            <h3 className="text-white font-bold text-lg">quick links</h3>
+            <ul className="space-y-3">
+              <li><Link to="/learn-more" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">learn more</Link></li>
+              <li><Link to="/get-involved" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">get involved</Link></li>
+              <li><Link to="/subject-reforms" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">subject reforms</Link></li>
+              <li><Link to="/communications" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">communications</Link></li>
             </ul>
           </div>
           
-          <div>
-            <h3 className="text-white font-bold mb-4">contact</h3>
+          <div className="space-y-4">
+            <h3 className="text-white font-bold text-lg">contact</h3>
             <p className="text-gray-400 text-sm italic">coming soon</p>
           </div>
         </div>
