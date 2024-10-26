@@ -31,16 +31,19 @@ const FeatureBox = ({ icon, title, description }) => (
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white overflow-hidden">
       <Header />
       
-      <motion.section 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
-        className="relative h-screen flex items-center justify-center overflow-hidden bg-black text-white"
-      >
-        <div className="container mx-auto px-4 relative z-10 text-center">
+      <div className="relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3b82f6,transparent)] pointer-events-none" />
+        
+        <motion.section 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+          className="relative h-screen flex items-center justify-center overflow-visible"
+        >
+          <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -63,20 +66,20 @@ const Index = () => {
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
-        </div>
-      </motion.section>
+          </div>
+        </motion.section>
 
-      <section className="py-24 bg-black">
-        <div className="container mx-auto px-4">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-6xl font-bold mb-20 text-center"
-          >
-            our vision
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <section className="relative py-24">
+          <div className="container mx-auto px-4">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-6xl font-bold mb-20 text-center"
+            >
+              our vision
+            </motion.h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <FeatureBox
               icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>}
               title="practical learning"
@@ -92,9 +95,10 @@ const Index = () => {
               title="foundation skills certificates"
               description="introducing fscs as a comprehensive way to assess and showcase student capabilities in practical, real-world scenarios."
             />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <Footer />
     </div>
