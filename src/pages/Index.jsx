@@ -41,9 +41,10 @@ const Index = () => {
                 <div className="mb-6">
                   <span className="text-sm tracking-[0.2em] text-white/30 uppercase font-light">introducing</span>
                 </div>
-                <h1 className="text-7xl sm:text-8xl font-bold mb-8 tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-r from-white/70 via-white to-white/70 animate-gradient-x">
+                <h1 className="text-7xl sm:text-8xl font-bold mb-2 tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-r from-white/70 via-white to-white/70 animate-gradient-x">
                   movement of real skills
                 </h1>
+                <p className="text-lg text-white/50 mb-8">(MORS)</p>
                 <div className="w-48 h-0.5 mx-auto bg-gradient-to-r from-transparent via-white/15 to-transparent mb-8 animate-pulse" />
                 <p className="text-2xl sm:text-3xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
                   our mission is to revolutionize the educational landscape by introducing practical, skills-based learning that prepares students for the real world.
