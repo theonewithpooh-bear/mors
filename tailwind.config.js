@@ -68,24 +68,32 @@ module.exports = {
         "glow-dance": {
           "0%": { 
             transform: "translate(-50%, 0) scale(1)",
-            opacity: 0.5
+            opacity: 0.3
+          },
+          "25%": {
+            transform: "translate(-45%, -15px) scale(1.2)",
+            opacity: 0.7
           },
           "50%": { 
-            transform: "translate(-50%, -20px) scale(1.1)",
+            transform: "translate(-50%, 0) scale(0.9)",
+            opacity: 0.5
+          },
+          "75%": {
+            transform: "translate(-55%, -15px) scale(1.2)",
             opacity: 0.7
           },
           "100%": { 
             transform: "translate(-50%, 0) scale(1)",
-            opacity: 0.5
+            opacity: 0.3
           }
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "glow-dance": "glow-dance 4s ease-in-out infinite",
+        "glow-dance": "glow-dance 3s ease-in-out infinite",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-};
+}
