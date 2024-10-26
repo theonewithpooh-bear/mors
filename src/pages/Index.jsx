@@ -38,10 +38,8 @@ const Index = () => {
                 <div className="absolute inset-0 -z-10">
                   <div className="absolute inset-0 bg-gradient-to-r from-[#FFD700]/3 via-[#FFF]/2 to-[#FFD700]/3 blur-3xl animate-glow-dance" />
                 </div>
-                <div className="flex items-center justify-center mb-4">
-                  <Sparkles className="w-8 h-8 text-[#FFD700]/50 animate-pulse mr-2" />
-                  <span className="text-xl text-[#FFD700]/50 uppercase tracking-widest">introducing</span>
-                  <Sparkles className="w-8 h-8 text-[#FFD700]/50 animate-pulse ml-2" />
+                <div className="mb-6">
+                  <span className="text-sm tracking-[0.2em] text-white/30 uppercase font-light">introducing</span>
                 </div>
                 <h1 className="text-7xl sm:text-8xl font-bold mb-8 tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700]/70 via-white to-[#FFD700]/70 animate-gradient-x">
                   movement of real skills
