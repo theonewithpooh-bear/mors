@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Construction } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import "@fontsource/special-elite";
 
@@ -137,6 +138,7 @@ const Communications = () => {
           </div>
         </motion.div>
       </div>
+      <Footer />
     </div>
   );
 };

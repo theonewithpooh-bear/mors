@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const GetInvolved = () => {
   return (
@@ -43,6 +44,7 @@ const GetInvolved = () => {
           </motion.section>
         </motion.div>
       </div>
+      <Footer />
     </div>
   );
 };
