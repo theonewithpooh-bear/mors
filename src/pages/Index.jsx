@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Crown } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Separator } from "@/components/ui/separator";
@@ -14,9 +14,9 @@ const Index = () => {
       <div className="container mx-auto px-4 py-32 relative">
         {/* Decorative elements */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 blur-3xl" />
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-yellow-500/5 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000" />
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-blue-900/10 to-purple-900/10 blur-3xl" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#FFD700]/5 rounded-full blur-3xl animate-glow-dance" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#FFD700]/5 rounded-full blur-3xl animate-glow-dance delay-1000" />
         </div>
 
         <motion.div 
@@ -33,17 +33,14 @@ const Index = () => {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="flex justify-center mb-8">
-                <Crown className="w-16 h-16 text-yellow-500/80" />
-              </div>
               <div className="relative">
                 <div className="absolute inset-0 -z-10">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-purple-500/10 blur-3xl" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#FFD700]/10 via-[#FFF]/5 to-[#FFD700]/10 blur-3xl animate-glow-dance" />
                 </div>
-                <h1 className="text-7xl sm:text-8xl font-bold mb-16 tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 via-white to-yellow-200">
+                <h1 className="text-7xl sm:text-8xl font-bold mb-16 tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700]/90 via-white to-[#FFD700]/90 animate-gradient-x">
                   movement of real skills
                 </h1>
-                <div className="w-48 h-1 mx-auto bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent mb-8" />
+                <div className="w-48 h-0.5 mx-auto bg-gradient-to-r from-transparent via-[#FFD700]/30 to-transparent mb-8 animate-pulse" />
                 <p className="text-2xl sm:text-3xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
                   our mission is to revolutionize the educational landscape by introducing practical, skills-based learning that prepares students for the real world.
                 </p>
@@ -63,7 +60,7 @@ const Index = () => {
             <a href="https://forms.gle/uV182TrQxVq8GwTc6" target="_blank" rel="noopener noreferrer">
               <Button 
                 variant="outline" 
-                className="group text-lg px-8 py-4 rounded-full bg-gradient-to-r from-yellow-500/10 via-white/10 to-yellow-500/10 hover:from-yellow-500/20 hover:via-white/20 hover:to-yellow-500/20 text-white border-yellow-500/20 hover:scale-105 transition-all duration-300 hover:border-yellow-500/40"
+                className="group text-lg px-8 py-4 rounded-full bg-gradient-to-r from-[#FFD700]/5 via-white/10 to-[#FFD700]/5 hover:from-[#FFD700]/10 hover:via-white/15 hover:to-[#FFD700]/10 text-white border-[#FFD700]/20 hover:scale-105 transition-all duration-300 hover:border-[#FFD700]/30"
               >
                 join waitlist
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
