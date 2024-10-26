@@ -57,14 +57,14 @@ const Communications = () => {
         
         <div className="flex flex-col items-center mb-8">
           <img 
-            src="/dfe-logo.png" 
+            src="https://www.education.ox.ac.uk/wp-content/uploads/2024/10/dfe-e1645782405638.png" 
             alt="Department of Education Logo"
             className="w-120 h-auto object-contain mb-0.5 invert"
           />
           <h2 className="text-2xl font-semibold">Department for Education</h2>
         </div>
         
-        <div className="flex flex-col items-center mb-8">
+        <div className="flex flex-col items-center space-y-4 mt-8">
           <div className="relative w-64">
             <Button
               variant="outline"
