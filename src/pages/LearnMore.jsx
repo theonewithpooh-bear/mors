@@ -111,7 +111,7 @@ const LearnMore = () => {
           >
             <Separator className="my-8 bg-white/10" />
             <h2 className="text-2xl font-bold mb-4">ready to make a difference?</h2>
-            <Link to="/get-involved">
+            <a href="https://forms.gle/uV182TrQxVq8GwTc6" target="_blank" rel="noopener noreferrer">
               <Button 
                 variant="outline" 
                 className="group text-lg px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20"
@@ -119,7 +119,7 @@ const LearnMore = () => {
                 join our movement
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </Link>
+            </a>
           </motion.div>
         </motion.div>
       </div>
