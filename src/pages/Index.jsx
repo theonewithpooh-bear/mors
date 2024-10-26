@@ -8,22 +8,6 @@ import Footer from '../components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
-const FeatureBox = ({ icon, title, description }) => (
-  <motion.div
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    className="bg-gray-800/50 p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-  >
-    <div className="flex items-center mb-6">
-      <div className="bg-black p-4 rounded-full mr-4">
-        {React.cloneElement(icon, { className: "w-8 h-8 text-white" })}
-      </div>
-      <h3 className="text-2xl font-bold text-white">{title}</h3>
-    </div>
-    <p className="text-gray-300 leading-relaxed text-lg">{description}</p>
-  </motion.div>
-);
-
 const Index = () => {
   const words = ["movement", "of", "real", "skills"];
 
@@ -47,11 +31,7 @@ const Index = () => {
                 transition={{ duration: 0.8 }}
                 className="flex flex-wrap justify-center gap-x-4"
               >
-                {words.map((word) => (
-                  <span className="bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent inline-block">
-                    {word}
-                  </span>
-                ))}
+                <span className="text-white">{words.join(' ')}</span>
               </motion.div>
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -59,7 +39,6 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Statistics Grid */}
           <div className="grid grid-cols-1 gap-16 mb-32">
             {[
               { number: "70%", text: "of employers value skills over degrees" },
@@ -139,6 +118,7 @@ const Index = () => {
               </Button>
             </Link>
           </motion.div>
+
         </motion.div>
       </div>
 
