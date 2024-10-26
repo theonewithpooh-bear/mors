@@ -88,24 +88,6 @@ const Index = () => {
         </div>
       </section>
 
-      <motion.section 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="bg-black text-white py-24"
-      >
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-6xl font-bold mb-8">join the movement</h2>
-          <p className="mb-12 text-2xl max-w-3xl mx-auto">help us reshape education for a better, more skilled future. together, we can create a world where every student's potential is fully realized.</p>
-          <Link to="/get-involved">
-            <Button size="lg" variant="secondary" className="group text-xl px-10 py-6 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all duration-300">
-              get involved
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
-        </div>
-      </motion.section>
-
       <Footer />
     </div>
   );
