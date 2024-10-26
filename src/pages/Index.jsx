@@ -20,26 +20,26 @@ const Index = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           {/* Hero Section */}
-          <div className="text-center mb-32">
-            <h1 className="text-5xl font-bold mb-6">
+          <div className="text-center mb-48">
+            <h1 className="text-8xl font-bold mb-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 className="flex flex-wrap justify-center gap-x-4"
               >
-                <span className="text-white">{words.join(' ')}</span>
+                <span className="text-white tracking-tight">{words.join(' ')}</span>
               </motion.div>
             </h1>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
               our mission is to revolutionize the educational landscape by introducing practical, skills-based learning that prepares students for the real world.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-16 mb-32">
+          <div className="space-y-48">
             {[
               { number: "70%", text: "of employers value skills over degrees" },
               { number: "85%", text: "of jobs in 2030 don't exist yet" },
@@ -47,21 +47,29 @@ const Index = () => {
             ].map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-                className="bg-white/5 backdrop-blur-sm rounded-lg p-12 text-center"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-16 text-center transform hover:scale-105 transition-all duration-500"
               >
-                <h3 className="text-6xl font-bold text-white mb-4">{stat.number}</h3>
-                <p className="text-gray-400 text-xl">{stat.text}</p>
+                <h3 className="text-8xl font-bold text-white mb-6">{stat.number}</h3>
+                <p className="text-2xl text-gray-400">{stat.text}</p>
               </motion.div>
             ))}
           </div>
 
           {/* Key Principles */}
-          <div className="space-y-16 mb-32">
-            <h2 className="text-3xl font-bold text-center mb-16">key principles</h2>
-            <div className="grid grid-cols-1 gap-16">
+          <div className="space-y-32 my-48">
+            <motion.h2 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-4xl font-bold text-center mb-24"
+            >
+              key principles
+            </motion.h2>
+            <div className="grid grid-cols-1 gap-24">
               {[
                 {
                   icon: <BookOpen className="h-8 w-8" />,
@@ -84,34 +92,43 @@ const Index = () => {
                   description: "peer learning and mentorship programs"
                 }
               ].map((principle, index) => (
-                <Card key={index} className="bg-white/5 border-white/10">
-                  <CardHeader>
-                    <div className="mb-2 text-white">{principle.icon}</div>
-                    <CardTitle className="text-white text-2xl">{principle.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-gray-400 text-lg">
-                      {principle.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <Card className="bg-white/5 border-white/10 hover:bg-white/10 transition-all duration-500">
+                    <CardHeader>
+                      <div className="mb-2 text-white">{principle.icon}</div>
+                      <CardTitle className="text-white text-3xl">{principle.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-gray-400 text-xl">
+                        {principle.description}
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               ))}
             </div>
           </div>
 
           {/* Call to Action */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="text-center"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mt-48"
           >
             <Separator className="my-16 bg-white/10" />
-            <h2 className="text-2xl font-bold mb-8">ready to make a difference?</h2>
+            <h2 className="text-3xl font-bold mb-8">ready to make a difference?</h2>
             <Link to="/get-involved">
               <Button 
                 variant="outline" 
-                className="group text-lg px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20"
+                className="group text-xl px-8 py-6 rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20"
               >
                 join our movement
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
