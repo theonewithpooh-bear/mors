@@ -57,7 +57,9 @@ const LearnMore = () => {
                   className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors"
                 >
                   <h3 className="text-6xl font-bold text-red-400 mb-4">58%</h3>
-                  <p className="text-gray-300">of UK teachers believe the current education system does not adequately prepare students for the future</p>
+                  <p className="text-gray-300">
+                    <span className="font-bold">58,000 UK teachers</span> warn: our education system is failing to prepare students for their future
+                  </p>
                 </motion.div>
 
                 <motion.div
@@ -67,7 +69,9 @@ const LearnMore = () => {
                   className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors"
                 >
                   <h3 className="text-6xl font-bold text-red-400 mb-4">49%</h3>
-                  <p className="text-gray-300">of teachers found GCSEs to be outdated according to OCR survey</p>
+                  <p className="text-gray-300">
+                    <span className="font-bold">49,000 teachers</span> declare GCSEs obsolete and unfit for purpose
+                  </p>
                 </motion.div>
 
                 <motion.div
@@ -77,7 +81,9 @@ const LearnMore = () => {
                   className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors"
                 >
                   <h3 className="text-6xl font-bold text-red-400 mb-4">80%</h3>
-                  <p className="text-gray-300">of teachers advocate for more content on digital skills and AI in the curriculum</p>
+                  <p className="text-gray-300">
+                    <span className="font-bold">80,000 educators</span> demand urgent digital skills & AI curriculum reform
+                  </p>
                 </motion.div>
 
                 <motion.div
@@ -89,7 +95,9 @@ const LearnMore = () => {
                   <div className="flex items-center justify-center mb-4">
                     <LineChart className="w-12 h-12 text-red-400" />
                   </div>
-                  <p className="text-gray-300">Teachers feel restricted by outdated resources and a curriculum that doesn't focus enough on digital and practical skills</p>
+                  <p className="text-gray-300">
+                    Teachers trapped by outdated resources & curriculum - digital skills crisis looming
+                  </p>
                 </motion.div>
               </div>
             </div>
