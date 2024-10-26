@@ -35,7 +35,11 @@ const Index = () => {
       <Header />
       
       <div className="relative">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3b82f6,transparent)] pointer-events-none" />
+        <div className="absolute inset-0">
+          <div className="absolute top-[100px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] animate-glow-dance">
+            <div className="absolute inset-0 bg-[radial-gradient(circle,#3b82f6_0%,transparent_70%)] opacity-50" />
+          </div>
+        </div>
         
         <motion.section 
           initial={{ opacity: 0 }}
