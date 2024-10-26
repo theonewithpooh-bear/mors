@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
@@ -8,6 +8,16 @@ import Footer from '../components/Footer';
 import { Separator } from "@/components/ui/separator";
 
 const Index = () => {
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  useEffect(() => {
+    const hasVisited = localStorage.getItem('hasVisitedBefore');
+    if (!hasVisited) {
+      setShouldAnimate(true);
+      localStorage.setItem('hasVisitedBefore', 'true');
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
       <motion.div 
@@ -16,8 +26,8 @@ const Index = () => {
         className="relative"
       >
         <motion.div
-          initial={{ scale: 4, y: "40vh" }}
-          animate={{ scale: 1, y: 0 }}
+          initial={shouldAnimate ? { scale: 4, y: "40vh" } : false}
+          animate={shouldAnimate ? { scale: 1, y: 0 } : false}
           transition={{ 
             duration: 2.5,
             ease: [0.16, 1, 0.3, 1],
@@ -25,9 +35,7 @@ const Index = () => {
           }}
           className="relative"
         >
-          <div className="opacity-0 animate-[fade-in_0.5s_ease-in-out_4s_forwards]">
-            <Header />
-          </div>
+          <Header />
           
           <div className="container mx-auto px-4 py-32 relative">
             <div className="absolute inset-0 -z-10">
@@ -38,12 +46,12 @@ const Index = () => {
               <div className="text-center mb-16">
                 <div className="relative">
                   <motion.div
-                    initial={{ opacity: 1, scale: 2 }}
-                    animate={{ 
+                    initial={shouldAnimate ? { opacity: 1, scale: 2 } : false}
+                    animate={shouldAnimate ? { 
                       opacity: 1, 
                       scale: [2, 1, 0.5],
                       fontSize: ["4rem", "4rem", "1rem"]
-                    }}
+                    } : false}
                     transition={{ 
                       duration: 3.5,
                       times: [0, 0.7, 1],
@@ -58,7 +66,7 @@ const Index = () => {
                   </motion.div>
                   
                   <motion.div
-                    initial={{ opacity: 0 }}
+                    initial={shouldAnimate ? { opacity: 0 } : { opacity: 1 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 3, duration: 1 }}
                   >
@@ -67,7 +75,7 @@ const Index = () => {
                     </h1>
                     <p className="text-lg text-white/50 mb-8">(MORS)</p>
                     <div className="w-48 h-0.5 mx-auto bg-gradient-to-r from-transparent via-white/15 to-transparent mb-8" />
-                    <p className="text-2xl sm:text-3xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light opacity-0 animate-[fade-in_0.5s_ease-in-out_3.5s_forwards]">
+                    <p className="text-2xl sm:text-3xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
                       our mission is to revolutionize the educational landscape by introducing practical, skills-based learning that prepares students for the real world.
                     </p>
                   </motion.div>
@@ -75,7 +83,7 @@ const Index = () => {
               </div>
 
               <motion.div 
-                initial={{ opacity: 0 }}
+                initial={shouldAnimate ? { opacity: 0 } : { opacity: 1 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 4, duration: 1 }}
                 className="text-center"
@@ -94,9 +102,7 @@ const Index = () => {
               </motion.div>
             </div>
           </div>
-          <div className="opacity-0 animate-[fade-in_0.5s_ease-in-out_4s_forwards]">
-            <Footer />
-          </div>
+          <Footer />
         </motion.div>
       </motion.div>
     </div>
