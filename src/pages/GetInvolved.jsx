@@ -20,7 +20,7 @@ const GetInvolved = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="mb-16 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white border-opacity-20"
+            className="mb-16 bg-white/5 backdrop-blur-xl rounded-[32px] shadow-2xl p-8 border border-white/10"
           >
             <h2 className="text-6xl font-bold mb-8 text-white">join the movement</h2>
             <p className="text-xl leading-relaxed mb-12 text-gray-300">
@@ -34,13 +34,13 @@ const GetInvolved = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all"
+              className="group bg-[#1d1d1f]/40 backdrop-blur-xl p-8 rounded-[24px] border border-white/10 hover:border-white/20 transition-all duration-500 hover:bg-[#1d1d1f]/60"
             >
-              <h3 className="text-2xl font-bold mb-4">join our discord</h3>
-              <p className="text-gray-300 mb-6">connect with other educators and students who are passionate about change</p>
-              <Button variant="outline" className="w-full">
+              <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">join our discord</h3>
+              <p className="text-[17px] leading-relaxed text-gray-300 mb-8">connect with other educators and students who are passionate about change</p>
+              <Button variant="outline" className="w-full bg-white/10 hover:bg-white/20 border-0 rounded-xl h-12 text-[15px] font-medium transition-all duration-300">
                 join community
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
               </Button>
             </motion.div>
 
@@ -48,13 +48,13 @@ const GetInvolved = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="bg-gradient-to-br from-pink-500/20 to-purple-500/20 p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all"
+              className="group bg-[#1d1d1f]/40 backdrop-blur-xl p-8 rounded-[24px] border border-white/10 hover:border-white/20 transition-all duration-500 hover:bg-[#1d1d1f]/60"
             >
-              <h3 className="text-2xl font-bold mb-4">attend events</h3>
-              <p className="text-gray-300 mb-6">participate in workshops, hackathons, and discussions about the future of education</p>
-              <Button variant="outline" className="w-full">
+              <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">attend events</h3>
+              <p className="text-[17px] leading-relaxed text-gray-300 mb-8">participate in workshops, hackathons, and discussions about the future of education</p>
+              <Button variant="outline" className="w-full bg-white/10 hover:bg-white/20 border-0 rounded-xl h-12 text-[15px] font-medium transition-all duration-300">
                 view calendar
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
               </Button>
             </motion.div>
 
@@ -62,13 +62,13 @@ const GetInvolved = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all"
+              className="group bg-[#1d1d1f]/40 backdrop-blur-xl p-8 rounded-[24px] border border-white/10 hover:border-white/20 transition-all duration-500 hover:bg-[#1d1d1f]/60"
             >
-              <h3 className="text-2xl font-bold mb-4">contribute</h3>
-              <p className="text-gray-300 mb-6">share your ideas and help develop new approaches to learning</p>
-              <Button variant="outline" className="w-full">
+              <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">contribute</h3>
+              <p className="text-[17px] leading-relaxed text-gray-300 mb-8">share your ideas and help develop new approaches to learning</p>
+              <Button variant="outline" className="w-full bg-white/10 hover:bg-white/20 border-0 rounded-xl h-12 text-[15px] font-medium transition-all duration-300">
                 get started
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
               </Button>
             </motion.div>
           </div>
