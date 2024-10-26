@@ -1,59 +1,96 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Separator } from "@/components/ui/separator";
+import { Github, Twitter, Linkedin } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-black/80 backdrop-blur-sm border-t border-white/5">
-      <div className="container mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-          <div className="space-y-6">
-            <h3 className="text-xl font-semibold text-white/90">about mors</h3>
-            <p className="text-base text-white/60 leading-relaxed max-w-md">
-              transforming education through practical skills and real-world learning experiences.
-            </p>
+    <footer className="relative overflow-hidden bg-gradient-to-b from-black to-gray-900">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3b82f6,transparent)]" />
+      
+      <div className="relative container mx-auto px-6 pt-32 pb-16">
+        {/* Main content */}
+        <div className="flex flex-col items-center text-center mb-16">
+          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500 mb-6">
+            join the movement
+          </h2>
+          <p className="text-gray-400 max-w-md mb-8">
+            be part of the educational revolution. together, we can transform how skills are taught and learned.
+          </p>
+          <Link to="/get-involved">
+            <Button variant="outline" className="rounded-full px-8">
+              get involved
+            </Button>
+          </Link>
+        </div>
+
+        {/* Links grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+          <div>
+            <h3 className="font-semibold text-white mb-4">explore</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/learn-more" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  learn more
+                </Link>
+              </li>
+              <li>
+                <Link to="/get-involved" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  get involved
+                </Link>
+              </li>
+            </ul>
           </div>
           
-          <div className="space-y-6">
-            <h3 className="text-xl font-semibold text-white/90">quick links</h3>
-            <nav>
-              <ul className="space-y-4">
-                <li>
-                  <Link to="/learn-more" className="text-white/60 hover:text-white transition-colors duration-300">
-                    learn more
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/get-involved" className="text-white/60 hover:text-white transition-colors duration-300">
-                    get involved
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/subject-reforms" className="text-white/60 hover:text-white transition-colors duration-300">
-                    subject reforms
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/communications" className="text-white/60 hover:text-white transition-colors duration-300">
-                    communications
-                  </Link>
-                </li>
-              </ul>
-            </nav>
+          <div>
+            <h3 className="font-semibold text-white mb-4">reforms</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/subject-reforms" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  subject reforms
+                </Link>
+              </li>
+              <li>
+                <Link to="/communications" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  communications
+                </Link>
+              </li>
+            </ul>
           </div>
           
-          <div className="space-y-6">
-            <h3 className="text-xl font-semibold text-white/90">contact</h3>
-            <p className="text-white/60 italic">coming soon</p>
+          <div>
+            <h3 className="font-semibold text-white mb-4">about</h3>
+            <ul className="space-y-3">
+              <li>
+                <span className="text-sm text-gray-400">
+                  transforming education through practical skills
+                </span>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="font-semibold text-white mb-4">connect</h3>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Github className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
           </div>
         </div>
-        
-        <Separator className="my-16 bg-white/5" />
-        
-        <div className="text-center">
-          <p className="text-white/40 text-sm">
+
+        {/* Bottom bar */}
+        <div className="border-t border-gray-800 pt-8 text-center">
+          <p className="text-sm text-gray-500">
             © {currentYear} movement of real skills. all rights reserved.
           </p>
         </div>
