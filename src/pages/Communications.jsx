@@ -23,27 +23,27 @@ const Communications = () => {
         </div>
         
         <div className="flex flex-col items-center space-y-6 mb-16">
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 w-full max-w-2xl">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-              <div className="flex items-center space-x-4">
+          <div className="bg-[#111]/80 backdrop-blur-sm border border-white/5 rounded-2xl p-12 w-full max-w-4xl">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
+              <div className="flex items-center gap-8">
                 <img 
                   src="https://www.education.ox.ac.uk/wp-content/uploads/2024/10/dfe-e1645782405638.png" 
                   alt="Department of Education Logo"
-                  className="w-16 h-16 object-contain invert"
+                  className="w-24 h-24 object-contain invert opacity-90"
                 />
-                <h2 className="text-2xl font-semibold">Department for Education</h2>
+                <h2 className="text-3xl font-semibold">Department for Education</h2>
               </div>
               <Button
                 variant="outline"
-                className="px-6 py-2 text-base rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20"
+                className="px-8 py-6 text-lg rounded-full bg-[#222]/50 hover:bg-[#333]/50 text-white/90 border-white/10"
                 disabled
               >
                 view this week's letter
               </Button>
             </div>
-            <div className="flex items-center justify-center gap-2 text-yellow-300 mt-4">
-              <Construction className="h-5 w-5" />
-              <span className="text-sm">coming soon!</span>
+            <div className="flex items-center justify-center gap-3 mt-8 text-yellow-300/90">
+              <Construction className="h-6 w-6" />
+              <span className="text-base">coming soon!</span>
             </div>
           </div>
         </div>
