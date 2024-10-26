@@ -23,71 +23,129 @@ const FeatureBox = ({ icon, title, description }) => (
 );
 
 const Index = () => {
+  const words = ["movement", "of", "real", "skills"];
+
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
       
-      <motion.section 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
-        className="relative h-screen flex items-center justify-center"
-      >
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
-            className="text-8xl font-bold mb-6 leading-tight"
-          >
-            movement of real skills
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 1 }}
-            className="text-3xl mb-10 max-w-3xl mx-auto font-light"
-          >
-            transforming education to prioritize practical, real-world skills for a brighter future
-          </motion.p>
-          <Link to="/learn-more">
-            <Button variant="outline" size="lg" className="group text-xl px-8 py-4 rounded-full bg-white/10 text-white hover:bg-white/20 transition-all duration-300">
-              learn more
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
-        </div>
-      </motion.section>
-
-      <section className="relative py-24">
-        <div className="container mx-auto px-4">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-6xl font-bold mb-20 text-center"
-          >
-            our vision
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <FeatureBox
-              icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>}
-              title="practical learning"
-              description="emphasizing real-world skills over traditional exam-based assessments to prepare students for the challenges of tomorrow."
-            />
-            <FeatureBox
-              icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>}
-              title="inclusive education"
-              description="recognizing and nurturing diverse talents and learning styles, ensuring every student can thrive and reach their full potential."
-            />
-            <FeatureBox
-              icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>}
-              title="foundation skills certificates"
-              description="introducing fscs as a comprehensive way to assess and showcase student capabilities in practical, real-world scenarios."
-            />
+      <div className="container mx-auto px-4 py-24">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl mx-auto"
+        >
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold mb-6">
+              <div className="flex flex-wrap justify-center gap-x-4">
+                {words.map((word, index) => (
+                  <motion.span
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: index * 0.2,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      repeatDelay: 2
+                    }}
+                    className="bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent inline-block"
+                  >
+                    {word}
+                  </motion.span>
+                ))}
+              </div>
+            </h1>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              our mission is to revolutionize the educational landscape by introducing practical, skills-based learning that prepares students for the real world.
+            </p>
           </div>
-        </div>
-      </section>
+
+          {/* Statistics Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {[
+              { number: "70%", text: "of employers value skills over degrees" },
+              { number: "85%", text: "of jobs in 2030 don't exist yet" },
+              { number: "92%", text: "of students want practical education" }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center"
+              >
+                <h3 className="text-4xl font-bold text-white mb-2">{stat.number}</h3>
+                <p className="text-gray-400">{stat.text}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Key Principles */}
+          <div className="space-y-8 mb-16">
+            <h2 className="text-3xl font-bold text-center mb-8">key principles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                {
+                  icon: <BookOpen className="h-8 w-8" />,
+                  title: "experiential learning",
+                  description: "hands-on experience through real-world projects"
+                },
+                {
+                  icon: <GraduationCap className="h-8 w-8" />,
+                  title: "skill certification",
+                  description: "recognized credentials for practical abilities"
+                },
+                {
+                  icon: <LineChart className="h-8 w-8" />,
+                  title: "industry alignment",
+                  description: "curriculum designed with industry partners"
+                },
+                {
+                  icon: <Users className="h-8 w-8" />,
+                  title: "collaborative growth",
+                  description: "peer learning and mentorship programs"
+                }
+              ].map((principle, index) => (
+                <Card key={index} className="bg-white/5 border-white/10">
+                  <CardHeader>
+                    <div className="mb-2 text-white">{principle.icon}</div>
+                    <CardTitle className="text-white">{principle.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-gray-400">
+                      {principle.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="text-center"
+          >
+            <Separator className="my-8 bg-white/10" />
+            <h2 className="text-2xl font-bold mb-4">ready to make a difference?</h2>
+            <Link to="/get-involved">
+              <Button 
+                variant="outline" 
+                className="group text-lg px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20"
+              >
+                join our movement
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+          </motion.div>
+        </motion.div>
+      </div>
 
       <Footer />
     </div>
