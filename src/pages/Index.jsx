@@ -24,19 +24,29 @@ const Index = () => {
         >
           {/* Hero Section */}
           <div className="text-center mb-96">
-            <h1 className="text-8xl font-bold mb-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="flex flex-wrap justify-center gap-x-4"
-              >
-                <span className="text-white tracking-tight">{words.join(' ')}</span>
-              </motion.div>
-            </h1>
-            <p className="text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              our mission is to revolutionize the educational landscape by introducing practical, skills-based learning that prepares students for the real world.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <h1 className="text-8xl font-bold mb-16 tracking-tight leading-none">
+                <span className="relative inline-block">
+                  <span className="relative z-10">
+                    movement of real skills
+                  </span>
+                  <motion.span
+                    className="absolute -bottom-2 left-0 w-full h-1 bg-white/20"
+                    initial={{ width: 0 }}
+                    animate={{ width: "100%" }}
+                    transition={{ delay: 0.5, duration: 0.8 }}
+                  />
+                </span>
+              </h1>
+              <p className="text-3xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light">
+                our mission is to revolutionize the educational landscape by introducing practical, skills-based learning that prepares students for the real world.
+              </p>
+            </motion.div>
           </div>
 
           <div className="space-y-48">
