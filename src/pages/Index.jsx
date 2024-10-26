@@ -50,11 +50,22 @@ const Index = () => {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-16 text-center transform hover:scale-105 transition-all duration-500"
+                transition={{ duration: 1.2 }}
+                className="relative group"
               >
-                <h3 className="text-8xl font-bold text-white mb-6">{stat.number}</h3>
-                <p className="text-2xl text-gray-400">{stat.text}</p>
+                <motion.div
+                  className="absolute inset-0 bg-white/5 rounded-full blur-3xl group-hover:bg-white/10 transition-all duration-700"
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.5 }}
+                />
+                <div className="relative text-center transform transition-transform duration-700 hover:scale-110">
+                  <h3 className="text-9xl font-bold text-white mb-6 [text-shadow:_0_4px_20px_rgb(255_255_255_/_20%)]">
+                    {stat.number}
+                  </h3>
+                  <p className="text-3xl text-gray-400">{stat.text}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -135,10 +146,8 @@ const Index = () => {
               </Button>
             </Link>
           </motion.div>
-
         </motion.div>
       </div>
-
       <Footer />
     </div>
   );
