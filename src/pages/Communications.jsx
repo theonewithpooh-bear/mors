@@ -24,18 +24,23 @@ const Communications = () => {
         
         <div className="flex flex-col items-center space-y-6 mb-16">
           <div className="bg-[#111]/80 backdrop-blur-sm border border-white/5 rounded-2xl p-12 w-full max-w-4xl transform hover:scale-[1.02] transition-all duration-300">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
+            <div className="flex flex-col items-center gap-8">
               <div className="flex items-center gap-8">
-                <div className="relative group">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-20 group-hover:opacity-40 blur transition duration-300"></div>
-                  <img 
-                    src="https://www.education.ox.ac.uk/wp-content/uploads/2024/10/dfe-e1645782405638.png" 
-                    alt="Department of Education Logo"
-                    className="relative w-24 h-24 object-contain invert opacity-90"
-                  />
-                </div>
+                <img 
+                  src="https://www.education.ox.ac.uk/wp-content/uploads/2024/10/dfe-e1645782405638.png" 
+                  alt="Department of Education Logo"
+                  className="w-24 h-24 object-contain invert opacity-90"
+                />
                 <h2 className="text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">Department for Education</h2>
               </div>
+              
+              <div className="flex items-center justify-center gap-3">
+                <div className="flex items-center gap-3 px-6 py-2 rounded-full bg-yellow-300/10 text-yellow-300/90">
+                  <Construction className="h-6 w-6" />
+                  <span className="text-base font-medium">coming soon!</span>
+                </div>
+              </div>
+
               <Button
                 variant="outline"
                 className="px-8 py-6 text-lg rounded-full bg-[#222]/50 hover:bg-[#333]/50 text-white/90 border-white/10 hover:border-white/20 transition-all duration-300"
@@ -43,12 +48,6 @@ const Communications = () => {
               >
                 view this week's letter
               </Button>
-            </div>
-            <div className="flex items-center justify-center gap-3 mt-8">
-              <div className="flex items-center gap-3 px-6 py-2 rounded-full bg-yellow-300/10 text-yellow-300/90">
-                <Construction className="h-6 w-6" />
-                <span className="text-base font-medium">coming soon!</span>
-              </div>
             </div>
           </div>
         </div>
