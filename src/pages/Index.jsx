@@ -27,25 +27,18 @@ const Index = () => {
     <div className="min-h-screen bg-black text-white">
       <Header />
       
-      <div className="relative">
-        <div className="absolute inset-0">
-          <div className="absolute top-[300px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] animate-glow-dance">
-            <div className="absolute inset-0 bg-[radial-gradient(circle,#3b82f6_0%,transparent_70%)] opacity-50" />
-          </div>
-        </div>
-        
-        <motion.section 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
-          className="relative h-screen flex items-center justify-center overflow-visible"
-        >
-          <div className="container mx-auto px-4 relative z-10 text-center">
+      <motion.section 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className="relative h-screen flex items-center justify-center"
+      >
+        <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="text-8xl font-bold mb-6 leading-tight faint-glow"
+            className="text-8xl font-bold mb-6 leading-tight"
           >
             movement of real skills
           </motion.h1>
@@ -63,8 +56,8 @@ const Index = () => {
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
-          </div>
-        </motion.section>
+        </div>
+      </motion.section>
 
         <section className="relative py-24">
           <div className="container mx-auto px-4">
