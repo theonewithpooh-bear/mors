@@ -36,7 +36,7 @@ const Footer = () => {
         {/* Links grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
           <div>
-            <h3 className="font-semibold text-white mb-4">explore</h3>
+            <h3 className="font-semibold text-white mb-4">quick links</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/learn-more" className="text-sm text-gray-400 hover:text-white transition-colors">
@@ -48,12 +48,6 @@ const Footer = () => {
                   get involved
                 </Link>
               </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-semibold text-white mb-4">communications</h3>
-            <ul className="space-y-3">
               <li>
                 <Link to="/communications" className="text-sm text-gray-400 hover:text-white transition-colors">
                   communications
