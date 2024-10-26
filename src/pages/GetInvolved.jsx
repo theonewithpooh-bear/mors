@@ -13,7 +13,7 @@ const involvementOptions = [
   {
     title: "offer mind-blowing internships",
     description: "provide hands-on learning experiences in your organization.",
-    icon: "⚡"
+    icon: "☁️"
   },
   {
     title: "join our epic workshops",
