@@ -66,15 +66,24 @@ module.exports = {
           to: { height: "0" },
         },
         "glow-dance": {
-          "0%, 100%": { transform: "translate(-50%, 0)" },
-          "25%": { transform: "translate(-50%, -30px)" },
-          "75%": { transform: "translate(-50%, 30px)" },
+          "0%": { 
+            transform: "translate(-50%, 0) scale(1)",
+            opacity: 0.5
+          },
+          "50%": { 
+            transform: "translate(-50%, -20px) scale(1.1)",
+            opacity: 0.7
+          },
+          "100%": { 
+            transform: "translate(-50%, 0) scale(1)",
+            opacity: 0.5
+          }
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "glow-dance": "glow-dance 8s ease-in-out infinite",
+        "glow-dance": "glow-dance 4s ease-in-out infinite",
       },
     },
   },
