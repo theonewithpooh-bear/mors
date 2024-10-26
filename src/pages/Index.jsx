@@ -26,12 +26,13 @@ const Index = () => {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <h1 className="text-8xl font-bold mb-16 tracking-tight leading-none">
-                <span className="relative inline-block">
-                  movement of real skills
-                </span>
+              <div className="absolute inset-0 -z-10">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-purple-500/10 blur-3xl" />
+              </div>
+              <h1 className="text-7xl sm:text-8xl font-bold mb-16 tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-400">
+                movement of real skills
               </h1>
-              <p className="text-3xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light">
+              <p className="text-2xl sm:text-3xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light">
                 our mission is to revolutionize the educational landscape by introducing practical, skills-based learning that prepares students for the real world.
               </p>
             </motion.div>
@@ -49,7 +50,7 @@ const Index = () => {
             <a href="https://forms.gle/uV182TrQxVq8GwTc6" target="_blank" rel="noopener noreferrer">
               <Button 
                 variant="outline" 
-                className="group text-lg px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20"
+                className="group text-lg px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20 hover:scale-105 transition-all duration-300"
               >
                 join waitlist
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
