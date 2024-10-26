@@ -103,7 +103,7 @@ const SubjectReforms = () => {
             exit={{ opacity: 0 }}
             className="container mx-auto px-4 py-16"
           >
-            <h1 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">subject reforms</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-center mb-12 mt-24 text-white">subject reforms</h1>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-lg shadow-md">
