@@ -43,7 +43,7 @@ const Communications = () => {
         >
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 shadow-lg">
             <p className="text-xl leading-relaxed text-gray-100">
-              mors sends open letters at least once a week to various stakeholders in education - from the department of education to influential organisations, political parties and MPs. open letters, being public and transparent communications, allow us to openly advocate for change while fostering public dialogue about educational reform. through these letters, we articulate our vision for skills-based education and invite others to join the conversation.
+              mors plans to send open letters at least once a week to various stakeholders in education - from the department of education to influential organisations, political parties and MPs. these open letters, being public and transparent communications, will allow us to openly advocate for change while fostering public dialogue about educational reform. through these letters, we will articulate our vision for skills-based education and invite others to join the conversation.
             </p>
             <a 
               href="#open-letters" 
