@@ -56,7 +56,7 @@ const LearnMore = () => {
                   transition={{ delay: 0.2 }}
                   className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors"
                 >
-                  <h3 className="text-6xl font-bold text-red-400 mb-4">58%</h3>
+                  <h3 className="text-[5rem] md:text-[6rem] font-black text-red-500 mb-4 animate-pulse">58%</h3>
                   <p className="text-gray-300">
                     <span className="font-bold">58,000 UK teachers</span> warn: our education system is failing to prepare students for their future
                   </p>
@@ -68,7 +68,7 @@ const LearnMore = () => {
                   transition={{ delay: 0.4 }}
                   className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors"
                 >
-                  <h3 className="text-6xl font-bold text-red-400 mb-4">49%</h3>
+                  <h3 className="text-[5rem] md:text-[6rem] font-black text-red-500 mb-4 animate-pulse">49%</h3>
                   <p className="text-gray-300">
                     <span className="font-bold">49,000 teachers</span> declare GCSEs obsolete and unfit for purpose
                   </p>
@@ -80,7 +80,7 @@ const LearnMore = () => {
                   transition={{ delay: 0.6 }}
                   className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors"
                 >
-                  <h3 className="text-6xl font-bold text-red-400 mb-4">80%</h3>
+                  <h3 className="text-[5rem] md:text-[6rem] font-black text-red-500 mb-4 animate-pulse">80%</h3>
                   <p className="text-gray-300">
                     <span className="font-bold">80,000 educators</span> demand urgent digital skills & AI curriculum reform
                   </p>
