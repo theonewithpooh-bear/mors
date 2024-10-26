@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const FeatureBox = ({ icon, title, description }) => (
   <motion.div
@@ -105,11 +106,7 @@ const Index = () => {
         </div>
       </motion.section>
 
-      <footer className="bg-gray-900 text-gray-300 py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-lg">&copy; {new Date().getFullYear()} movement of real skills. all rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
