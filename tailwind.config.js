@@ -67,23 +67,23 @@ module.exports = {
         },
         "glow-dance": {
           "0%": { 
-            transform: "translate(-50%, 0) scale(1)",
+            transform: "scale(1)",
             opacity: 0.3
           },
           "25%": {
-            transform: "translate(-50%, -10px) scale(1.2)",
+            transform: "translateY(-10px) scale(1.2)",
             opacity: 0.7
           },
           "50%": { 
-            transform: "translate(-50%, 0) scale(0.9)",
+            transform: "scale(0.9)",
             opacity: 0.4
           },
           "75%": {
-            transform: "translate(-50%, -10px) scale(1.2)",
+            transform: "translateY(-10px) scale(1.2)",
             opacity: 0.7
           },
           "100%": { 
-            transform: "translate(-50%, 0) scale(1)",
+            transform: "scale(1)",
             opacity: 0.3
           }
         },
