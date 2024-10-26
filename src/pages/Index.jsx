@@ -25,7 +25,7 @@ const Index = () => {
           }}
           className="relative"
         >
-          <div className="opacity-0 animate-[fade-in_0.5s_ease-in-out_3s_forwards]">
+          <div className="opacity-0 animate-[fade-in_0.5s_ease-in-out_4s_forwards]">
             <Header />
           </div>
           
@@ -67,7 +67,7 @@ const Index = () => {
                     </h1>
                     <p className="text-lg text-white/50 mb-8">(MORS)</p>
                     <div className="w-48 h-0.5 mx-auto bg-gradient-to-r from-transparent via-white/15 to-transparent mb-8" />
-                    <p className="text-2xl sm:text-3xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
+                    <p className="text-2xl sm:text-3xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light opacity-0 animate-[fade-in_0.5s_ease-in-out_3.5s_forwards]">
                       our mission is to revolutionize the educational landscape by introducing practical, skills-based learning that prepares students for the real world.
                     </p>
                   </motion.div>
@@ -94,7 +94,7 @@ const Index = () => {
               </motion.div>
             </div>
           </div>
-          <div className="opacity-0 animate-[fade-in_0.5s_ease-in-out_3s_forwards]">
+          <div className="opacity-0 animate-[fade-in_0.5s_ease-in-out_4s_forwards]">
             <Footer />
           </div>
         </motion.div>
