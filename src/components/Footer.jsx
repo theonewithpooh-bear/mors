@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Github, Twitter, Linkedin } from 'lucide-react';
-import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,22 +10,7 @@ const Footer = () => {
       {/* Decorative elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3b82f6,transparent)]" />
       
-      <div className="relative container mx-auto px-6 pt-32 pb-16">
-        {/* Main content */}
-        <div className="flex flex-col items-center text-center mb-16">
-          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500 mb-6">
-            join the movement
-          </h2>
-          <p className="text-gray-400 max-w-md mb-8">
-            be part of the educational revolution. together, we can transform how skills are taught and learned.
-          </p>
-          <Link to="/get-involved">
-            <Button variant="outline" className="rounded-full px-8">
-              get involved
-            </Button>
-          </Link>
-        </div>
-
+      <div className="relative container mx-auto px-6 py-16">
         {/* Links grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
           <div>
