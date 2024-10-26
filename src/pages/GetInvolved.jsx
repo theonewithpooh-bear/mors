@@ -41,7 +41,7 @@ const GetInvolved = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-6xl font-extrabold mb-12 text-center"
+          className="text-6xl font-extrabold mb-12 mt-24 text-center"
         >
           join the mors adventure!
         </motion.h1>
