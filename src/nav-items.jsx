@@ -1,4 +1,4 @@
-import { HomeIcon, BookOpenIcon, UsersIcon, GraduationCapIcon, MessageSquareIcon } from "lucide-react";
+import { HomeIcon, BookOpenIcon, UsersIcon, MessageSquareIcon } from "lucide-react";
 import Index from "./pages/Index.jsx";
 import LearnMore from "./pages/LearnMore.jsx";
 import GetInvolved from "./pages/GetInvolved.jsx";
@@ -25,15 +25,17 @@ export const navItems = [
     page: <GetInvolved />,
   },
   {
-    title: "subject reforms",
-    to: "/subject-reforms",
-    icon: <GraduationCapIcon className="h-4 w-4" />,
-    page: <SubjectReforms />,
-  },
-  {
     title: "communications",
     to: "/communications",
     icon: <MessageSquareIcon className="h-4 w-4" />,
     page: <Communications />,
+  },
+  // Hidden from navigation but still accessible
+  {
+    title: "subject reforms",
+    to: "/subject-reforms",
+    icon: null,
+    page: <SubjectReforms />,
+    hidden: true,
   },
 ];
