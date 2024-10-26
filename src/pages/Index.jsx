@@ -23,7 +23,7 @@ const Index = () => {
           className="max-w-5xl mx-auto"
         >
           {/* Hero Section */}
-          <div className="text-center mb-48">
+          <div className="text-center mb-96">
             <h1 className="text-8xl font-bold mb-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
