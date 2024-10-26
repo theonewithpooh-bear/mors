@@ -36,7 +36,7 @@ const GetInvolved = () => {
                 variant="outline" 
                 className="group text-lg px-8 py-6 rounded-2xl bg-white/10 hover:bg-white/20 border-white/20 transition-all duration-300"
               >
-                join waitlist
+                register your interest
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>

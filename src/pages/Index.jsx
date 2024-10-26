@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Separator } from "@/components/ui/separator";
@@ -62,15 +63,15 @@ const Index = () => {
           >
             <Separator className="my-8 bg-white/10" />
             <h2 className="text-2xl font-bold mb-4 text-white">ready to make a difference?</h2>
-            <a href="https://forms.gle/uV182TrQxVq8GwTc6" target="_blank" rel="noopener noreferrer">
+            <Link to="/get-involved">
               <Button 
                 variant="outline" 
                 className="group text-lg px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 text-white border-white/20 hover:scale-105 transition-all duration-300"
               >
-                join waitlist
+                get involved
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </a>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
