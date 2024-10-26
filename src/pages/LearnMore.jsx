@@ -8,7 +8,8 @@ import {
   GraduationCap, 
   LineChart, 
   Users,
-  ArrowRight
+  ArrowRight,
+  AlertTriangle
 } from 'lucide-react';
 import {
   Card,
@@ -41,51 +42,79 @@ const LearnMore = () => {
             </p>
           </div>
 
-          {/* New Statistics Showcase */}
-          <div className="mb-16 bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-            <h2 className="text-2xl font-bold mb-8 text-center">the current state of education</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-white/10"
-              >
-                <h3 className="text-5xl font-bold text-white mb-4">58%</h3>
-                <p className="text-gray-300">of UK teachers believe the current education system does not adequately prepare students for the future</p>
-              </motion.div>
+          {/* Shocking Statistics Section */}
+          <div className="mb-16">
+            <div className="bg-red-500/10 backdrop-blur-sm rounded-xl p-8 border border-red-500/20 mb-12">
+              <div className="flex items-center justify-center gap-2 mb-6">
+                <AlertTriangle className="w-6 h-6 text-red-400" />
+                <h2 className="text-2xl font-bold text-center">shocking state of UK education</h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors"
+                >
+                  <h3 className="text-6xl font-bold text-red-400 mb-4">58%</h3>
+                  <p className="text-gray-300">of UK teachers believe the current education system does not adequately prepare students for the future</p>
+                </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-white/10"
-              >
-                <h3 className="text-5xl font-bold text-white mb-4">49%</h3>
-                <p className="text-gray-300">of teachers found GCSEs to be outdated according to OCR survey</p>
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors"
+                >
+                  <h3 className="text-6xl font-bold text-red-400 mb-4">49%</h3>
+                  <p className="text-gray-300">of teachers found GCSEs to be outdated according to OCR survey</p>
+                </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-                className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-white/10"
-              >
-                <h3 className="text-5xl font-bold text-white mb-4">80%</h3>
-                <p className="text-gray-300">of teachers advocate for more content on digital skills and AI in the curriculum</p>
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.6 }}
+                  className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors"
+                >
+                  <h3 className="text-6xl font-bold text-red-400 mb-4">80%</h3>
+                  <p className="text-gray-300">of teachers advocate for more content on digital skills and AI in the curriculum</p>
+                </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 }}
-                className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-white/10"
-              >
-                <div className="flex items-center justify-center mb-4">
-                  <LineChart className="w-12 h-12 text-white" />
-                </div>
-                <p className="text-gray-300">Teachers feel restricted by outdated resources and a curriculum that doesn't focus enough on digital and practical skills</p>
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.8 }}
+                  className="bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors"
+                >
+                  <div className="flex items-center justify-center mb-4">
+                    <LineChart className="w-12 h-12 text-red-400" />
+                  </div>
+                  <p className="text-gray-300">Teachers feel restricted by outdated resources and a curriculum that doesn't focus enough on digital and practical skills</p>
+                </motion.div>
+              </div>
+            </div>
+
+            {/* Future of Work Statistics */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold mb-8 text-center">the future of work</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {[
+                  { number: "70%", text: "of employers value skills over degrees" },
+                  { number: "85%", text: "of jobs in 2030 don't exist yet" },
+                  { number: "92%", text: "of students want practical education" }
+                ].map((stat, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.2 }}
+                    className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center border border-white/10 hover:border-white/20 transition-colors"
+                  >
+                    <h3 className="text-4xl font-bold text-white mb-2">{stat.number}</h3>
+                    <p className="text-gray-400">{stat.text}</p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
 
