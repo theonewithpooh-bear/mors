@@ -3,99 +3,92 @@ import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
-import { Star, Cloud, Cog, Sparkles, Hexagon } from 'lucide-react';
-
-const involvementOptions = [
-  {
-    title: "mentor the next generation",
-    description: "share your expertise and guide students through real-world challenges.",
-    icon: Star
-  },
-  {
-    title: "create learning opportunities",
-    description: "open your workplace doors to innovative internship programs.",
-    icon: Cloud
-  },
-  {
-    title: "lead skill workshops",
-    description: "bring your industry knowledge to interactive learning sessions.",
-    icon: Cog
-  },
-  {
-    title: "amplify our message",
-    description: "help us reach more people who believe in practical education.",
-    icon: Sparkles
-  },
-  {
-    title: "support our mission",
-    description: "contribute to building the future of skills-based education.",
-    icon: Hexagon
-  }
-];
+import { ArrowRight } from 'lucide-react';
 
 const GetInvolved = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
       <div className="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-        <motion.h1 
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="text-6xl font-extrabold mb-12 mt-24 text-center"
+          className="mt-24"
         >
-          join the mors adventure!
-        </motion.h1>
-        
-        <motion.section 
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-          className="mb-16 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white border-opacity-20"
-        >
-          <h2 className="text-4xl font-bold mb-6 text-gray-300">shape the future of education</h2>
-          <p className="text-xl leading-relaxed mb-6">
-            we're looking for passionate individuals who want to revolutionize education. whether you're an educator, professional, or supporter, your unique perspective can help transform how we learn.
-          </p>
-        </motion.section>
-        
-        <motion.section 
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="mb-16 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white border-opacity-20"
-        >
-          <h2 className="text-4xl font-bold mb-6 text-gray-300">ways to contribute</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {involvementOptions.map((option, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
-                className="flex items-start space-x-4"
-              >
-                <option.icon className="w-8 h-8 text-gray-400" />
-                <div>
-                  <h3 className="text-2xl font-semibold mb-2">{option.title}</h3>
-                  <p className="text-lg text-gray-300">{option.description}</p>
-                </div>
-              </motion.div>
-            ))}
+          <motion.section 
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="mb-16 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl p-8 border border-white border-opacity-20"
+          >
+            <h2 className="text-6xl font-bold mb-8 text-white">join the movement</h2>
+            <p className="text-xl leading-relaxed mb-12 text-gray-300">
+              we're building a community of change-makers who believe in transforming education. 
+              your voice, your ideas, and your passion can help shape the future of learning.
+            </p>
+          </motion.section>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all"
+            >
+              <h3 className="text-2xl font-bold mb-4">join our discord</h3>
+              <p className="text-gray-300 mb-6">connect with other educators and students who are passionate about change</p>
+              <Button variant="outline" className="w-full">
+                join community
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="bg-gradient-to-br from-pink-500/20 to-purple-500/20 p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all"
+            >
+              <h3 className="text-2xl font-bold mb-4">attend events</h3>
+              <p className="text-gray-300 mb-6">participate in workshops, hackathons, and discussions about the future of education</p>
+              <Button variant="outline" className="w-full">
+                view calendar
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all"
+            >
+              <h3 className="text-2xl font-bold mb-4">contribute</h3>
+              <p className="text-gray-300 mb-6">share your ideas and help develop new approaches to learning</p>
+              <Button variant="outline" className="w-full">
+                get started
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </motion.div>
           </div>
-        </motion.section>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.5 }}
-          className="text-center"
-        >
-          <Link to="/" className="inline-block">
-            <Button variant="outline" className="text-xl px-10 py-6 rounded-full bg-white text-black hover:bg-gray-200 transition-all duration-300 transform hover:scale-110 hover:rotate-3 shadow-lg">
-              return to home base
-            </Button>
-          </Link>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="text-center"
+          >
+            <Link to="/">
+              <Button 
+                variant="outline" 
+                className="text-lg px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white border-white/20"
+              >
+                return to home
+                <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </div>
