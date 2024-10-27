@@ -44,8 +44,11 @@ const Ethics = () => {
               <p className="mb-4">
                 we believe in absolute transparency in all our operations. all our communications, including those with educational authorities and political entities, are made public through our open letters system.
               </p>
-              <p>
+              <p className="mb-4">
                 our funding sources, partnerships, and decision-making processes are openly documented and accessible to all stakeholders.
+              </p>
+              <p>
+                however, mors reserves the right to its privacy in particular operations, and privacy of our donors, members, and staff. not all communications can be made public for <i>obvious</i> reasons.
               </p>
             </CardContent>
           </Card>
