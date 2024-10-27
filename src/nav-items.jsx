@@ -35,26 +35,3 @@ export const navItems = [
     hidden: true,
   },
 ];
-
-export const youthNavItems = [
-  {
-    title: "home",
-    to: "/youth",
-    icon: <HomeIcon className="h-4 w-4" />,
-  },
-  {
-    title: "learn more",
-    to: "/youth/learn-more",
-    icon: <BookOpenIcon className="h-4 w-4" />,
-  },
-  {
-    title: "get involved",
-    to: "/youth/get-involved",
-    icon: <UsersIcon className="h-4 w-4" />,
-  },
-  {
-    title: "communications",
-    to: "/youth/communications",
-    icon: <MessageSquareIcon className="h-4 w-4" />,
-  },
-];
