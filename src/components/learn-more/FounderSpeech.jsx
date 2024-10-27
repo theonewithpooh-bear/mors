@@ -10,7 +10,7 @@ const FounderSpeech = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8">
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 shadow-lg">
-          <h2 className="font-serif text-3xl text-white mb-4 text-center">The Case Against GCSEs</h2>
+          <h2 className="font-serif text-3xl text-white mb-4 text-center">Introduction to Foundation Skills Certificates</h2>
           <p className="text-sm text-center text-gray-400 mb-6">
             By Monty Middleton-Burn
             <span className="mx-2">|</span>
