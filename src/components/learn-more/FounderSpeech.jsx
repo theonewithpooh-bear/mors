@@ -14,9 +14,7 @@ const FounderSpeech = () => {
           <p className="text-sm text-center text-gray-400 mb-6">
             By Monty Middleton-Burn
             <span className="mx-2">|</span>
-            Education Reform Advocate
-            <span className="mx-2">|</span>
-            Opinion Editorial
+            Founder, MORS
           </p>
           
           <div className="prose prose-invert max-w-none">
