@@ -57,16 +57,50 @@ const Ethics = () => {
             <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">
               <CardHeader>
                 <Eye className="h-8 w-8 mb-2 text-purple-400" />
-                <CardTitle className="text-white text-2xl">transparency in action</CardTitle>
+                <CardTitle className="text-white text-2xl">complete transparency</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="text-gray-300 space-y-6">
+                <p>
+                  we believe in absolute transparency in all our operations. all our communications, including those with educational authorities and political entities, are made public through our open letters system.
+                </p>
+                <p>
+                  our funding sources, partnerships, and decision-making processes are openly documented and accessible to all stakeholders.
+                </p>
+                <p>
+                  however, mors reserves the right to its privacy in particular operations, and privacy of our donors, members, and staff. not all communications can be made public for <span className="italic">obvious</span> reasons.
+                </p>
                 <Accordion type="single" collapsible className="w-full">
-                  <AccordionItem value="transparency" className="border-white/10">
+                  <AccordionItem value="privacy-levels" className="border-white/10">
                     <AccordionTrigger className="text-white hover:text-white/90">
-                      learn more about our transparency commitment
+                      examples of communication privacy levels
                     </AccordionTrigger>
-                    <AccordionContent className="text-gray-300">
-                      our commitment to transparency extends beyond mere declarations. we publish detailed reports of our activities, funding sources, and decision-making processes. our open letters system ensures that communications with educational authorities are publicly accessible, fostering trust and accountability in our reform efforts.
+                    <AccordionContent className="text-gray-300 space-y-6">
+                      <div>
+                        <h4 className="font-semibold mb-2">strictly private communications:</h4>
+                        <ul className="list-disc list-inside space-y-1 text-gray-400">
+                          <li>personal information of members and supporters</li>
+                          <li>internal strategic planning documents</li>
+                          <li>confidential correspondence with educational institutions</li>
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold mb-2">temporarily private communications:</h4>
+                        <ul className="list-disc list-inside space-y-1 text-gray-400">
+                          <li>draft proposals under review</li>
+                          <li>ongoing negotiations with stakeholders</li>
+                          <li>research findings pending verification</li>
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold mb-2">immediately public communications:</h4>
+                        <ul className="list-disc list-inside space-y-1 text-gray-400">
+                          <li>open letters to government bodies</li>
+                          <li>published reform proposals</li>
+                          <li>public statements and position papers</li>
+                        </ul>
+                      </div>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
