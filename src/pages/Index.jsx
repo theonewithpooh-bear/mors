@@ -84,15 +84,9 @@ const Index = () => {
             </div>
           </div>
 
-          <div className={shouldAnimate ? "opacity-0 animate-[fade-in_0.5s_ease-in-out_4s_forwards]" : ""}>
-            <Footer />
-          </div>
-        </motion.div>
-      </motion.div>
-
-      <div className="max-w-3xl mx-auto mt-32 px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
-        <Accordion type="single" collapsible className="w-full">
+          <div className="max-w-3xl mx-auto px-4 mb-32">
+            <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1" className="border-white/10">
             <AccordionTrigger className="text-white hover:text-white/90">
               what exactly is m.o.r.s?
@@ -137,8 +131,14 @@ const Index = () => {
               educational reform is a gradual process. we're currently in the advocacy and awareness phase, building support and refining our proposals. our goal is to see pilot programs implemented within the next few years, with broader systemic changes following successful trials.
             </AccordionContent>
           </AccordionItem>
-        </Accordion>
-      </div>
+            </Accordion>
+          </div>
+
+          <div className={shouldAnimate ? "opacity-0 animate-[fade-in_0.5s_ease-in-out_4s_forwards]" : ""}>
+            <Footer />
+          </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
