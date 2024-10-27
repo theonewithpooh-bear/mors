@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-const Index = () => {
+const YouthIndex = () => {
   const [shouldAnimate, setShouldAnimate] = useState(true);
 
   useEffect(() => {
@@ -20,11 +20,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
-      <motion.div 
-        initial={{ scale: 1 }}
-        animate={{ scale: 1 }}
-        className="relative"
-      >
+      <motion.div initial={{ scale: 1 }} animate={{ scale: 1 }} className="relative">
         <motion.div
           initial={shouldAnimate ? { scale: 4, y: "40vh" } : false}
           animate={shouldAnimate ? { scale: 1, y: 0 } : false}
@@ -63,7 +59,7 @@ const Index = () => {
                     className="mb-6"
                   >
                     <span className="text-4xl tracking-[0.3em] text-white uppercase font-light">
-                      introducing
+                      hi there!
                     </span>
                   </motion.div>
                   
@@ -73,17 +69,17 @@ const Index = () => {
                     transition={{ delay: 3, duration: 1 }}
                   >
                     <h1 className="text-7xl sm:text-8xl font-bold mb-2 tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-r from-white/70 via-white to-white/70">
-                      movement of real skills
+                      let's make school better!
                     </h1>
-                    <p className="text-lg text-white/50 mb-8">(MORS)</p>
+                    <p className="text-lg text-white/50 mb-8">we're MORS</p>
                     <div className="w-48 h-0.5 mx-auto bg-gradient-to-r from-transparent via-white/15 to-transparent mb-8" />
                     <p className={`text-2xl sm:text-3xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light ${shouldAnimate ? "opacity-0 animate-[fade-in_0.5s_ease-in-out_3.5s_forwards]" : ""}`}>
-                      our mission is to revolutionize the educational landscape by introducing practical, skills-based learning that prepares students for the real world.
+                      we want to change how you learn at school, making it more fun and useful for your future!
                     </p>
                     <div className="mt-8">
-                      <Link to="/youth">
+                      <Link to="/">
                         <Button variant="outline" className="rounded-full px-8 py-6 text-lg bg-white/10 hover:bg-white/20 text-white border-white/20">
-                          version for young people
+                          switch to grown-up version
                         </Button>
                       </Link>
                     </div>
@@ -101,4 +97,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default YouthIndex;
