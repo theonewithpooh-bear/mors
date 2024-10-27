@@ -21,6 +21,11 @@ export const navItems = [
     to: "/communications",
     icon: <MessageSquareIcon className="h-4 w-4" />,
   },
+  {
+    title: "articles",
+    to: "/articles",
+    icon: <BookOpenIcon className="h-4 w-4" />,
+  },
   // Hidden from navigation but still accessible
   {
     title: "subject reforms",
