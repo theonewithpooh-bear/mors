@@ -98,7 +98,7 @@ const Index = () => {
               But don't GCSEs teach critical thinking?
             </AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              While GCSEs claim to develop critical thinking, they primarily reward memorization and standardized answers. A reformed education system should emphasize analyzing real-world problems, developing innovative solutions, and applying knowledge in practical contexts - essential skills currently overlooked in the GCSE format.
+              M.O.R.S advocates for a shift away from the current GCSE system that primarily rewards memorization and standardized answers. We advocate for an education system that emphasizes analyzing real-world problems, developing innovative solutions, and applying knowledge in practical contexts - essential skills currently overlooked in the GCSE format.
             </AccordionContent>
           </AccordionItem>
 
@@ -107,7 +107,7 @@ const Index = () => {
               Isn't memory retention an important skill taught by GCSEs?
             </AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              Modern technology has transformed how we access and use information. Education reform should prioritize understanding concepts, practical application, and effective information utilization over pure memorization. The focus should shift to developing these more relevant skills for today's world.
+              M.O.R.S advocates for an education system that reflects how modern technology has transformed information access and usage. We support prioritizing concept understanding, practical application, and effective information utilization over pure memorization, advocating for the development of skills more relevant to today's world.
             </AccordionContent>
           </AccordionItem>
 
@@ -116,7 +116,7 @@ const Index = () => {
               How will students prove their abilities without GCSEs?
             </AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              A reformed education system should include comprehensive skill certification, practical assessments, and portfolio development. These methods better demonstrate a student's actual capabilities and readiness for further education or employment than traditional GCSE grades.
+              M.O.R.S advocates for a comprehensive skill certification system, incorporating practical assessments and portfolio development. We believe these methods would better demonstrate students' actual capabilities and readiness for further education or employment than traditional GCSE grades.
             </AccordionContent>
           </AccordionItem>
 
@@ -125,7 +125,7 @@ const Index = () => {
               Won't this make education less standardized?
             </AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              Educational reform should maintain high standards while enabling more personalized learning paths. The ideal framework would ensure consistency in skill assessment while providing flexibility in how students demonstrate their competencies.
+              M.O.R.S advocates for maintaining high educational standards while enabling personalized learning paths. We support a framework that ensures consistency in skill assessment while providing flexibility in how students demonstrate their competencies.
             </AccordionContent>
           </AccordionItem>
 
@@ -134,7 +134,7 @@ const Index = () => {
               How will universities evaluate students?
             </AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              Universities should have access to more meaningful data about students' capabilities, including practical skills assessments, project portfolios, and demonstrated competencies in specific areas - providing a more complete picture than traditional GCSE grades.
+              M.O.R.S advocates for universities to have access to more meaningful data about students' capabilities. We support the inclusion of practical skills assessments, project portfolios, and demonstrated competencies in specific areas - providing a more complete picture than traditional GCSE grades.
             </AccordionContent>
           </AccordionItem>
 
@@ -143,7 +143,7 @@ const Index = () => {
               What about international recognition?
             </AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              Modern international educational trends already emphasize practical skills and competency-based assessment. Many countries are moving away from traditional examination-based systems, demonstrating the viability of this approach.
+              M.O.R.S advocates for alignment with modern international educational trends that emphasize practical skills and competency-based assessment. We point to many countries already moving away from traditional examination-based systems as evidence of this approach's viability.
             </AccordionContent>
           </AccordionItem>
 
@@ -152,7 +152,7 @@ const Index = () => {
               How will this prepare students for the workplace?
             </AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              Education reform focused on practical skills, real-world problem solving, and project-based learning would develop the exact competencies that employers seek. This includes technical skills, teamwork, communication, and adaptability - all crucial for workplace success.
+              M.O.R.S advocates for education reform focused on practical skills, real-world problem solving, and project-based learning. We believe these changes would develop the exact competencies that employers seek, including technical skills, teamwork, communication, and adaptability.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
