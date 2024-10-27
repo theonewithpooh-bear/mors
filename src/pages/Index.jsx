@@ -72,7 +72,7 @@ const Index = () => {
                     <h1 className="text-7xl sm:text-8xl font-bold mb-2 tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-r from-white/70 via-white to-white/70">
                       movement of real skills
                     </h1>
-                    <p className="text-lg text-white/50 mb-8">(MORS)</p>
+                    <p className="text-lg text-white/50 mb-8">M.O.R.S.</p>
                     <div className="w-48 h-0.5 mx-auto bg-gradient-to-r from-transparent via-white/15 to-transparent mb-8" />
                     <p className={`text-2xl sm:text-3xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light ${shouldAnimate ? "opacity-0 animate-[fade-in_0.5s_ease-in-out_3.5s_forwards]" : ""}`}>
                       our mission is to revolutionize the educational landscape by introducing practical, skills-based learning that prepares students for the real world.
