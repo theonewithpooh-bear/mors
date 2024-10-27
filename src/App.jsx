@@ -10,6 +10,7 @@ import Communications from "./pages/Communications";
 import SubjectReforms from "./pages/SubjectReforms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Articles from "./pages/Articles";
+import Ethics from "./pages/Ethics";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/subject-reforms" element={<SubjectReforms />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/articles" element={<Articles />} />
+          <Route path="/ethics" element={<Ethics />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
