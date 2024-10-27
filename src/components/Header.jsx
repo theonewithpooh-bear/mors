@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { navItems } from '../nav-items';
+import { navItems, youthNavItems } from '../nav-items';
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import {
@@ -15,7 +15,8 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   
   const isActive = (path) => location.pathname === path;
-  const visibleNavItems = navItems.filter(item => !item.hidden);
+  const isYouthVersion = location.pathname.startsWith('/youth');
+  const currentNavItems = isYouthVersion ? youthNavItems : navItems.filter(item => !item.hidden);
 
   const MobileNav = () => (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -34,7 +35,7 @@ const Header = () => {
           </div>
           <nav className="px-6 py-8">
             <ul className="space-y-4">
-              {visibleNavItems.map(({ to, title, icon }) => (
+              {currentNavItems.map(({ to, title, icon }) => (
                 <li key={to}>
                   <Link
                     to={to}
@@ -64,7 +65,7 @@ const Header = () => {
           
           {/* Desktop navigation */}
           <ul className="hidden md:flex space-x-12">
-            {visibleNavItems.map(({ path, label, to, title }) => (
+            {currentNavItems.map(({ to, title }) => (
               <li key={to}>
                 <Link 
                   to={to} 
