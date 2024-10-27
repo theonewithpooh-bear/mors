@@ -2,12 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, BookOpen, GraduationCap, LineChart, Users } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import FounderSpeech from '../components/learn-more/FounderSpeech';
-import FAQSection from '../components/learn-more/FAQSection';
 
 const LearnMore = () => {
   return (
@@ -111,14 +112,80 @@ const LearnMore = () => {
         <FounderSpeech />
 
         {/* FAQ Section */}
-        <FAQSection />
+        <div className="max-w-3xl mx-auto mt-32">
+          <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1" className="border-white/10">
+              <AccordionTrigger className="text-white hover:text-white/90">
+                But don't GCSEs teach critical thinking?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-400">
+                While GCSEs claim to develop critical thinking, they often focus more on memorization and standardized answers. True critical thinking involves analyzing real-world problems, developing innovative solutions, and applying knowledge in practical contexts - skills that are often overlooked in the current GCSE format.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2" className="border-white/10">
+              <AccordionTrigger className="text-white hover:text-white/90">
+                Isn't memory retention an important skill taught by GCSEs?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-400">
+                While memory retention is valuable, modern technology has transformed how we access and use information. The focus should be on understanding concepts, practical application, and knowing how to find and utilize information effectively rather than pure memorization.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3" className="border-white/10">
+              <AccordionTrigger className="text-white hover:text-white/90">
+                How will students prove their abilities without GCSEs?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-400">
+                Our proposed system includes comprehensive skill certification, practical assessments, and portfolio development that better demonstrate a student's actual capabilities and readiness for further education or employment.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-4" className="border-white/10">
+              <AccordionTrigger className="text-white hover:text-white/90">
+                Won't this make education less standardized?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-400">
+                Our approach maintains high standards while allowing for more personalized learning paths. We propose a framework that ensures consistency in skill assessment while providing flexibility in how students demonstrate their competencies.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5" className="border-white/10">
+              <AccordionTrigger className="text-white hover:text-white/90">
+                How will universities evaluate students?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-400">
+                Universities will have access to more meaningful data about students' capabilities, including practical skills assessments, project portfolios, and demonstrated competencies in specific areas - providing a more complete picture than traditional GCSE grades.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-6" className="border-white/10">
+              <AccordionTrigger className="text-white hover:text-white/90">
+                What about international recognition?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-400">
+                Our proposed system aligns with modern international educational trends that emphasize practical skills and competency-based assessment. Many countries are already moving away from traditional examination-based systems.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-7" className="border-white/10">
+              <AccordionTrigger className="text-white hover:text-white/90">
+                How will this prepare students for the workplace?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-400">
+                By focusing on practical skills, real-world problem solving, and project-based learning, students will develop the exact competencies that employers seek. This includes technical skills, teamwork, communication, and adaptability.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
 
         {/* Call to Action */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="text-center mt-16"
+          className="text-center"
         >
           <Separator className="my-8 bg-white/10" />
           <h2 className="text-2xl font-bold mb-4">ready to make a difference?</h2>
