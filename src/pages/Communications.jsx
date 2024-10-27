@@ -54,57 +54,6 @@ const Communications = () => {
 
         <div className="max-w-3xl mx-auto mb-16">
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 shadow-lg">
-            <h2 className="text-3xl font-bold mb-8 text-center">our non-partisan approach</h2>
-            
-            <div className="prose prose-invert max-w-none mb-12">
-              <p className="text-lg mb-6">
-                mors maintains a strictly non-partisan stance, meaning we work independently of any political party affiliations or ideological biases. our focus is solely on evidence-based educational reform that benefits all students, regardless of political leanings.
-              </p>
-              
-              <p className="text-lg mb-6">
-                while we remain politically neutral, we actively engage with political organizations across the spectrum to raise awareness and advocate for educational reform. this includes communicating with:
-              </p>
-
-              <ul className="list-disc pl-6 space-y-2 text-gray-300">
-                <li>political parties and their education spokespersons</li>
-                <li>parliamentary committees on education</li>
-                <li>local authorities and councils</li>
-                <li>education-focused think tanks and policy groups</li>
-              </ul>
-              
-              <p className="text-lg mt-6">
-                our engagement with political entities is always transparent and focused on our core mission: improving the education system through practical, evidence-based reforms.
-              </p>
-
-              <div className="mt-8 grid grid-cols-3 gap-8 items-center">
-                <div className="flex justify-center">
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/en/f/f8/Reform_UK_Logo.png"
-                    alt="Reform UK Logo"
-                    className="h-16 object-contain filter brightness-75 hover:brightness-100 transition-all"
-                  />
-                </div>
-                <div className="flex justify-center">
-                  <img 
-                    src="https://upload.wikimedia.org/wikipedia/sco/thumb/0/05/Logo_Labour_Party.svg/2560px-Logo_Labour_Party.svg.png"
-                    alt="UK Labour Logo"
-                    className="h-16 object-contain filter brightness-75 hover:brightness-100 transition-all"
-                  />
-                </div>
-                <div className="flex justify-center">
-                  <img 
-                    src="https://www.logo.wine/a/logo/Conservative_Party_(UK)/Conservative_Party_(UK)-Logo.wine.svg"
-                    alt="UK Conservatives Logo"
-                    className="h-16 object-contain filter brightness-75 hover:brightness-100 transition-all"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="open-letters" className="max-w-3xl mx-auto mb-16">
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 shadow-lg">
             <h2 className="text-3xl font-bold mb-8 text-center">understanding open letters</h2>
             
             <div className="prose prose-invert max-w-none mb-12">
@@ -119,30 +68,51 @@ const Communications = () => {
 
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
-                <AccordionTrigger>what is the purpose of mors' open letters?</AccordionTrigger>
-                <AccordionContent>
-                  mors utilizes open letters as a formal communication channel to present educational reform proposals to key stakeholders. this approach ensures transparency in our advocacy while facilitating public discourse on educational reform. our letters serve to document our positions and recommendations while maintaining accountability in the reform process.
+                <AccordionTrigger>How will the system ensure fairness in coursework grading when different teachers have varying expectations and standards?</AccordionTrigger>
+                <AccordionContent className="text-gray-400">
+                  M.O.R.S advocates for standardized rubrics and regular moderation processes. We support establishing clear assessment criteria, comprehensive teacher training programs, and regular cross-marking sessions. Additionally, we propose external moderation systems to review work samples across different schools to maintain consistency.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-2">
-                <AccordionTrigger>how do open letters facilitate change?</AccordionTrigger>
-                <AccordionContent>
-                  open letters function as formal instruments of change by establishing clear documentation of reform proposals and enabling public scrutiny of the dialogue between stakeholders. this transparency creates accountability and allows for broader participation in the reform process, leading to more comprehensive and well-considered educational policies.
+                <AccordionTrigger>What measures will be taken to prevent plagiarism and ensure the authenticity of students' coursework submissions?</AccordionTrigger>
+                <AccordionContent className="text-gray-400">
+                  M.O.R.S advocates for implementing advanced plagiarism detection systems, regular progress monitoring, and supervised work sessions. We support the use of digital portfolios for documenting work processes and regular teacher-student discussions about project development.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-3">
-                <AccordionTrigger>who are the intended audiences for these letters?</AccordionTrigger>
-                <AccordionContent>
-                  our open letters are directed primarily at policy makers and educational authorities, while remaining accessible to all stakeholders in education. this includes teachers, administrators, parents, students, and the general public. the letters are structured to be comprehensible and relevant to this diverse audience while maintaining their formal nature.
+                <AccordionTrigger>How will this approach avoid disadvantaging students from schools with fewer resources or less experienced teachers?</AccordionTrigger>
+                <AccordionContent className="text-gray-400">
+                  M.O.R.S advocates for establishing national resource sharing platforms, comprehensive teacher support networks, and mentoring programs. We support additional funding allocation to schools in need and partnerships between schools to share expertise and resources.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-4">
-                <AccordionTrigger>what outcomes have been achieved through these letters?</AccordionTrigger>
-                <AccordionContent>
-                  as mors is currently in its launch phase, we have not yet sent our first open letter. however, we have established a comprehensive framework for our communication strategy and are preparing to initiate formal dialogue with key stakeholders in the educational sector. our first open letters will be published soon.
+                <AccordionTrigger>Without the clear structure of GCSEs, how will students know what they need to learn for higher education and employment?</AccordionTrigger>
+                <AccordionContent className="text-gray-400">
+                  M.O.R.S advocates for detailed skill frameworks aligned with higher education and industry requirements. We support frameworks that clearly outline core competencies, essential knowledge areas, and practical skills needed for various career paths and academic progression.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5">
+                <AccordionTrigger>How will the system handle subjectivity in assessing soft skills and practical abilities?</AccordionTrigger>
+                <AccordionContent className="text-gray-400">
+                  M.O.R.S advocates for detailed assessment matrices for soft skills, multiple evaluator systems, and peer and self-assessment components. We support regular standardization meetings to ensure consistent interpretation of assessment criteria across all schools.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6">
+                <AccordionTrigger>What strategies will prevent students from becoming overly reliant on external help?</AccordionTrigger>
+                <AccordionContent className="text-gray-400">
+                  M.O.R.S advocates for supervised in-class work periods, detailed work logs, and regular progress interviews. We support assessment systems that emphasize process documentation and include individual reflection components to demonstrate personal understanding and growth.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-7">
+                <AccordionTrigger>How will the system manage student workload and mental health with continuous assessment?</AccordionTrigger>
+                <AccordionContent className="text-gray-400">
+                  M.O.R.S advocates for flexible deadlines, balanced assessment schedules, and regular workload reviews. We support integrating mental health support into the system, with dedicated counselors and stress management resources, and coordination between teachers to prevent overwhelming deadlines.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
