@@ -4,6 +4,12 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Scale, Eye, Users, Brain } from 'lucide-react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const Ethics = () => {
   return (
@@ -47,9 +53,47 @@ const Ethics = () => {
               <p className="mb-4">
                 our funding sources, partnerships, and decision-making processes are openly documented and accessible to all stakeholders.
               </p>
-              <p>
+              <p className="mb-4">
                 however, mors reserves the right to its privacy in particular operations, and privacy of our donors, members, and staff. not all communications can be made public for <i>obvious</i> reasons.
               </p>
+              
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1" className="border-white/10">
+                  <AccordionTrigger className="text-white hover:text-white/90">
+                    examples of communication privacy levels
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-400">
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="font-semibold text-white mb-2">strictly private communications:</h4>
+                        <ul className="list-disc pl-5 space-y-1">
+                          <li>personal information of members and supporters</li>
+                          <li>internal strategic planning documents</li>
+                          <li>confidential correspondence with educational institutions</li>
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold text-white mb-2">temporarily private communications:</h4>
+                        <ul className="list-disc pl-5 space-y-1">
+                          <li>draft proposals under review</li>
+                          <li>ongoing negotiations with stakeholders</li>
+                          <li>research findings pending verification</li>
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold text-white mb-2">immediately public communications:</h4>
+                        <ul className="list-disc pl-5 space-y-1">
+                          <li>open letters to government bodies</li>
+                          <li>published reform proposals</li>
+                          <li>public statements and position papers</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </CardContent>
           </Card>
 
