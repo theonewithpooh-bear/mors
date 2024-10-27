@@ -25,7 +25,7 @@ const Articles = () => {
                 <span className="text-sm text-gray-400">Volume 1, Issue 1 - Education Reform Special Edition</span>
               </div>
               
-              <h2 className="font-serif text-4xl mb-6">The Case Against GCSEs</h2>
+              <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">The Case Against GCSEs</h2>
               
               <div className="flex items-center text-sm text-gray-400 mb-6">
                 <span>By Monty Middleton-Burn</span>
@@ -33,7 +33,7 @@ const Articles = () => {
                 <span>Founder, MORS</span>
               </div>
               
-              <p className="text-gray-300 text-lg mb-6">
+              <p className="text-xl text-gray-400 mb-6">
                 I have noticed, through my studying of my GCSEs, that they are seriously flawed. The current system demands an unrealistic memorization of vast amounts of information across multiple subjects...
               </p>
               
@@ -53,20 +53,24 @@ const Articles = () => {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="pt-6 space-y-6 text-gray-300 text-lg">
-                      <p>
+                    <div className="pt-6 space-y-8">
+                      <p className="text-xl text-gray-400">
                         This scenario is entirely unrealistic and places unnecessary stress on our young people while wasting valuable time. Time that could be better invested in core knowledge acquisition and practical application of skills relevant to future careers.
                       </p>
 
-                      <h3 className="text-2xl font-bold mt-8 mb-4">The Alarming Statistics</h3>
-                      <p>
-                        Research reveals that within months, 60% to 70% of GCSE knowledge dissipates, escalating to 90% within a year. More concerning still, only 30% of employers value these qualifications, with the majority prioritizing practical skills that GCSEs fail to measure.
-                      </p>
+                      <div>
+                        <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">The Alarming Statistics</h3>
+                        <p className="text-xl text-gray-400">
+                          Research reveals that within months, 60% to 70% of GCSE knowledge dissipates, escalating to 90% within a year. More concerning still, only 30% of employers value these qualifications, with the majority prioritizing practical skills that GCSEs fail to measure.
+                        </p>
+                      </div>
 
-                      <h3 className="text-2xl font-bold mt-8 mb-4">A Revolutionary Proposal</h3>
-                      <p>
-                        I propose a revolutionary system that assesses real-world abilities through coursework. This would introduce two tiers of Foundation Skills Certificates (FSCs) as replacements for GCSE and A-Level qualifications, with an optional higher-level qualification available for those who prefer it over FSC Level 2.
-                      </p>
+                      <div>
+                        <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">A Revolutionary Proposal</h3>
+                        <p className="text-xl text-gray-400">
+                          I propose a revolutionary system that assesses real-world abilities through coursework. This would introduce two tiers of Foundation Skills Certificates (FSCs) as replacements for GCSE and A-Level qualifications, with an optional higher-level qualification available for those who prefer it over FSC Level 2.
+                        </p>
+                      </div>
                     </div>
                   </motion.div>
                 )}
