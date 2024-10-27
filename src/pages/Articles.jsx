@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const Articles = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
@@ -25,7 +22,14 @@ const Articles = () => {
                 <span className="text-sm text-gray-400">Volume 1, Issue 1 - Education Reform Special Edition</span>
               </div>
               
-              <h2 className="font-serif text-3xl mb-4">The Case Against GCSEs</h2>
+              <h2 className="font-serif text-3xl mb-4">
+                <Link 
+                  to="/learn-more#founder-speech" 
+                  className="hover:text-gray-300 transition-colors"
+                >
+                  The Case Against GCSEs
+                </Link>
+              </h2>
               
               <div className="flex items-center text-sm text-gray-400 mb-6">
                 <span>By Monty Middleton-Burn</span>
@@ -37,40 +41,12 @@ const Articles = () => {
                 I have noticed, through my studying of my GCSEs, that they are seriously flawed. The current system demands an unrealistic memorization of vast amounts of information across multiple subjects...
               </p>
               
-              <button 
-                onClick={() => setIsExpanded(!isExpanded)}
+              <Link 
+                to="/learn-more#founder-speech"
                 className="inline-flex items-center text-sm text-gray-400 hover:text-white transition-colors"
               >
-                {isExpanded ? 'Show less' : 'Read full article'} <ArrowRight className={`ml-2 w-4 h-4 transition-transform ${isExpanded ? 'rotate-90' : ''}`} />
-              </button>
-
-              <AnimatePresence>
-                {isExpanded && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="overflow-hidden"
-                  >
-                    <div className="pt-6 space-y-4 text-gray-300">
-                      <p>
-                        This scenario is entirely unrealistic and places unnecessary stress on our young people while wasting valuable time. Time that could be better invested in core knowledge acquisition and practical application of skills relevant to future careers.
-                      </p>
-
-                      <h3 className="text-xl font-bold mt-8">The Alarming Statistics</h3>
-                      <p>
-                        Research reveals that within months, 60% to 70% of GCSE knowledge dissipates, escalating to 90% within a year. More concerning still, only 30% of employers value these qualifications, with the majority prioritizing practical skills that GCSEs fail to measure.
-                      </p>
-
-                      <h3 className="text-xl font-bold mt-8">A Revolutionary Proposal</h3>
-                      <p>
-                        I propose a revolutionary system that assesses real-world abilities through coursework. This would introduce two tiers of Foundation Skills Certificates (FSCs) as replacements for GCSE and A-Level qualifications, with an optional higher-level qualification available for those who prefer it over FSC Level 2.
-                      </p>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                Read full article <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
             </article>
 
             {/* Placeholder for future articles */}
