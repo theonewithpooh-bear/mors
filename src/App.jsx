@@ -9,6 +9,7 @@ import GetInvolved from "./pages/GetInvolved";
 import Communications from "./pages/Communications";
 import SubjectReforms from "./pages/SubjectReforms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Articles from "./pages/Articles";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/communications" element={<Communications />} />
           <Route path="/subject-reforms" element={<SubjectReforms />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/articles" element={<Articles />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
