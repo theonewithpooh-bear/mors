@@ -2,30 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { 
-  BookOpen, 
-  GraduationCap, 
-  LineChart, 
-  Users,
-  ArrowRight,
-  AlertTriangle
-} from 'lucide-react';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import FounderSpeech from '../components/learn-more/FounderSpeech';
 
 const LearnMore = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
-      
       <div className="container mx-auto px-4 py-24">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -41,7 +28,6 @@ const LearnMore = () => {
         <div className="mb-16">
           <div className="bg-red-500/10 backdrop-blur-sm rounded-xl p-8 border border-red-500/20 mb-12">
             <div className="flex items-center justify-center gap-2 mb-6">
-              <AlertTriangle className="w-6 h-6 text-red-400" />
               <h2 className="text-2xl font-bold text-center">shocking state of UK education</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -88,7 +74,7 @@ const LearnMore = () => {
                 className="bg-white/5 rounded-lg p-8 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors flex flex-col items-center justify-center text-center"
               >
                 <div className="flex items-center justify-center mb-4">
-                  <LineChart className="w-12 h-12 text-red-400" />
+                  <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-2 leading-none">Digital Skills Crisis</h3>
                 </div>
                 <p className="text-gray-300">
                   Teachers trapped by outdated resources & curriculum - digital skills crisis looming
@@ -122,34 +108,7 @@ const LearnMore = () => {
         </div>
 
         {/* Opinion Piece */}
-        <div className="max-w-3xl mx-auto mb-16">
-          <p className="text-sm tracking-wide uppercase text-gray-400 mb-6 text-center">
-            Written by our founder · Monty Middleton-Burn
-          </p>
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 shadow-lg">
-            <p className="text-xl leading-relaxed text-gray-300">
-              I have noticed, through my studying of my GCSEs, that they are seriously flawed.
-            </p>
-            <p className="text-xl leading-relaxed text-gray-300 mt-4">
-              You are expected to learn an extremely large amount of information, on a wide variety of subjects, at a time when the brain is not yet fully developed.
-            </p>
-            <p className="text-xl leading-relaxed text-gray-300 mt-4">
-              In what world, will you again be put in an exam hall, in extreme silence, not allowed to communicate with anyone, or use any of your resources?
-            </p>
-            <p className="text-xl leading-relaxed text-gray-300 mt-4">
-              Exactly, you won't! Which is why it is entirely unrealistic, and putting not just undue stress on our young people, but wasting their time. Time that could be much better spent on more core knowledge, and learning that core knowledge in a way that will actually help you in the future.
-            </p>
-            <p className="text-xl leading-relaxed text-gray-300 mt-4">
-              It has been discovered that within a few months, nearly 60% to 70% of knowledge gained through GCSEs can be lost, and up to 90% can be lost within a year. That's 90% of knowledge gone! And to make matters worse, only about 30% of employers even care about the qualifications you acquired. The remaining 70% care more about your skills, which GCSEs can't measure or quantify.
-            </p>
-            <p className="text-xl leading-relaxed text-gray-300 mt-4">
-              That's why I propose a revolutionary new system that will completely overhaul the current system. I propose a system that assesses real-world abilities through coursework.
-            </p>
-            <p className="text-xl leading-relaxed text-gray-300 mt-4">
-              In my proposed system, there would be two tiers of Foundation Skills Certificates (FSCs) for GCSE and A-Level replacements, respectively. However, there would still be an optional higher-level qualification available for those who prefer it over FSC Level 2.
-            </p>
-          </div>
-        </div>
+        <FounderSpeech />
 
         {/* Key Principles */}
         <div className="space-y-8 mb-16">
