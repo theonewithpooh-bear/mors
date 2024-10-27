@@ -95,64 +95,46 @@ const Index = () => {
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1" className="border-white/10">
             <AccordionTrigger className="text-white hover:text-white/90">
-              But don't GCSEs teach critical thinking?
+              what exactly is m.o.r.s?
             </AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              M.O.R.S advocates for a shift away from the current GCSE system that primarily rewards memorization and standardized answers. We advocate for an education system that emphasizes analyzing real-world problems, developing innovative solutions, and applying knowledge in practical contexts - essential skills currently overlooked in the GCSE format.
+              m.o.r.s (movement of real skills) is a grassroots educational reform initiative advocating for a shift from traditional examination-based assessment to practical, skills-focused learning. we believe in preparing students for real-world challenges through hands-on experience and continuous assessment.
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-2" className="border-white/10">
             <AccordionTrigger className="text-white hover:text-white/90">
-              Isn't memory retention an important skill taught by GCSEs?
+              how does m.o.r.s plan to implement these changes?
             </AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              M.O.R.S advocates for an education system that reflects how modern technology has transformed information access and usage. We support prioritizing concept understanding, practical application, and effective information utilization over pure memorization, advocating for the development of skills more relevant to today's world.
+              we work through democratic channels, engaging with educational authorities, policymakers, and stakeholders. our approach involves presenting detailed reform proposals, building public support, and collaborating with educational institutions to pilot new assessment methods.
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-3" className="border-white/10">
             <AccordionTrigger className="text-white hover:text-white/90">
-              How will students prove their abilities without GCSEs?
+              what makes m.o.r.s different from other reform movements?
             </AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              M.O.R.S advocates for a comprehensive skill certification system, incorporating practical assessments and portfolio development. We believe these methods would better demonstrate students' actual capabilities and readiness for further education or employment than traditional GCSE grades.
+              our focus is specifically on transforming assessment methods to reflect real-world skills and practical abilities. we maintain political neutrality while advocating for evidence-based reforms that prepare students for both higher education and employment.
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-4" className="border-white/10">
             <AccordionTrigger className="text-white hover:text-white/90">
-              Won't this make education less standardized?
+              how can i get involved with m.o.r.s?
             </AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              M.O.R.S advocates for maintaining high educational standards while enabling personalized learning paths. We support a framework that ensures consistency in skill assessment while providing flexibility in how students demonstrate their competencies.
+              there are multiple ways to support our movement: join our community, participate in local advocacy groups, share our message on social media, or contribute to our research and proposal development. visit our "get involved" page to learn more.
             </AccordionContent>
           </AccordionItem>
 
           <AccordionItem value="item-5" className="border-white/10">
             <AccordionTrigger className="text-white hover:text-white/90">
-              How will universities evaluate students?
+              what is the timeline for these proposed changes?
             </AccordionTrigger>
             <AccordionContent className="text-gray-400">
-              M.O.R.S advocates for universities to have access to more meaningful data about students' capabilities. We support the inclusion of practical skills assessments, project portfolios, and demonstrated competencies in specific areas - providing a more complete picture than traditional GCSE grades.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-6" className="border-white/10">
-            <AccordionTrigger className="text-white hover:text-white/90">
-              What about international recognition?
-            </AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              M.O.R.S advocates for alignment with modern international educational trends that emphasize practical skills and competency-based assessment. We point to many countries already moving away from traditional examination-based systems as evidence of this approach's viability.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-7" className="border-white/10">
-            <AccordionTrigger className="text-white hover:text-white/90">
-              How will this prepare students for the workplace?
-            </AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              M.O.R.S advocates for education reform focused on practical skills, real-world problem solving, and project-based learning. We believe these changes would develop the exact competencies that employers seek, including technical skills, teamwork, communication, and adaptability.
+              educational reform is a gradual process. we're currently in the advocacy and awareness phase, building support and refining our proposals. our goal is to see pilot programs implemented within the next few years, with broader systemic changes following successful trials.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
