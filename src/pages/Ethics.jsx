@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Scale, Eye, Users, Brain, BookOpen, Shield, Target, Lightbulb } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const Ethics = () => {
   const fadeIn = {
@@ -32,65 +33,142 @@ const Ethics = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {[
-            {
-              icon: <Scale className="h-8 w-8 mb-2 text-blue-400" />,
-              title: "non-partisan commitment",
-              content: "we maintain strict political neutrality, focusing solely on evidence-based educational reform. while we engage with organizations across the political spectrum, our commitment remains steadfast to educational improvement rather than political alignment. this independence allows us to advocate effectively for changes that benefit all students, regardless of political context."
-            },
-            {
-              icon: <Eye className="h-8 w-8 mb-2 text-purple-400" />,
-              title: "transparency in action",
-              content: "our commitment to transparency extends beyond mere declarations. we publish detailed reports of our activities, funding sources, and decision-making processes. our open letters system ensures that communications with educational authorities are publicly accessible, fostering trust and accountability in our reform efforts."
-            },
-            {
-              icon: <Users className="h-8 w-8 mb-2 text-green-400" />,
-              title: "inclusive dialogue",
-              content: "we actively seek diverse perspectives from all education stakeholders. our reform proposals are developed through extensive consultation with students, teachers, parents, administrators, and policymakers. this collaborative approach ensures that our initiatives address real needs and concerns across the educational landscape."
-            },
-            {
-              icon: <Brain className="h-8 w-8 mb-2 text-rose-400" />,
-              title: "evidence-based approach",
-              content: "all our reform proposals are grounded in rigorous research and empirical evidence. we maintain partnerships with educational researchers and institutions to ensure our proposals reflect current academic understanding. our commitment to continuous evaluation helps us refine and improve our approaches."
-            },
-            {
-              icon: <BookOpen className="h-8 w-8 mb-2 text-amber-400" />,
-              title: "educational integrity",
-              content: "we advocate for assessment methods that genuinely reflect student capabilities and learning outcomes. our proposals emphasize authentic evaluation over standardized testing, promoting a more holistic and meaningful approach to measuring educational achievement."
-            },
-            {
-              icon: <Target className="h-8 w-8 mb-2 text-cyan-400" />,
-              title: "long-term vision",
-              content: "our ethical framework emphasizes sustainable, long-term improvements over quick fixes. we believe in developing solutions that will stand the test of time and create lasting positive change in the educational system."
-            },
-            {
-              icon: <Shield className="h-8 w-8 mb-2 text-indigo-400" />,
-              title: "student advocacy",
-              content: "at the heart of our ethical framework is an unwavering commitment to student welfare. we prioritize reforms that enhance learning experiences while supporting mental health and well-being, ensuring that educational advancement never comes at the cost of student welfare."
-            },
-            {
-              icon: <Lightbulb className="h-8 w-8 mb-2 text-yellow-400" />,
-              title: "innovation with responsibility",
-              content: "while we champion innovative approaches to education, we do so with careful consideration of potential impacts. our ethical framework ensures that new methodologies are thoroughly evaluated for their effects on all stakeholders before implementation."
-            }
-          ].map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-            >
-              <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">
-                <CardHeader>
-                  {item.icon}
-                  <CardTitle className="text-white text-2xl">{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="text-gray-300">
-                  <p>{item.content}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+          >
+            <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">
+              <CardHeader>
+                <Scale className="h-8 w-8 mb-2 text-blue-400" />
+                <CardTitle className="text-white text-2xl">non-partisan commitment</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-300">
+                <p>we maintain strict political neutrality, focusing solely on evidence-based educational reform. while we engage with organizations across the political spectrum, our commitment remains steadfast to educational improvement rather than political alignment. this independence allows us to advocate effectively for changes that benefit all students, regardless of political context.</p>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">
+              <CardHeader>
+                <Eye className="h-8 w-8 mb-2 text-purple-400" />
+                <CardTitle className="text-white text-2xl">transparency in action</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="transparency" className="border-white/10">
+                    <AccordionTrigger className="text-white hover:text-white/90">
+                      learn more about our transparency commitment
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-300">
+                      our commitment to transparency extends beyond mere declarations. we publish detailed reports of our activities, funding sources, and decision-making processes. our open letters system ensures that communications with educational authorities are publicly accessible, fostering trust and accountability in our reform efforts.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">
+              <CardHeader>
+                <Users className="h-8 w-8 mb-2 text-green-400" />
+                <CardTitle className="text-white text-2xl">inclusive dialogue</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-300">
+                <p>we actively seek diverse perspectives from all education stakeholders. our reform proposals are developed through extensive consultation with students, teachers, parents, administrators, and policymakers. this collaborative approach ensures that our initiatives address real needs and concerns across the educational landscape.</p>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">
+              <CardHeader>
+                <Brain className="h-8 w-8 mb-2 text-rose-400" />
+                <CardTitle className="text-white text-2xl">evidence-based approach</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-300">
+                <p>all our reform proposals are grounded in rigorous research and empirical evidence. we maintain partnerships with educational researchers and institutions to ensure our proposals reflect current academic understanding. our commitment to continuous evaluation helps us refine and improve our approaches.</p>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+          >
+            <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">
+              <CardHeader>
+                <BookOpen className="h-8 w-8 mb-2 text-amber-400" />
+                <CardTitle className="text-white text-2xl">educational integrity</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-300">
+                <p>we advocate for assessment methods that genuinely reflect student capabilities and learning outcomes. our proposals emphasize authentic evaluation over standardized testing, promoting a more holistic and meaningful approach to measuring educational achievement.</p>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+          >
+            <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">
+              <CardHeader>
+                <Target className="h-8 w-8 mb-2 text-cyan-400" />
+                <CardTitle className="text-white text-2xl">long-term vision</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-300">
+                <p>our ethical framework emphasizes sustainable, long-term improvements over quick fixes. we believe in developing solutions that will stand the test of time and create lasting positive change in the educational system.</p>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+          >
+            <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">
+              <CardHeader>
+                <Shield className="h-8 w-8 mb-2 text-indigo-400" />
+                <CardTitle className="text-white text-2xl">student advocacy</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-300">
+                <p>at the heart of our ethical framework is an unwavering commitment to student welfare. we prioritize reforms that enhance learning experiences while supporting mental health and well-being, ensuring that educational advancement never comes at the cost of student welfare.</p>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+          >
+            <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">
+              <CardHeader>
+                <Lightbulb className="h-8 w-8 mb-2 text-yellow-400" />
+                <CardTitle className="text-white text-2xl">innovation with responsibility</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-300">
+                <p>while we champion innovative approaches to education, we do so with careful consideration of potential impacts. our ethical framework ensures that new methodologies are thoroughly evaluated for their effects on all stakeholders before implementation.</p>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
 
         <motion.div 
