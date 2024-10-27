@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const Index = () => {
   const [shouldAnimate, setShouldAnimate] = useState(true);
@@ -88,6 +89,74 @@ const Index = () => {
           </div>
         </motion.div>
       </motion.div>
+
+      <div className="max-w-3xl mx-auto mt-32 px-4">
+        <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+        <Accordion type="single" collapsible className="w-full">
+          <AccordionItem value="item-1" className="border-white/10">
+            <AccordionTrigger className="text-white hover:text-white/90">
+              But don't GCSEs teach critical thinking?
+            </AccordionTrigger>
+            <AccordionContent className="text-gray-400">
+              While GCSEs claim to develop critical thinking, they primarily reward memorization and standardized answers. A reformed education system should emphasize analyzing real-world problems, developing innovative solutions, and applying knowledge in practical contexts - essential skills currently overlooked in the GCSE format.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-2" className="border-white/10">
+            <AccordionTrigger className="text-white hover:text-white/90">
+              Isn't memory retention an important skill taught by GCSEs?
+            </AccordionTrigger>
+            <AccordionContent className="text-gray-400">
+              Modern technology has transformed how we access and use information. Education reform should prioritize understanding concepts, practical application, and effective information utilization over pure memorization. The focus should shift to developing these more relevant skills for today's world.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-3" className="border-white/10">
+            <AccordionTrigger className="text-white hover:text-white/90">
+              How will students prove their abilities without GCSEs?
+            </AccordionTrigger>
+            <AccordionContent className="text-gray-400">
+              A reformed education system should include comprehensive skill certification, practical assessments, and portfolio development. These methods better demonstrate a student's actual capabilities and readiness for further education or employment than traditional GCSE grades.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-4" className="border-white/10">
+            <AccordionTrigger className="text-white hover:text-white/90">
+              Won't this make education less standardized?
+            </AccordionTrigger>
+            <AccordionContent className="text-gray-400">
+              Educational reform should maintain high standards while enabling more personalized learning paths. The ideal framework would ensure consistency in skill assessment while providing flexibility in how students demonstrate their competencies.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-5" className="border-white/10">
+            <AccordionTrigger className="text-white hover:text-white/90">
+              How will universities evaluate students?
+            </AccordionTrigger>
+            <AccordionContent className="text-gray-400">
+              Universities should have access to more meaningful data about students' capabilities, including practical skills assessments, project portfolios, and demonstrated competencies in specific areas - providing a more complete picture than traditional GCSE grades.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-6" className="border-white/10">
+            <AccordionTrigger className="text-white hover:text-white/90">
+              What about international recognition?
+            </AccordionTrigger>
+            <AccordionContent className="text-gray-400">
+              Modern international educational trends already emphasize practical skills and competency-based assessment. Many countries are moving away from traditional examination-based systems, demonstrating the viability of this approach.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-7" className="border-white/10">
+            <AccordionTrigger className="text-white hover:text-white/90">
+              How will this prepare students for the workplace?
+            </AccordionTrigger>
+            <AccordionContent className="text-gray-400">
+              Education reform focused on practical skills, real-world problem solving, and project-based learning would develop the exact competencies that employers seek. This includes technical skills, teamwork, communication, and adaptability - all crucial for workplace success.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </div>
     </div>
   );
 };
