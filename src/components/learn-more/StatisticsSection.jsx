@@ -52,10 +52,10 @@ const StatisticsSection = () => {
             className="bg-white/5 rounded-lg p-8 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors flex flex-col items-center justify-center text-center"
           >
             <div className="flex items-center justify-center mb-4">
-              <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-2 leading-none">Digital Skills Crisis</h3>
+              <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-2 leading-none">Trapped</h3>
             </div>
             <p className="text-gray-300">
-              Teachers trapped by outdated resources & curriculum - digital skills crisis looming
+              Teachers in the UK are trapped by an outdated curriculum, limiting their ability to foster creativity and practical skills
             </p>
           </motion.div>
         </div>
