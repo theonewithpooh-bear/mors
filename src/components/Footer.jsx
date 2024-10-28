@@ -83,12 +83,9 @@ const Footer = () => {
                   <Linkedin className="h-5 w-5" />
                 </a>
               </div>
-              <div className="flex flex-col space-y-1 px-4 py-3 bg-white/5 rounded-lg border border-white/10 w-fit">
-                <div className="flex items-center space-x-2">
-                  <Mail className="h-4 w-4 text-gray-400 flex-shrink-0" />
-                  <span className="text-sm text-gray-400">info@mors.org.uk</span>
-                </div>
-                <span className="text-yellow-500/80 text-xs pl-6">(currently being set up)</span>
+              <div className="flex items-center space-x-2 px-4 py-3 bg-white/5 rounded-lg border border-white/10 w-fit">
+                <Mail className="h-4 w-4 text-gray-400 flex-shrink-0" />
+                <span className="text-sm text-gray-400">info@mors.org.uk</span>
               </div>
             </div>
           </div>
