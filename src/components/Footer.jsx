@@ -15,7 +15,6 @@ const Footer = () => {
       </div>
       
       <div className="relative container mx-auto px-6 pt-32 pb-16">
-        {/* Main content - only show on index page */}
         {isIndexPage && (
           <div className="flex flex-col items-center text-center mb-16">
             <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500 mb-6">
@@ -32,7 +31,7 @@ const Footer = () => {
           </div>
         )}
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div>
             <h3 className="font-semibold text-white mb-4">quick links</h3>
             <ul className="space-y-3">
@@ -70,9 +69,9 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div>
+          <div className="sm:col-span-2 lg:col-span-2">
             <h3 className="font-semibold text-white mb-4">connect</h3>
-            <div className="space-y-3">
+            <div className="space-y-4">
               <div className="flex space-x-4">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
                   <Github className="h-5 w-5" />
@@ -84,9 +83,9 @@ const Footer = () => {
                   <Linkedin className="h-5 w-5" />
                 </a>
               </div>
-              <div className="flex items-center space-x-2 px-3 py-2 bg-white/5 rounded-lg border border-white/10">
-                <Mail className="h-4 w-4 text-gray-400" />
-                <span className="text-sm">
+              <div className="flex items-center space-x-2 px-4 py-3 bg-white/5 rounded-lg border border-white/10 max-w-md">
+                <Mail className="h-4 w-4 text-gray-400 flex-shrink-0" />
+                <span className="text-sm whitespace-nowrap">
                   <span className="text-gray-400">info@mors.org.uk</span>
                   <span className="text-yellow-500/80 ml-2 text-xs">(currently being set up)</span>
                 </span>
@@ -95,7 +94,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-sm text-gray-500">
             © {currentYear} movement of real skills. all rights reserved.
