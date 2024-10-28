@@ -10,7 +10,6 @@ const Footer = () => {
   
   return (
     <footer className="relative overflow-hidden bg-gradient-to-b from-black to-gray-900">
-      {/* Decorative elements */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="w-[300px] h-[300px] bg-[radial-gradient(circle_at_center,#3b82f640_0%,transparent_70%)] animate-glow-dance" />
       </div>
@@ -33,7 +32,6 @@ const Footer = () => {
           </div>
         )}
 
-        {/* Links grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
           <div>
             <h3 className="font-semibold text-white mb-4">quick links</h3>
@@ -86,9 +84,12 @@ const Footer = () => {
                   <Linkedin className="h-5 w-5" />
                 </a>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-400 hover:text-white transition-colors">
-                <Mail className="h-4 w-4" />
-                <span>info@mors.org.uk (currently being set up)</span>
+              <div className="flex items-center space-x-2 px-3 py-2 bg-white/5 rounded-lg border border-white/10">
+                <Mail className="h-4 w-4 text-gray-400" />
+                <span className="text-sm">
+                  <span className="text-gray-400">info@mors.org.uk</span>
+                  <span className="text-yellow-500/80 ml-2 text-xs">(currently being set up)</span>
+                </span>
               </div>
             </div>
           </div>
