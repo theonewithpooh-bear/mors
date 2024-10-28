@@ -55,7 +55,7 @@ const StatisticsSection = () => {
               <h3 className="text-[4.5rem] md:text-[5.5rem] font-black text-white mb-2 leading-none">Trapped</h3>
             </div>
             <p className="text-gray-300">
-              According to The Times Education Commission, teachers in the UK are trapped by an outdated curriculum, limiting their ability to foster creativity and practical skills
+              The Times Education Commission reveals: UK teachers are shackled by outdated curricula, stifling creativity and real-world skills
             </p>
           </motion.div>
         </div>
