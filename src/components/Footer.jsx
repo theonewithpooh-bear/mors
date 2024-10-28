@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
         )}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="flex justify-between mb-16">
           <div>
             <h3 className="font-semibold text-white mb-4">quick links</h3>
             <ul className="space-y-3">
