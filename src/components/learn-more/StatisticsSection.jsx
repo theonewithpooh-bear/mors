@@ -17,7 +17,7 @@ const StatisticsSection = () => {
           >
             <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-2 leading-none">58%</h3>
             <p className="text-gray-300">
-              <span className="font-bold">58,000 UK teachers</span> warn: our education system is failing to prepare students for their future
+              <span className="font-bold">371,884 UK teachers</span> warn: our education system is failing to prepare students for their future
             </p>
           </motion.div>
 
@@ -29,7 +29,7 @@ const StatisticsSection = () => {
           >
             <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-2 leading-none">49%</h3>
             <p className="text-gray-300">
-              <span className="font-bold">49,000 teachers</span> declare GCSEs obsolete and unfit for purpose
+              <span className="font-bold">314,178 teachers</span> declare GCSEs obsolete and unfit for purpose
             </p>
           </motion.div>
 
@@ -41,7 +41,7 @@ const StatisticsSection = () => {
           >
             <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-2 leading-none">80%</h3>
             <p className="text-gray-300">
-              <span className="font-bold">80,000 educators</span> demand urgent digital skills & AI curriculum reform
+              <span className="font-bold">512,944 educators</span> demand urgent digital skills & AI curriculum reform
             </p>
           </motion.div>
 
