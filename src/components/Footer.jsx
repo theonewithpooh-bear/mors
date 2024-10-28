@@ -83,10 +83,13 @@ const Footer = () => {
                   <Linkedin className="h-5 w-5" />
                 </a>
               </div>
-              <div className="flex items-center space-x-2 px-4 py-3 bg-white/5 rounded-lg border border-white/10 w-fit">
+              <a 
+                href="mailto:info@mors.org.uk" 
+                className="flex items-center space-x-2 px-4 py-3 bg-white/5 rounded-lg border border-white/10 w-fit hover:bg-white/10 transition-colors"
+              >
                 <Mail className="h-4 w-4 text-gray-400 flex-shrink-0" />
                 <span className="text-sm text-gray-400">info@mors.org.uk</span>
-              </div>
+              </a>
             </div>
           </div>
         </div>
