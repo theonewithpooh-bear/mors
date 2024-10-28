@@ -69,7 +69,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div className="sm:col-span-2 lg:col-span-2">
+          <div>
             <h3 className="font-semibold text-white mb-4">connect</h3>
             <div className="space-y-4">
               <div className="flex space-x-4">
@@ -83,12 +83,12 @@ const Footer = () => {
                   <Linkedin className="h-5 w-5" />
                 </a>
               </div>
-              <div className="flex items-center space-x-2 px-4 py-3 bg-white/5 rounded-lg border border-white/10 max-w-md">
-                <Mail className="h-4 w-4 text-gray-400 flex-shrink-0" />
-                <span className="text-sm whitespace-nowrap">
-                  <span className="text-gray-400">info@mors.org.uk</span>
-                  <span className="text-yellow-500/80 ml-2 text-xs">(currently being set up)</span>
-                </span>
+              <div className="flex flex-col space-y-1 px-4 py-3 bg-white/5 rounded-lg border border-white/10 w-fit">
+                <div className="flex items-center space-x-2">
+                  <Mail className="h-4 w-4 text-gray-400 flex-shrink-0" />
+                  <span className="text-sm text-gray-400">info@mors.org.uk</span>
+                </div>
+                <span className="text-yellow-500/80 text-xs pl-6">(currently being set up)</span>
               </div>
             </div>
           </div>
