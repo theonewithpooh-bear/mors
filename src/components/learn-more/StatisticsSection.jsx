@@ -51,11 +51,9 @@ const StatisticsSection = () => {
             transition={{ delay: 0.8 }}
             className="bg-white/5 rounded-lg p-8 backdrop-blur-sm border border-red-500/20 hover:border-red-500/40 transition-colors flex flex-col items-center justify-center text-center"
           >
-            <div className="flex items-center justify-center mb-4">
-              <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-2 leading-none">Trapped</h3>
-            </div>
+            <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-2 leading-none">93%</h3>
             <p className="text-gray-300">
-              Teachers in the UK are trapped by an outdated curriculum, limiting their ability to foster creativity and practical skills
+              <span className="font-bold">596,297 teachers</span> report the curriculum limits their ability to foster creativity and practical skills
             </p>
           </motion.div>
         </div>
