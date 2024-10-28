@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const Index = () => {
   const [shouldAnimate, setShouldAnimate] = useState(true);
@@ -82,56 +81,6 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="max-w-3xl mx-auto px-4 mb-32">
-            <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
-            <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="item-1" className="border-white/10">
-            <AccordionTrigger className="text-white hover:text-white/90">
-              what exactly is m.o.r.s?
-            </AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              m.o.r.s (movement of real skills) is a grassroots educational reform initiative advocating for a shift from traditional examination-based assessment to practical, skills-focused learning. we believe in preparing students for real-world challenges through hands-on experience and continuous assessment.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-2" className="border-white/10">
-            <AccordionTrigger className="text-white hover:text-white/90">
-              how does m.o.r.s plan to implement these changes?
-            </AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              we work through democratic channels, engaging with educational authorities, policymakers, and stakeholders. our approach involves presenting detailed reform proposals, building public support, and collaborating with educational institutions to pilot new assessment methods.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-3" className="border-white/10">
-            <AccordionTrigger className="text-white hover:text-white/90">
-              what makes m.o.r.s different from other reform movements?
-            </AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              our focus is specifically on transforming assessment methods to reflect real-world skills and practical abilities. we maintain political neutrality while advocating for evidence-based reforms that prepare students for both higher education and employment.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-4" className="border-white/10">
-            <AccordionTrigger className="text-white hover:text-white/90">
-              how can i get involved with m.o.r.s?
-            </AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              there are multiple ways to support our movement: join our community, participate in local advocacy groups, share our message on social media, or contribute to our research and proposal development. visit our "get involved" page to learn more.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-5" className="border-white/10">
-            <AccordionTrigger className="text-white hover:text-white/90">
-              what is the timeline for these proposed changes?
-            </AccordionTrigger>
-            <AccordionContent className="text-gray-400">
-              educational reform is a gradual process. we're currently in the advocacy and awareness phase, building support and refining our proposals. our goal is to see pilot programs implemented within the next few years, with broader systemic changes following successful trials.
-            </AccordionContent>
-          </AccordionItem>
-            </Accordion>
           </div>
 
           <div className={shouldAnimate ? "opacity-0 animate-[fade-in_0.5s_ease-in-out_4s_forwards]" : ""}>
