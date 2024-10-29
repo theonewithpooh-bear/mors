@@ -71,6 +71,11 @@ const Footer = () => {
                   ethical principles
                 </Link>
               </li>
+              <li>
+                <Link to="/cookies-policy" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  cookies policy
+                </Link>
+              </li>
             </ul>
           </div>
           
