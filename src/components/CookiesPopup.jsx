@@ -40,7 +40,7 @@ const CookiesPopup = () => {
             <img 
               src="https://i.ibb.co/8sjLJdJ/bob.jpg" 
               alt="Bob" 
-              className="w-24 h-24 object-cover rounded-full"
+              className="w-24 h-24 rounded-full"
             />
             <p className="text-xs text-gray-400" style={{ fontFamily: 'Times New Roman' }}>
               BOB IS ENSURING YOUR PRIVACY
