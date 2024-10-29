@@ -1,11 +1,26 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { motion } from 'framer-motion';
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Card } from "@/components/ui/card";
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { useToast } from "@/components/ui/use-toast";
 
 const GetInvolved = () => {
+  const { toast } = useToast();
+
+  const handleDonationSubmit = (e) => {
+    e.preventDefault();
+    // In a real app, this would connect to a payment processor
+    toast({
+      title: "Thank you for your support!",
+      description: "This is a demo - no actual payment was processed.",
+    });
+  };
+
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
@@ -14,7 +29,7 @@ const GetInvolved = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          className="mt-24"
+          className="mt-24 space-y-8"
         >
           <motion.section 
             initial={{ opacity: 0, y: 50 }}
@@ -41,6 +56,64 @@ const GetInvolved = () => {
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
+          </motion.section>
+
+          <motion.section
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="mb-16"
+          >
+            <Card className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-xl border-white/10 p-8">
+              <h2 className="text-4xl font-bold mb-8 text-white">support our mission</h2>
+              <p className="text-lg text-gray-300 mb-8">
+                your donation helps us advocate for better education and implement real change in the UK's education system.
+              </p>
+              
+              <form onSubmit={handleDonationSubmit} className="space-y-6">
+                <div className="space-y-2">
+                  <Label htmlFor="name">full name</Label>
+                  <Input
+                    id="name"
+                    type="text"
+                    required
+                    className="bg-black/50 border-white/10 text-white"
+                    placeholder="john doe"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="email">email address</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    required
+                    className="bg-black/50 border-white/10 text-white"
+                    placeholder="john@example.com"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="amount">donation amount (£)</Label>
+                  <Input
+                    id="amount"
+                    type="number"
+                    min="1"
+                    step="1"
+                    required
+                    className="bg-black/50 border-white/10 text-white"
+                    placeholder="50"
+                  />
+                </div>
+
+                <Button 
+                  type="submit"
+                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-6 text-lg"
+                >
+                  donate now
+                </Button>
+              </form>
+            </Card>
           </motion.section>
         </motion.div>
       </div>
