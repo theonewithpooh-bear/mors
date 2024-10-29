@@ -14,6 +14,7 @@ import Articles from "./pages/Articles";
 import Ethics from "./pages/Ethics";
 import Legal from "./pages/Legal";
 import CookiesPolicy from "./pages/CookiesPolicy";
+import FileStore from "./pages/FileStore";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/ethics" element={<Ethics />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/cookies-policy" element={<CookiesPolicy />} />
+          <Route path="/file-store" element={<FileStore />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

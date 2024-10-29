@@ -1,4 +1,4 @@
-import { HomeIcon, BookOpenIcon, UsersIcon, MessageSquareIcon } from "lucide-react";
+import { HomeIcon, BookOpenIcon, UsersIcon, MessageSquareIcon, FolderIcon } from "lucide-react";
 
 export const navItems = [
   {
@@ -25,6 +25,11 @@ export const navItems = [
     title: "articles",
     to: "/articles",
     icon: <BookOpenIcon className="h-4 w-4" />,
+  },
+  {
+    title: "file store",
+    to: "/file-store",
+    icon: <FolderIcon className="h-4 w-4" />,
   },
   // Hidden from navigation but still accessible
   {
