@@ -32,20 +32,20 @@ const CookiesPopup = () => {
     <AlertDialog open={open} onOpenChange={setOpen}>
       <AlertDialogContent className="bg-black/95 border border-white/10">
         <AlertDialogHeader>
-          <div className="flex flex-col items-center space-y-4">
+          <AlertDialogTitle className="text-2xl text-white">No cookies here!</AlertDialogTitle>
+          <AlertDialogDescription className="text-gray-300">
+            Unlike most websites, we don't use any cookies or tracking technologies. Your privacy matters to us.
+          </AlertDialogDescription>
+          <div className="flex flex-col items-center space-y-4 mt-4">
             <img 
               src="/bob.jpg" 
               alt="Bob" 
               className="w-32 h-32 object-cover rounded-full"
             />
             <p className="text-sm text-gray-400" style={{ fontFamily: 'Times New Roman' }}>
-              Bob is ensuring your privacy
+              BOB IS ENSURING YOUR PRIVACY
             </p>
           </div>
-          <AlertDialogTitle className="text-2xl text-white">No cookies here!</AlertDialogTitle>
-          <AlertDialogDescription className="text-gray-300">
-            Unlike most websites, we don't use any cookies or tracking technologies. Your privacy matters to us.
-          </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter className="sm:space-x-4">
           <Button
