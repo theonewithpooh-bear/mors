@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { navItems } from '../nav-items';
+import { useNavItems } from '../nav-items';
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useTranslation } from 'react-i18next';
@@ -14,6 +14,7 @@ import {
 const Header = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const navItems = useNavItems();
   
   const isActive = (path) => location.pathname === path;
   const visibleNavItems = navItems.filter(item => !item.hidden);
