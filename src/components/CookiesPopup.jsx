@@ -38,11 +38,11 @@ const CookiesPopup = () => {
           </AlertDialogDescription>
           <div className="flex flex-col items-center space-y-4 mt-4">
             <img 
-              src="/bob.jpg" 
+              src="https://i.ibb.co/8sjLJdJ/bob.jpg" 
               alt="Bob" 
-              className="w-32 h-32 object-cover rounded-full"
+              className="w-24 h-24 object-cover rounded-full"
             />
-            <p className="text-sm text-gray-400" style={{ fontFamily: 'Times New Roman' }}>
+            <p className="text-xs text-gray-400" style={{ fontFamily: 'Times New Roman' }}>
               BOB IS ENSURING YOUR PRIVACY
             </p>
           </div>
