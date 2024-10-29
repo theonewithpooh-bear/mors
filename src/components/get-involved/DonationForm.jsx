@@ -56,7 +56,7 @@ const DonationForm = () => {
                   type="text"
                   required
                   className="h-11 bg-white/5 border-white/10 text-white focus:border-white/50 focus:ring-white/20 transition-all duration-300"
-                  placeholder="john"
+                  placeholder=""
                 />
               </div>
               <div className="space-y-2">
@@ -66,7 +66,7 @@ const DonationForm = () => {
                   type="text"
                   required
                   className="h-11 bg-white/5 border-white/10 text-white focus:border-white/50 focus:ring-white/20 transition-all duration-300"
-                  placeholder="doe"
+                  placeholder=""
                 />
               </div>
             </div>
@@ -78,7 +78,7 @@ const DonationForm = () => {
                 type="email"
                 required
                 className="h-11 bg-white/5 border-white/10 text-white focus:border-white/50 focus:ring-white/20 transition-all duration-300"
-                placeholder="john@example.com"
+                placeholder="email@example.com"
               />
             </div>
 
@@ -91,7 +91,7 @@ const DonationForm = () => {
                 step="1"
                 required
                 className="h-11 bg-white/5 border-white/10 text-white focus:border-white/50 focus:ring-white/20 transition-all duration-300"
-                placeholder="50"
+                placeholder=""
               />
             </div>
           </div>
