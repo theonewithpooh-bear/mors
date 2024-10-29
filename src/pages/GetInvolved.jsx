@@ -1,34 +1,12 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Card } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { ArrowRight, CreditCard, Lock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { useToast } from "@/components/ui/use-toast";
+import DonationForm from '../components/get-involved/DonationForm';
 
 const GetInvolved = () => {
-  const { toast } = useToast();
-
-  const handleDonationSubmit = (e) => {
-    e.preventDefault();
-    toast({
-      title: "Processing payment...",
-      description: "Please wait...",
-    });
-
-    // Simulate payment processing
-    setTimeout(() => {
-      toast({
-        title: "Thank you for your support!",
-        description: "Your donation has been processed successfully.",
-      });
-    }, 2000);
-  };
-
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
@@ -72,125 +50,7 @@ const GetInvolved = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="mb-16"
           >
-            <Card className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-xl border-white/10 p-8">
-              <div className="flex items-center space-x-2 mb-8">
-                <Lock className="w-5 h-5 text-emerald-500" />
-                <h2 className="text-4xl font-bold text-white">support our mission</h2>
-              </div>
-              
-              <p className="text-lg text-gray-300 mb-8">
-                your donation helps us advocate for better education and implement real change in the UK's education system.
-              </p>
-              
-              <form onSubmit={handleDonationSubmit} className="space-y-8">
-                <div className="grid gap-6 md:grid-cols-2">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName">first name</Label>
-                    <Input
-                      id="firstName"
-                      type="text"
-                      required
-                      className="bg-black/50 border-white/10 text-white"
-                      placeholder="john"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="lastName">last name</Label>
-                    <Input
-                      id="lastName"
-                      type="text"
-                      required
-                      className="bg-black/50 border-white/10 text-white"
-                      placeholder="doe"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="email">email address</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    required
-                    className="bg-black/50 border-white/10 text-white"
-                    placeholder="john@example.com"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="amount">donation amount (£)</Label>
-                  <Input
-                    id="amount"
-                    type="number"
-                    min="1"
-                    step="1"
-                    required
-                    className="bg-black/50 border-white/10 text-white"
-                    placeholder="50"
-                  />
-                </div>
-
-                <Separator className="my-8 bg-white/10" />
-
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-2">
-                    <CreditCard className="w-5 h-5 text-emerald-500" />
-                    <h3 className="text-xl font-semibold">payment details</h3>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="cardNumber">card number</Label>
-                    <Input
-                      id="cardNumber"
-                      type="text"
-                      required
-                      maxLength="19"
-                      className="bg-black/50 border-white/10 text-white font-mono"
-                      placeholder="4242 4242 4242 4242"
-                    />
-                  </div>
-
-                  <div className="grid gap-6 md:grid-cols-2">
-                    <div className="space-y-2">
-                      <Label htmlFor="expiry">expiry date</Label>
-                      <Input
-                        id="expiry"
-                        type="text"
-                        required
-                        maxLength="5"
-                        className="bg-black/50 border-white/10 text-white font-mono"
-                        placeholder="MM/YY"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="cvc">security code</Label>
-                      <Input
-                        id="cvc"
-                        type="text"
-                        required
-                        maxLength="3"
-                        className="bg-black/50 border-white/10 text-white font-mono"
-                        placeholder="123"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <Button 
-                  type="submit"
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-6 text-lg group relative overflow-hidden"
-                >
-                  <span className="relative z-10 flex items-center justify-center gap-2">
-                    <Lock className="w-4 h-4" />
-                    donate securely now
-                  </span>
-                </Button>
-
-                <p className="text-sm text-gray-400 text-center mt-4">
-                  Your payment is secured with SSL encryption. This is a demo - no real payments will be processed.
-                </p>
-              </form>
-            </Card>
+            <DonationForm />
           </motion.section>
         </motion.div>
       </div>
