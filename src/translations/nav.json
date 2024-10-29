@@ -1,0 +1,22 @@
+{
+  "en": {
+    "nav": {
+      "home": "home",
+      "learn_more": "learn more",
+      "get_involved": "get involved",
+      "communications": "communications",
+      "articles": "articles",
+      "file_store": "file store"
+    }
+  },
+  "cy": {
+    "nav": {
+      "home": "cartref",
+      "learn_more": "dysgu mwy",
+      "get_involved": "cymryd rhan",
+      "communications": "cyfathrebiadau",
+      "articles": "erthyglau",
+      "file_store": "storfa ffeiliau"
+    }
+  }
+}
