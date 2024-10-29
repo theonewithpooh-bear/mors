@@ -1,54 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { toast } from "sonner";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const Index = () => {
   const [shouldAnimate, setShouldAnimate] = useState(true);
-
-  useEffect(() => {
-    const hasVisited = localStorage.getItem('hasVisitedBefore');
-    if (hasVisited) {
-      setShouldAnimate(false);
-    } else {
-      localStorage.setItem('hasVisitedBefore', 'true');
-    }
-
-    const timeoutId = setTimeout(() => {
-      toast.custom((t) => (
-        <div 
-          className="fixed top-0 right-0 h-screen w-[500px] bg-black/90 backdrop-blur-sm z-[100] flex items-center"
-          onClick={() => toast.dismiss(t)}
-        >
-          <div 
-            className="w-full p-8 bg-black/80 backdrop-blur-md border-l border-white/10"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <p className="text-white text-2xl text-center mb-8">
-              We have chosen to protect your privacy, so we employed Bob, to remove those pesky cookies.
-            </p>
-            <img 
-              src="/bob.jpg" 
-              alt="Bob" 
-              className="w-96 h-96 rounded-full mx-auto object-cover"
-            />
-          </div>
-        </div>
-      ), {
-        duration: Infinity,
-        className: "p-0 m-0",
-        style: {
-          background: 'none',
-          border: 'none',
-          padding: 0,
-          margin: 0,
-        }
-      });
-    }, 8000);
-
-    return () => clearTimeout(timeoutId);
-  }, []);
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
