@@ -15,7 +15,7 @@ const FileStore = () => {
             <div className="flex flex-col items-center justify-center space-y-4">
               <Construction className="w-16 h-16 text-yellow-300/90" />
               <p className="text-xl text-center text-gray-300">
-                our file store is currently under construction. check back soon to access educational resources and materials.
+                our file store is currently under construction. check back soon to access official publications by mors
               </p>
             </div>
           </div>
