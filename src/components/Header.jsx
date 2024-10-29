@@ -36,16 +36,19 @@ const Header = () => {
             <ul className="space-y-4">
               {visibleNavItems.map(({ to, title, icon }) => (
                 <li key={to}>
-                  <Link
-                    to={to}
-                    onClick={() => setIsOpen(false)}
-                    className={`flex items-center space-x-2 text-lg ${
+                  <Button
+                    variant="ghost"
+                    asChild
+                    className={`flex items-center space-x-2 w-full justify-start ${
                       isActive(to) ? 'text-white' : 'text-gray-400'
                     }`}
+                    onClick={() => setIsOpen(false)}
                   >
-                    {icon && <span className="w-5">{icon}</span>}
-                    <span>{title}</span>
-                  </Link>
+                    <Link to={to}>
+                      {icon && <span className="w-5">{icon}</span>}
+                      <span>{title}</span>
+                    </Link>
+                  </Button>
                 </li>
               ))}
             </ul>
@@ -59,31 +62,32 @@ const Header = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md backdrop-saturate-150 border-b border-white/5 supports-[backdrop-filter]:bg-black/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between md:justify-center">
-          {/* Mobile menu button */}
           <MobileNav />
           
-          {/* Desktop navigation */}
           <ul className="hidden md:flex space-x-12">
             {visibleNavItems.map(({ to, title }) => (
               <li key={to}>
-                <Link 
-                  to={to} 
+                <Button
+                  variant="ghost"
+                  asChild
                   className="relative group py-2"
                 >
-                  <span className={`text-sm tracking-wide uppercase ${
-                    isActive(to) 
-                      ? 'text-white font-medium' 
-                      : 'text-gray-400 hover:text-white transition-colors'
-                  }`}>
-                    {title}
-                  </span>
-                  {isActive(to) && (
-                    <motion.div
-                      layoutId="underline"
-                      className="absolute left-0 right-0 h-px bottom-0 bg-white"
-                    />
-                  )}
-                </Link>
+                  <Link to={to}>
+                    <span className={`text-sm tracking-wide uppercase ${
+                      isActive(to) 
+                        ? 'text-white font-medium' 
+                        : 'text-gray-400 hover:text-white transition-colors'
+                    }`}>
+                      {title}
+                    </span>
+                    {isActive(to) && (
+                      <motion.div
+                        layoutId="underline"
+                        className="absolute left-0 right-0 h-px bottom-0 bg-white"
+                      />
+                    )}
+                  </Link>
+                </Button>
               </li>
             ))}
           </ul>
