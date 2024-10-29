@@ -15,35 +15,41 @@ const Index = () => {
       localStorage.setItem('hasVisitedBefore', 'true');
     }
 
-    toast.custom((t) => (
-      <div 
-        className="fixed inset-0 flex items-center justify-center bg-black/90 backdrop-blur-sm z-[100]"
-        onClick={() => toast.dismiss(t)}
-      >
+    // Add 8 second delay before showing the popup
+    const timeoutId = setTimeout(() => {
+      toast.custom((t) => (
         <div 
-          className="bg-white/10 p-8 rounded-lg backdrop-blur-md max-w-2xl w-full mx-4"
-          onClick={(e) => e.stopPropagation()}
+          className="fixed inset-0 flex items-center justify-center bg-black/90 backdrop-blur-sm z-[100]"
+          onClick={() => toast.dismiss(t)}
         >
-          <p className="text-white text-xl text-center mb-8">
-            We have chosen to protect your privacy, so we employed Bob, to remove those pesky cookies.
-          </p>
-          <img 
-            src="/bob.jpg" 
-            alt="Bob" 
-            className="w-64 h-64 rounded-full mx-auto object-cover"
-          />
+          <div 
+            className="bg-white/10 p-8 rounded-lg backdrop-blur-md max-w-2xl w-full mx-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <p className="text-white text-xl text-center mb-8">
+              We have chosen to protect your privacy, so we employed Bob, to remove those pesky cookies.
+            </p>
+            <img 
+              src="/bob.jpg" 
+              alt="Bob" 
+              className="w-64 h-64 rounded-full mx-auto object-cover"
+            />
+          </div>
         </div>
-      </div>
-    ), {
-      duration: Infinity,
-      style: {
-        background: 'none',
-        border: 'none',
-        padding: 0,
-        width: '100vw',
-        maxWidth: '100vw',
-      }
-    });
+      ), {
+        duration: Infinity,
+        style: {
+          background: 'none',
+          border: 'none',
+          padding: 0,
+          width: '100vw',
+          maxWidth: '100vw',
+        }
+      });
+    }, 8000); // 8 second delay
+
+    // Cleanup timeout on component unmount
+    return () => clearTimeout(timeoutId);
   }, []);
 
   return (
