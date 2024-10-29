@@ -18,11 +18,11 @@ const Index = () => {
     const timeoutId = setTimeout(() => {
       toast.custom((t) => (
         <div 
-          className="fixed inset-0 bg-black/90 backdrop-blur-sm z-[100] flex items-center justify-center"
+          className="fixed top-0 right-0 h-screen w-[500px] bg-black/90 backdrop-blur-sm z-[100] flex items-center"
           onClick={() => toast.dismiss(t)}
         >
           <div 
-            className="max-w-2xl w-full mx-4 bg-black/80 p-8 rounded-lg backdrop-blur-md border border-white/10"
+            className="w-full p-8 bg-black/80 backdrop-blur-md border-l border-white/10"
             onClick={(e) => e.stopPropagation()}
           >
             <p className="text-white text-2xl text-center mb-8">
@@ -37,11 +37,8 @@ const Index = () => {
         </div>
       ), {
         duration: Infinity,
-        className: "w-screen h-screen p-0 m-0",
+        className: "p-0 m-0",
         style: {
-          maxWidth: '100vw',
-          width: '100vw',
-          height: '100vh',
           background: 'none',
           border: 'none',
           padding: 0,
