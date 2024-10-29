@@ -23,32 +23,34 @@ const Index = () => {
           onClick={() => toast.dismiss(t)}
         >
           <div 
-            className="bg-white/10 p-8 rounded-lg backdrop-blur-md max-w-2xl w-full mx-4"
+            className="relative bg-black/80 p-8 rounded-lg backdrop-blur-md max-w-2xl w-full mx-4 border border-white/10"
             onClick={(e) => e.stopPropagation()}
           >
-            <p className="text-white text-xl text-center mb-8">
+            <p className="text-white text-2xl text-center mb-8">
               We have chosen to protect your privacy, so we employed Bob, to remove those pesky cookies.
             </p>
             <img 
               src="/bob.jpg" 
               alt="Bob" 
-              className="w-64 h-64 rounded-full mx-auto object-cover"
+              className="w-96 h-96 rounded-full mx-auto object-cover"
             />
           </div>
         </div>
       ), {
         duration: Infinity,
+        className: "w-screen h-screen p-0 m-0",
         style: {
+          maxWidth: '100vw',
+          width: '100vw',
+          height: '100vh',
           background: 'none',
           border: 'none',
           padding: 0,
-          width: '100vw',
-          maxWidth: '100vw',
+          margin: 0,
         }
       });
-    }, 8000); // 8 second delay
+    }, 8000);
 
-    // Cleanup timeout on component unmount
     return () => clearTimeout(timeoutId);
   }, []);
 
