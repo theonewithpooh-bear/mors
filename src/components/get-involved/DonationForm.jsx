@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { CreditCard, Lock, Sparkles } from 'lucide-react';
+import { CreditCard, Lock } from 'lucide-react';
 import { useToast } from "@/components/ui/use-toast";
 
 const DonationForm = () => {
@@ -26,21 +26,18 @@ const DonationForm = () => {
 
   return (
     <Card className="relative overflow-hidden">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-emerald-500/10 animate-gradient-x" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-black/20" />
       
-      {/* Glass overlay */}
-      <div className="relative backdrop-blur-xl bg-black/40 p-8 sm:p-12 border border-white/10 rounded-xl">
-        <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-blue-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-[200px] h-[200px] bg-purple-500/10 rounded-full blur-3xl" />
+      <div className="relative backdrop-blur-sm bg-black/40 p-8 sm:p-12 border border-white/10 rounded-xl">
+        <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-[200px] h-[200px] bg-white/5 rounded-full blur-3xl" />
         
-        {/* Header */}
         <div className="relative flex items-center gap-4 mb-10">
-          <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-blue-500">
-            <Sparkles className="w-6 h-6 text-white" />
+          <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10">
+            <Lock className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-emerald-400">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white">
               support our mission
             </h2>
             <p className="text-sm text-gray-400 mt-1">
@@ -50,7 +47,6 @@ const DonationForm = () => {
         </div>
         
         <form onSubmit={handleDonationSubmit} className="relative space-y-8">
-          {/* Personal Details Section */}
           <div className="space-y-6">
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="space-y-2">
@@ -59,7 +55,7 @@ const DonationForm = () => {
                   id="firstName"
                   type="text"
                   required
-                  className="h-11 bg-white/5 border-white/10 text-white focus:border-purple-500/50 focus:ring-purple-500/20 transition-all duration-300"
+                  className="h-11 bg-white/5 border-white/10 text-white focus:border-white/50 focus:ring-white/20 transition-all duration-300"
                   placeholder="john"
                 />
               </div>
@@ -69,7 +65,7 @@ const DonationForm = () => {
                   id="lastName"
                   type="text"
                   required
-                  className="h-11 bg-white/5 border-white/10 text-white focus:border-purple-500/50 focus:ring-purple-500/20 transition-all duration-300"
+                  className="h-11 bg-white/5 border-white/10 text-white focus:border-white/50 focus:ring-white/20 transition-all duration-300"
                   placeholder="doe"
                 />
               </div>
@@ -81,7 +77,7 @@ const DonationForm = () => {
                 id="email"
                 type="email"
                 required
-                className="h-11 bg-white/5 border-white/10 text-white focus:border-purple-500/50 focus:ring-purple-500/20 transition-all duration-300"
+                className="h-11 bg-white/5 border-white/10 text-white focus:border-white/50 focus:ring-white/20 transition-all duration-300"
                 placeholder="john@example.com"
               />
             </div>
@@ -94,7 +90,7 @@ const DonationForm = () => {
                 min="1"
                 step="1"
                 required
-                className="h-11 bg-white/5 border-white/10 text-white focus:border-purple-500/50 focus:ring-purple-500/20 transition-all duration-300"
+                className="h-11 bg-white/5 border-white/10 text-white focus:border-white/50 focus:ring-white/20 transition-all duration-300"
                 placeholder="50"
               />
             </div>
@@ -102,11 +98,10 @@ const DonationForm = () => {
 
           <Separator className="bg-white/10" />
 
-          {/* Payment Details Section */}
           <div className="space-y-6">
             <div className="flex items-center gap-2">
               <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white/5">
-                <CreditCard className="w-4 h-4 text-purple-400" />
+                <CreditCard className="w-4 h-4 text-white" />
               </div>
               <h3 className="text-lg font-medium text-white">payment details</h3>
             </div>
@@ -119,7 +114,7 @@ const DonationForm = () => {
                   type="text"
                   required
                   maxLength="19"
-                  className="h-11 font-mono bg-white/5 border-white/10 text-white focus:border-purple-500/50 focus:ring-purple-500/20 transition-all duration-300"
+                  className="h-11 font-mono bg-white/5 border-white/10 text-white focus:border-white/50 focus:ring-white/20 transition-all duration-300"
                   placeholder="4242 4242 4242 4242"
                 />
               </div>
@@ -132,7 +127,7 @@ const DonationForm = () => {
                     type="text"
                     required
                     maxLength="5"
-                    className="h-11 font-mono bg-white/5 border-white/10 text-white focus:border-purple-500/50 focus:ring-purple-500/20 transition-all duration-300"
+                    className="h-11 font-mono bg-white/5 border-white/10 text-white focus:border-white/50 focus:ring-white/20 transition-all duration-300"
                     placeholder="MM/YY"
                   />
                 </div>
@@ -143,7 +138,7 @@ const DonationForm = () => {
                     type="text"
                     required
                     maxLength="3"
-                    className="h-11 font-mono bg-white/5 border-white/10 text-white focus:border-purple-500/50 focus:ring-purple-500/20 transition-all duration-300"
+                    className="h-11 font-mono bg-white/5 border-white/10 text-white focus:border-white/50 focus:ring-white/20 transition-all duration-300"
                     placeholder="123"
                   />
                 </div>
@@ -151,10 +146,9 @@ const DonationForm = () => {
             </div>
           </div>
 
-          {/* Submit Button */}
           <Button 
             type="submit"
-            className="w-full h-12 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white text-lg font-medium rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-purple-500/20"
+            className="w-full h-12 bg-white hover:bg-gray-100 text-black text-lg font-medium rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
           >
             <span className="flex items-center justify-center gap-2">
               <Lock className="w-4 h-4" />
