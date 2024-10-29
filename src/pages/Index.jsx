@@ -22,7 +22,7 @@ const Index = () => {
           onClick={() => toast.dismiss(t)}
         >
           <div 
-            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/80 p-8 rounded-lg backdrop-blur-md max-w-2xl w-full mx-4 border border-white/10"
+            className="relative max-w-2xl w-full mx-4 bg-black/80 p-8 rounded-lg backdrop-blur-md border border-white/10"
             onClick={(e) => e.stopPropagation()}
           >
             <p className="text-white text-2xl text-center mb-8">
