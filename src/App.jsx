@@ -11,6 +11,8 @@ import SubjectReforms from "./pages/SubjectReforms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Articles from "./pages/Articles";
 import Ethics from "./pages/Ethics";
+import Legal from "./pages/Legal";
+import CookiesPolicy from "./pages/CookiesPolicy";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +31,8 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/ethics" element={<Ethics />} />
+          <Route path="/legal" element={<Legal />} />
+          <Route path="/cookies-policy" element={<CookiesPolicy />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
