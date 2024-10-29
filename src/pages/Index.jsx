@@ -15,30 +15,35 @@ const Index = () => {
       localStorage.setItem('hasVisitedBefore', 'true');
     }
 
-    toast(
-      <div className="fixed inset-0 flex flex-col items-center justify-center bg-black/80 backdrop-blur-sm z-50">
-        <div className="bg-white/10 p-8 rounded-lg backdrop-blur-md max-w-2xl w-full mx-4">
+    toast.custom((t) => (
+      <div 
+        className="fixed inset-0 flex items-center justify-center bg-black/90 backdrop-blur-sm z-[100]"
+        onClick={() => toast.dismiss(t)}
+      >
+        <div 
+          className="bg-white/10 p-8 rounded-lg backdrop-blur-md max-w-2xl w-full mx-4"
+          onClick={(e) => e.stopPropagation()}
+        >
           <p className="text-white text-xl text-center mb-8">
             We have chosen to protect your privacy, so we employed Bob, to remove those pesky cookies.
           </p>
           <img 
-            src="https://ci3.googleusercontent.com/mail-img-att/AGAZnRoSiLKf1ha4a-U5hjyg2f3ZESrsSvZ8lX7ch0R7MTOz03bOMROQcADMn6cWvloONgnIDLQg7RFVhq7BHbs_fNhjNZz4pcP_JsDOYQe2QhSW8rdlDeC4N226tdrBGAeuKS27qnwI3s0ii1rFLTksVeSloy63VcwjqRN_-kqYMSYjLWEaTkXHWhQtHUHC1l9-H4iO5PK6zZzw4FqmelyCcqOIguSiFYFu-rb4tWSeL9xV4YLEkjxiBJppAfi3IJX58ZZD60h1D_U0K7e941yOSzeoYSezsyXBmM7spHPi2YSHZ8mYMllJ0mgTNlJSm6lBGIodtFnUkNycs6Qcl4ASmASfobxDsdfy_TgSmYAMtaMnRZ_bi13lOlwtBgDfTGs1KyYzjthiHaklI_zy02QwzbOWrf_Oo-ZLW_lizxWvWg9iaOg9VvfO4AMvOwsYfqUw1Fb2fUu1YY63NnXQSzCHPa_fzrgza0XVQehPwDfnvWwq9x2Lkk89MUt_eR3wsbNTPrDkz9BMULahpLl_dtzAuBcUJDR_TYcm0YKlAu5koawU-l4aVaow9QtM9lVSNOORk4y_fDX20EwcbMCFaxeQwl9PoZF_HzCx_DNY70XGYZWtRU1GrONE6nRdqsgtxJu10Lbn3QwHpDvlm4cOik5js1xlBXvyTMVEHkE5kwRw3Z-qSaxTY4z8y1CKYV8TtqELVgGczFTXAm32NH33rVjBBeR6yYZ_uY5Mq7B2SC3bnU-AUlAqesOjaZG3PFtviuHu_ietM-DS1ER5wPghQKMvjF66DqJD-Scf47Xq_aznaRCepKOs-W-AsDqgoDyjuW97mfU_gNYetvPtaM6AUpQryo_JS5CQZAs7j8Oxo6JyKqBy5fGZyi2avJFciwYsM9bYxHUX4Yd3_PzdZHKzNXVhbPnLZPqzeFM3UkHs7mED20A493qAZYJ7DxntVjK2VqOz7ebVBcmaOrUX529pqnb8ldp6z77cLh1iD0SSCraJVAhlr2p34zS6r_kZaJ5Bi8q0behxYAAONFyWndCIgTr3ag=s0-l75-ft" 
+            src="/bob.jpg" 
             alt="Bob" 
-            className="w-48 h-48 rounded-full mx-auto object-cover"
+            className="w-64 h-64 rounded-full mx-auto object-cover"
           />
         </div>
-      </div>,
-      {
-        duration: 5000,
-        style: {
-          background: 'transparent',
-          border: 'none',
-          padding: 0,
-          maxWidth: '100%',
-          width: '100%',
-        }
+      </div>
+    ), {
+      duration: Infinity,
+      style: {
+        background: 'none',
+        border: 'none',
+        padding: 0,
+        width: '100vw',
+        maxWidth: '100vw',
       }
-    );
+    });
   }, []);
 
   return (
