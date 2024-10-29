@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { useToast } from "@/components/ui/use-toast";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const Index = () => {
   const [shouldAnimate, setShouldAnimate] = useState(true);
+  const { toast } = useToast();
 
   useEffect(() => {
     const hasVisited = localStorage.getItem('hasVisitedBefore');
@@ -13,6 +15,21 @@ const Index = () => {
     } else {
       localStorage.setItem('hasVisitedBefore', 'true');
     }
+
+    toast({
+      title: "Meet Bob, Our Cookie Manager",
+      description: (
+        <div className="flex items-center space-x-4">
+          <img 
+            src="/bob.jpg" 
+            alt="Bob" 
+            className="w-16 h-16 rounded-full"
+          />
+          <p>We have chosen to protect your privacy, so we employed Bob, to remove those pesky cookies.</p>
+        </div>
+      ),
+      duration: 5000,
+    });
   }, []);
 
   return (
