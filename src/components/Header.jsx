@@ -14,17 +14,9 @@ import {
 const Header = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  const { i18n } = useTranslation();
-  const [currentLang, setCurrentLang] = useState('en');
   
   const isActive = (path) => location.pathname === path;
   const visibleNavItems = navItems.filter(item => !item.hidden);
-
-  const toggleLanguage = () => {
-    const newLang = currentLang === 'en' ? 'cy' : 'en';
-    i18n.changeLanguage(newLang);
-    setCurrentLang(newLang);
-  };
 
   const MobileNav = () => (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -100,14 +92,6 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          
-          <Button
-            variant="ghost"
-            onClick={toggleLanguage}
-            className="absolute right-4 text-sm tracking-wide uppercase text-gray-400 hover:text-white transition-colors"
-          >
-            {currentLang === 'en' ? 'Cymraeg' : 'English'}
-          </Button>
         </div>
       </div>
     </nav>
