@@ -1,31 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Button } from "@/components/ui/button";
 
 const Index = () => {
-  const [shouldAnimate, setShouldAnimate] = useState(true);
-  const { i18n } = useTranslation();
-  const [currentLang, setCurrentLang] = useState('en');
-
-  const toggleLanguage = () => {
-    const newLang = currentLang === 'en' ? 'cy' : 'en';
-    i18n.changeLanguage(newLang);
-    setCurrentLang(newLang);
-  };
+  const [shouldAnimate] = React.useState(true);
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
-      <Button
-        variant="ghost"
-        onClick={toggleLanguage}
-        className="fixed top-8 right-8 z-[100] text-sm tracking-wide uppercase text-gray-400 hover:text-white transition-colors"
-      >
-        {currentLang === 'en' ? 'Cymraeg' : 'English'}
-      </Button>
-
       <motion.div 
         initial={{ scale: 1 }}
         animate={{ scale: 1 }}
