@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Construction } from 'lucide-react';
