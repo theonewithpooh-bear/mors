@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { useNavItems } from '../nav-items';
 import { Menu, X, Snowflake } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { useTranslation } from 'react-i18next';
 import {
   Sheet,
   SheetContent,
@@ -16,21 +15,39 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = useNavItems();
   
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path) => {
+    // Exact match for home page
+    if (path === '/') {
+      return location.pathname === path;
+    }
+    // For other pages, check if the current path starts with the nav item path
+    return location.pathname.startsWith(path);
+  };
+
   const visibleNavItems = navItems.filter(item => !item.hidden);
 
   const MobileNav = () => (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="md:hidden">
+        <Button 
+          variant="ghost" 
+          size="icon" 
+          className="md:hidden hover:bg-white/10"
+          aria-label="Toggle menu"
+        >
           <Menu className="h-6 w-6 text-white" />
-          <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="w-[300px] bg-black/95 border-white/10 p-0 backdrop-blur-md">
         <div className="flex flex-col h-full">
           <div className="px-6 py-4 border-b border-white/10">
-            <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="absolute right-4 top-4">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={() => setIsOpen(false)} 
+              className="absolute right-4 top-4 hover:bg-white/10"
+              aria-label="Close menu"
+            >
               <X className="h-6 w-6 text-white" />
             </Button>
           </div>
@@ -41,14 +58,14 @@ const Header = () => {
                   <Button
                     variant="ghost"
                     asChild
-                    className={`flex items-center space-x-2 w-full justify-start ${
-                      isActive(to) ? 'text-white' : 'text-gray-400'
+                    className={`flex items-center space-x-2 w-full justify-start transition-colors ${
+                      isActive(to) ? 'text-white bg-white/10' : 'text-gray-400 hover:text-white hover:bg-white/5'
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
                     <Link to={to}>
                       {icon && <span className="w-5">{icon}</span>}
-                      <span>{title}</span>
+                      <span className="ml-2">{title}</span>
                     </Link>
                   </Button>
                 </li>
@@ -72,13 +89,13 @@ const Header = () => {
                 <Button
                   variant="ghost"
                   asChild
-                  className="relative group py-2"
+                  className="relative group py-2 hover:bg-transparent"
                 >
                   <Link to={to}>
-                    <span className={`text-sm tracking-wide uppercase flex items-center gap-2 ${
+                    <span className={`text-sm tracking-wide uppercase flex items-center gap-2 transition-colors ${
                       isActive(to) 
                         ? 'text-white font-medium' 
-                        : 'text-gray-400 hover:text-white transition-colors'
+                        : 'text-gray-400 hover:text-white'
                     }`}>
                       {title}
                       <Snowflake className={`w-4 h-4 ${isActive(to) ? 'text-red-400' : 'text-green-400'} animate-pulse`} />
