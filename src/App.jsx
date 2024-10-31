@@ -21,6 +21,7 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster richColors />
+      <div className="snowfall" />
       <BrowserRouter>
         <ScrollToTop />
         <Routes>

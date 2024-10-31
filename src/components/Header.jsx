@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useNavItems } from '../nav-items';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Snowflake } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useTranslation } from 'react-i18next';
 import {
@@ -75,17 +75,18 @@ const Header = () => {
                   className="relative group py-2"
                 >
                   <Link to={to}>
-                    <span className={`text-sm tracking-wide uppercase ${
+                    <span className={`text-sm tracking-wide uppercase flex items-center gap-2 ${
                       isActive(to) 
                         ? 'text-white font-medium' 
                         : 'text-gray-400 hover:text-white transition-colors'
                     }`}>
                       {title}
+                      <Snowflake className={`w-4 h-4 ${isActive(to) ? 'text-red-400' : 'text-green-400'} animate-pulse`} />
                     </span>
                     {isActive(to) && (
                       <motion.div
                         layoutId="underline"
-                        className="absolute left-0 right-0 h-px bottom-0 bg-white"
+                        className="absolute left-0 right-0 h-px bottom-0 bg-gradient-to-r from-red-500 via-white to-green-500"
                       />
                     )}
                   </Link>
