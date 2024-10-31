@@ -2,5 +2,39 @@
   "fileStore": {
     "title": "file store",
     "underConstruction": "our file store is currently under construction. check back soon to access official publications by mors"
+  },
+  "nav": {
+    "home": "home",
+    "learn_more": "learn more",
+    "get_involved": "get involved",
+    "communications": "communications",
+    "articles": "articles",
+    "file_store": "file store"
+  },
+  "founder": {
+    "title": "The Case Against GCSEs",
+    "author": "By Monty Middleton-Burn",
+    "role": "Founder, MORS",
+    "intro": "I have noticed, through my studying of my GCSEs, that they are seriously flawed. The current system demands an unrealistic memorization of vast amounts of information across multiple subjects during a crucial developmental period when the brain is still maturing.",
+    "quote": "In what world, will you again be put in an exam hall, in extreme silence, not allowed to communicate with anyone, or use any of your resources?",
+    "paragraph1": "This scenario is entirely unrealistic and places unnecessary stress on our young people while wasting valuable time. Time that could be better invested in core knowledge acquisition and practical application of skills relevant to future careers.",
+    "stats_title": "The Alarming Statistics",
+    "stats_content": "Research reveals that within months, 60% to 70% of GCSE knowledge dissipates, escalating to 90% within a year. More concerning still, only 30% of employers value these qualifications, with the majority prioritizing practical skills that GCSEs fail to measure.",
+    "proposal_title": "A Revolutionary Proposal",
+    "proposal_content": "I propose a revolutionary system that assesses real-world abilities through coursework. This would introduce two tiers of Foundation Skills Certificates (FSCs) as replacements for GCSE and A-Level qualifications, with an optional higher-level qualification available for those who prefer it over FSC Level 2."
+  },
+  "getInvolved": {
+    "title": "register interest",
+    "description": "mors is a new initiative to revolutionize education. before launching our full platform, we're gathering interest to ensure we can provide the best possible experience for our community. join our waitlist to be among the first to know when we launch and help shape the future of education.",
+    "button": "register your interest"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": {
+      "q1": {
+        "question": "how will the system ensure fairness in coursework grading when different teachers have varying expectations and standards?",
+        "answer": "we propose integrating AI and machine learning models to support human markers, helping to identify and maintain consistent grading patterns. additionally, teachers would undergo extensive training—both mandatory and optional—focused on standardised assessment criteria. regular spot checks by exam board officials throughout the year would reinforce standardisation, and exam boards would provide detailed mark schemes and resources to guide teachers in aligning with nationally established expectations and criteria."
+      }
+    }
   }
 }

@@ -2,11 +2,14 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import DonationForm from '../components/get-involved/DonationForm';
 
 const GetInvolved = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
@@ -23,11 +26,9 @@ const GetInvolved = () => {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="mb-16 bg-gradient-to-br from-purple-500/10 to-blue-500/10 backdrop-blur-xl rounded-[32px] shadow-2xl p-12 border border-white/10"
           >
-            <h2 className="text-6xl font-bold mb-8 text-white">register interest</h2>
+            <h2 className="text-6xl font-bold mb-8 text-white">{t('getInvolved.title')}</h2>
             <p className="text-xl leading-relaxed mb-12 text-gray-300">
-              mors is a new initiative to revolutionize education. before launching our full platform, 
-              we're gathering interest to ensure we can provide the best possible experience for our community. 
-              join our waitlist to be among the first to know when we launch and help shape the future of education.
+              {t('getInvolved.description')}
             </p>
             <a 
               href="https://forms.gle/uV182TrQxVq8GwTc6" 
@@ -38,7 +39,7 @@ const GetInvolved = () => {
                 variant="outline" 
                 className="group text-lg px-8 py-6 rounded-2xl bg-white/10 hover:bg-white/20 border-white/20 transition-all duration-300"
               >
-                register your interest
+                {t('getInvolved.button')}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
