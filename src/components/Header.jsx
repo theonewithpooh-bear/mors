@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useNavItems } from '../nav-items';
@@ -15,12 +15,15 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = useNavItems();
   
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
   const isActive = (path) => {
-    // Exact match for home page
     if (path === '/') {
       return location.pathname === path;
     }
-    // For other pages, check if the current path starts with the nav item path
     return location.pathname.startsWith(path);
   };
 
@@ -55,19 +58,18 @@ const Header = () => {
             <ul className="space-y-4">
               {visibleNavItems.map(({ to, title, icon }) => (
                 <li key={to}>
-                  <Button
-                    variant="ghost"
-                    asChild
-                    className={`flex items-center space-x-2 w-full justify-start transition-colors ${
-                      isActive(to) ? 'text-white bg-white/10' : 'text-gray-400 hover:text-white hover:bg-white/5'
+                  <Link 
+                    to={to}
+                    className={`flex items-center space-x-2 w-full px-4 py-2 rounded-md transition-colors ${
+                      isActive(to) 
+                        ? 'text-white bg-white/10' 
+                        : 'text-gray-400 hover:text-white hover:bg-white/5'
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
-                    <Link to={to}>
-                      {icon && <span className="w-5">{icon}</span>}
-                      <span className="ml-2">{title}</span>
-                    </Link>
-                  </Button>
+                    {icon && <span className="w-5">{icon}</span>}
+                    <span className="ml-2">{title}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -78,20 +80,19 @@ const Header = () => {
   );
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md backdrop-saturate-150 border-b border-white/5 supports-[backdrop-filter]:bg-black/30">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md backdrop-saturate-150 border-b border-white/5 supports-[backdrop-filter]:bg-black/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between md:justify-center">
           <MobileNav />
           
-          <ul className="hidden md:flex space-x-12">
-            {visibleNavItems.map(({ to, title }) => (
-              <li key={to}>
-                <Button
-                  variant="ghost"
-                  asChild
-                  className="relative group py-2 hover:bg-transparent"
-                >
-                  <Link to={to}>
+          <nav className="hidden md:block">
+            <ul className="flex space-x-12">
+              {visibleNavItems.map(({ to, title }) => (
+                <li key={to}>
+                  <Link 
+                    to={to}
+                    className="relative group py-2 px-4 block"
+                  >
                     <span className={`text-sm tracking-wide uppercase flex items-center gap-2 transition-colors ${
                       isActive(to) 
                         ? 'text-white font-medium' 
@@ -107,13 +108,13 @@ const Header = () => {
                       />
                     )}
                   </Link>
-                </Button>
-              </li>
-            ))}
-          </ul>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </div>
-    </nav>
+    </header>
   );
 };
 
