@@ -1,4 +1,4 @@
-import "@fontsource/special-elite";
+import "@fontsource/special-elite/400.css"; // Changed from basic import to specific weight
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
