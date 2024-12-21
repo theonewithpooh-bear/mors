@@ -51,44 +51,32 @@ const Index = () => {
       {/* Features Section */}
       <section className="py-24 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-center space-y-4"
-            >
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-12"
+          >
+            <div className="text-center space-y-4">
               <h3 className="text-2xl font-serif">practical skills</h3>
               <p className="text-gray-400">
                 focus on real-world applications and hands-on experience
               </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="text-center space-y-4"
-            >
+            </div>
+            <div className="text-center space-y-4">
               <h3 className="text-2xl font-serif">modern approach</h3>
               <p className="text-gray-400">
                 education that evolves with the demands of today's world
               </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-              className="text-center space-y-4"
-            >
+            </div>
+            <div className="text-center space-y-4">
               <h3 className="text-2xl font-serif">future ready</h3>
               <p className="text-gray-400">
                 preparing students for success in their careers and life
               </p>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
