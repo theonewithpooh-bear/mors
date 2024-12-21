@@ -21,19 +21,10 @@ const Header = () => {
   }, [location.pathname]);
 
   const isActive = (path) => {
-    // Special case for home page
-    if (path === '/') {
-      return location.pathname === '/';
-    }
-    // For other routes, ensure exact matches or proper parent/child relationships
-    if (location.pathname === path) {
+    if (path === '/' && location.pathname === '/') {
       return true;
     }
-    // Check if it's a parent route with a child
-    if (location.pathname.startsWith(path + '/')) {
-      return true;
-    }
-    return false;
+    return path !== '/' && location.pathname === path;
   };
 
   const visibleNavItems = navItems.filter(item => !item.hidden);
