@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useNavItems } from '../nav-items';
-import { Menu, X, Snowflake } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -98,7 +98,6 @@ const Header = () => {
                         : 'text-gray-400 hover:text-white'
                     }`}>
                       {title}
-                      <Snowflake className={`w-4 h-4 ${isActive(to) ? 'text-red-400' : 'text-green-400'} animate-pulse`} />
                     </span>
                     {isActive(to) && (
                       <motion.div
