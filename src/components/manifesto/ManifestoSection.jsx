@@ -15,7 +15,7 @@ const ManifestoSection = ({ title, subtitle, content, source, className = "" }) 
           <motion.div 
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
-            className="mb-64" // Doubled from mb-32 to mb-64
+            className="mb-[32rem]" // Doubled from mb-64 to mb-[32rem]
           >
             {title.includes(":") ? (
               <>
@@ -36,7 +36,7 @@ const ManifestoSection = ({ title, subtitle, content, source, className = "" }) 
           <motion.h3 
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
-            className="text-4xl font-serif mb-32" // Doubled from mb-16 to mb-32
+            className="text-4xl font-serif mb-64" // Doubled from mb-32 to mb-64
           >
             {subtitle}
           </motion.h3>
@@ -58,7 +58,7 @@ const ManifestoSection = ({ title, subtitle, content, source, className = "" }) 
           )}
           
           {source && (
-            <p className="text-sm text-gray-500 italic mt-32"> // Doubled from mt-16 to mt-32
+            <p className="text-sm text-gray-500 italic mt-64"> // Doubled from mt-32 to mt-64
               Source: {source}
             </p>
           )}
