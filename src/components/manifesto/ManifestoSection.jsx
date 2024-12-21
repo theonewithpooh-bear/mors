@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const ManifestoSection = ({ title, subtitle, content, className = "", source }) => {
+const ManifestoSection = ({ title, subtitle, content, source, className = "" }) => {
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -10,12 +10,12 @@ const ManifestoSection = ({ title, subtitle, content, className = "", source }) 
       transition={{ duration: 0.8 }}
       className={`min-h-screen flex items-center justify-center p-4 ${className}`}
     >
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-4xl mx-auto">
         {title && (
           <motion.h2 
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
-            className="text-5xl font-serif mb-8"
+            className="text-5xl font-serif mb-8 text-center"
           >
             {title}
           </motion.h2>
