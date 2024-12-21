@@ -21,18 +21,18 @@ const Index = () => {
             ease: [0.16, 1, 0.3, 1],
             delay: 0.5
           }}
-          className="relative"
+          className="relative pointer-events-none"
         >
-          <div className={shouldAnimate ? "opacity-0 animate-[fade-in_0.5s_ease-in-out_4s_forwards]" : ""}>
+          <div className={`pointer-events-auto ${shouldAnimate ? "opacity-0 animate-[fade-in_0.5s_ease-in-out_4s_forwards]" : ""}`}>
             <Header />
           </div>
           
-          <div className="container mx-auto px-4 py-32 relative">
+          <div className="container mx-auto px-4 py-32 relative pointer-events-none">
             <div className="absolute inset-0 -z-10">
               <div className="absolute inset-0 bg-gradient-to-r from-gray-900/10 via-white/5 to-gray-900/10 blur-3xl opacity-0 animate-[fade-in_1s_ease-in-out_3s_forwards]" />
             </div>
 
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-5xl mx-auto pointer-events-auto">
               <div className="text-center mb-16">
                 <div className="relative">
                   <motion.div
