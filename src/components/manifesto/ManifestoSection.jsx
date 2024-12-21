@@ -10,33 +10,55 @@ const ManifestoSection = ({ title, subtitle, content, source, className = "" }) 
       transition={{ duration: 0.8 }}
       className={`min-h-screen flex items-center justify-center p-4 ${className}`}
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto text-center">
         {title && (
-          <motion.h2 
+          <motion.div 
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
-            className="text-5xl font-serif mb-8 text-center"
+            className="mb-16"
           >
-            {title}
-          </motion.h2>
+            {title.includes(":") ? (
+              <>
+                <h2 className="text-5xl font-serif mb-4">
+                  {title.split(":")[0]}:
+                </h2>
+                <h2 className="text-6xl font-serif">
+                  {title.split(":")[1]}
+                </h2>
+              </>
+            ) : (
+              <h2 className="text-6xl font-serif">{title}</h2>
+            )}
+          </motion.div>
         )}
+        
         {subtitle && (
           <motion.h3 
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
-            className="text-3xl font-serif mb-4"
+            className="text-4xl font-serif mb-8"
           >
             {subtitle}
           </motion.h3>
         )}
+        
         <motion.div 
           initial={{ y: 20 }}
           whileInView={{ y: 0 }}
-          className="space-y-6 text-lg text-gray-300"
+          className="space-y-8 text-xl text-gray-300"
         >
-          {content}
+          {Array.isArray(content) ? (
+            content.map((item, index) => (
+              <div key={index} className="space-y-4">
+                {item}
+              </div>
+            ))
+          ) : (
+            <div className="space-y-4">{content}</div>
+          )}
+          
           {source && (
-            <p className="text-sm text-gray-500 italic mt-4">
+            <p className="text-sm text-gray-500 italic mt-8">
               Source: {source}
             </p>
           )}
