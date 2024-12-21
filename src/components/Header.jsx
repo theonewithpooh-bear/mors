@@ -15,7 +15,6 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = useNavItems();
   
-  // Close mobile menu when route changes
   useEffect(() => {
     setIsOpen(false);
   }, [location.pathname]);
@@ -41,7 +40,7 @@ const Header = () => {
           <Menu className="h-6 w-6 text-white" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="w-[300px] bg-black/95 border-white/10 p-0 backdrop-blur-md">
+      <SheetContent side="right" className="w-[300px] bg-black/95 border-white/10 p-0">
         <div className="flex flex-col h-full">
           <div className="px-6 py-4 border-b border-white/10">
             <Button 
@@ -80,9 +79,9 @@ const Header = () => {
   );
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md backdrop-saturate-150 border-b border-white/5 supports-[backdrop-filter]:bg-black/30">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/30 border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between md:justify-center">
+        <div className="flex h-20 items-center justify-between md:justify-center relative">
           <MobileNav />
           
           <nav className="hidden md:block">
