@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { motion } from 'framer-motion';
 
 const FileStore = () => {
   const { t } = useTranslation();
@@ -13,67 +14,93 @@ const FileStore = () => {
       <Header />
       <div className="container mx-auto px-4 py-24">
         <div className="flex flex-col items-center justify-center space-y-12 max-w-4xl mx-auto">
-          <div className="text-center space-y-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center space-y-4"
+          >
             <h1 className="text-7xl font-serif mb-2">mors</h1>
             <p className="text-3xl font-serif">a future for education</p>
             <p className="text-xl text-gray-400">manifesto</p>
-          </div>
+          </motion.div>
 
-          {/* Sections */}
-          <ScrollArea className="w-full h-full">
-            <div className="w-full space-y-16">
+          <ScrollArea className="h-[60vh] w-full rounded-md">
+            <div className="w-full space-y-24 pb-24">
               {sections.map((section, index) => (
-                <Card key={index} className="bg-black border-white/10">
-                  <CardContent className="p-8">
-                    <h2 className="text-4xl font-serif mb-8">{section.title}</h2>
-                    <div className="space-y-6">
-                      {section.content.map((content, idx) => (
-                        <div key={idx} className="space-y-4">
-                          {content.subtitle && (
-                            <h3 className="text-2xl font-serif mb-4">{content.subtitle}</h3>
-                          )}
-                          {content.paragraphs.map((paragraph, pIdx) => (
-                            <p key={pIdx} className="text-lg text-gray-300 leading-relaxed">
-                              {paragraph}
-                            </p>
-                          ))}
-                          {content.source && (
-                            <p className="text-sm text-gray-500 italic mt-2">
-                              Source: {content.source}
-                            </p>
-                          )}
-                          {content.list && (
-                            <ul className="list-disc pl-6 space-y-2">
-                              {content.list.map((item, lIdx) => (
-                                <li key={lIdx} className="text-lg text-gray-300">{item}</li>
-                              ))}
-                            </ul>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <Card className="bg-black border-white/10">
+                    <CardContent className="p-8">
+                      <h2 className="text-4xl font-serif mb-8">{section.title}</h2>
+                      <div className="space-y-12">
+                        {section.content.map((content, idx) => (
+                          <div key={idx} className="space-y-4">
+                            {content.subtitle && (
+                              <h3 className="text-2xl font-serif mb-4">{content.subtitle}</h3>
+                            )}
+                            {content.paragraphs && content.paragraphs.map((paragraph, pIdx) => (
+                              <p key={pIdx} className="text-lg text-gray-300 leading-relaxed">
+                                {paragraph}
+                              </p>
+                            ))}
+                            {content.source && (
+                              <p className="text-sm text-gray-500 italic mt-2">
+                                Source: {content.source}
+                              </p>
+                            )}
+                            {content.list && (
+                              <ul className="list-disc pl-6 space-y-2">
+                                {content.list.map((item, lIdx) => (
+                                  <li key={lIdx} className="text-lg text-gray-300">{item}</li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               ))}
 
               {/* Quote Section */}
-              <Card className="bg-black border-white/10">
-                <CardContent className="p-8 text-center">
-                  <blockquote className="text-xl italic text-gray-300 mb-4">
-                    "Victory at all costs, victory in spite of all terror, victory however long and hard the road may be; for without victory, there is no survival"
-                  </blockquote>
-                  <p className="text-gray-400">— Winston Churchill</p>
-                </CardContent>
-              </Card>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
+              >
+                <Card className="bg-black border-white/10">
+                  <CardContent className="p-8 text-center">
+                    <blockquote className="text-xl italic text-gray-300 mb-4">
+                      "Victory at all costs, victory in spite of all terror, victory however long and hard the road may be; for without victory, there is no survival"
+                    </blockquote>
+                    <p className="text-gray-400">— Winston Churchill</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
 
               {/* Signature Section */}
-              <Card className="bg-black border-white/10">
-                <CardContent className="p-8 text-center">
-                  <p className="text-xl mb-8">Signed,</p>
-                  <p className="text-2xl font-serif mb-2">Monty Middleton-Burn</p>
-                  <p className="text-lg text-gray-400">Founder & Director General, MORS</p>
-                </CardContent>
-              </Card>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
+              >
+                <Card className="bg-black border-white/10">
+                  <CardContent className="p-8 text-center">
+                    <p className="text-xl mb-8">Signed,</p>
+                    <p className="text-2xl font-serif mb-2">Monty Middleton-Burn</p>
+                    <p className="text-lg text-gray-400">Founder & Director General, MORS</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </div>
           </ScrollArea>
         </div>
