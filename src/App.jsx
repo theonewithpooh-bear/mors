@@ -34,7 +34,7 @@ const App = () => (
           <Route path="/ethics" element={<Ethics />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/cookies-policy" element={<CookiesPolicy />} />
-          <Route path="/file-store" element={<FileStore />} />
+          <Route path="/manifesto" element={<FileStore />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

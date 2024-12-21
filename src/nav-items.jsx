@@ -31,8 +31,8 @@ export const useNavItems = () => {
       icon: <BookOpenIcon className="h-4 w-4" />,
     },
     {
-      title: t("nav.file_store"),
-      to: "/file-store",
+      title: t("nav.manifesto"),
+      to: "/manifesto",
       icon: <FolderIcon className="h-4 w-4" />,
     },
     // Hidden from navigation but still accessible

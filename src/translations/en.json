@@ -1,7 +1,7 @@
 {
   "fileStore": {
-    "title": "file store",
-    "underConstruction": "our file store is currently under construction. check back soon to access official publications by mors"
+    "title": "manifesto",
+    "underConstruction": "our manifesto is currently under construction. check back soon to access official publications by mors"
   },
   "nav": {
     "home": "home",
@@ -9,7 +9,7 @@
     "get_involved": "get involved",
     "communications": "communications",
     "articles": "articles",
-    "file_store": "file store"
+    "manifesto": "manifesto"
   },
   "founder": {
     "title": "The Case Against GCSEs",

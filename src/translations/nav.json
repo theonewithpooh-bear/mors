@@ -6,7 +6,7 @@
       "get_involved": "get involved",
       "communications": "communications",
       "articles": "articles",
-      "file_store": "file store"
+      "manifesto": "manifesto"
     }
   },
   "cy": {
@@ -16,7 +16,7 @@
       "get_involved": "cymryd rhan",
       "communications": "cyfathrebiadau",
       "articles": "erthyglau",
-      "file_store": "storfa ffeiliau"
+      "manifesto": "maniffesto"
     }
   }
 }
