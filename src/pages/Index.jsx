@@ -3,9 +3,22 @@ import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
+const Section = ({ children, className = "" }) => (
+  <motion.div 
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ once: true, margin: "-100px" }}
+    transition={{ duration: 0.8 }}
+    className={`min-h-screen flex items-center justify-center ${className}`}
+  >
+    <div className="text-center max-w-4xl mx-auto px-4">
+      {children}
+    </div>
+  </motion.div>
+);
+
 const Index = () => {
   const [shouldAnimate] = React.useState(() => {
-    // Check if animation has played before
     const hasAnimated = localStorage.getItem('indexAnimationPlayed');
     if (!hasAnimated) {
       localStorage.setItem('indexAnimationPlayed', 'true');
@@ -15,12 +28,11 @@ const Index = () => {
   });
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
-      <motion.div 
-        initial={{ scale: 1 }}
-        animate={{ scale: 1 }}
-        className="relative"
-      >
+    <div className="bg-black text-white">
+      <Header />
+      
+      {/* Title Section */}
+      <Section>
         <motion.div
           initial={shouldAnimate ? { scale: 4, y: "40vh" } : false}
           animate={shouldAnimate ? { scale: 1, y: 0 } : false}
@@ -29,64 +41,70 @@ const Index = () => {
             ease: [0.16, 1, 0.3, 1],
             delay: 0.5
           }}
-          className="relative pointer-events-none"
         >
-          <div className={`pointer-events-auto ${shouldAnimate ? "opacity-0 animate-[fade-in_0.5s_ease-in-out_4s_forwards]" : ""}`}>
-            <Header />
-          </div>
-          
-          <div className="container mx-auto px-4 py-32 relative pointer-events-none">
-            <div className="absolute inset-0 -z-10">
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-900/10 via-white/5 to-gray-900/10 blur-3xl opacity-0 animate-[fade-in_1s_ease-in-out_3s_forwards]" />
-            </div>
-
-            <div className="max-w-5xl mx-auto pointer-events-auto">
-              <div className="text-center mb-16">
-                <div className="relative">
-                  <motion.div
-                    initial={shouldAnimate ? { opacity: 1, scale: 2 } : false}
-                    animate={shouldAnimate ? { 
-                      opacity: 1, 
-                      scale: [2, 1, 0.5],
-                      fontSize: ["4rem", "4rem", "1rem"]
-                    } : false}
-                    transition={{ 
-                      duration: 3.5,
-                      times: [0, 0.7, 1],
-                      ease: [0.16, 1, 0.3, 1],
-                      delay: 0.5 
-                    }}
-                    className="mb-6"
-                  >
-                    <span className="text-4xl tracking-[0.3em] text-white uppercase font-light">
-                      introducing
-                    </span>
-                  </motion.div>
-                  
-                  <motion.div
-                    initial={shouldAnimate ? { opacity: 0 } : { opacity: 1 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 3, duration: 1 }}
-                  >
-                    <h1 className="text-7xl sm:text-8xl font-bold mb-2 tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-r from-white/70 via-white to-white/70">
-                      movement of real skills
-                    </h1>
-                    <p className="text-lg text-white/50 mb-8">M.O.R.S.</p>
-                    <div className="w-48 h-0.5 mx-auto bg-gradient-to-r from-transparent via-white/15 to-transparent mb-8" />
-                    <p className={`text-2xl sm:text-3xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light ${shouldAnimate ? "opacity-0 animate-[fade-in_0.5s_ease-in-out_3.5s_forwards]" : ""}`}>
-                      our mission is to revolutionize the educational landscape by introducing practical, skills-based learning that prepares students for the real world.
-                    </p>
-                  </motion.div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className={shouldAnimate ? "opacity-0 animate-[fade-in_0.5s_ease-in-out_4s_forwards]" : ""}>
-            <Footer />
-          </div>
+          <h1 className="text-7xl font-serif mb-2">mors</h1>
+          <p className="text-3xl font-serif">a future for education</p>
+          <p className="text-xl text-gray-400 mt-4">manifesto</p>
         </motion.div>
-      </motion.div>
+      </Section>
+
+      {/* Introduction Section */}
+      <Section>
+        <h2 className="text-5xl font-serif mb-12">Introduction & Vision</h2>
+        <div className="space-y-8 text-left">
+          <div>
+            <h3 className="text-2xl font-serif mb-4">What is MORS?</h3>
+            <p className="text-lg text-gray-300">
+              M.O.R.S. is an organisation founded by Monty Middleton-Burn, which aims to overhaul 
+              the current outdated exam and education system in the UK, by advocating for change.
+            </p>
+            <p className="text-lg text-gray-300 mt-4">
+              MORS hopes to achieve this by acting as a central hub for all major supporters of 
+              educational reform to speak from.
+            </p>
+            <p className="text-lg text-gray-300 mt-4">We are stronger as one.</p>
+          </div>
+        </div>
+      </Section>
+
+      {/* Vision Statement Section */}
+      <Section>
+        <h2 className="text-5xl font-serif mb-12">Vision Statement</h2>
+        <div className="space-y-8 text-left">
+          <p className="text-lg text-gray-300">
+            MORS is advocating for a future where British students are prepared for the real world 
+            by being taught in a way that will equip them for working life.
+          </p>
+          <p className="text-lg text-gray-300">
+            Studies have shown that the majority of information you gain during GCSEs is lost within a year.
+          </p>
+          <p className="text-lg text-gray-300">
+            At MORS, we don't believe this is right. We believe that students deserve better, 
+            the right to a better education—one that is actually worthwhile.
+          </p>
+          <p className="text-sm text-gray-500 italic">
+            Source: Herman Ebbinghaus' "forgetting curve"
+          </p>
+        </div>
+      </Section>
+
+      {/* Quote Section */}
+      <Section>
+        <blockquote className="text-2xl italic text-gray-300 mb-4">
+          "Victory at all costs, victory in spite of all terror, victory however long and hard 
+          the road may be; for without victory, there is no survival"
+        </blockquote>
+        <p className="text-gray-400">— Winston Churchill</p>
+      </Section>
+
+      {/* Signature Section */}
+      <Section className="pb-24">
+        <p className="text-xl mb-8">Signed,</p>
+        <p className="text-2xl font-serif mb-2">Monty Middleton-Burn</p>
+        <p className="text-lg text-gray-400">Founder & Director General, MORS</p>
+      </Section>
+
+      <Footer />
     </div>
   );
 };
