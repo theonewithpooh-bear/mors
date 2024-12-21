@@ -15,7 +15,7 @@ const ManifestoSection = ({ title, subtitle, content, source, className = "" }) 
           <motion.div 
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
-            className="mb-16"
+            className="mb-32" // Increased from mb-16 to mb-32 for more spacing
           >
             {title.includes(":") ? (
               <>
@@ -36,7 +36,7 @@ const ManifestoSection = ({ title, subtitle, content, source, className = "" }) 
           <motion.h3 
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
-            className="text-4xl font-serif mb-8"
+            className="text-4xl font-serif mb-16" // Increased from mb-8 to mb-16
           >
             {subtitle}
           </motion.h3>
@@ -58,7 +58,7 @@ const ManifestoSection = ({ title, subtitle, content, source, className = "" }) 
           )}
           
           {source && (
-            <p className="text-sm text-gray-500 italic mt-8">
+            <p className="text-sm text-gray-500 italic mt-16"> // Increased from mt-8 to mt-16
               Source: {source}
             </p>
           )}
