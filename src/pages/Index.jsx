@@ -1,85 +1,96 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ManifestoSection from '../components/manifesto/ManifestoSection';
-import { manifestoSections } from '../data/manifestoContent';
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from 'lucide-react';
 
 const Index = () => {
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white min-h-screen">
       <Header />
       
-      {manifestoSections.map((section, index) => {
-        if (section.isHero) {
-          return (
-            <ManifestoSection
-              key={index}
-              content={
-                <div className="min-h-screen flex flex-col items-center justify-center space-y-4 text-center">
-                  <h1 className="text-7xl font-serif mb-2">{section.title}</h1>
-                  <p className="text-3xl font-serif">{section.subtitle}</p>
-                  <p className="text-xl text-gray-400">{section.content}</p>
-                </div>
-              }
-            />
-          );
-        }
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#3b82f640_0%,transparent_70%)] animate-glow-dance" />
+        </div>
+        
+        <div className="relative container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-6"
+          >
+            <h1 className="text-6xl md:text-7xl font-serif mb-6">
+              movement of real skills
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-8">
+              revolutionizing education through practical, skills-based learning that prepares students for the real world
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/learn-more">
+                <Button variant="outline" size="lg" className="rounded-full group">
+                  learn more
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Link to="/get-involved">
+                <Button size="lg" className="rounded-full">
+                  get involved
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-        return (
-          <ManifestoSection
-            key={index}
-            title={section.title}
-            content={
-              <div className="space-y-12">
-                {section.content.map((subsection, subIndex) => (
-                  <div key={subIndex} className="space-y-4">
-                    {subsection.subtitle && (
-                      <h3 className="text-2xl font-serif">{subsection.subtitle}</h3>
-                    )}
-                    {subsection.text && subsection.text.map((paragraph, pIndex) => (
-                      <p key={pIndex} className="text-lg text-gray-300">
-                        {paragraph}
-                      </p>
-                    ))}
-                    {subsection.source && (
-                      <p className="text-sm text-gray-500 italic">
-                        Source: {subsection.source}
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            }
-          />
-        );
-      })}
-
-      {/* Quote Section */}
-      <ManifestoSection
-        className="text-center"
-        content={
-          <>
-            <blockquote className="text-2xl italic text-gray-300 mb-4">
-              "Victory at all costs, victory in spite of all terror, victory however long and hard 
-              the road may be; for without victory, there is no survival"
-            </blockquote>
-            <p className="text-gray-400">— Winston Churchill</p>
-          </>
-        }
-      />
-
-      {/* Signature Section */}
-      <ManifestoSection
-        className="text-center pb-24"
-        content={
-          <>
-            <p className="text-xl mb-8">Signed,</p>
-            <p className="text-2xl font-serif mb-2">Monty Middleton-Burn</p>
-            <p className="text-lg text-gray-400">Founder & Director General, MORS</p>
-          </>
-        }
-      />
+      {/* Features Section */}
+      <section className="py-24 bg-gradient-to-b from-black to-gray-900">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-center space-y-4"
+            >
+              <h3 className="text-2xl font-serif">practical skills</h3>
+              <p className="text-gray-400">
+                focus on real-world applications and hands-on experience
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="text-center space-y-4"
+            >
+              <h3 className="text-2xl font-serif">modern approach</h3>
+              <p className="text-gray-400">
+                education that evolves with the demands of today's world
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="text-center space-y-4"
+            >
+              <h3 className="text-2xl font-serif">future ready</h3>
+              <p className="text-gray-400">
+                preparing students for success in their careers and life
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
