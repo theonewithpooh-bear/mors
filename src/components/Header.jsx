@@ -21,10 +21,16 @@ const Header = () => {
   }, [location.pathname]);
 
   const isActive = (path) => {
+    // For home page, only match exact '/'
     if (path === '/') {
-      return location.pathname === path;
+      return location.pathname === '/';
     }
-    return location.pathname.startsWith(path);
+    // For other routes, check if the current path starts with the nav item path
+    // but make sure it's not matching a parent path incorrectly
+    return location.pathname.startsWith(path) && (
+      path === location.pathname || // exact match
+      location.pathname.charAt(path.length) === '/' // next char is a slash
+    );
   };
 
   const visibleNavItems = navItems.filter(item => !item.hidden);
