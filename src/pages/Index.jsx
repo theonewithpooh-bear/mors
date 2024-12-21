@@ -4,7 +4,15 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const Index = () => {
-  const [shouldAnimate] = React.useState(true);
+  const [shouldAnimate] = React.useState(() => {
+    // Check if animation has played before
+    const hasAnimated = localStorage.getItem('indexAnimationPlayed');
+    if (!hasAnimated) {
+      localStorage.setItem('indexAnimationPlayed', 'true');
+      return true;
+    }
+    return false;
+  });
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
