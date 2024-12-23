@@ -17,7 +17,7 @@ const Index = () => {
             movement of real skills
           </h1>
           <p className="text-lg text-gray-400 tracking-wider mb-4">M.O.R.S.</p>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             revolutionizing education through practical, skills-based learning that prepares students for the real world
           </p>
           
@@ -26,14 +26,14 @@ const Index = () => {
             <Link to="/learn-more">
               <Button 
                 variant="outline" 
-                className="text-white border-white hover:bg-white hover:text-black text-lg px-8 py-6 h-auto rounded-full transition-all"
+                className="text-white border-white hover:bg-white hover:text-black text-base px-6 py-4 h-auto rounded-full transition-all"
               >
                 learn more →
               </Button>
             </Link>
             <Link to="/get-involved">
               <Button 
-                className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6 h-auto rounded-full transition-all"
+                className="bg-white text-black hover:bg-gray-100 text-base px-6 py-4 h-auto rounded-full transition-all"
               >
                 get involved
               </Button>
