@@ -48,6 +48,23 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Poster Section */}
+      <motion.section 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="py-24 px-4"
+      >
+        <div className="container mx-auto max-w-4xl">
+          <img 
+            src="/lovable-uploads/4722914f-5717-4fa6-a9f2-ade90e377a30.png"
+            alt="Education shouldn't burst under pressure - MORS campaign poster"
+            className="w-full rounded-lg shadow-2xl"
+          />
+        </div>
+      </motion.section>
+
       {/* Features Section */}
       <section className="relative py-24">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black opacity-50" />
