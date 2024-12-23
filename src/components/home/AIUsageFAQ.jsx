@@ -82,7 +82,7 @@ const AIUsageFAQ = () => {
             icon={Rocket}
             trigger="how does MORS plan to evolve its AI usage?"
           >
-            we plan to maximize AI usage while maintaining a good balance. we view AI as a force for good and believe 
+            we plan to maximise AI usage while maintaining a good balance. we view AI as a force for good and believe 
             that education and society should evolve together with AI technology.
           </FAQItem>
         </Accordion>
