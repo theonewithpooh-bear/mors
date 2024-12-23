@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black">
       <Header />
-      <main className="flex flex-col items-center justify-center min-h-screen text-center px-4">
+      <main className="flex flex-col items-center justify-center min-h-screen text-center px-4 pt-32">
         {/* Hero Section */}
         <div className="max-w-6xl mx-auto space-y-8" style={{ animation: 'fade-in 1s ease-out' }}>
           <p className="text-gray-400 tracking-[0.2em] uppercase text-sm">introducing</p>
@@ -41,7 +41,7 @@ const Index = () => {
         </div>
 
         {/* Poster Image */}
-        <div className="w-full max-w-5xl mx-auto mt-16">
+        <div className="w-full max-w-4xl mx-auto mt-16">
           <img 
             src="/lovable-uploads/4722914f-5717-4fa6-a9f2-ade90e377a30.png" 
             alt="MORS Poster" 
