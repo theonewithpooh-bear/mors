@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
-import '@fontsource/special-elite';
+import '@fontsource/cormorant';
 
 const Index = () => {
   return (
@@ -13,7 +13,7 @@ const Index = () => {
         {/* Hero Section */}
         <div className="max-w-6xl mx-auto space-y-8" style={{ animation: 'fade-in 1s ease-out' }}>
           <p className="text-gray-400 tracking-[0.2em] uppercase text-lg">introducing</p>
-          <h1 className="text-6xl md:text-7xl font-normal text-white mb-4 tracking-normal leading-none font-['Special_Elite']">
+          <h1 className="text-5xl md:text-6xl font-normal text-white mb-4 tracking-normal leading-none font-['Cormorant']">
             movement of real skills
           </h1>
           <p className="text-xl text-gray-400 tracking-wider mb-4">M.O.R.S.</p>
