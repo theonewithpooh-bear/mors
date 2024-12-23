@@ -1,6 +1,6 @@
 import React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Brain, Shield, CircleInfo, Computer, Globe, MessageSquare, Rocket } from "lucide-react";
+import { Brain, Shield, Info, Computer, Globe, MessageSquare, Rocket } from "lucide-react";
 
 const FAQItem = ({ value, icon: Icon, trigger, children }) => (
   <AccordionItem value={value} className="border-white/10">
@@ -43,7 +43,7 @@ const AIUsageFAQ = () => {
 
           <FAQItem 
             value="transparency" 
-            icon={CircleInfo}
+            icon={Info}
             trigger="how does MORS ensure transparency?"
           >
             we maintain dedicated sections explaining our AI usage, provide open communication via info@mors.org.uk, 
