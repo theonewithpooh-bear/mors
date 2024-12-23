@@ -28,6 +28,16 @@ const Legal = () => {
               </p>
             </Link>
 
+            <Link 
+              to="/ai-usage"
+              className="p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
+            >
+              <h2 className="text-2xl font-semibold mb-2">AI usage policy</h2>
+              <p className="text-gray-300">
+                understand how we responsibly use artificial intelligence in our operations.
+              </p>
+            </Link>
+
             <section>
               <h2 className="text-2xl font-semibold mb-6">contact</h2>
               <p className="text-gray-300">
