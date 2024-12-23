@@ -71,10 +71,10 @@ const FAQSection = () => {
 
         <AccordionItem value="item-8" className="border-white/10">
           <AccordionTrigger className="text-white hover:text-white/90">
-            what benefits has MORS seen from using AI?
+            what AI models does MORS use?
           </AccordionTrigger>
           <AccordionContent className="text-gray-400">
-            AI has helped us operate more efficiently, create more consistent content, and reach a wider audience. it allows our team to focus on strategic thinking and community engagement while maintaining high-quality outputs.
+            we primarily use GPT-4 for content generation and analysis, along with specialized models for specific tasks like data analysis and research synthesis. all models are carefully selected based on their reliability and alignment with our educational goals.
           </AccordionContent>
         </AccordionItem>
       </Accordion>
