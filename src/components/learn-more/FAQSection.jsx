@@ -8,73 +8,73 @@ const FAQSection = () => {
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="item-1" className="border-white/10">
           <AccordionTrigger className="text-white hover:text-white/90">
-            how will the system ensure fairness in coursework grading when different teachers have varying expectations and standards?
+            how does MORS use AI in its operations?
           </AccordionTrigger>
           <AccordionContent className="text-gray-400">
-            we propose integrating AI and machine learning models to support human markers, helping to identify and maintain consistent grading patterns. additionally, teachers would undergo extensive training—both mandatory and optional—focused on standardised assessment criteria. regular spot checks by exam board officials throughout the year would reinforce standardisation, and exam boards would provide detailed mark schemes and resources to guide teachers in aligning with nationally established expectations and criteria.
+            we use AI to assist with content creation, research analysis, and communication materials. all AI-generated content is reviewed and refined by our human team to ensure accuracy and alignment with our mission.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-2" className="border-white/10">
           <AccordionTrigger className="text-white hover:text-white/90">
-            what measures will be taken to prevent plagiarism and ensure the authenticity of students' coursework submissions?
+            what safeguards does MORS have in place for AI usage?
           </AccordionTrigger>
           <AccordionContent className="text-gray-400">
-            we don't consider plagiarism an issue unless the content breaches the law. from MORS's perspective, using available resources to complete a given task is simply part of real-world problem-solving. however, we propose that a significant portion of the coursework be completed as classwork, allowing for supervised environments that help maintain authenticity.
+            we have implemented strict oversight protocols where all AI-generated content undergoes human review. our team ensures that all content aligns with our educational values and maintains accuracy.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-3" className="border-white/10">
           <AccordionTrigger className="text-white hover:text-white/90">
-            how will this approach avoid disadvantaging students from schools with fewer resources or less experienced teachers?
+            how does MORS ensure transparency about its AI usage?
           </AccordionTrigger>
           <AccordionContent className="text-gray-400">
-            we believe that schools bear the responsibility for providing adequate resources to support all students. as for teachers' abilities, it is up to individual schools to ensure they are employing educators with the necessary skills and expertise to support coursework-based assessment. our focus is on creating a fair and adaptable assessment system, leaving schools to handle staffing and resource provisions accordingly.
+            we maintain complete transparency about our AI usage through clear documentation and open communication with our community. we believe in being upfront about which aspects of our work involve AI assistance.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-4" className="border-white/10">
           <AccordionTrigger className="text-white hover:text-white/90">
-            without the clear structure of GCSEs, how will students know what they need to learn for higher education and employment?
+            what types of content does MORS create using AI?
           </AccordionTrigger>
           <AccordionContent className="text-gray-400">
-            we propose that students be clearly informed of the requirements needed to achieve specific grades within the Foundation Skills Certificate (FSC) framework, serving as an alternative to GCSEs. as the system develops further, comprehensive expectations and guidelines will be communicated, ensuring students understand what is needed to meet the demands of higher education and employment. given that we are still in the early stages, these details will evolve as the system is fully thought out and implemented.
+            we use AI to assist in creating educational content, research summaries, and communication materials. this includes initial drafts of documents, data analysis, and content organization.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-5" className="border-white/10">
           <AccordionTrigger className="text-white hover:text-white/90">
-            how will the system handle subjectivity in assessing soft skills and practical abilities?
+            how does MORS balance AI usage with human expertise?
           </AccordionTrigger>
           <AccordionContent className="text-gray-400">
-            we propose implementing regular spot checks and teacher reviews to maintain consistency in assessing soft skills and practical abilities. these measures will help ensure that assessments are fair and standardised across all coursework.
+            we view AI as a tool to enhance our human team's capabilities, not replace them. our experts provide critical thinking, context, and final approval for all AI-assisted work.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-6" className="border-white/10">
           <AccordionTrigger className="text-white hover:text-white/90">
-            what strategies will prevent students from becoming overly reliant on external help?
+            what are MORS' ethical guidelines for AI usage?
           </AccordionTrigger>
           <AccordionContent className="text-gray-400">
-            we propose a blend of coursework and lightly monitored open-book controlled assessments. this approach allows students to demonstrate their understanding independently while still having access to resources, reducing the likelihood of excessive reliance on external help, such as tutoring or parental assistance.
+            our ethical guidelines prioritize transparency, accuracy, and responsible use of AI technology. we ensure all AI usage aligns with our educational mission and values.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-7" className="border-white/10">
           <AccordionTrigger className="text-white hover:text-white/90">
-            how will the system manage student workload and mental health with continuous assessment?
+            how does MORS plan to evolve its AI usage in the future?
           </AccordionTrigger>
           <AccordionContent className="text-gray-400">
-            we are developing Foundation Skills Certificates (FSCs) specifically to reduce stress and support mental health. our proposed system will be thoughtfully designed to address these concerns, ensuring that students' workload is manageable and conducive to well-being, rather than creating constant pressure with endless deadlines.
+            we continuously evaluate new AI technologies and their potential benefits for our mission. our focus is on finding ways to leverage AI to create more effective and accessible educational resources.
           </AccordionContent>
         </AccordionItem>
 
         <AccordionItem value="item-8" className="border-white/10">
           <AccordionTrigger className="text-white hover:text-white/90">
-            how will this new system ensure that students are prepared for the demands and expectations of the modern workplace?
+            what benefits has MORS seen from using AI?
           </AccordionTrigger>
           <AccordionContent className="text-gray-400">
-            we propose that the new system prepare students for the modern workplace by mirroring real-world environments. traditional exams often fail to reflect workplace demands, whereas tasks and assignments offer practical, hands-on experiences that better equip students with the skills and adaptability required in a professional setting.
+            AI has helped us operate more efficiently, create more consistent content, and reach a wider audience. it allows our team to focus on strategic thinking and community engagement while maintaining high-quality outputs.
           </AccordionContent>
         </AccordionItem>
       </Accordion>
