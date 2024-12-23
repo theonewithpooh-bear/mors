@@ -12,27 +12,27 @@ const Index = () => {
         {/* Hero Section */}
         <div className="max-w-6xl mx-auto space-y-8" style={{ animation: 'fade-in 1s ease-out' }}>
           <p className="text-gray-400 tracking-[0.2em] uppercase text-lg">introducing</p>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight leading-none">
+          <h1 className="text-8xl md:text-9xl font-light text-white mb-4 tracking-normal leading-none">
             movement of real skills
           </h1>
           <p className="text-xl text-gray-400 tracking-wider mb-4">M.O.R.S.</p>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             revolutionizing education through practical, skills-based learning that prepares students for the real world
           </p>
           
           {/* Call to Action Buttons */}
-          <div className="flex flex-wrap justify-center gap-6 mt-8">
+          <div className="flex flex-wrap justify-center gap-8 mt-12">
             <Link to="/learn-more">
               <Button 
                 variant="outline" 
-                className="text-white border-white hover:bg-white hover:text-black text-base px-6 py-3 h-auto rounded-md"
+                className="text-white border-white hover:bg-white hover:text-black text-lg px-8 py-6 h-auto rounded-full transition-all"
               >
-                learn more
+                learn more →
               </Button>
             </Link>
             <Link to="/get-involved">
               <Button 
-                className="bg-white text-black hover:bg-gray-200 text-base px-6 py-3 h-auto rounded-md"
+                className="bg-white text-black hover:bg-gray-100 text-lg px-8 py-6 h-auto rounded-full transition-all"
               >
                 get involved
               </Button>
