@@ -13,7 +13,7 @@ const Index = () => {
         {/* Hero Section */}
         <div className="max-w-6xl mx-auto space-y-8" style={{ animation: 'fade-in 1s ease-out' }}>
           <p className="text-gray-400 tracking-[0.2em] uppercase text-lg">introducing</p>
-          <h1 className="text-4xl md:text-5xl font-normal text-white mb-4 tracking-normal leading-none font-['Cormorant']">
+          <h1 className="text-8xl md:text-9xl font-normal text-white mb-4 tracking-normal leading-none font-['Cormorant']">
             movement of real skills
           </h1>
           <p className="text-lg text-gray-400 tracking-wider mb-4">M.O.R.S.</p>
