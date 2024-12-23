@@ -11,7 +11,7 @@ const Index = () => {
       <main className="flex flex-col items-center justify-center min-h-screen text-center px-4 pt-32">
         {/* Hero Section */}
         <div className="max-w-6xl mx-auto space-y-8" style={{ animation: 'fade-in 1s ease-out' }}>
-          <p className="text-gray-400 tracking-[0.2em] uppercase text-sm">introducing</p>
+          <p className="text-gray-400 tracking-[0.2em] uppercase text-base">introducing</p>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight leading-none">
             movement of real skills
           </h1>
