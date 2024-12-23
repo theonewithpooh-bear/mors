@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Brain, Shield, BookOpen, DollarSign, Zap, Target } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import FAQSection from '../components/learn-more/FAQSection';
+import AIUsageFAQ from '../components/home/AIUsageFAQ';
 
 const AIUsage = () => {
   return (
@@ -88,7 +88,7 @@ const AIUsage = () => {
             </p>
           </section>
 
-          <FAQSection />
+          <AIUsageFAQ />
         </motion.div>
       </div>
       <Footer />

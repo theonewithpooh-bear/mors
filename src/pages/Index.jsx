@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import AIUsageFAQ from '../components/home/AIUsageFAQ';
 
 const Index = () => {
   return (
@@ -19,7 +18,6 @@ const Index = () => {
             </p>
           </div>
         </section>
-        <AIUsageFAQ />
       </main>
       <Footer />
     </div>
