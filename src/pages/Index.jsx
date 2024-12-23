@@ -45,7 +45,7 @@ const Index = () => {
           <img 
             src="/lovable-uploads/4722914f-5717-4fa6-a9f2-ade90e377a30.png" 
             alt="MORS Poster" 
-            className="w-full h-auto"
+            className="w-full h-auto rounded-2xl"
           />
         </div>
 
