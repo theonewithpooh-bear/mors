@@ -74,7 +74,7 @@ const FAQSection = () => {
             what AI models does MORS use?
           </AccordionTrigger>
           <AccordionContent className="text-gray-400">
-            we primarily use GPT-4 for content generation and analysis, along with specialized models for specific tasks like data analysis and research synthesis. all models are carefully selected based on their reliability and alignment with our educational goals.
+            we utilize a diverse range of AI models from leading providers. from OpenAI, we use GPT-4o, OpenAI o1 and o1-mini for text processing, Sora for video generation, and DALL-E for image creation. we also leverage Google's AI suite, including VEO 2 for video processing, Gemini for text analysis, and Imagen 3 for image generation. all these models are carefully selected and integrated to support our educational mission while maintaining high standards of quality and reliability.
           </AccordionContent>
         </AccordionItem>
       </Accordion>
