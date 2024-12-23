@@ -14,9 +14,9 @@ const Footer = () => {
         <div className="w-[300px] h-[300px] bg-[radial-gradient(circle_at_center,#3b82f640_0%,transparent_70%)] animate-glow-dance" />
       </div>
       
-      <div className="relative container mx-auto px-6 pt-32 pb-16">
+      <div className="relative container mx-auto px-6 pt-24 pb-16">
         {isIndexPage && (
-          <div className="flex flex-col items-center text-center mb-16">
+          <div className="flex flex-col items-center text-center mb-12">
             <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500 mb-6">
               join the movement
             </h2>
