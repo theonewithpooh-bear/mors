@@ -2,46 +2,90 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Brain, Shield, BookOpen, DollarSign, Zap, Target } from 'lucide-react';
+import { Card } from '@/components/ui/card';
 
 const AIUsage = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black">
       <Header />
       <div className="container mx-auto px-4 py-24">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto space-y-24"
         >
-          <h1 className="text-4xl font-bold mb-12">AI usage policy</h1>
-          
-          <div className="prose prose-invert">
-            <p className="text-gray-300 mb-8">
-              at movement of real skills (mors), we believe in the responsible and ethical use of artificial intelligence to enhance educational experiences and operational efficiency.
+          <section>
+            <h1 className="text-4xl font-bold mb-6 text-white">why we use AI</h1>
+            <p className="text-gray-400 text-xl leading-relaxed">
+              at mors, we embrace artificial intelligence as a powerful tool to amplify our impact in educational reform. our approach combines innovative technology with human oversight to create meaningful change.
             </p>
-            
-            <h2 className="text-2xl font-semibold mb-6">our approach to AI</h2>
-            <ul className="list-disc pl-6 text-gray-300 space-y-4 mb-8">
-              <li>we use AI to assist in content creation and educational resource development</li>
-              <li>all AI-generated content undergoes human review and verification</li>
-              <li>we prioritize transparency in our AI usage</li>
-              <li>we maintain strict data privacy and security standards</li>
-            </ul>
+          </section>
 
-            <h2 className="text-2xl font-semibold mb-6">benefits and safeguards</h2>
-            <p className="text-gray-300 mb-8">
-              while AI helps us improve efficiency and scalability, we maintain robust safeguards to ensure quality, accuracy, and ethical compliance. human oversight remains central to our operations.
-            </p>
+          <section>
+            <h2 className="text-3xl font-bold mb-12 text-white">our principles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Card className="bg-[#111] border-gray-800 p-6">
+                <Brain className="w-8 h-8 text-green-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">human oversight</h3>
+                <p className="text-gray-400">
+                  while we use AI for content generation, every piece of content is reviewed and refined by our team to ensure accuracy and alignment with our mission.
+                </p>
+              </Card>
 
-            <h2 className="text-2xl font-semibold mb-6">continuous improvement</h2>
-            <p className="text-gray-300">
-              we regularly review and update our AI usage policies to reflect best practices and emerging ethical guidelines. for questions about our AI usage, contact us at{' '}
-              <a href="mailto:info@mors.org.uk" className="text-blue-400 hover:text-blue-300">
-                info@mors.org.uk
-              </a>
+              <Card className="bg-[#111] border-gray-800 p-6">
+                <Shield className="w-8 h-8 text-green-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">ethical considerations</h3>
+                <p className="text-gray-400">
+                  we carefully consider the ethical implications of AI usage and ensure transparency about which content is AI-assisted.
+                </p>
+              </Card>
+
+              <Card className="bg-[#111] border-gray-800 p-6">
+                <BookOpen className="w-8 h-8 text-green-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">continuous learning</h3>
+                <p className="text-gray-400">
+                  we stay updated with the latest AI developments to ensure we're using these tools responsibly and effectively.
+                </p>
+              </Card>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl font-bold mb-12 text-white">key benefits</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Card className="bg-[#111] border-gray-800 p-6">
+                <DollarSign className="w-8 h-8 text-blue-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">cost-effective</h3>
+                <p className="text-gray-400">
+                  as a grassroots movement, we operate on minimal resources. AI tools allow us to create professional-quality content at a fraction of traditional costs.
+                </p>
+              </Card>
+
+              <Card className="bg-[#111] border-gray-800 p-6">
+                <Zap className="w-8 h-8 text-blue-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">rapid iteration</h3>
+                <p className="text-gray-400">
+                  AI enables us to quickly generate and refine our materials, helping us respond promptly to the evolving educational landscape.
+                </p>
+              </Card>
+
+              <Card className="bg-[#111] border-gray-800 p-6">
+                <Target className="w-8 h-8 text-blue-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">quality results</h3>
+                <p className="text-gray-400">
+                  modern AI tools produce high-quality visual and written content that effectively communicates our message.
+                </p>
+              </Card>
+            </div>
+          </section>
+
+          <section className="text-center">
+            <p className="text-gray-400 text-xl italic leading-relaxed">
+              by leveraging AI technology, we can focus our limited resources on what matters most: advocating for meaningful educational reform and building our community. we believe that embracing innovation responsibly is key to creating lasting change in education.
             </p>
-          </div>
+          </section>
         </motion.div>
       </div>
       <Footer />
