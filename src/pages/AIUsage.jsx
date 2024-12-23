@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Brain, Shield, BookOpen, DollarSign, Zap, Target } from 'lucide-react';
 import { Card } from '@/components/ui/card';
+import FAQSection from '../components/learn-more/FAQSection';
 
 const AIUsage = () => {
   return (
@@ -86,6 +87,8 @@ const AIUsage = () => {
               by leveraging AI technology, we can focus our limited resources on what matters most: advocating for meaningful educational reform and building our community. we believe that embracing innovation responsibly is key to creating lasting change in education.
             </p>
           </section>
+
+          <FAQSection />
         </motion.div>
       </div>
       <Footer />
