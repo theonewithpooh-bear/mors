@@ -14,6 +14,7 @@ import Ethics from "./pages/Ethics";
 import Legal from "./pages/Legal";
 import CookiesPolicy from "./pages/CookiesPolicy";
 import FileStore from "./pages/FileStore";
+import AIUsage from "./pages/AIUsage";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/legal" element={<Legal />} />
           <Route path="/cookies-policy" element={<CookiesPolicy />} />
           <Route path="/manifesto" element={<FileStore />} />
+          <Route path="/ai-usage" element={<AIUsage />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
