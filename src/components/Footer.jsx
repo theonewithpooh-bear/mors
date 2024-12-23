@@ -15,22 +15,6 @@ const Footer = () => {
       </div>
       
       <div className="relative container mx-auto px-6 pt-24 pb-16">
-        {isIndexPage && (
-          <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500 mb-6">
-              join the movement
-            </h2>
-            <p className="text-gray-400 max-w-md mb-8">
-              be part of the educational revolution. together, we can transform how skills are taught and learned.
-            </p>
-            <Link to="/get-involved">
-              <Button variant="outline" className="rounded-full px-8">
-                get involved
-              </Button>
-            </Link>
-          </div>
-        )}
-
         <div className="flex justify-between mb-16">
           <div>
             <h3 className="font-semibold text-white mb-4">quick links</h3>
