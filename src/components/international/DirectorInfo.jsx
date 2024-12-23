@@ -6,7 +6,7 @@ const DirectorInfo = () => {
     <div className="space-y-8">
       <Card className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-white/10">
         <CardHeader>
-          <CardTitle className="text-2xl text-white">Want to become a director?</CardTitle>
+          <CardTitle className="text-2xl text-white">Want to become a director in your country?</CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="space-y-4">
