@@ -31,7 +31,7 @@ const DirectorInfo = () => {
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">Director General</h3>
                 <p className="text-gray-300">
-                  The Director General oversees all MORS operations globally:
+                  The Director General position is currently held by Monty, MORS's founder, who oversees all operations globally:
                 </p>
                 <ul className="list-disc list-inside text-gray-300 mt-2 space-y-1">
                   <li>Coordinating between country directors</li>
