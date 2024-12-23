@@ -64,7 +64,7 @@ const Index = () => {
               className="w-full rounded-lg shadow-2xl"
             />
             <figcaption className="text-center text-sm text-gray-400 mt-4 italic">
-              Created using artificial intelligence technology
+              Created using artificial intelligence technology. <Link to="/ai-usage" className="underline hover:text-gray-300 transition-colors"><em>why</em></Link>
             </figcaption>
           </figure>
         </div>

@@ -48,5 +48,11 @@ export const useNavItems = () => {
       icon: null,
       hidden: true,
     },
+    {
+      title: "ai usage",
+      to: "/ai-usage",
+      icon: null,
+      hidden: true,
+    },
   ];
 };
