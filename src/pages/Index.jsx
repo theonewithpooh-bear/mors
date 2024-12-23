@@ -7,7 +7,7 @@ const Index = () => {
     <div className="min-h-screen bg-black">
       <Header />
       <main className="flex flex-col items-center justify-center min-h-screen text-center px-4">
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-4xl mx-auto space-y-8" style={{ animation: 'fade-in 1s ease-out' }}>
           <p className="text-gray-400 tracking-widest uppercase">introducing</p>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
             movement of real skills
