@@ -76,6 +76,11 @@ const Footer = () => {
                   cookies policy
                 </Link>
               </li>
+              <li>
+                <Link to="/ai-usage" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  AI usage
+                </Link>
+              </li>
             </ul>
           </div>
           
