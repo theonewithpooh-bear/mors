@@ -26,27 +26,27 @@ const Newsroom = () => {
   }, []);
 
   const tabContentVariants = {
-    initial: { 
-      opacity: 0,
+    enter: {
       x: '100%',
-      position: 'absolute'
+      opacity: 0,
+      position: 'absolute',
     },
-    animate: { 
-      opacity: 1,
+    center: {
       x: 0,
+      opacity: 1,
       position: 'relative',
       transition: {
-        duration: 0.3,
-        ease: [0.25, 0.1, 0.25, 1.0],
+        duration: 0.4,
+        ease: [0.45, 0, 0.55, 1],
       }
     },
-    exit: { 
-      opacity: 0,
+    exit: {
       x: '-100%',
+      opacity: 0,
       position: 'absolute',
       transition: {
-        duration: 0.3,
-        ease: [0.25, 0.1, 0.25, 1.0],
+        duration: 0.4,
+        ease: [0.45, 0, 0.55, 1],
       }
     }
   };
@@ -67,13 +67,13 @@ const Newsroom = () => {
             <TabsTrigger value="tech">Tech & Society</TabsTrigger>
           </TabsList>
 
-          <div className="relative w-full">
-            <AnimatePresence mode="wait">
+          <div className="relative w-full min-h-[400px]">
+            <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={location.pathname}
                 variants={tabContentVariants}
-                initial="initial"
-                animate="animate"
+                initial="enter"
+                animate="center"
                 exit="exit"
                 className="w-full"
               >
