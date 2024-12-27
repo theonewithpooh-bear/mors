@@ -28,22 +28,25 @@ const Newsroom = () => {
   const tabContentVariants = {
     initial: { 
       opacity: 0,
-      x: '100%'
+      x: '100%',
+      position: 'absolute'
     },
     animate: { 
       opacity: 1,
       x: 0,
+      position: 'relative',
       transition: {
-        duration: 0.4,
-        ease: "easeOut"
+        duration: 0.3,
+        ease: [0.25, 0.1, 0.25, 1.0],
       }
     },
     exit: { 
       opacity: 0,
       x: '-100%',
+      position: 'absolute',
       transition: {
-        duration: 0.4,
-        ease: "easeIn"
+        duration: 0.3,
+        ease: [0.25, 0.1, 0.25, 1.0],
       }
     }
   };
@@ -64,15 +67,16 @@ const Newsroom = () => {
             <TabsTrigger value="tech">Tech & Society</TabsTrigger>
           </TabsList>
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={location.pathname}
-              variants={tabContentVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              className="w-full overflow-hidden"
-            >
+          <div className="relative w-full">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={location.pathname}
+                variants={tabContentVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                className="w-full"
+              >
                 <TabsContent value="featured" className="space-y-8">
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div className="lg:col-span-2">
@@ -107,47 +111,48 @@ const Newsroom = () => {
                   </div>
                 </TabsContent>
 
-              <TabsContent value="mors" className="space-y-6">
-                <NewsCard 
-                  title="MORS Launches New Initiative"
-                  description="Announcing our latest program to support educational innovation."
-                  source="MORS Team"
-                  date="Mar 12, 2024"
-                  readTime={4}
-                />
-              </TabsContent>
+                <TabsContent value="mors" className="space-y-6">
+                  <NewsCard 
+                    title="MORS Launches New Initiative"
+                    description="Announcing our latest program to support educational innovation."
+                    source="MORS Team"
+                    date="Mar 12, 2024"
+                    readTime={4}
+                  />
+                </TabsContent>
 
-              <TabsContent value="ai" className="space-y-6">
-                <NewsCard 
-                  title="Breakthrough in AI Language Models"
-                  description="New developments in AI technology show promising applications for education."
-                  source="AI Today"
-                  date="Mar 11, 2024"
-                  readTime={7}
-                />
-              </TabsContent>
+                <TabsContent value="ai" className="space-y-6">
+                  <NewsCard 
+                    title="Breakthrough in AI Language Models"
+                    description="New developments in AI technology show promising applications for education."
+                    source="AI Today"
+                    date="Mar 11, 2024"
+                    readTime={7}
+                  />
+                </TabsContent>
 
-              <TabsContent value="education" className="space-y-6">
-                <NewsCard 
-                  title="Global Education Trends 2024"
-                  description="Analysis of emerging patterns in educational systems worldwide."
-                  source="Education Observer"
-                  date="Mar 10, 2024"
-                  readTime={6}
-                />
-              </TabsContent>
+                <TabsContent value="education" className="space-y-6">
+                  <NewsCard 
+                    title="Global Education Trends 2024"
+                    description="Analysis of emerging patterns in educational systems worldwide."
+                    source="Education Observer"
+                    date="Mar 10, 2024"
+                    readTime={6}
+                  />
+                </TabsContent>
 
-              <TabsContent value="tech" className="space-y-6">
-                <NewsCard 
-                  title="Technology's Impact on Learning"
-                  description="How modern tech is changing the way we think about education."
-                  source="Tech Review"
-                  date="Mar 9, 2024"
-                  readTime={5}
-                />
-              </TabsContent>
-            </motion.div>
-          </AnimatePresence>
+                <TabsContent value="tech" className="space-y-6">
+                  <NewsCard 
+                    title="Technology's Impact on Learning"
+                    description="How modern tech is changing the way we think about education."
+                    source="Tech Review"
+                    date="Mar 9, 2024"
+                    readTime={5}
+                  />
+                </TabsContent>
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </Tabs>
       </main>
     </div>
