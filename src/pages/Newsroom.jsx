@@ -25,34 +25,30 @@ const Newsroom = () => {
     return () => container.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  const tabContentVariants = {
-    enter: {
-      x: '100%',
+  const slideVariants = {
+    initial: {
       opacity: 0,
+      x: 20,
       position: 'absolute',
-      transition: {
-        duration: 0.25,
-        ease: 'easeInOut'
-      }
     },
-    center: {
-      x: 0,
+    animate: {
       opacity: 1,
+      x: 0,
       position: 'relative',
       transition: {
-        duration: 0.25,
-        ease: 'easeInOut'
-      }
+        duration: 0.2,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
     },
     exit: {
-      x: '-100%',
       opacity: 0,
+      x: -20,
       position: 'absolute',
       transition: {
-        duration: 0.25,
-        ease: 'easeInOut'
-      }
-    }
+        duration: 0.2,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
   };
 
   return (
@@ -75,9 +71,9 @@ const Newsroom = () => {
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={location.pathname}
-                variants={tabContentVariants}
-                initial="enter"
-                animate="center"
+                variants={slideVariants}
+                initial="initial"
+                animate="animate"
                 exit="exit"
                 className="w-full"
               >
