@@ -9,7 +9,6 @@ import GetInvolved from "./pages/GetInvolved";
 import Communications from "./pages/Communications";
 import SubjectReforms from "./pages/SubjectReforms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Articles from "./pages/Articles";
 import Ethics from "./pages/Ethics";
 import Legal from "./pages/Legal";
 import CookiesPolicy from "./pages/CookiesPolicy";
@@ -33,7 +32,6 @@ const App = () => (
           <Route path="/communications" element={<Communications />} />
           <Route path="/subject-reforms" element={<SubjectReforms />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/articles" element={<Articles />} />
           <Route path="/ethics" element={<Ethics />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/cookies-policy" element={<CookiesPolicy />} />

@@ -26,11 +26,6 @@ export const useNavItems = () => {
       icon: <MessageSquareIcon className="h-4 w-4" />,
     },
     {
-      title: t("nav.articles"),
-      to: "/articles",
-      icon: <BookOpenIcon className="h-4 w-4" />,
-    },
-    {
       title: t("nav.manifesto"),
       to: "/manifesto",
       icon: <FolderIcon className="h-4 w-4" />,
