@@ -7,13 +7,9 @@ import '@fontsource/cormorant';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-black">
       <Header />
       <main className="flex flex-col items-center justify-center min-h-screen text-center px-4 pt-32">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0f172a] via-[#1a1f2d] to-[#0f172a] animate-gradient-x overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_50%_-50%,#3b82f640,transparent)]" />
-        </div>
-        
         {/* Hero Section */}
         <div className="max-w-6xl mx-auto space-y-8 animate-fade-in">
           <p className="text-gray-400 tracking-[0.2em] uppercase text-sm">introducing</p>
