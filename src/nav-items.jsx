@@ -1,4 +1,4 @@
-import { HomeIcon, BookOpenIcon, UsersIcon, MessageSquareIcon, FolderIcon, Globe2Icon } from "lucide-react";
+import { HomeIcon, BookOpenIcon, UsersIcon, MessageSquareIcon, FolderIcon, Globe2Icon, NewspaperIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export const useNavItems = () => {
@@ -34,6 +34,11 @@ export const useNavItems = () => {
       title: t("nav.manifesto"),
       to: "/manifesto",
       icon: <FolderIcon className="h-4 w-4" />,
+    },
+    {
+      title: "newsroom",
+      to: "/newsroom",
+      icon: <NewspaperIcon className="h-4 w-4" />,
     },
     {
       title: "international",

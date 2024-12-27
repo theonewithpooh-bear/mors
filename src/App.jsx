@@ -16,6 +16,7 @@ import CookiesPolicy from "./pages/CookiesPolicy";
 import FileStore from "./pages/FileStore";
 import AIUsage from "./pages/AIUsage";
 import International from "./pages/International";
+import Newsroom from "./pages/Newsroom";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/manifesto" element={<FileStore />} />
           <Route path="/ai-usage" element={<AIUsage />} />
           <Route path="/international" element={<International />} />
+          <Route path="/newsroom" element={<Newsroom />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
