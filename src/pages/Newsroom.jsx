@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Header from '@/components/Header';
-import { ScrollArea } from "@/components/ui/scroll-area";
 import NewsCard from '@/components/newsroom/NewsCard';
 import NewsHeader from '@/components/newsroom/NewsHeader';
 
@@ -55,28 +54,27 @@ const Newsroom = () => {
   return (
     <div className="min-h-screen bg-[#0f172a] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-[#0f172a] to-[#0f172a]">
       <Header />
-      <ScrollArea className="h-[calc(100vh-5rem)]">
-        <main ref={containerRef} className="container mx-auto px-4 pt-24 pb-12 relative">
-          <NewsHeader />
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-purple-500/10 rounded-full blur-3xl" />
-          
-          <Tabs defaultValue="featured" className="w-full relative z-10">
-            <TabsList className="mb-8 bg-black/20 backdrop-blur-xl border border-white/10">
-              <TabsTrigger value="featured">Featured</TabsTrigger>
-              <TabsTrigger value="mors">MORS Updates</TabsTrigger>
-              <TabsTrigger value="ai">AI News</TabsTrigger>
-              <TabsTrigger value="education">Education</TabsTrigger>
-              <TabsTrigger value="tech">Tech & Society</TabsTrigger>
-            </TabsList>
+      <main ref={containerRef} className="container mx-auto px-4 pt-24 pb-12 relative">
+        <NewsHeader />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-purple-500/10 rounded-full blur-3xl" />
+        
+        <Tabs defaultValue="featured" className="w-full relative z-10">
+          <TabsList className="mb-8 bg-black/20 backdrop-blur-xl border border-white/10">
+            <TabsTrigger value="featured">Featured</TabsTrigger>
+            <TabsTrigger value="mors">MORS Updates</TabsTrigger>
+            <TabsTrigger value="ai">AI News</TabsTrigger>
+            <TabsTrigger value="education">Education</TabsTrigger>
+            <TabsTrigger value="tech">Tech & Society</TabsTrigger>
+          </TabsList>
 
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={location.pathname}
-                variants={tabContentVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-              >
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={location.pathname}
+              variants={tabContentVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+            >
                 <TabsContent value="featured" className="space-y-8">
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div className="lg:col-span-2">
@@ -150,11 +148,10 @@ const Newsroom = () => {
                   readTime={5}
                 />
               </TabsContent>
-              </motion.div>
-            </AnimatePresence>
-          </Tabs>
-        </main>
-      </ScrollArea>
+            </motion.div>
+          </AnimatePresence>
+        </Tabs>
+      </main>
     </div>
   );
 };
