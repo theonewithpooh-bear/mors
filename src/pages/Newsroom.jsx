@@ -28,21 +28,21 @@ const Newsroom = () => {
   const tabContentVariants = {
     initial: { 
       opacity: 0,
-      x: 20,
+      x: '100%'
     },
     animate: { 
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.3,
+        duration: 0.4,
         ease: "easeOut"
       }
     },
     exit: { 
       opacity: 0,
-      x: -20,
+      x: '-100%',
       transition: {
-        duration: 0.2,
+        duration: 0.4,
         ease: "easeIn"
       }
     }
@@ -71,6 +71,7 @@ const Newsroom = () => {
               initial="initial"
               animate="animate"
               exit="exit"
+              className="w-full overflow-hidden"
             >
                 <TabsContent value="featured" className="space-y-8">
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
