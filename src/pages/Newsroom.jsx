@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Header from '@/components/Header';
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -26,6 +26,32 @@ const Newsroom = () => {
     return () => container.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
+  const tabContentVariants = {
+    initial: { 
+      opacity: 0,
+      y: 10,
+      scale: 0.98
+    },
+    animate: { 
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.4,
+        ease: [0.4, 0, 0.2, 1]
+      }
+    },
+    exit: { 
+      opacity: 0,
+      y: -10,
+      scale: 0.98,
+      transition: {
+        duration: 0.3,
+        ease: [0.4, 0, 1, 1]
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#0f172a] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-[#0f172a] to-[#0f172a]">
       <Header />
@@ -44,39 +70,46 @@ const Newsroom = () => {
             </TabsList>
 
             <AnimatePresence mode="wait">
-              <TabsContent value="featured" className="space-y-8">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  <div className="lg:col-span-2">
-                    <NewsCard 
-                      title="The Future of Education: AI-Powered Learning Environments"
-                      description="Exploring how artificial intelligence is reshaping traditional classroom experiences and creating personalized learning paths for students."
-                      source="MORS Editorial"
-                      date="Mar 15, 2024"
-                      readTime={8}
-                      image="/placeholder.svg"
-                      index={0}
-                    />
+              <motion.div
+                key={location.pathname}
+                variants={tabContentVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+              >
+                <TabsContent value="featured" className="space-y-8">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="lg:col-span-2">
+                      <NewsCard 
+                        title="The Future of Education: AI-Powered Learning Environments"
+                        description="Exploring how artificial intelligence is reshaping traditional classroom experiences and creating personalized learning paths for students."
+                        source="MORS Editorial"
+                        date="Mar 15, 2024"
+                        readTime={8}
+                        image="/placeholder.svg"
+                        index={0}
+                      />
+                    </div>
+                    <div className="space-y-6">
+                      <NewsCard 
+                        title="Latest Developments in Educational Reform"
+                        description="Key updates on policy changes and their impact on modern education systems."
+                        source="Education Weekly"
+                        date="Mar 14, 2024"
+                        readTime={5}
+                        index={1}
+                      />
+                      <NewsCard 
+                        title="AI Ethics in Educational Technology"
+                        description="Understanding the ethical implications of AI implementation in educational tools."
+                        source="Tech Insights"
+                        date="Mar 13, 2024"
+                        readTime={6}
+                        index={2}
+                      />
+                    </div>
                   </div>
-                  <div className="space-y-6">
-                    <NewsCard 
-                      title="Latest Developments in Educational Reform"
-                      description="Key updates on policy changes and their impact on modern education systems."
-                      source="Education Weekly"
-                      date="Mar 14, 2024"
-                      readTime={5}
-                      index={1}
-                    />
-                    <NewsCard 
-                      title="AI Ethics in Educational Technology"
-                      description="Understanding the ethical implications of AI implementation in educational tools."
-                      source="Tech Insights"
-                      date="Mar 13, 2024"
-                      readTime={6}
-                      index={2}
-                    />
-                  </div>
-                </div>
-              </TabsContent>
+                </TabsContent>
 
               <TabsContent value="mors" className="space-y-6">
                 <NewsCard 
@@ -117,6 +150,7 @@ const Newsroom = () => {
                   readTime={5}
                 />
               </TabsContent>
+              </motion.div>
             </AnimatePresence>
           </Tabs>
         </main>
