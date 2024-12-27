@@ -30,14 +30,18 @@ const Newsroom = () => {
       x: '100%',
       opacity: 0,
       position: 'absolute',
+      transition: {
+        duration: 0.25,
+        ease: 'easeInOut'
+      }
     },
     center: {
       x: 0,
       opacity: 1,
       position: 'relative',
       transition: {
-        duration: 0.4,
-        ease: [0.45, 0, 0.55, 1],
+        duration: 0.25,
+        ease: 'easeInOut'
       }
     },
     exit: {
@@ -45,8 +49,8 @@ const Newsroom = () => {
       opacity: 0,
       position: 'absolute',
       transition: {
-        duration: 0.4,
-        ease: [0.45, 0, 0.55, 1],
+        duration: 0.25,
+        ease: 'easeInOut'
       }
     }
   };
