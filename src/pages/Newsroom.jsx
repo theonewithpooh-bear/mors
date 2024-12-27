@@ -6,7 +6,19 @@ import NewsCard from '@/components/newsroom/NewsCard';
 import NewsHeader from '@/components/newsroom/NewsHeader';
 
 const Newsroom = () => {
-  const slideAnimation = {
+  const [selectedTab, setSelectedTab] = React.useState("featured");
+  const [slideDirection, setSlideDirection] = React.useState(0);
+
+  const handleTabChange = (newValue) => {
+    // Determine slide direction based on tab order
+    const tabOrder = ["featured", "mors", "ai", "education", "tech"];
+    const oldIndex = tabOrder.indexOf(selectedTab);
+    const newIndex = tabOrder.indexOf(newValue);
+    setSlideDirection(newIndex > oldIndex ? 1 : -1);
+    setSelectedTab(newValue);
+  };
+
+  const slideVariants = {
     enter: (direction) => ({
       x: direction > 0 ? 1000 : -1000,
       opacity: 0
@@ -23,11 +35,6 @@ const Newsroom = () => {
     })
   };
 
-  const swipeConfidenceThreshold = 10000;
-  const swipePower = (offset, velocity) => {
-    return Math.abs(offset) * velocity;
-  };
-
   return (
     <div className="min-h-screen bg-[#0f172a] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-[#0f172a] to-[#0f172a]">
       <Header />
@@ -35,7 +42,7 @@ const Newsroom = () => {
         <NewsHeader />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-purple-500/10 rounded-full blur-3xl" />
         
-        <Tabs defaultValue="featured" className="w-full relative z-10">
+        <Tabs value={selectedTab} onValueChange={handleTabChange} className="w-full relative z-10">
           <TabsList className="mb-8 bg-black/20 backdrop-blur-xl border border-white/10">
             <TabsTrigger value="featured">Featured</TabsTrigger>
             <TabsTrigger value="mors">MORS Updates</TabsTrigger>
@@ -44,27 +51,17 @@ const Newsroom = () => {
             <TabsTrigger value="tech">Tech & Society</TabsTrigger>
           </TabsList>
 
-          <AnimatePresence mode="wait" initial={false}>
+          <AnimatePresence mode="wait" custom={slideDirection}>
             <motion.div
-              key="content-wrapper"
+              key={selectedTab}
+              custom={slideDirection}
+              variants={slideVariants}
               initial="enter"
               animate="center"
               exit="exit"
-              variants={slideAnimation}
               transition={{
                 x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 }
-              }}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={1}
-              onDragEnd={(e, { offset, velocity }) => {
-                const swipe = swipePower(offset.x, velocity.x);
-                if (swipe < -swipeConfidenceThreshold) {
-                  // Swipe left logic if needed
-                } else if (swipe > swipeConfidenceThreshold) {
-                  // Swipe right logic if needed
-                }
               }}
             >
               <TabsContent value="featured" className="space-y-8 m-0">
