@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Header from '@/components/Header';
@@ -6,55 +6,30 @@ import NewsCard from '@/components/newsroom/NewsCard';
 import NewsHeader from '@/components/newsroom/NewsHeader';
 
 const Newsroom = () => {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const handleMouseMove = (e) => {
-      const { left, top, width, height } = container.getBoundingClientRect();
-      const x = (e.clientX - left) / width;
-      const y = (e.clientY - top) / height;
-      
-      container.style.setProperty('--mouse-x', x);
-      container.style.setProperty('--mouse-y', y);
-    };
-
-    container.addEventListener('mousemove', handleMouseMove);
-    return () => container.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
-  const slideVariants = {
-    initial: {
-      opacity: 0,
-      x: 20,
-      position: 'absolute',
-    },
-    animate: {
-      opacity: 1,
+  const slideAnimation = {
+    initial: { opacity: 0, x: 100 },
+    animate: { 
+      opacity: 1, 
       x: 0,
-      position: 'relative',
       transition: {
-        duration: 0.2,
-        ease: [0.25, 0.1, 0.25, 1],
-      },
+        duration: 0.3,
+        ease: [0.4, 0, 0.2, 1]
+      }
     },
-    exit: {
-      opacity: 0,
-      x: -20,
-      position: 'absolute',
+    exit: { 
+      opacity: 0, 
+      x: -100,
       transition: {
-        duration: 0.2,
-        ease: [0.25, 0.1, 0.25, 1],
-      },
-    },
+        duration: 0.3,
+        ease: [0.4, 0, 0.2, 1]
+      }
+    }
   };
 
   return (
     <div className="min-h-screen bg-[#0f172a] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-[#0f172a] to-[#0f172a]">
       <Header />
-      <main ref={containerRef} className="container mx-auto px-4 pt-24 pb-12 relative">
+      <main className="container mx-auto px-4 pt-24 pb-12 relative">
         <NewsHeader />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-purple-500/10 rounded-full blur-3xl" />
         
@@ -67,17 +42,17 @@ const Newsroom = () => {
             <TabsTrigger value="tech">Tech & Society</TabsTrigger>
           </TabsList>
 
-          <div className="relative w-full min-h-[400px]">
+          <div className="relative">
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
-                key={location.pathname}
-                variants={slideVariants}
+                key="featured"
+                variants={slideAnimation}
                 initial="initial"
                 animate="animate"
                 exit="exit"
                 className="w-full"
               >
-                <TabsContent value="featured" className="space-y-8">
+                <TabsContent value="featured" className="space-y-8 m-0">
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div className="lg:col-span-2">
                       <NewsCard 
@@ -111,7 +86,7 @@ const Newsroom = () => {
                   </div>
                 </TabsContent>
 
-                <TabsContent value="mors" className="space-y-6">
+                <TabsContent value="mors" className="space-y-6 m-0">
                   <NewsCard 
                     title="MORS Launches New Initiative"
                     description="Announcing our latest program to support educational innovation."
@@ -121,7 +96,7 @@ const Newsroom = () => {
                   />
                 </TabsContent>
 
-                <TabsContent value="ai" className="space-y-6">
+                <TabsContent value="ai" className="space-y-6 m-0">
                   <NewsCard 
                     title="Breakthrough in AI Language Models"
                     description="New developments in AI technology show promising applications for education."
@@ -131,7 +106,7 @@ const Newsroom = () => {
                   />
                 </TabsContent>
 
-                <TabsContent value="education" className="space-y-6">
+                <TabsContent value="education" className="space-y-6 m-0">
                   <NewsCard 
                     title="Global Education Trends 2024"
                     description="Analysis of emerging patterns in educational systems worldwide."
@@ -141,7 +116,7 @@ const Newsroom = () => {
                   />
                 </TabsContent>
 
-                <TabsContent value="tech" className="space-y-6">
+                <TabsContent value="tech" className="space-y-6 m-0">
                   <NewsCard 
                     title="Technology's Impact on Learning"
                     description="How modern tech is changing the way we think about education."
