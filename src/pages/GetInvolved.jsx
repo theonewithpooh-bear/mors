@@ -26,9 +26,7 @@ const GetInvolved = () => {
                     contribute your skills and expertise to our various initiatives and working groups.
                   </p>
                   <a 
-                    href="https://forms.gle/uV182TrQxVq8GwTc6" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
+                    href="/positions" 
                   >
                     <Button 
                       variant="outline" 

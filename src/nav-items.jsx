@@ -36,8 +36,8 @@ export const useNavItems = () => {
       icon: <NewspaperIcon className="h-4 w-4" />,
     },
     {
-      title: "international",
-      to: "/international",
+      title: "positions",
+      to: "/positions",
       icon: <Globe2Icon className="h-4 w-4" />,
     },
     // Hidden from navigation but still accessible
