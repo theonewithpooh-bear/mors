@@ -60,13 +60,19 @@ const Positions = () => {
 
             <div className="p-6 bg-white/5 rounded-lg">
               <h3 className="text-xl font-semibold text-green-400 mb-2">Board Members</h3>
+              <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-4">
+                <p className="text-red-400 font-medium">By Invitation Only</p>
+                <p className="text-gray-300 text-sm mt-1">Not open to those under 18, except for select YAPM members</p>
+              </div>
               <p className="text-gray-300 mb-2">Positions Available: Varies</p>
               <p className="text-gray-300 mb-4">Join the MORS Board of Directors to provide governance and strategic oversight.</p>
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-gray-400 mb-2">Requirements:</h4>
                 <ul className="list-disc list-inside text-gray-300 space-y-1">
+                  <li>Must be 18 or older (exceptions for select YAPM members)</li>
                   <li>Expertise in education, governance, finance, or public relations</li>
                   <li>Proven track record of leadership or advocacy</li>
+                  <li>By invitation only</li>
                 </ul>
               </div>
             </div>
