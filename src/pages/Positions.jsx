@@ -104,7 +104,7 @@ const Positions = () => {
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-gray-400 mb-2">Requirements:</h4>
                 <ul className="list-disc list-inside text-gray-300 space-y-1">
-                  <li>Experience with Instagram, Twitter, and TikTok</li>
+                  <li>Experience with Instagram, X, and TikTok</li>
                   <li>Creative skills in digital storytelling and content creation</li>
                 </ul>
               </div>
