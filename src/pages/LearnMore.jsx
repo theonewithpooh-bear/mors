@@ -4,20 +4,20 @@ import Footer from '../components/Footer';
 import HeroSection from '../components/learn-more/HeroSection';
 import StatisticsSection from '../components/learn-more/StatisticsSection';
 import FAQSection from '../components/learn-more/FAQSection';
-import CallToAction from '../components/learn-more/CallToAction';
 import FounderSpeech from '../components/learn-more/FounderSpeech';
+import CallToAction from '../components/learn-more/CallToAction';
 
 const LearnMore = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
-      <div className="container mx-auto px-4 py-24">
+      <main className="pt-20">
         <HeroSection />
         <StatisticsSection />
         <FounderSpeech />
         <FAQSection />
         <CallToAction />
-      </div>
+      </main>
       <Footer />
     </div>
   );

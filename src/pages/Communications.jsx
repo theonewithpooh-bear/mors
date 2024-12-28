@@ -1,8 +1,8 @@
 import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Construction } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Button } from "@/components/ui/button";
+import { Construction } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const Communications = () => {

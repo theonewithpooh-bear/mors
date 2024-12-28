@@ -1,60 +1,77 @@
 import React from 'react';
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import DonationForm from '../components/get-involved/DonationForm';
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from 'lucide-react';
 
 const GetInvolved = () => {
-  const { t } = useTranslation();
-
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
-      <div className="max-w-5xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="mt-24 space-y-8"
-        >
-          <motion.section 
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="mb-16 bg-gradient-to-br from-purple-500/10 to-blue-500/10 backdrop-blur-xl rounded-[32px] shadow-2xl p-12 border border-white/10"
-          >
-            <h2 className="text-6xl font-bold mb-8 text-white">{t('getInvolved.title')}</h2>
-            <p className="text-xl leading-relaxed mb-12 text-gray-300">
-              {t('getInvolved.description')}
-            </p>
-            <a 
-              href="https://forms.gle/uV182TrQxVq8GwTc6" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              <Button 
-                variant="outline" 
-                className="group text-lg px-8 py-6 rounded-2xl bg-white/10 hover:bg-white/20 border-white/20 transition-all duration-300"
-              >
-                {t('getInvolved.button')}
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </a>
-          </motion.section>
+      <main className="container mx-auto px-4 py-24 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl font-bold mb-8">get involved</h1>
+          
+          <div className="space-y-12">
+            <section className="prose prose-invert max-w-none">
+              <p className="text-xl leading-relaxed">
+                join the movement for real skills and help shape the future of education. there are many ways to get involved and make a difference:
+              </p>
+              
+              <div className="mt-8 grid gap-6 sm:grid-cols-2">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                  <h3 className="text-xl font-semibold mb-4">become a volunteer</h3>
+                  <p className="text-gray-300 mb-4">
+                    contribute your skills and expertise to our various initiatives and working groups.
+                  </p>
+                  <a 
+                    href="https://forms.gle/uV182TrQxVq8GwTc6" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button 
+                      variant="outline" 
+                      className="group text-sm px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border-white/20"
+                    >
+                      apply now
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </a>
+                </div>
 
-          <motion.section
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="mb-16"
-          >
-            <DonationForm />
-          </motion.section>
-        </motion.div>
-      </div>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+                  <h3 className="text-xl font-semibold mb-4">spread the word</h3>
+                  <p className="text-gray-300 mb-4">
+                    share our mission with your network and help us grow the movement.
+                  </p>
+                  <Button 
+                    variant="outline" 
+                    className="group text-sm px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border-white/20"
+                    onClick={() => {
+                      navigator.share({
+                        title: 'Movement of Real Skills',
+                        text: 'Join the movement for real skills and help shape the future of education.',
+                        url: window.location.href,
+                      }).catch(() => {
+                        // Handle error or unsupported browsers
+                      });
+                    }}
+                  >
+                    share now
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-3xl font-bold mb-8">support our mission</h2>
+              <DonationForm />
+            </section>
+          </div>
+        </div>
+      </main>
       <Footer />
     </div>
   );
