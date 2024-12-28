@@ -8,7 +8,7 @@ export const ApplicationNotice = () => {
       <AlertCircle className="h-4 w-4" />
       <AlertTitle>Applications Currently Closed</AlertTitle>
       <AlertDescription>
-        We are currently setting up our application infrastructure. Applications for all positions are temporarily unavailable. Please check back later.
+        We are currently setting up our application infrastructure. Applications for all positions will open in late 2025, with roles commencing September 2026. Please check back later for updates.
       </AlertDescription>
     </Alert>
   );
