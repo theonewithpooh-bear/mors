@@ -2,6 +2,33 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const ManifestoSection = ({ title, subtitle, content, source, className = "" }) => {
+  const renderContent = (content) => {
+    if (Array.isArray(content)) {
+      return content.map((section, index) => (
+        <div key={index} className="mb-16">
+          {section.subtitle && (
+            <h3 className="text-3xl font-serif mb-6">{section.subtitle}</h3>
+          )}
+          {Array.isArray(section.text) ? (
+            <div className="space-y-4">
+              {section.text.map((paragraph, idx) => (
+                <p key={idx}>{paragraph}</p>
+              ))}
+            </div>
+          ) : (
+            <p>{section.text}</p>
+          )}
+          {section.source && (
+            <p className="text-sm text-gray-500 italic mt-4">
+              Source: {section.source}
+            </p>
+          )}
+        </div>
+      ));
+    }
+    return <p>{content}</p>;
+  };
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -15,7 +42,7 @@ const ManifestoSection = ({ title, subtitle, content, source, className = "" }) 
           <motion.div 
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
-            className="mb-[32rem] flex flex-col items-center justify-center min-h-[50vh]"
+            className="mb-32 flex flex-col items-center justify-center min-h-[50vh]"
           >
             {title.includes(":") ? (
               <>
@@ -36,7 +63,7 @@ const ManifestoSection = ({ title, subtitle, content, source, className = "" }) 
           <motion.h3 
             initial={{ y: 20 }}
             whileInView={{ y: 0 }}
-            className="text-4xl font-serif mb-64 flex items-center justify-center min-h-[25vh]"
+            className="text-4xl font-serif mb-16 flex items-center justify-center min-h-[25vh]"
           >
             {subtitle}
           </motion.h3>
@@ -47,18 +74,10 @@ const ManifestoSection = ({ title, subtitle, content, source, className = "" }) 
           whileInView={{ y: 0 }}
           className="space-y-8 text-xl text-gray-300"
         >
-          {Array.isArray(content) ? (
-            content.map((item, index) => (
-              <div key={index} className="space-y-4">
-                {item}
-              </div>
-            ))
-          ) : (
-            <div className="space-y-4">{content}</div>
-          )}
+          {renderContent(content)}
           
           {source && (
-            <p className="text-sm text-gray-500 italic mt-64">
+            <p className="text-sm text-gray-500 italic mt-16">
               Source: {source}
             </p>
           )}
