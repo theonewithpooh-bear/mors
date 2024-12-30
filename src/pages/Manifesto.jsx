@@ -8,7 +8,7 @@ const Manifesto = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
-      <main className="container mx-auto px-4 py-24 sm:px-6 lg:px-8">
+      <main>
         {manifestoSections.map((section, index) => (
           <ManifestoSection
             key={index}
@@ -16,7 +16,7 @@ const Manifesto = () => {
             subtitle={section.subtitle}
             content={section.content}
             source={section.source}
-            className={section.isHero ? 'min-h-[90vh]' : ''}
+            isHero={section.isHero}
           />
         ))}
       </main>
