@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from '@/components/Header';
-import { AlertCircle } from 'lucide-react';
+import NewsHeader from '@/components/newsroom/NewsHeader';
+import NewsCard from '@/components/newsroom/NewsCard';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { AlertCircle } from 'lucide-react';
 
 const Newsroom = () => {
   return (
@@ -9,7 +11,7 @@ const Newsroom = () => {
       <Header />
       <main className="container mx-auto px-4 pt-24 pb-12 relative">
         <div className="max-w-3xl mx-auto space-y-8">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Newsroom</h1>
+          <NewsHeader />
           
           <Alert variant="default" className="bg-purple-950/50 border-purple-500/50">
             <AlertCircle className="h-4 w-4 text-purple-500" />

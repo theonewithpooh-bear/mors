@@ -5,6 +5,7 @@ import LearnMore from './pages/LearnMore';
 import GetInvolved from './pages/GetInvolved';
 import Communications from './pages/Communications';
 import Manifesto from './pages/Manifesto';
+import Newsroom from './pages/Newsroom';
 import Positions from './pages/Positions';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/communications" element={<Communications />} />
         <Route path="/learn-more" element={<LearnMore />} />
         <Route path="/manifesto" element={<Manifesto />} />
+        <Route path="/newsroom" element={<Newsroom />} />
         <Route path="/positions" element={<Positions />} />
       </Routes>
     </Router>
