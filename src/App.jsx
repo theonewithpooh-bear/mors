@@ -21,6 +21,7 @@ const ForSchools = React.lazy(() => import('./pages/ForSchools'));
 const BecomePartner = React.lazy(() => import('./pages/ForSchools/BecomePartner'));
 const Inquire = React.lazy(() => import('./pages/ForSchools/Inquire'));
 const PartnerSchools = React.lazy(() => import('./pages/ForSchools/PartnerSchools'));
+const Resources = React.lazy(() => import('./pages/ForSchools/Resources'));
 
 const App = () => {
   return (
@@ -49,6 +50,7 @@ const App = () => {
               <Route path="/for-schools/become-partner" element={<BecomePartner />} />
               <Route path="/for-schools/inquire" element={<Inquire />} />
               <Route path="/for-schools/partner-schools" element={<PartnerSchools />} />
+              <Route path="/for-schools/resources" element={<Resources />} />
             </Routes>
           </Suspense>
         </main>
