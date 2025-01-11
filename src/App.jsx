@@ -7,6 +7,8 @@ import Index from './pages/Index';
 
 const ForSchools = React.lazy(() => import('./pages/ForSchools'));
 const BecomePartner = React.lazy(() => import('./pages/ForSchools/BecomePartner'));
+const Inquire = React.lazy(() => import('./pages/ForSchools/Inquire'));
+const PartnerSchools = React.lazy(() => import('./pages/ForSchools/PartnerSchools'));
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
               <Route path="/" element={<Index />} />
               <Route path="/for-schools" element={<ForSchools />} />
               <Route path="/for-schools/become-partner" element={<BecomePartner />} />
+              <Route path="/for-schools/inquire" element={<Inquire />} />
+              <Route path="/for-schools/partner-schools" element={<PartnerSchools />} />
             </Routes>
           </Suspense>
         </main>
