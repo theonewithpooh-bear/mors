@@ -7,6 +7,10 @@ import Communications from './pages/Communications';
 import Manifesto from './pages/Manifesto';
 import Newsroom from './pages/Newsroom';
 import Positions from './pages/Positions';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Ethics from './pages/Ethics';
+import CookiesPolicy from './pages/CookiesPolicy';
+import AIUsage from './pages/AIUsage';
 import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
@@ -21,6 +25,10 @@ const App = () => {
         <Route path="/manifesto" element={<Manifesto />} />
         <Route path="/newsroom" element={<Newsroom />} />
         <Route path="/positions" element={<Positions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/ethics" element={<Ethics />} />
+        <Route path="/cookies-policy" element={<CookiesPolicy />} />
+        <Route path="/ai-usage" element={<AIUsage />} />
       </Routes>
     </Router>
   );

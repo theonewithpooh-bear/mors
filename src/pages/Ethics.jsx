@@ -1,79 +1,74 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import EthicsPrinciple from '../components/ethics/EthicsPrinciple';
-import TransparencyAccordion from '../components/ethics/TransparencyAccordion';
-import { Scale, Eye, Users, Brain, BookOpen, Target } from 'lucide-react';
+import { Scale, Heart, Users, Brain, Shield, Target } from 'lucide-react';
 
 const Ethics = () => {
   const principles = [
     {
       icon: Scale,
-      title: "non-partisan commitment",
-      content: "we maintain strict political neutrality, focusing solely on evidence-based educational reform."
+      title: "fairness and equality",
+      content: "we believe in equal access to quality education and fair assessment methods for all students."
     },
     {
-      icon: Eye,
-      title: "complete transparency",
-      content: (
-        <div className="space-y-6">
-          <p>we believe in absolute transparency in all our operations.</p>
-          <TransparencyAccordion />
-        </div>
-      )
+      icon: Heart,
+      title: "student wellbeing",
+      content: "prioritizing mental health and personal development alongside academic achievement."
     },
     {
       icon: Users,
-      title: "inclusive dialogue",
-      content: "we actively seek diverse perspectives from all education stakeholders to develop comprehensive reform proposals."
+      title: "inclusive education",
+      content: "ensuring our reform proposals consider diverse learning needs and backgrounds."
     },
     {
       icon: Brain,
       title: "evidence-based approach",
-      content: "all our reform proposals are grounded in rigorous research and empirical evidence."
+      content: "all our proposals are grounded in research and empirical evidence."
     },
     {
-      icon: BookOpen,
-      title: "educational integrity",
-      content: "we advocate for assessment methods that genuinely reflect student capabilities and learning outcomes."
+      icon: Shield,
+      title: "data protection",
+      content: "maintaining strict standards for protecting student and member data."
     },
     {
       icon: Target,
-      title: "long-term vision",
-      content: "our ethical framework emphasizes sustainable, long-term improvements over quick fixes."
+      title: "transparency",
+      content: "being open about our methods, funding, and decision-making processes."
     }
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black">
       <Header />
-      <div className="container mx-auto px-4 py-24">
-        <motion.h1 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-5xl font-bold text-center mb-24"
+      <main className="container mx-auto px-4 py-24">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl mx-auto space-y-12"
         >
-          ethical principles
-        </motion.h1>
+          <h1 className="text-4xl font-bold text-white mb-8">ethical principles</h1>
+          
+          <p className="text-gray-300 text-lg leading-relaxed mb-12">
+            at mors, our ethical framework guides every aspect of our mission to reform education. 
+            these principles ensure we maintain the highest standards of integrity while pursuing meaningful change.
+          </p>
 
-        <div className="max-w-4xl mx-auto space-y-12">
-          {principles.map((principle, index) => (
-            <motion.div
-              key={principle.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-            >
-              <EthicsPrinciple
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {principles.map((principle) => (
+              <EthicsPrinciple 
+                key={principle.title}
                 icon={principle.icon}
                 title={principle.title}
               >
                 {principle.content}
               </EthicsPrinciple>
-            </motion.div>
-          ))}
-        </div>
-      </div>
+            ))}
+          </div>
+        </motion.div>
+      </main>
       <Footer />
     </div>
   );
