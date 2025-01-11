@@ -1,45 +1,44 @@
 import React from 'react';
+import { Scale, Eye, Users, Brain, BookOpen, Target } from 'lucide-react';
+import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-import EthicsPrinciple from '../components/ethics/EthicsPrinciple';
-import TransparencyAccordion from '../components/ethics/TransparencyAccordion';
-import { Scale, Heart, Users, Brain, Shield, Target } from 'lucide-react';
 
 const Ethics = () => {
   const principles = [
     {
       icon: Scale,
-      title: "fairness and equality",
-      content: "we believe in equal access to quality education and fair assessment methods for all students."
+      title: "non-partisan commitment",
+      content: "we maintain strict political neutrality, focusing solely on evidence-based educational reform."
     },
     {
-      icon: Heart,
-      title: "student wellbeing",
-      content: "prioritizing mental health and personal development alongside academic achievement."
+      icon: Eye,
+      title: "complete transparency",
+      content: "we believe in absolute transparency in all our operations."
     },
     {
       icon: Users,
-      title: "inclusive education",
-      content: "ensuring our reform proposals consider diverse learning needs and backgrounds."
+      title: "inclusive dialogue",
+      content: "we actively seek diverse perspectives from all education stakeholders to develop comprehensive reform proposals."
     },
     {
       icon: Brain,
       title: "evidence-based approach",
-      content: "all our proposals are grounded in research and empirical evidence."
+      content: "all our reform proposals are grounded in rigorous research and empirical evidence."
     },
     {
-      icon: Shield,
-      title: "data protection",
-      content: "maintaining strict standards for protecting student and member data."
+      icon: BookOpen,
+      title: "educational integrity",
+      content: "we advocate for assessment methods that genuinely reflect student capabilities and learning outcomes."
     },
     {
       icon: Target,
-      title: "transparency",
-      content: "being open about our methods, funding, and decision-making processes."
+      title: "continuous improvement",
+      content: "we constantly evaluate and refine our approaches based on feedback and outcomes."
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black">
+    <div className="min-h-screen bg-black">
       <main className="container mx-auto px-4 py-24">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -47,29 +46,22 @@ const Ethics = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto space-y-12"
         >
-          <h1 className="text-4xl font-bold text-white mb-8">ethical principles</h1>
+          <h1 className="text-4xl font-bold text-white mb-16 text-center">ethical principles</h1>
           
-          <p className="text-gray-300 text-lg leading-relaxed mb-12">
-            at mors, our ethical framework guides every aspect of our mission to reform education. 
-            these principles ensure we maintain the highest standards of integrity while pursuing meaningful change.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="space-y-6">
             {principles.map((principle) => (
-              <EthicsPrinciple 
+              <Card 
                 key={principle.title}
-                icon={principle.icon}
-                title={principle.title}
+                className="bg-[#111]/80 border-white/10 backdrop-blur-sm p-6 hover:bg-[#222]/80 transition-colors duration-300"
               >
-                {principle.content}
-              </EthicsPrinciple>
+                <div className="flex flex-col space-y-4">
+                  <principle.icon className="h-6 w-6 text-white/80" />
+                  <h3 className="text-xl font-semibold text-white">{principle.title}</h3>
+                  <p className="text-gray-400">{principle.content}</p>
+                </div>
+              </Card>
             ))}
           </div>
-
-          <section className="mt-16">
-            <h2 className="text-2xl font-semibold text-white mb-6">transparency in communication</h2>
-            <TransparencyAccordion />
-          </section>
         </motion.div>
       </main>
     </div>
