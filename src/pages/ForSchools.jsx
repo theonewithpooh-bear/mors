@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { AlertCircle, Lock } from 'lucide-react';
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
@@ -32,10 +32,27 @@ const ForSchools = () => {
               </AlertDescription>
             </Alert>
 
-            <p className="text-gray-400 text-center max-w-lg">
-              If you represent a school and would like to become a partner to access these resources, 
-              please visit our "Become a Partner" section.
-            </p>
+            <div className="text-center space-y-6 max-w-2xl">
+              <p className="text-gray-300">
+                MORS provides partner schools with comprehensive educational resources including:
+              </p>
+              <ul className="text-gray-400 space-y-2 list-disc list-inside text-left">
+                <li>Customizable curriculum frameworks</li>
+                <li>Interactive learning materials</li>
+                <li>Assessment tools and templates</li>
+                <li>Professional development resources</li>
+                <li>Collaborative teaching platforms</li>
+              </ul>
+              <p className="text-gray-400">
+                To attempt to partner with MORS and gain access to these resources,{' '}
+                <Link 
+                  to="/for-schools/become-partner" 
+                  className="text-purple-400 hover:text-purple-300 underline"
+                >
+                  visit our Become a Partner page
+                </Link>.
+              </p>
+            </div>
           </div>
         ) : (
           <p className="text-gray-400 max-w-2xl mb-12">
