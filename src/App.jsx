@@ -1,37 +1,31 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Index from './pages/Index';
-import LearnMore from './pages/LearnMore';
-import GetInvolved from './pages/GetInvolved';
-import Communications from './pages/Communications';
-import Manifesto from './pages/Manifesto';
-import Newsroom from './pages/Newsroom';
-import Positions from './pages/Positions';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import Ethics from './pages/Ethics';
-import CookiesPolicy from './pages/CookiesPolicy';
-import AIUsage from './pages/AIUsage';
-import ForSchools from './pages/ForSchools';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+
+const ForSchools = React.lazy(() => import('./pages/ForSchools'));
+const BecomePartner = React.lazy(() => import('./pages/ForSchools/BecomePartner'));
 
 const App = () => {
   return (
     <Router>
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/get-involved" element={<GetInvolved />} />
-        <Route path="/communications" element={<Communications />} />
-        <Route path="/learn-more" element={<LearnMore />} />
-        <Route path="/manifesto" element={<Manifesto />} />
-        <Route path="/newsroom" element={<Newsroom />} />
-        <Route path="/positions" element={<Positions />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/ethics" element={<Ethics />} />
-        <Route path="/cookies-policy" element={<CookiesPolicy />} />
-        <Route path="/ai-usage" element={<AIUsage />} />
-        <Route path="/for-schools/*" element={<ForSchools />} />
-      </Routes>
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-grow">
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/for-schools" element={<ForSchools />} />
+              <Route path="/for-schools/become-partner" element={<BecomePartner />} />
+            </Routes>
+          </Suspense>
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 };
