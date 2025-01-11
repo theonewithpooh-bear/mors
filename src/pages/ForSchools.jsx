@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
-import { AlertCircle } from 'lucide-react';
+import { AlertCircle, Lock } from 'lucide-react';
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const ForSchools = () => {
@@ -20,26 +20,22 @@ const ForSchools = () => {
         </h1>
         
         {isResourcesPage ? (
-          <div className="space-y-8">
-            <p className="text-gray-400 max-w-2xl text-lg">
-              MORS has put together and is still actively developing a wide variety of resources for schools to adopt and use as they wish, completely free of charge.
-            </p>
-
-            <Alert variant="default" className="bg-black/30 border-yellow-500/50">
-              <AlertCircle className="h-4 w-4 text-yellow-500" />
+          <div className="flex flex-col items-center justify-center space-y-6 mt-12">
+            <div className="w-16 h-16 rounded-full bg-black/30 flex items-center justify-center border border-white/10">
+              <Lock className="w-8 h-8 text-purple-400" />
+            </div>
+            
+            <Alert variant="default" className="max-w-xl bg-black/30 border-purple-500/50">
+              <AlertCircle className="h-4 w-4 text-purple-500" />
               <AlertDescription className="text-gray-300">
-                Currently, these resources are available by invitation only and are being tested with select partner schools. All tools are in beta phase.
+                This section is restricted to partner schools. Please log in to access our educational resources.
               </AlertDescription>
             </Alert>
 
-            <div className="grid gap-6 mt-8">
-              <div className="p-6 rounded-lg bg-black/30 border border-white/10">
-                <h3 className="text-xl font-semibold mb-2 text-white">Beta Program Access</h3>
-                <p className="text-gray-400">
-                  If you're interested in becoming a partner school and gaining early access to our educational resources, please visit our "Become a Partner" section.
-                </p>
-              </div>
-            </div>
+            <p className="text-gray-400 text-center max-w-lg">
+              If you represent a school and would like to become a partner to access these resources, 
+              please visit our "Become a Partner" section.
+            </p>
           </div>
         ) : (
           <p className="text-gray-400 max-w-2xl mb-12">
