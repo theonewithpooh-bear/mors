@@ -1,7 +1,8 @@
 import React from 'react';
 import { Scale, Eye, Users, Brain, BookOpen, Target } from 'lucide-react';
-import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
+import EthicsPrinciple from '@/components/ethics/EthicsPrinciple';
+import TransparencyAccordion from '@/components/ethics/TransparencyAccordion';
 
 const Ethics = () => {
   const principles = [
@@ -13,7 +14,8 @@ const Ethics = () => {
     {
       icon: Eye,
       title: "complete transparency",
-      content: "we believe in absolute transparency in all our operations."
+      content: "we believe in absolute transparency in all our operations.",
+      hasAccordion: true
     },
     {
       icon: Users,
@@ -44,24 +46,19 @@ const Ethics = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto space-y-12"
+          className="max-w-4xl mx-auto space-y-6"
         >
-          <h1 className="text-4xl font-bold text-white mb-16 text-center">ethical principles</h1>
-          
-          <div className="space-y-6">
-            {principles.map((principle) => (
-              <Card 
-                key={principle.title}
-                className="bg-[#111]/80 border-white/10 backdrop-blur-sm p-6 hover:bg-[#222]/80 transition-colors duration-300"
+          {principles.map((principle) => (
+            <div key={principle.title} className="space-y-4">
+              <EthicsPrinciple 
+                icon={principle.icon} 
+                title={principle.title}
               >
-                <div className="flex flex-col space-y-4">
-                  <principle.icon className="h-6 w-6 text-white/80" />
-                  <h3 className="text-xl font-semibold text-white">{principle.title}</h3>
-                  <p className="text-gray-400">{principle.content}</p>
-                </div>
-              </Card>
-            ))}
-          </div>
+                {principle.content}
+              </EthicsPrinciple>
+              {principle.hasAccordion && <TransparencyAccordion />}
+            </div>
+          ))}
         </motion.div>
       </main>
     </div>
