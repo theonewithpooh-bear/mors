@@ -34,17 +34,17 @@ const ForSchools = () => {
 
             <div className="text-center space-y-6 max-w-2xl">
               <p className="text-gray-300">
-                MORS provides partner schools with comprehensive educational resources including:
+                MORS is aiming to provide schools across the county with comprehensive educational resources.
               </p>
-              <ul className="text-gray-400 space-y-2 list-disc list-inside text-left">
-                <li>Customizable curriculum frameworks</li>
-                <li>Interactive learning materials</li>
-                <li>Assessment tools and templates</li>
-                <li>Professional development resources</li>
-                <li>Collaborative teaching platforms</li>
-              </ul>
-              <p className="text-gray-400">
-                To attempt to partner with MORS and gain access to these resources,{' '}
+              <div className="text-left space-y-4">
+                <p className="text-gray-300 font-semibold">Currently available:</p>
+                <ul className="text-gray-400 space-y-2 list-disc list-inside">
+                  <li>Revision websites for students</li>
+                </ul>
+                <p className="text-purple-400 font-semibold italic">MORE COMING SOON</p>
+              </div>
+              <p className="text-gray-400 mt-6">
+                Resources are currently limited to our partnered schools, by invitation only. To gain access to these resources,{' '}
                 <Link 
                   to="/for-schools/become-partner" 
                   className="text-purple-400 hover:text-purple-300 underline"
