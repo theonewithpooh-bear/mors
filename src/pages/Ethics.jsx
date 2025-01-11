@@ -48,15 +48,16 @@ const Ethics = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto space-y-6"
         >
+          <h1 className="text-3xl font-normal text-white mb-12 text-center">ethical principles</h1>
           {principles.map((principle) => (
-            <div key={principle.title} className="space-y-4">
+            <div key={principle.title}>
               <EthicsPrinciple 
                 icon={principle.icon} 
                 title={principle.title}
+                accordion={principle.hasAccordion && <TransparencyAccordion />}
               >
                 {principle.content}
               </EthicsPrinciple>
-              {principle.hasAccordion && <TransparencyAccordion />}
             </div>
           ))}
         </motion.div>
