@@ -11,6 +11,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import Ethics from './pages/Ethics';
 import CookiesPolicy from './pages/CookiesPolicy';
 import AIUsage from './pages/AIUsage';
+import ForSchools from './pages/ForSchools';
 import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/ethics" element={<Ethics />} />
         <Route path="/cookies-policy" element={<CookiesPolicy />} />
         <Route path="/ai-usage" element={<AIUsage />} />
+        <Route path="/for-schools/*" element={<ForSchools />} />
       </Routes>
     </Router>
   );

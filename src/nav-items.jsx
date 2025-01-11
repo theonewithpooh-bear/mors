@@ -1,4 +1,4 @@
-import { HomeIcon, BookOpenIcon, UsersIcon, MessageSquareIcon, FolderIcon, Globe2Icon, NewspaperIcon } from "lucide-react";
+import { HomeIcon, BookOpenIcon, UsersIcon, MessageSquareIcon, FolderIcon, Globe2Icon, NewspaperIcon, GraduationCapIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export const useNavItems = () => {
@@ -24,6 +24,33 @@ export const useNavItems = () => {
       title: t("nav.communications"),
       to: "/communications",
       icon: <MessageSquareIcon className="h-4 w-4" />,
+    },
+    {
+      title: "For Schools",
+      icon: <GraduationCapIcon className="h-4 w-4" />,
+      dropdown: true,
+      items: [
+        {
+          title: "Implementation Guide",
+          to: "/for-schools/implementation",
+          description: "Step-by-step guide for schools adopting our program"
+        },
+        {
+          title: "Resources",
+          to: "/for-schools/resources",
+          description: "Educational materials and tools"
+        },
+        {
+          title: "Case Studies",
+          to: "/for-schools/case-studies",
+          description: "Success stories from partner schools"
+        },
+        {
+          title: "Support",
+          to: "/for-schools/support",
+          description: "Get help with implementation and ongoing assistance"
+        }
+      ]
     },
     {
       title: t("nav.manifesto"),

@@ -2,13 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useNavItems } from '../nav-items';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const location = useLocation();
@@ -27,6 +33,55 @@ const Header = () => {
   };
 
   const visibleNavItems = navItems.filter(item => !item.hidden);
+
+  const NavItem = ({ item }) => {
+    if (item.dropdown) {
+      return (
+        <DropdownMenu>
+          <DropdownMenuTrigger className="relative group py-2 px-4 block">
+            <span className="text-sm tracking-wide uppercase flex items-center gap-2 text-gray-400 hover:text-white">
+              {item.title}
+              <ChevronDown className="h-4 w-4" />
+            </span>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="w-64 bg-black/95 border border-white/10">
+            {item.items.map((dropdownItem) => (
+              <DropdownMenuItem key={dropdownItem.to} className="focus:bg-white/10">
+                <Link
+                  to={dropdownItem.to}
+                  className="w-full p-2"
+                >
+                  <div className="text-sm font-medium text-white">{dropdownItem.title}</div>
+                  <p className="text-xs text-gray-400">{dropdownItem.description}</p>
+                </Link>
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+      );
+    }
+
+    return (
+      <Link 
+        to={item.to}
+        className="relative group py-2 px-4 block"
+      >
+        <span className={`text-sm tracking-wide uppercase flex items-center gap-2 transition-colors ${
+          isActive(item.to) 
+            ? 'text-white font-medium' 
+            : 'text-gray-400 hover:text-white'
+        }`}>
+          {item.title}
+        </span>
+        {isActive(item.to) && (
+          <motion.div
+            layoutId="underline"
+            className="absolute left-0 right-0 h-px bottom-0 bg-gradient-to-r from-red-500 via-white to-green-500"
+          />
+        )}
+      </Link>
+    );
+  };
 
   const MobileNav = () => (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -55,20 +110,42 @@ const Header = () => {
           </div>
           <nav className="px-6 py-8">
             <ul className="space-y-4">
-              {visibleNavItems.map(({ to, title, icon }) => (
-                <li key={to}>
-                  <Link 
-                    to={to}
-                    className={`flex items-center space-x-2 w-full px-4 py-2 rounded-md transition-colors ${
-                      isActive(to) 
-                        ? 'text-white bg-white/10' 
-                        : 'text-gray-400 hover:text-white hover:bg-white/5'
-                    }`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {icon && <span className="w-5">{icon}</span>}
-                    <span className="ml-2">{title}</span>
-                  </Link>
+              {visibleNavItems.map((item) => (
+                <li key={item.to || item.title}>
+                  {item.dropdown ? (
+                    <div className="px-4 py-2">
+                      <div className="text-white mb-2 flex items-center gap-2">
+                        {item.icon}
+                        <span>{item.title}</span>
+                      </div>
+                      <ul className="pl-6 space-y-2">
+                        {item.items.map((dropdownItem) => (
+                          <li key={dropdownItem.to}>
+                            <Link
+                              to={dropdownItem.to}
+                              className="text-gray-400 hover:text-white text-sm block py-1"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {dropdownItem.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    <Link 
+                      to={item.to}
+                      className={`flex items-center space-x-2 w-full px-4 py-2 rounded-md transition-colors ${
+                        isActive(item.to) 
+                          ? 'text-white bg-white/10' 
+                          : 'text-gray-400 hover:text-white hover:bg-white/5'
+                      }`}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.icon && <span className="w-5">{item.icon}</span>}
+                      <span className="ml-2">{item.title}</span>
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -86,26 +163,9 @@ const Header = () => {
           
           <nav className="hidden md:block">
             <ul className="flex space-x-12">
-              {visibleNavItems.map(({ to, title }) => (
-                <li key={to}>
-                  <Link 
-                    to={to}
-                    className="relative group py-2 px-4 block"
-                  >
-                    <span className={`text-sm tracking-wide uppercase flex items-center gap-2 transition-colors ${
-                      isActive(to) 
-                        ? 'text-white font-medium' 
-                        : 'text-gray-400 hover:text-white'
-                    }`}>
-                      {title}
-                    </span>
-                    {isActive(to) && (
-                      <motion.div
-                        layoutId="underline"
-                        className="absolute left-0 right-0 h-px bottom-0 bg-gradient-to-r from-red-500 via-white to-green-500"
-                      />
-                    )}
-                  </Link>
+              {visibleNavItems.map((item) => (
+                <li key={item.to || item.title}>
+                  <NavItem item={item} />
                 </li>
               ))}
             </ul>
