@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import EthicsPrinciple from '../components/ethics/EthicsPrinciple';
+import TransparencyAccordion from '../components/ethics/TransparencyAccordion';
 import { Scale, Heart, Users, Brain, Shield, Target } from 'lucide-react';
 
 const Ethics = () => {
@@ -40,8 +39,7 @@ const Ethics = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black">
-      <Header />
+    <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black">
       <main className="container mx-auto px-4 py-24">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -67,9 +65,13 @@ const Ethics = () => {
               </EthicsPrinciple>
             ))}
           </div>
+
+          <section className="mt-16">
+            <h2 className="text-2xl font-semibold text-white mb-6">transparency in communication</h2>
+            <TransparencyAccordion />
+          </section>
         </motion.div>
       </main>
-      <Footer />
     </div>
   );
 };
