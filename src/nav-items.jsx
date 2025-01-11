@@ -31,24 +31,24 @@ export const useNavItems = () => {
       dropdown: true,
       items: [
         {
-          title: "Implementation Guide",
-          to: "/for-schools/implementation",
-          description: "Step-by-step guide for schools adopting our program"
-        },
-        {
           title: "Resources",
           to: "/for-schools/resources",
-          description: "Educational materials and tools"
+          description: "Educational materials and teaching resources"
         },
         {
-          title: "Case Studies",
-          to: "/for-schools/case-studies",
-          description: "Success stories from partner schools"
+          title: "Inquire",
+          to: "/for-schools/inquire",
+          description: "Learn more about our programs"
         },
         {
-          title: "Support",
-          to: "/for-schools/support",
-          description: "Get help with implementation and ongoing assistance"
+          title: "Partner Schools",
+          to: "/for-schools/partner-schools",
+          description: "View our network of partner institutions"
+        },
+        {
+          title: "Become a Partner",
+          to: "/for-schools/become-partner",
+          description: "Join our educational network"
         }
       ]
     },
