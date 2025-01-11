@@ -48,7 +48,7 @@ const Ethics = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto space-y-6"
         >
-          <h1 className="text-3xl font-normal text-white mb-12 text-center">ethical principles</h1>
+          <h1 className="text-4xl font-bold text-white mb-12 text-center">ethical principles</h1>
           {principles.map((principle) => (
             <div key={principle.title}>
               <EthicsPrinciple 
