@@ -1,14 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
 import '@fontsource/cormorant';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-black">
-      <Header />
       <main className="flex flex-col items-center justify-center min-h-screen text-center px-4 pt-32">
         {/* Hero Section */}
         <div className="max-w-6xl mx-auto space-y-8 animate-fade-in mb-24">
@@ -49,7 +46,6 @@ const Index = () => {
           />
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
