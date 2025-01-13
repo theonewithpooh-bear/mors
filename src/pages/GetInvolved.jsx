@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import DonationForm from '../components/get-involved/DonationForm';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
@@ -8,7 +6,6 @@ import { ArrowRight } from 'lucide-react';
 const GetInvolved = () => {
   return (
     <div className="min-h-screen bg-black text-white">
-      <Header />
       <main className="container mx-auto px-4 py-24 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl font-bold mb-8">get involved</h1>
@@ -70,7 +67,6 @@ const GetInvolved = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };
