@@ -17,10 +17,10 @@ const Manifesto = () => {
             <motion.button
               key={userType}
               onClick={() => handleButtonClick(userType)}
-              className="relative px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full 
-                         text-white text-lg font-medium transition-all duration-300
-                         hover:bg-white/20 hover:scale-105 active:scale-95
-                         border border-white/20 shadow-lg w-48"
+              className="relative px-6 py-3 bg-white backdrop-blur-sm rounded-full 
+                         text-black text-lg font-medium transition-all duration-300
+                         hover:bg-white/90 hover:scale-105 active:scale-95
+                         border border-white shadow-lg w-48"
               whileHover={{ y: -5 }}
               whileTap={{ scale: 0.95 }}
             >
