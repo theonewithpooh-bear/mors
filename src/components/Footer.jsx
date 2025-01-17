@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Instagram, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -73,13 +73,10 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex space-x-4">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <Github className="h-5 w-5" />
+                  <X className="h-5 w-5" />
                 </a>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <Twitter className="h-5 w-5" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <Linkedin className="h-5 w-5" />
+                  <Instagram className="h-5 w-5" />
                 </a>
               </div>
               <a 
