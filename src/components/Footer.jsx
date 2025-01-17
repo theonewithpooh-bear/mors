@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Instagram, X } from 'lucide-react';
+import { Instagram, X, Mail } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
