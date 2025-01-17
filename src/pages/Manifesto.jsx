@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ManifestoSection from '../components/manifesto/ManifestoSection';
 import { manifestoSections } from '../data/manifestoContent';
+import { teacherManifestoSections } from '../data/teacherManifestoContent';
 import { motion } from 'framer-motion';
 
 const Manifesto = () => {
+  const [currentContent, setCurrentContent] = useState(manifestoSections);
+
   const handleButtonClick = (userType) => {
-    console.log(`${userType} button clicked`);
-    // Future functionality can be added here
+    if (userType === 'Teachers') {
+      setCurrentContent(teacherManifestoSections);
+    } else {
+      setCurrentContent(manifestoSections);
+    }
   };
 
   return (
@@ -30,7 +36,7 @@ const Manifesto = () => {
         </div>
       </div>
       <main>
-        {manifestoSections.map((section, index) => (
+        {currentContent.map((section, index) => (
           <ManifestoSection
             key={index}
             title={section.title}
