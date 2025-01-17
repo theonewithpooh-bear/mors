@@ -527,9 +527,9 @@ export const teacherManifestoSections = [
 
 export const studentManifestoSections = [
   {
-    title: "SIMPLIFIED MANIFESTO FOR STUDENTS",
-    subtitle: "mors",
-    content: "a future for education",
+    title: "mors",
+    subtitle: "a future for education",
+    content: "SIMPLIFIED MANIFESTO FOR STUDENTS",
     isHero: true
   },
   {
