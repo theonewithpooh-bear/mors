@@ -90,7 +90,7 @@ export const manifestoSections = [
         subtitle: "Narrow Skill Assessment",
         text: [
           "A report by the Social Mobility Commission found that children from higher-income families are able to better develop their soft skills (such as communication, problem-solving and teamwork) than those from lower-income families. This is due to easier access to extracurricular activities.",
-          "MORS believes that soft skills are vital for life and fully supports changes that would ensure students’ soft skills are tested and developed throughout their time at school.",
+          "MORS believes that soft skills are vital for life and fully supports changes that would ensure students' soft skills are tested and developed throughout their time at school.",
           "MORS passionately believes that education is a right, not a privilege. While we acknowledge that some in society will always have better access to activities and services, we want all students to be given the very best start in life."
         ]
       },
@@ -101,13 +101,13 @@ export const manifestoSections = [
           "The Teacher Wellbeing Index 2023 reported that 36% of staff are experiencing burnout. As well as this, a 2019 survey (bearing in mind that this is pre-Covid) found that 70% of teachers felt their job negatively impacted their mental health, 32% of whom had to seek counseling.",
           "What this means: Over 200,000 teachers feel unable to teach effectively due to burnout, driven by severe stress and excessive demands. Over 600,000 teachers feel their job has negatively impacted their mental health. Over 140,000 teachers sought counseling to support their mental health."
         ],
-        source: "Teacher Wellbeing Index, NASUWUT"
+        source: "Teacher Wellbeing Index, NASUWT"
       },
       {
         subtitle: "Limited Real-World Application",
         text: [
           "MORS has already addressed the limited real-world application exams-based qualifications have on students, however, in this part of our manifesto, we will go deeper into our reasoning behind this argument.",
-          "A report conducted by the Confederation of British Industry (CBI) found that 44% of companies believe that people leaving school, college, or university, are not ‘work ready’. Although 44% is not a seemingly ‘huge’ number, that equates to 616,000 employers who believe students are not prepared to join the workforce.",
+          "A report conducted by the Confederation of British Industry (CBI) found that 44% of companies believe that people leaving school, college, or university, are not 'work ready'. Although 44% is not a seemingly 'huge' number, that equates to 616,000 employers who believe students are not prepared to join the workforce.",
           "Exam-based learning neglects to factor in other skills, besides obsessive memory retention."
         ],
         source: "Confederation of British Industry"
@@ -157,7 +157,7 @@ export const manifestoSections = [
         subtitle: "Assessment and Assignment Reform",
         text: [
           "Under the system we propose, the way in which homework is structured would change. Homework should be kept low to ensure that student mental health is maintained. This is especially important for those in secondary school, where the work really does pile up to a very high amount.",
-          "Assessments under MORS’ system would be less important to the final grade, and would become open book, in order to test the individual understanding of the subject.",
+          "Assessments under MORS' system would be less important to the final grade, and would become open book, in order to test the individual understanding of the subject.",
           "For times when our proposed coursework is given as homework, there is a lot of concern that it will be forged, using artificial intelligence, or having other people do it for them. MORS has two opinions on this issue, the AI argument will be covered later on in our manifesto. The other argument, MORS believes, will not be an issue. This is because A.I. is fast developing, and by the time our proposed system is rolled out, A.I. will be at a point where it will be able to detect if the work is the students' own."
         ]
       }
@@ -171,7 +171,7 @@ export const manifestoSections = [
         text: [
           "Britain is seeing dark times in the economy. With an economy currently pleading for help, things are only getting worse, due to the severe digital skills gap in this country, estimated to be costing the economy £63 billion annually, says The House of Commons Library.",
           "If this and future generations are to succeed, then a huge ramp-up of digital skills is in order. Otherwise, the economy is at risk.",
-          "MORS will campaign for change to the government, demanding that our young people are taught the vital skills required to fill the economy’s ever-growing black hole."
+          "MORS will campaign for change to the government, demanding that our young people are taught the vital skills required to fill the economy's ever-growing black hole."
         ]
       }
     ]
@@ -253,9 +253,9 @@ export const manifestoSections = [
     title: "Section Ten: Call to Action",
     content: [
       {
-        subtitle: "Join MORS’ Movement",
+        subtitle: "Join MORS' Movement",
         text: [
-          "We can’t do this alone. We need the support of the British people, and those in charge to make this change happen.",
+          "We can't do this alone. We need the support of the British people, and those in charge to make this change happen.",
           "MORS is actively working to raise awareness against the issue.",
           "If you want to help, please visit mors.org.uk to register your interest. If you would like to donate towards our cause, it would be very much appreciated! But what MORS need more than money, is support.",
           "If you would like to get involved, please say so when you are registering your interest, and we will endeavour to get back to you."
@@ -265,7 +265,7 @@ export const manifestoSections = [
         subtitle: "How You Can Help",
         text: [
           "You are the ones that will make this change happen.",
-          "We need you all to chip in to make MORS’ mission a reality.",
+          "We need you all to chip in to make MORS' mission a reality.",
           "You can do this by contacting your local MP, telling your friends and family, informing your teachers (or students), asking your parents to contact us to volunteer, and contacting MORS to offer your support."
         ]
       },
@@ -274,6 +274,260 @@ export const manifestoSections = [
         text: [
           "MORS is committed to delivering this change. We promise to do our utmost to do our part in ensuring the education system gets the TLC it so desperately needs.",
           "This, I promise to you."
+        ]
+      }
+    ]
+  }
+];
+
+export const teacherManifestoSections = [
+  // Teacher manifesto sections would go here
+];
+
+export const studentManifestoSections = [
+  {
+    title: "SIMPLIFIED MANIFESTO FOR STUDENTS",
+    subtitle: "mors",
+    content: "a future for education",
+    isHero: true
+  },
+  {
+    title: "Section One: Introduction & Vision",
+    content: [
+      {
+        subtitle: "What is MORS?",
+        text: [
+          "A group set up by Monty Middleton-Burn to fix the exam system.",
+          "We bring people together to demand real change in schools."
+        ]
+      },
+      {
+        subtitle: "Vision Statement",
+        text: [
+          "MORS believes students should learn skills that truly matter for work and life.",
+          "Research shows most GCSE knowledge is forgotten soon after the exams."
+        ]
+      },
+      {
+        subtitle: "Why Overhaul the System?",
+        text: [
+          "GCSEs focus on memorisation, which is only valued by 30% of employers.",
+          "Modern jobs need real skills, so we must change our outdated system."
+        ]
+      }
+    ]
+  },
+  {
+    title: "Section Two: The Problem with GCSEs",
+    content: [
+      {
+        subtitle: "Outdated Exam-Based Learning",
+        text: [
+          "You cram lots of facts, then forget them soon after.",
+          "MORS wants exams that let you talk with classmates and use resources."
+        ]
+      },
+      {
+        subtitle: "Narrow Skill Assessment",
+        text: [
+          "Current exams don't develop creative problem-solving or teamwork enough.",
+          "MORS wants a shift to practical learning."
+        ]
+      },
+      {
+        subtitle: "Mental Health Impact",
+        text: [
+          "High-stakes exams harm the mental health of over half of students.",
+          "Teachers and parents see anxiety levels rising."
+        ]
+      },
+      {
+        subtitle: "Inequality in Assessment Outcomes",
+        text: [
+          "Some schools can't support students with special needs as well as others.",
+          "Everyone deserves fair support to succeed."
+        ]
+      },
+      {
+        subtitle: "Discouragement of Creativity and Critical Thinking",
+        text: [
+          "GCSEs can restrict creativity.",
+          "MORS wants more coursework that nurtures new ideas."
+        ]
+      }
+    ]
+  },
+  {
+    title: "Section Three: Limitations of the Current Education System",
+    content: [
+      {
+        subtitle: "Narrow Skill Assessment",
+        text: [
+          "Not everyone has the same chance to learn vital soft skills.",
+          "MORS aims to ensure all students get these skills built into their lessons."
+        ]
+      },
+      {
+        subtitle: "Mental Health Impact – Staff",
+        text: [
+          "Teachers feel burned out.",
+          "This can affect the education you receive."
+        ]
+      },
+      {
+        subtitle: "Limited Real-World Application",
+        text: [
+          "Many employers say school leavers aren't ready for work.",
+          "Memory-based exams don't teach the skills needed for real jobs."
+        ]
+      }
+    ]
+  },
+  {
+    title: "Section Four: The Foundation Skills Certificate (FSC)",
+    content: [
+      {
+        subtitle: "What is the FSC?",
+        text: [
+          "A new qualification to replace GCSEs, based on coursework and smaller in-class tests.",
+          "Exams become group-friendly and use real resources."
+        ]
+      },
+      {
+        subtitle: "Key Competencies and Assessment Criteria",
+        text: [
+          "Focus on critical thinking, leadership, teamwork, and digital literacy.",
+          "Lessons are more exciting, and teachers are open to feedback."
+        ]
+      },
+      {
+        subtitle: "Flexibility and Inclusivity",
+        text: [
+          "Different learning styles are considered.",
+          "More access arrangements for those with special needs."
+        ]
+      }
+    ]
+  },
+  {
+    title: "Section Five: Real-World Learning and Problem Solving",
+    content: [
+      {
+        subtitle: "Integrating Practical Skills",
+        text: [
+          "Skills like public speaking and problem-solving are crucial in life and work.",
+          "Employers say many school leavers aren't ready. MORS wants to fix that."
+        ]
+      },
+      {
+        subtitle: "Assessment and Assignment Reform",
+        text: [
+          "Less homework, so you have time to rest and develop other interests.",
+          "Open-book assessments to test genuine understanding.",
+          "Technology will help ensure your work is your own."
+        ]
+      }
+    ]
+  },
+  {
+    title: "Section Six: The Role of Technology in Modern Education",
+    content: [
+      {
+        subtitle: "Embracing Technology",
+        text: [
+          "The UK faces a big digital skills gap, costing the economy billions.",
+          "MORS will push for better digital education to help you succeed."
+        ]
+      }
+    ]
+  },
+  {
+    title: "Section Seven: Support for Students and Teachers",
+    content: [
+      {
+        subtitle: "Providing Adequate Resources and Training",
+        text: [
+          "Both students and teachers need the right tools to thrive.",
+          "MORS wants to make sure resources are freely accessible."
+        ]
+      },
+      {
+        subtitle: "Reducing Teacher Workload",
+        text: [
+          "Your teachers work hard and often feel stressed.",
+          "MORS believes in reducing their workload so they can focus on you."
+        ]
+      }
+    ]
+  },
+  {
+    title: "Section Eight: Benefits of the New System",
+    content: [
+      {
+        subtitle: "For Students",
+        text: [
+          "Lower stress, better mental health.",
+          "Coursework-based and open-book tasks.",
+          "Real-life skills and work experience.",
+          "A system that changes as jobs change."
+        ]
+      },
+      {
+        subtitle: "For Teachers",
+        text: [
+          "More time to teach, less paperwork.",
+          "Better mental health.",
+          "More satisfaction in the classroom."
+        ]
+      },
+      {
+        subtitle: "For Society",
+        text: [
+          "Skilled future employees.",
+          "Stronger economy and better mental health overall."
+        ]
+      }
+    ]
+  },
+  {
+    title: "Section Nine: Implementation Strategy",
+    content: [
+      {
+        subtitle: "Timeline for Change",
+        text: [
+          "MORS is new, so no set timeline yet."
+        ]
+      },
+      {
+        subtitle: "Pilot Programmes and Feedback",
+        text: [
+          "Opinions from teachers and activists are being collected.",
+          "Trials of the new curriculum and FSCs will come in time."
+        ]
+      }
+    ]
+  },
+  {
+    title: "Section Ten: Call to Action",
+    content: [
+      {
+        subtitle: "Join MORS' Movement",
+        text: [
+          "MORS needs your help and the government's help to succeed.",
+          "Visit mors.org.uk if you'd like to support or donate."
+        ]
+      },
+      {
+        subtitle: "How You Can Help",
+        text: [
+          "Talk to your friends, family, and teachers about these ideas.",
+          "Ask parents to get in touch with MORS or contact MPs."
+        ]
+      },
+      {
+        subtitle: "Our Promise",
+        text: [
+          "MORS will do everything it can to fix the education system."
         ]
       }
     ]

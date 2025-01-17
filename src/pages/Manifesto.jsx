@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 import ManifestoSection from '../components/manifesto/ManifestoSection';
-import { manifestoSections } from '../data/manifestoContent';
-import { teacherManifestoSections } from '../data/teacherManifestoContent';
+import { manifestoSections, teacherManifestoSections, studentManifestoSections } from '../data/manifestoContent';
 import { motion } from 'framer-motion';
 
 const Manifesto = () => {
   const [currentContent, setCurrentContent] = useState(manifestoSections);
 
   const handleButtonClick = (userType) => {
-    if (userType === 'Teachers') {
-      setCurrentContent(teacherManifestoSections);
-    } else {
-      setCurrentContent(manifestoSections);
+    switch(userType) {
+      case 'Teachers':
+        setCurrentContent(teacherManifestoSections);
+        break;
+      case 'Students':
+        setCurrentContent(studentManifestoSections);
+        break;
+      default:
+        setCurrentContent(manifestoSections);
     }
   };
 
