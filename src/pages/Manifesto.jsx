@@ -11,7 +11,7 @@ const Manifesto = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <div className="w-full flex flex-col items-center justify-center py-12 px-4">
+      <div className="w-full flex flex-col items-center justify-center py-12 px-4 mt-24">
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 max-w-4xl w-full justify-center">
           {['Teachers', 'Students', 'Parents'].map((userType) => (
             <motion.button
