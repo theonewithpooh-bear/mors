@@ -97,45 +97,6 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                     />
                   )}
                 </AnimatePresence>
-
-                {isActive && (
-                  <motion.div
-                    layoutId="anime-mascot"
-                    className="absolute -top-12 left-1/2 -translate-x-1/2 pointer-events-none"
-                    initial={false}
-                    transition={{
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 30,
-                    }}
-                  >
-                    <div className="relative w-12 h-12">
-                      <motion.div 
-                        className="absolute w-10 h-10 bg-white rounded-full left-1/2 -translate-x-1/2"
-                        animate={
-                          hoveredTab ? {
-                            scale: [1, 1.1, 1],
-                            rotate: [0, -5, 5, 0],
-                            transition: {
-                              duration: 0.5,
-                              ease: "easeInOut"
-                            }
-                          } : {
-                            y: [0, -3, 0],
-                            transition: {
-                              duration: 2,
-                              repeat: Infinity,
-                              ease: "easeInOut"
-                            }
-                          }
-                        }
-                      >
-                        <div className="absolute inset-0 bg-black rounded-full" />
-                        <div className="absolute inset-0 bg-white rounded-full" />
-                      </motion.div>
-                    </div>
-                  </motion.div>
-                )}
               </Link>
             );
           })}
