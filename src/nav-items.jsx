@@ -6,83 +6,83 @@ export const useNavItems = () => {
   
   return [
     {
-      title: t("nav.home"),
-      to: "/",
-      icon: <HomeIcon className="h-4 w-4" />,
+      name: t("nav.home"),
+      url: "/",
+      icon: HomeIcon,
     },
     {
-      title: t("nav.learn_more"),
-      to: "/learn-more",
-      icon: <BookOpenIcon className="h-4 w-4" />,
+      name: t("nav.learn_more"),
+      url: "/learn-more",
+      icon: BookOpenIcon,
     },
     {
-      title: t("nav.get_involved"),
-      to: "/get-involved",
-      icon: <UsersIcon className="h-4 w-4" />,
+      name: t("nav.get_involved"),
+      url: "/get-involved",
+      icon: UsersIcon,
     },
     {
-      title: t("nav.communications"),
-      to: "/communications",
-      icon: <MessageSquareIcon className="h-4 w-4" />,
+      name: t("nav.communications"),
+      url: "/communications",
+      icon: MessageSquareIcon,
     },
     {
-      title: "For Schools",
-      icon: <GraduationCapIcon className="h-4 w-4" />,
+      name: "For Schools",
+      icon: GraduationCapIcon,
       dropdown: true,
       items: [
         {
-          title: "Resources",
-          to: "/for-schools/resources",
+          name: "Resources",
+          url: "/for-schools/resources",
           description: "Educational materials and teaching resources"
         },
         {
-          title: "Inquire",
-          to: "/for-schools/inquire",
+          name: "Inquire",
+          url: "/for-schools/inquire",
           description: "Learn more about our programs"
         },
         {
-          title: "Partner Schools",
-          to: "/for-schools/partner-schools",
+          name: "Partner Schools",
+          url: "/for-schools/partner-schools",
           description: "View our network of partner institutions"
         },
         {
-          title: "Become a Partner",
-          to: "/for-schools/become-partner",
+          name: "Become a Partner",
+          url: "/for-schools/become-partner",
           description: "Join our educational network"
         }
       ]
     },
     {
-      title: t("nav.manifesto"),
-      to: "/manifesto",
-      icon: <FolderIcon className="h-4 w-4" />,
+      name: t("nav.manifesto"),
+      url: "/manifesto",
+      icon: FolderIcon,
     },
     {
-      title: "newsroom",
-      to: "/newsroom",
-      icon: <NewspaperIcon className="h-4 w-4" />,
+      name: "newsroom",
+      url: "/newsroom",
+      icon: NewspaperIcon,
     },
     {
-      title: "positions",
-      to: "/positions",
-      icon: <Globe2Icon className="h-4 w-4" />,
+      name: "positions",
+      url: "/positions",
+      icon: Globe2Icon,
     },
     // Hidden from navigation but still accessible
     {
-      title: "subject reforms",
-      to: "/subject-reforms",
+      name: "subject reforms",
+      url: "/subject-reforms",
       icon: null,
       hidden: true,
     },
     {
-      title: "privacy policy",
-      to: "/privacy-policy",
+      name: "privacy policy",
+      url: "/privacy-policy",
       icon: null,
       hidden: true,
     },
     {
-      title: "ai usage",
-      to: "/ai-usage",
+      name: "ai usage",
+      url: "/ai-usage",
       icon: null,
       hidden: true,
     },

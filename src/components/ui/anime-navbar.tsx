@@ -54,14 +54,14 @@ export function AnimeNavBar({ items, className, defaultActive = "home" }: NavBar
         >
           {items.map((item) => {
             const Icon = item.icon
-            const isActive = activeTab === item.name
+            const isActive = activeTab === item.name.toLowerCase()
             const isHovered = hoveredTab === item.name
 
             return (
               <Link
                 key={item.name}
                 to={item.url}
-                onClick={() => setActiveTab(item.name)}
+                onClick={() => setActiveTab(item.name.toLowerCase())}
                 onMouseEnter={() => setHoveredTab(item.name)}
                 onMouseLeave={() => setHoveredTab(null)}
                 className={cn(
@@ -111,7 +111,7 @@ export function AnimeNavBar({ items, className, defaultActive = "home" }: NavBar
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Icon size={18} strokeWidth={2.5} />
+                  {Icon && <Icon size={18} strokeWidth={2.5} />}
                 </motion.span>
           
                 <AnimatePresence>
