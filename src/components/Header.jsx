@@ -8,11 +8,11 @@ const Header = () => {
   const navItems = useNavItems();
 
   const animeNavItems = navItems
-    .filter(item => !item.hidden && !item.dropdown)
+    .filter(item => !item.hidden)
     .map(item => ({
       name: item.name,
-      url: item.url,
-      icon: null // Set icon to null to ensure text is displayed
+      url: item.dropdown ? '#' : item.url, // Prevent navigation for dropdown items
+      icon: null
     }));
 
   return (
@@ -20,7 +20,7 @@ const Header = () => {
       <AnimeNavBar 
         items={animeNavItems} 
         defaultActive={location.pathname === "/" ? "home" : ""} 
-        showIcons={false} // Add prop to explicitly disable icons
+        showIcons={false}
       />
     </header>
   );
