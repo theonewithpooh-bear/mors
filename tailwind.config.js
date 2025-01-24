@@ -96,13 +96,22 @@ module.exports = {
             transform: "scale(1) translateY(0) rotate(0deg)",
             opacity: 0.15
           }
-        }
+        },
+        "pulse-slow": {
+          '0%, 100%': {
+            transform: 'translateX(-100%)',
+          },
+          '50%': {
+            transform: 'translateX(100%)',
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "gradient-x": "gradient-x 15s ease infinite",
         "glow-dance": "glow-dance 4s ease-in-out infinite",
+        "pulse-slow": "pulse-slow 3s ease-in-out infinite",
       },
     },
   },
