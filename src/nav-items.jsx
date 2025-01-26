@@ -1,4 +1,4 @@
-import { HomeIcon, BookOpenIcon, UsersIcon, MessageSquareIcon, FolderIcon, Globe2Icon, NewspaperIcon, GraduationCapIcon } from "lucide-react";
+import { HomeIcon, BookOpenIcon, UsersIcon, MessageSquareIcon, FolderIcon, Globe2Icon, NewspaperIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export const useNavItems = () => {
@@ -24,33 +24,6 @@ export const useNavItems = () => {
       name: t("nav.communications"),
       url: "/communications",
       icon: MessageSquareIcon,
-    },
-    {
-      name: "For Schools",
-      icon: GraduationCapIcon,
-      dropdown: true,
-      items: [
-        {
-          name: "Resources",
-          url: "/for-schools/resources",
-          description: "Educational materials and teaching resources"
-        },
-        {
-          name: "Inquire",
-          url: "/for-schools/inquire",
-          description: "Learn more about our programs"
-        },
-        {
-          name: "Partner Schools",
-          url: "/for-schools/partner-schools",
-          description: "View our network of partner institutions"
-        },
-        {
-          name: "Become a Partner",
-          url: "/for-schools/become-partner",
-          description: "Join our educational network"
-        }
-      ]
     },
     {
       name: t("nav.manifesto"),
