@@ -15,13 +15,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import AIUsage from './pages/AIUsage';
 import Ethics from './pages/Ethics';
 import CookiesPolicy from './pages/CookiesPolicy';
-
-// For Schools section
-const ForSchools = React.lazy(() => import('./pages/ForSchools'));
-const BecomePartner = React.lazy(() => import('./pages/ForSchools/BecomePartner'));
-const Inquire = React.lazy(() => import('./pages/ForSchools/Inquire'));
-const PartnerSchools = React.lazy(() => import('./pages/ForSchools/PartnerSchools'));
-const Resources = React.lazy(() => import('./pages/ForSchools/Resources'));
+import NotFound from './pages/NotFound';
 
 const App = () => {
   return (
@@ -44,13 +38,7 @@ const App = () => {
               <Route path="/ai-usage" element={<AIUsage />} />
               <Route path="/ethics" element={<Ethics />} />
               <Route path="/cookies-policy" element={<CookiesPolicy />} />
-              
-              {/* For Schools section */}
-              <Route path="/for-schools" element={<ForSchools />} />
-              <Route path="/for-schools/become-partner" element={<BecomePartner />} />
-              <Route path="/for-schools/inquire" element={<Inquire />} />
-              <Route path="/for-schools/partner-schools" element={<PartnerSchools />} />
-              <Route path="/for-schools/resources" element={<Resources />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
