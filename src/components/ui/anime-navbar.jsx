@@ -13,6 +13,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
   const [hoveredTab, setHoveredTab] = useState(null);
   const [activeTab, setActiveTab] = useState(defaultActive);
   const [isMobile, setIsMobile] = useState(false);
+  const [openPopover, setOpenPopover] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -49,11 +50,22 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
 
             if (item.dropdown) {
               return (
-                <Popover key={item.name}>
+                <Popover key={item.name} open={openPopover} onOpenChange={setOpenPopover}>
                   <PopoverTrigger asChild>
                     <button
-                      onMouseEnter={() => setHoveredTab(item.name)}
-                      onMouseLeave={() => setHoveredTab(null)}
+                      onMouseEnter={() => {
+                        setHoveredTab(item.name);
+                        setOpenPopover(true);
+                      }}
+                      onMouseLeave={() => {
+                        setHoveredTab(null);
+                        // Don't close immediately to allow moving to content
+                        setTimeout(() => {
+                          if (!document.querySelector(':hover > .popover-content')) {
+                            setOpenPopover(false);
+                          }
+                        }, 100);
+                      }}
                       className={cn(
                         "relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300",
                         "text-white/70 hover:text-white",
@@ -72,8 +84,10 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                     </button>
                   </PopoverTrigger>
                   <PopoverContent 
-                    className="w-64 bg-black/90 border border-white/10 backdrop-blur-lg p-2 rounded-lg shadow-xl"
+                    className="popover-content w-64 bg-black/90 border border-white/10 backdrop-blur-lg p-2 rounded-lg shadow-xl"
                     sideOffset={8}
+                    onMouseEnter={() => setOpenPopover(true)}
+                    onMouseLeave={() => setOpenPopover(false)}
                   >
                     <div className="flex flex-col space-y-1">
                       {item.items?.map((subItem) => (
