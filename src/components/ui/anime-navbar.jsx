@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 export function AnimeNavBar({ items, className, defaultActive = "Home", showIcons = true }) {
   const [mounted, setMounted] = useState(false);
@@ -41,6 +46,53 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
           {items.map((item) => {
             const isActive = activeTab === item.name;
             const isHovered = hoveredTab === item.name;
+
+            if (item.dropdown) {
+              return (
+                <Popover key={item.name}>
+                  <PopoverTrigger asChild>
+                    <button
+                      onMouseEnter={() => setHoveredTab(item.name)}
+                      onMouseLeave={() => setHoveredTab(null)}
+                      className={cn(
+                        "relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300",
+                        "text-white/70 hover:text-white",
+                        isActive && "text-white"
+                      )}
+                    >
+                      <span className="relative z-10">{item.name}</span>
+                      {isHovered && !isActive && (
+                        <motion.div
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 0.8 }}
+                          className="absolute inset-0 bg-white/10 rounded-full -z-10"
+                        />
+                      )}
+                    </button>
+                  </PopoverTrigger>
+                  <PopoverContent 
+                    className="w-64 bg-black/90 border border-white/10 backdrop-blur-lg p-2 rounded-lg shadow-xl"
+                    sideOffset={8}
+                  >
+                    <div className="flex flex-col space-y-1">
+                      {item.items?.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.url}
+                          className="px-4 py-2 rounded-md hover:bg-white/10 transition-colors text-sm text-white/70 hover:text-white"
+                        >
+                          <div className="font-medium">{subItem.name}</div>
+                          {subItem.description && (
+                            <div className="text-xs text-white/50">{subItem.description}</div>
+                          )}
+                        </Link>
+                      ))}
+                    </div>
+                  </PopoverContent>
+                </Popover>
+              );
+            }
 
             return (
               <Link
