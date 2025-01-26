@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Instagram, Mail } from 'lucide-react';
-import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,8 +13,8 @@ const Footer = () => {
         <div className="w-[300px] h-[300px] bg-[radial-gradient(circle_at_center,#3b82f640_0%,transparent_70%)] animate-glow-dance" />
       </div>
       
-      <div className="relative container mx-auto px-6 pt-24 pb-16">
-        <div className="flex justify-between mb-16">
+      <div className="relative container mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-8 sm:pb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 sm:mb-16">
           <div>
             <h3 className="font-semibold text-white mb-4">quick links</h3>
             <ul className="space-y-3">
@@ -68,7 +67,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <h3 className="font-semibold text-white mb-4">connect</h3>
             <div className="space-y-4">
               <div className="flex space-x-4">
