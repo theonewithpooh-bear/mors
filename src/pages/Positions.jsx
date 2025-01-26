@@ -24,10 +24,18 @@ const Positions = () => {
   return (
     <div className="min-h-screen bg-black">
       <div className="relative h-screen w-screen">
+        {/* Desktop Image */}
         <img 
           src="/lovable-uploads/566b091b-7e85-4965-9b51-03bd0a8f2b22.png" 
           alt="Jobs desk in forest" 
-          className="w-full h-full object-contain bg-black"
+          className="hidden md:block w-full h-full object-contain bg-black"
+        />
+        
+        {/* Mobile Image */}
+        <img 
+          src="/lovable-uploads/387a4d3f-fd1d-439b-a4e3-1331342235ef.png" 
+          alt="Jobs desk in forest mobile" 
+          className="md:hidden w-full h-full object-contain bg-black"
         />
           
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
