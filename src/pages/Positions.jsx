@@ -8,6 +8,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { Twitter } from 'lucide-react';
 
 const Positions = () => {
   const [showDialog, setShowDialog] = React.useState(false);
@@ -38,13 +39,21 @@ const Positions = () => {
           className="md:hidden w-full h-full object-contain bg-black"
         />
           
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
           <Button 
             onClick={() => navigate('/')}
             className="bg-primary hover:bg-primary/90"
           >
             Back Home
           </Button>
+          <a 
+            href="https://x.com/mors_uk" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-white/70 hover:text-white transition-colors"
+          >
+            <Twitter size={24} />
+          </a>
         </div>
 
         <Dialog open={showDialog} onOpenChange={setShowDialog}>
