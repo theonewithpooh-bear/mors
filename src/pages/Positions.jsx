@@ -8,7 +8,7 @@ const Positions = () => {
           <h1 className="text-4xl font-bold mb-8">Positions</h1>
           <div className="bg-zinc-900/50 p-8 rounded-lg border border-zinc-800">
             <p className="text-xl text-zinc-300">
-              Mors soon hopes to announce volunteer unpaid positions.
+              MORS soon hopes to announce volunteer unpaid positions.
             </p>
           </div>
         </div>
