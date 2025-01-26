@@ -7,6 +7,8 @@ const NotFound = () => {
         src="/lovable-uploads/d61adcbf-97c4-420d-93dd-270fbdf20723.png" 
         alt="404 Error - Page Not Found" 
         className="w-auto h-[60vh] max-w-full object-contain animate-fade-in"
+        loading="eager"
+        fetchpriority="high"
       />
     </div>
   );
