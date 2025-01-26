@@ -10,6 +10,7 @@ import Communications from './pages/Communications';
 import Manifesto from './pages/Manifesto';
 import Newsroom from './pages/Newsroom';
 import Positions from './pages/Positions';
+import PositionsToBeReleased from './pages/Positions';
 import SubjectReforms from './pages/SubjectReforms';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import AIUsage from './pages/AIUsage';
@@ -32,7 +33,8 @@ const App = () => {
               <Route path="/communications" element={<Communications />} />
               <Route path="/manifesto" element={<Manifesto />} />
               <Route path="/newsroom" element={<Newsroom />} />
-              <Route path="/positions_to_be_released" element={<Positions />} />
+              <Route path="/positions" element={<Positions />} />
+              <Route path="/positions_to_be_released" element={<PositionsToBeReleased />} />
               <Route path="/subject-reforms" element={<SubjectReforms />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/ai-usage" element={<AIUsage />} />

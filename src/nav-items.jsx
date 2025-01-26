@@ -37,10 +37,16 @@ export const useNavItems = () => {
     },
     {
       name: "positions",
-      url: "/positions_to_be_released",
+      url: "/positions",
       icon: Globe2Icon,
     },
     // Hidden from navigation but still accessible
+    {
+      name: "positions to be released",
+      url: "/positions_to_be_released",
+      icon: null,
+      hidden: true,
+    },
     {
       name: "subject reforms",
       url: "/subject-reforms",
