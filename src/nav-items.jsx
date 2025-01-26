@@ -37,7 +37,7 @@ export const useNavItems = () => {
     },
     {
       name: "positions",
-      url: "/positions",
+      url: "/positions_to_be_released",
       icon: Globe2Icon,
     },
     // Hidden from navigation but still accessible
