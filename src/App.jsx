@@ -1,10 +1,8 @@
-
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import { ThemeProvider } from './components/theme-provider';
 import Index from './pages/Index';
 import LearnMore from './pages/LearnMore';
 import GetInvolved from './pages/GetInvolved';
@@ -22,35 +20,33 @@ import NotFound from './pages/NotFound';
 
 const App = () => {
   return (
-    <ThemeProvider>
-      <Router>
-        <ScrollToTop />
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main>
-            <Suspense fallback={<div>Loading...</div>}>
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/learn-more" element={<LearnMore />} />
-                <Route path="/get-involved" element={<GetInvolved />} />
-                <Route path="/communications" element={<Communications />} />
-                <Route path="/manifesto" element={<Manifesto />} />
-                <Route path="/newsroom" element={<Newsroom />} />
-                <Route path="/positions" element={<Positions />} />
-                <Route path="/positions_to_be_released" element={<PositionsToBeReleased />} />
-                <Route path="/subject-reforms" element={<SubjectReforms />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                <Route path="/ai-usage" element={<AIUsage />} />
-                <Route path="/ethics" element={<Ethics />} />
-                <Route path="/cookies-policy" element={<CookiesPolicy />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </ThemeProvider>
+    <Router>
+      <ScrollToTop />
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <main>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/learn-more" element={<LearnMore />} />
+              <Route path="/get-involved" element={<GetInvolved />} />
+              <Route path="/communications" element={<Communications />} />
+              <Route path="/manifesto" element={<Manifesto />} />
+              <Route path="/newsroom" element={<Newsroom />} />
+              <Route path="/positions" element={<Positions />} />
+              <Route path="/positions_to_be_released" element={<PositionsToBeReleased />} />
+              <Route path="/subject-reforms" element={<SubjectReforms />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/ai-usage" element={<AIUsage />} />
+              <Route path="/ethics" element={<Ethics />} />
+              <Route path="/cookies-policy" element={<CookiesPolicy />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 
