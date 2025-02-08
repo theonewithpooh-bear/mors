@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Instagram, Mail } from 'lucide-react';
+import { ThemeToggle } from './theme-toggle';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,7 +10,7 @@ const Footer = () => {
   const isIndexPage = location.pathname === '/';
   
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-b from-black to-gray-900">
+    <footer className="relative overflow-hidden bg-gradient-to-b from-background to-secondary">
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="w-[300px] h-[300px] bg-[radial-gradient(circle_at_center,#3b82f640_0%,transparent_70%)] animate-glow-dance" />
       </div>
@@ -16,25 +18,25 @@ const Footer = () => {
       <div className="relative container mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-8 sm:pb-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 sm:mb-16">
           <div>
-            <h3 className="font-semibold text-white mb-4">quick links</h3>
+            <h3 className="font-semibold mb-4">quick links</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/learn-more" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link to="/learn-more" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   learn more
                 </Link>
               </li>
               <li>
-                <Link to="/get-involved" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link to="/get-involved" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   get involved
                 </Link>
               </li>
               <li>
-                <Link to="/communications" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link to="/communications" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   communications
                 </Link>
               </li>
               <li>
-                <Link to="/articles" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link to="/articles" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   articles
                 </Link>
               </li>
@@ -42,25 +44,25 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-semibold text-white mb-4">legal</h3>
+            <h3 className="font-semibold mb-4">legal</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/privacy-policy" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link to="/privacy-policy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   privacy policy
                 </Link>
               </li>
               <li>
-                <Link to="/ethics" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link to="/ethics" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   ethical principles
                 </Link>
               </li>
               <li>
-                <Link to="/cookies-policy" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link to="/cookies-policy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   cookies policy
                 </Link>
               </li>
               <li>
-                <Link to="/ai-usage" className="text-sm text-gray-400 hover:text-white transition-colors">
+                <Link to="/ai-usage" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   AI usage
                 </Link>
               </li>
@@ -68,41 +70,32 @@ const Footer = () => {
           </div>
           
           <div className="sm:col-span-2 lg:col-span-1">
-            <h3 className="font-semibold text-white mb-4">connect</h3>
+            <h3 className="font-semibold mb-4">connect</h3>
             <div className="space-y-4">
-              <div className="flex space-x-4">
-                <a 
-                  href="https://x.com/mors_uk" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                  </svg>
-                </a>
+              <div className="flex items-center space-x-4">
                 <a 
                   href="https://instagram.com/mors_edu" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Instagram className="h-5 w-5" />
                 </a>
+                <ThemeToggle />
               </div>
               <a 
                 href="mailto:info@mors.org.uk" 
                 className="flex items-center space-x-2 px-4 py-3 bg-white/5 rounded-lg border border-white/10 w-fit hover:bg-white/10 transition-colors"
               >
-                <Mail className="h-4 w-4 text-gray-400 flex-shrink-0" />
-                <span className="text-sm text-gray-400">info@mors.org.uk</span>
+                <Mail className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+                <span className="text-sm text-muted-foreground">info@mors.org.uk</span>
               </a>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-center">
-          <p className="text-sm text-gray-500">
+        <div className="border-t border-border pt-8 text-center">
+          <p className="text-sm text-muted-foreground">
             © {currentYear} MORS. all rights reserved.
           </p>
         </div>
