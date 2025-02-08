@@ -42,6 +42,12 @@ export const useNavItems = () => {
     },
     // Hidden from navigation but still accessible
     {
+      name: "positions to be released",
+      url: "/positions_to_be_released",
+      icon: null,
+      hidden: true,
+    },
+    {
       name: "subject reforms",
       url: "/subject-reforms",
       icon: null,

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Instagram, Mail } from 'lucide-react';
-import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,8 +13,8 @@ const Footer = () => {
         <div className="w-[300px] h-[300px] bg-[radial-gradient(circle_at_center,#3b82f640_0%,transparent_70%)] animate-glow-dance" />
       </div>
       
-      <div className="relative container mx-auto px-6 pt-24 pb-16">
-        <div className="flex justify-between mb-16">
+      <div className="relative container mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-8 sm:pb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 sm:mb-16">
           <div>
             <h3 className="font-semibold text-white mb-4">quick links</h3>
             <ul className="space-y-3">
@@ -68,16 +67,26 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <h3 className="font-semibold text-white mb-4">connect</h3>
             <div className="space-y-4">
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a 
+                  href="https://x.com/mors_uk" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a 
+                  href="https://instagram.com/mors_edu" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   <Instagram className="h-5 w-5" />
                 </a>
               </div>
