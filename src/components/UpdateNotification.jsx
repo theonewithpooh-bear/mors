@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Sparkles } from 'lucide-react';
 import { useToast } from "@/components/ui/use-toast";
