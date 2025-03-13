@@ -1,8 +1,10 @@
+
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import UpdateNotification from './components/UpdateNotification';
 import Index from './pages/Index';
 import LearnMore from './pages/LearnMore';
 import GetInvolved from './pages/GetInvolved';
@@ -24,6 +26,7 @@ const App = () => {
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Header />
+        <UpdateNotification />
         <main>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
