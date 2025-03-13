@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { Sparkles } from 'lucide-react';
 import { useToast } from "@/components/ui/use-toast";
@@ -12,10 +13,10 @@ export const UpdateNotification = () => {
       title: (
         <div className="flex items-center gap-2">
           <Sparkles className="h-5 w-5 text-yellow-400" />
-          <span>Welcome to Lovable MORS</span>
+          <span>Project Updated</span>
         </div>
       ),
-      description: "You've been updated to the latest version of MORS.",
+      description: "Your project has been updated to the latest Lovable version.",
       className: "bg-black border border-white/10 text-white",
     });
   }, [toast]);
