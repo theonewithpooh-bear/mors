@@ -11,6 +11,14 @@ const Header = () => {
   const navItems = useNavItems();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const handleOpenMobileMenu = () => {
+    setIsMobileMenuOpen(true);
+  };
+
+  const handleCloseMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   const animeNavItems = navItems
     .filter(item => !item.hidden)
     .map(item => ({
@@ -33,7 +41,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       <div className="md:hidden">
         <button 
-          onClick={() => setIsMobileMenuOpen(true)}
+          onClick={handleOpenMobileMenu}
           className="fixed top-6 right-6 z-50 bg-black/30 backdrop-blur-md p-3 rounded-full border border-white/10 text-white/90 hover:text-white transition-all duration-300 hover:bg-white/10 shadow-lg"
           aria-label="Open menu"
           style={{
@@ -44,7 +52,7 @@ const Header = () => {
         </button>
         <MobileNav 
           isOpen={isMobileMenuOpen} 
-          onClose={() => setIsMobileMenuOpen(false)} 
+          onClose={handleCloseMobileMenu} 
         />
       </div>
     </header>

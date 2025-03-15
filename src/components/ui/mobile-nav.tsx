@@ -48,18 +48,13 @@ export const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
               </div>
             </div>
             
-            <motion.button 
+            <button 
               onClick={onClose}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3 }}
-              className="absolute top-6 right-6 text-white/70 hover:text-white transition-all duration-300 p-2 rounded-full bg-white/5 hover:bg-white/15 backdrop-blur-sm border border-white/10 shadow-lg"
+              className="absolute top-6 right-6 text-white/70 hover:text-white transition-all duration-300 p-2 rounded-full bg-white/5 hover:bg-white/15 backdrop-blur-sm border border-white/10 shadow-lg z-10"
               aria-label="Close menu"
-              whileHover={{ rotate: 90 }}
-              whileTap={{ scale: 0.9 }}
             >
               <X size={20} />
-            </motion.button>
+            </button>
 
             <div className="h-full flex flex-col items-start justify-center px-8 space-y-7 relative">
               {navItems.map((item, index) => (
