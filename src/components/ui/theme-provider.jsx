@@ -19,15 +19,22 @@ export function ThemeProvider({
   const [theme, setTheme] = useState(defaultTheme);
 
   useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.remove("light", "dark");
+    
+    // When first mounting, force dark theme initially before checking saved preference
+    root.classList.add("dark");
+    
     const savedTheme = localStorage.getItem(storageKey);
     
     if (savedTheme) {
       setTheme(savedTheme);
+      root.classList.remove("light", "dark");
+      root.classList.add(savedTheme);
     } else {
-      // Check for system preference
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      setTheme(prefersDark ? "dark" : "light");
-      localStorage.setItem(storageKey, prefersDark ? "dark" : "light");
+      // Use dark as the default
+      setTheme("dark");
+      localStorage.setItem(storageKey, "dark");
     }
   }, [storageKey]);
 

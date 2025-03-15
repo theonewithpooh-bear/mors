@@ -11,7 +11,7 @@ export function ThemeToggle() {
       variant="outline"
       size="icon"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="rounded-full h-9 w-9 border border-white/20 backdrop-blur-sm bg-background/50"
+      className="rounded-full h-9 w-9 border border-border dark:border-white/20 backdrop-blur-sm bg-background/50"
       aria-label="Toggle theme"
     >
       {theme === "light" ? (

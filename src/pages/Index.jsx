@@ -23,7 +23,7 @@ const Index = () => {
             <Link to="/learn-more">
               <Button 
                 variant="outline" 
-                className="border-primary hover:bg-primary text-sm px-5 py-3 h-auto rounded-full transition-all text-primary-foreground hover:text-primary-foreground"
+                className="border-primary hover:bg-primary text-sm px-5 py-3 h-auto rounded-full transition-all text-foreground dark:text-primary-foreground hover:text-primary-foreground"
               >
                 learn more →
               </Button>
