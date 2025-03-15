@@ -29,20 +29,25 @@ const Header = () => {
           defaultActive={location.pathname === "/" ? "home" : ""} 
           showIcons={false}
         />
-        <div className="pr-6 pt-6">
+        <div className="absolute top-6 right-6">
           <ThemeToggle />
         </div>
       </div>
 
       {/* Mobile Navigation */}
       <div className="md:hidden flex justify-between items-center px-6 pt-6">
-        <ThemeToggle />
-        <button 
-          onClick={() => setIsMobileMenuOpen(true)}
-          className="text-foreground/70 hover:text-foreground transition-colors"
-        >
-          <Menu size={24} />
-        </button>
+        <div className="flex-1"></div>
+        <div className="flex-1 flex justify-center">
+          <ThemeToggle />
+        </div>
+        <div className="flex-1 flex justify-end">
+          <button 
+            onClick={() => setIsMobileMenuOpen(true)}
+            className="text-foreground/70 hover:text-foreground transition-colors"
+          >
+            <Menu size={24} />
+          </button>
+        </div>
         <MobileNav 
           isOpen={isMobileMenuOpen} 
           onClose={() => setIsMobileMenuOpen(false)} 
