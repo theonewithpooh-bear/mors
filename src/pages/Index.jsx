@@ -2,10 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import '@fontsource/cormorant';
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-black">
+  return <div className="min-h-screen bg-black">
       <main className="flex flex-col items-center justify-center min-h-screen text-center px-4 pt-32">
         {/* Hero Section */}
         <div className="max-w-6xl mx-auto space-y-8 animate-fade-in mb-24">
@@ -20,17 +18,12 @@ const Index = () => {
           
           <div className="flex flex-wrap justify-center gap-8 mt-12">
             <Link to="/learn-more">
-              <Button 
-                variant="outline" 
-                className="text-white border-white hover:bg-white hover:text-black text-sm px-5 py-3 h-auto rounded-full transition-all"
-              >
+              <Button variant="outline" className="border-white hover:bg-white text-sm px-5 py-3 h-auto rounded-full transition-all text-slate-950">
                 learn more →
               </Button>
             </Link>
             <Link to="/get-involved">
-              <Button 
-                className="bg-white text-black hover:bg-gray-100 text-sm px-5 py-3 h-auto rounded-full transition-all"
-              >
+              <Button className="bg-white text-black hover:bg-gray-100 text-sm px-5 py-3 h-auto rounded-full transition-all">
                 get involved
               </Button>
             </Link>
@@ -39,15 +32,9 @@ const Index = () => {
 
         {/* Poster Image */}
         <div className="w-full max-w-4xl mx-auto mb-24">
-          <img 
-            src="/lovable-uploads/4722914f-5717-4fa6-a9f2-ade90e377a30.png" 
-            alt="MORS Poster" 
-            className="w-full h-auto rounded-2xl"
-          />
+          <img src="/lovable-uploads/4722914f-5717-4fa6-a9f2-ade90e377a30.png" alt="MORS Poster" className="w-full h-auto rounded-2xl" />
         </div>
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
