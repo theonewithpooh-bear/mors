@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useNavItems } from '../nav-items';
@@ -33,9 +34,10 @@ const Header = () => {
       <div className="md:hidden">
         <button 
           onClick={() => setIsMobileMenuOpen(true)}
-          className="fixed top-6 right-6 z-50 text-white/70 hover:text-white transition-colors"
+          className="fixed top-6 right-6 z-50 bg-black/30 backdrop-blur-md p-2 rounded-full border border-white/10 text-white/90 hover:text-white transition-all hover:bg-white/10"
+          aria-label="Open menu"
         >
-          <Menu size={24} />
+          <Menu size={22} />
         </button>
         <MobileNav 
           isOpen={isMobileMenuOpen} 
