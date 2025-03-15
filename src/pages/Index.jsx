@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
@@ -6,12 +5,12 @@ import '@fontsource/cormorant';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-black">
       <main className="flex flex-col items-center justify-center min-h-screen text-center px-4 pt-32">
         {/* Hero Section */}
         <div className="max-w-6xl mx-auto space-y-8 animate-fade-in mb-24">
           <p className="text-gray-400 tracking-[0.2em] uppercase text-sm">introducing</p>
-          <h1 className="text-6xl md:text-7xl font-normal text-foreground mb-4 tracking-normal leading-none font-['Cormorant']">
+          <h1 className="text-6xl md:text-7xl font-normal text-white mb-4 tracking-normal leading-none font-['Cormorant']">
             movement of real skills
           </h1>
           <p className="text-base text-gray-400 tracking-wider mb-4">M.O.R.S.</p>
@@ -23,14 +22,14 @@ const Index = () => {
             <Link to="/learn-more">
               <Button 
                 variant="outline" 
-                className="border-primary hover:bg-primary text-sm px-5 py-3 h-auto rounded-full transition-all text-foreground dark:text-primary-foreground hover:text-primary-foreground"
+                className="text-white border-white hover:bg-white hover:text-black text-sm px-5 py-3 h-auto rounded-full transition-all"
               >
                 learn more →
               </Button>
             </Link>
             <Link to="/get-involved">
               <Button 
-                className="bg-primary text-primary-foreground hover:bg-primary/90 text-sm px-5 py-3 h-auto rounded-full transition-all"
+                className="bg-white text-black hover:bg-gray-100 text-sm px-5 py-3 h-auto rounded-full transition-all"
               >
                 get involved
               </Button>
@@ -43,7 +42,7 @@ const Index = () => {
           <img 
             src="/lovable-uploads/4722914f-5717-4fa6-a9f2-ade90e377a30.png" 
             alt="MORS Poster" 
-            className="w-full h-auto rounded-2xl" 
+            className="w-full h-auto rounded-2xl"
           />
         </div>
       </main>

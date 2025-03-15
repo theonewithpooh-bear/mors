@@ -1,11 +1,10 @@
-
-import { useTheme } from "@/components/ui/theme-provider";
-import { Toaster as Sonner } from "sonner";
+import { useTheme } from "next-themes"
+import { Toaster as Sonner } from "sonner"
 
 const Toaster = ({
   ...props
 }) => {
-  const { theme = "system" } = useTheme();
+  const { theme = "system" } = useTheme()
 
   return (
     (<Sonner
