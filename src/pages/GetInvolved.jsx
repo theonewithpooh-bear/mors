@@ -1,127 +1,12 @@
+
 import React from 'react';
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Link, Linkedin, Facebook, Mail, MessageCircle, Instagram, Share } from 'lucide-react';
-import { X } from 'lucide-react';
 import { useToast } from "@/components/ui/use-toast";
 import { Toaster } from "@/components/ui/toaster";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import ActionCard from "@/components/get-involved/ActionCard";
+import ShareDropdown from "@/components/get-involved/ShareDropdown";
 
 const GetInvolved = () => {
   const { toast } = useToast();
-  const websiteUrl = "https://mors.org.uk";
-
-  const handleShare = async () => {
-    const shareData = {
-      title: 'Movement for Real Skills',
-      text: 'Join the movement for real skills and help shape the future of education. #RealSkills #EducationReform',
-      url: websiteUrl,
-    };
-
-    if (navigator.share && navigator.canShare(shareData)) {
-      try {
-        await navigator.share(shareData);
-        toast({
-          title: "Shared successfully!",
-          description: "Thank you for spreading the word.",
-          duration: 3000,
-        });
-      } catch (error) {
-        if (error.name !== 'AbortError') {
-          showSharingOptions();
-        }
-      }
-    } else {
-      showSharingOptions();
-    }
-  };
-
-  const showSharingOptions = () => {
-    toast({
-      title: "Share this page",
-      description: "Spread the word about our mission",
-      duration: 5000,
-      action: (
-        <div className="flex space-x-2 mt-2">
-          <Button 
-            variant="outline" 
-            size="sm"
-            className="bg-white/10 hover:bg-white/20"
-            onClick={() => copyToClipboard()}
-          >
-            <Link className="h-4 w-4 mr-1" />
-            Copy Link
-          </Button>
-          <Button 
-            variant="outline" 
-            size="sm"
-            className="bg-white/10 hover:bg-white/20"
-            onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent('Join the movement for real skills and help shape the future of education.')} ${encodeURIComponent(websiteUrl)} %23RealSkills %23EducationReform`, '_blank')}
-          >
-            <X className="h-4 w-4" />
-          </Button>
-          <Button 
-            variant="outline" 
-            size="sm"
-            className="bg-white/10 hover:bg-white/20"
-            onClick={() => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(websiteUrl)}`, '_blank')}
-          >
-            <Linkedin className="h-4 w-4" />
-          </Button>
-          <Button 
-            variant="outline" 
-            size="sm"
-            className="bg-white/10 hover:bg-white/20"
-            onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(websiteUrl)}`, '_blank')}
-          >
-            <Facebook className="h-4 w-4" />
-          </Button>
-        </div>
-      ),
-    });
-  };
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(websiteUrl).then(() => {
-      toast({
-        title: "Link copied!",
-        description: "The link has been copied to your clipboard.",
-        duration: 2000,
-      });
-    }).catch(() => {
-      toast({
-        title: "Failed to copy link",
-        description: "Please try again or copy the URL manually.",
-        variant: "destructive",
-        duration: 2000,
-      });
-    });
-  };
-
-  const openMailShare = () => {
-    const subject = encodeURIComponent('Movement for Real Skills');
-    const body = encodeURIComponent(`Join the movement for real skills and help shape the future of education.\n\n${websiteUrl}\n\n#RealSkills #EducationReform`);
-    window.location.href = `mailto:?subject=${subject}&body=${body}`;
-  };
-
-  const openMessageShare = () => {
-    const body = encodeURIComponent(`Join the movement for real skills: ${websiteUrl}`);
-    window.location.href = `sms:?&body=${body}`;
-  };
-
-  const openInstagramShare = () => {
-    navigator.clipboard.writeText(websiteUrl).then(() => {
-      toast({
-        title: "Link copied for Instagram",
-        description: "Open Instagram app and paste the link in your story or message",
-        duration: 4000,
-      });
-    });
-  };
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -136,81 +21,19 @@ const GetInvolved = () => {
               </p>
               
               <div className="mt-8 grid gap-6 sm:grid-cols-2">
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                  <h3 className="text-xl font-semibold mb-4">become a volunteer</h3>
-                  <p className="text-gray-300 mb-4">
-                    contribute your skills and expertise to our various initiatives and working groups.
-                  </p>
-                  <a 
-                    href="/positions" 
-                  >
-                    <Button 
-                      variant="outline" 
-                      className="group text-sm px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border-white/20"
-                    >
-                      apply now
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </a>
-                </div>
+                <ActionCard 
+                  title="become a volunteer"
+                  description="contribute your skills and expertise to our various initiatives and working groups."
+                  buttonText="apply now"
+                  buttonLink="/positions"
+                />
 
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                  <h3 className="text-xl font-semibold mb-4">spread the word</h3>
-                  <p className="text-gray-300 mb-4">
-                    share our mission with your network and help us grow the movement.
-                  </p>
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button 
-                        variant="outline" 
-                        className="group text-sm px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border-white/20"
-                        onClick={(e) => {
-                          if (navigator.share) {
-                            e.preventDefault();
-                            handleShare();
-                          }
-                        }}
-                      >
-                        share now
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end" className="bg-gray-900 border-white/10 text-white">
-                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => copyToClipboard()}>
-                        <Link className="mr-2 h-4 w-4" />
-                        Copy link
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent('Join the movement for real skills and help shape the future of education.')} ${encodeURIComponent(websiteUrl)} %23RealSkills %23EducationReform`, '_blank')}>
-                        <X className="mr-2 h-4 w-4" />
-                        Share to X
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(websiteUrl)}`, '_blank')}>
-                        <Linkedin className="mr-2 h-4 w-4" />
-                        Share to LinkedIn
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(websiteUrl)}`, '_blank')}>
-                        <Facebook className="mr-2 h-4 w-4" />
-                        Share to Facebook
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => openMailShare()}>
-                        <Mail className="mr-2 h-4 w-4" />
-                        Share via Email
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => openMessageShare()}>
-                        <MessageCircle className="mr-2 h-4 w-4" />
-                        Share via Message
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => openInstagramShare()}>
-                        <Instagram className="mr-2 h-4 w-4" />
-                        Share to Instagram
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => openInstagramShare()}>
-                        <Share className="mr-2 h-4 w-4" />
-                        Share to Threads
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>
+                <ActionCard 
+                  title="spread the word"
+                  description="share our mission with your network and help us grow the movement."
+                >
+                  <ShareDropdown toast={toast} />
+                </ActionCard>
               </div>
             </section>
           </div>
