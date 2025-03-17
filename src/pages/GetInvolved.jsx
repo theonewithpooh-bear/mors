@@ -1,5 +1,5 @@
+
 import React from 'react';
-import DonationForm from '../components/get-involved/DonationForm';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
 
@@ -58,11 +58,6 @@ const GetInvolved = () => {
                   </Button>
                 </div>
               </div>
-            </section>
-
-            <section>
-              <h2 className="text-3xl font-bold mb-8">support our mission</h2>
-              <DonationForm />
             </section>
           </div>
         </div>
