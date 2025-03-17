@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
@@ -21,7 +22,7 @@ const Newsroom = () => {
 
   // The rest of the articles
   const regularArticles = sortedNews.slice(1);
-  return <div className="min-h-screen bg-[#0f172a] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/20 via-[#0f172a] to-[#0f172a]">
+  return <div className="min-h-screen bg-black bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-900/20 via-black to-black">
       <Header />
       <main className="container mx-auto px-4 pt-24 pb-24 relative">
         <div className="max-w-6xl mx-auto">
@@ -36,7 +37,7 @@ const Newsroom = () => {
           y: 0
         }} transition={{
           duration: 0.8
-        }} className="mb-16 p-8 rounded-xl border border-purple-500/30 bg-black/30 backdrop-blur-sm text-center">
+        }} className="mb-16 p-8 rounded-xl border border-gray-500/30 bg-black/30 backdrop-blur-sm text-center">
             <motion.div initial={{
             scale: 0.9
           }} animate={{
@@ -46,9 +47,9 @@ const Newsroom = () => {
             repeatType: "reverse",
             duration: 2
           }} className="mb-4 inline-flex items-center justify-center">
-              <Clock className="h-12 w-12 text-purple-400" />
+              <Clock className="h-12 w-12 text-white" />
             </motion.div>
-            <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-300 to-purple-600 mb-3">
+            <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-gray-600 mb-3">
               Articles Coming Soon
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
