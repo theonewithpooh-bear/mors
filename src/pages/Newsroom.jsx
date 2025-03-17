@@ -6,7 +6,7 @@ import NewsHeader from '@/components/newsroom/NewsHeader';
 import NewsCard from '@/components/newsroom/NewsCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
-import { Search, Filter } from 'lucide-react';
+import { Search, Filter, Clock } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import NewsletterSignup from '@/components/newsroom/NewsletterSignup';
@@ -34,116 +34,40 @@ const Newsroom = () => {
         <div className="max-w-6xl mx-auto">
           <NewsHeader />
           
-          {/* Featured Article */}
-          <section className="mb-16">
-            <FeaturedArticle article={featuredArticle} />
-          </section>
-          
-          {/* Search and filter */}
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
-            <div className="relative w-full sm:w-72">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-              <input
-                type="text"
-                placeholder="Search articles..."
-                className="bg-black/30 border border-white/10 rounded-full py-2 pl-10 pr-4 text-white w-full focus:outline-none focus:ring-2 focus:ring-purple-500/50"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-            </div>
-            
-            <div className="flex items-center gap-2">
-              <Button variant="outline" size="sm" className="bg-black/30 border-white/10 text-white hover:bg-purple-950/50">
-                <Filter className="h-4 w-4 mr-2" />
-                Filters
+          {/* Coming Soon Message */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-16 p-8 rounded-xl border border-purple-500/30 bg-black/30 backdrop-blur-sm text-center"
+          >
+            <motion.div
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              transition={{ 
+                repeat: Infinity, 
+                repeatType: "reverse", 
+                duration: 2 
+              }}
+              className="mb-4 inline-flex items-center justify-center"
+            >
+              <Clock className="h-12 w-12 text-purple-400" />
+            </motion.div>
+            <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-300 to-purple-600 mb-3">
+              Articles Coming Soon
+            </h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              We're preparing insightful articles about educational reform, AI in education, and the latest MORS updates. Check back soon for fresh content that will help shape the future of education.
+            </p>
+            <div className="mt-6">
+              <Button 
+                variant="outline" 
+                className="bg-purple-600/20 border-purple-500/40 text-white hover:bg-purple-600/30"
+              >
+                Subscribe to Updates
               </Button>
             </div>
-          </div>
-          
-          {/* News Categories Tabs */}
-          <Tabs defaultValue="all" className="mb-8">
-            <TabsList className="bg-black/30 border border-white/10 p-1 rounded-lg">
-              <TabsTrigger value="all" className="data-[state=active]:bg-purple-900/40 text-white data-[state=active]:text-white rounded-md">All</TabsTrigger>
-              <TabsTrigger value="educational-reform" className="data-[state=active]:bg-purple-900/40 text-white data-[state=active]:text-white rounded-md">Educational Reform</TabsTrigger>
-              <TabsTrigger value="ai-education" className="data-[state=active]:bg-purple-900/40 text-white data-[state=active]:text-white rounded-md">AI in Education</TabsTrigger>
-              <TabsTrigger value="mors-updates" className="data-[state=active]:bg-purple-900/40 text-white data-[state=active]:text-white rounded-md">MORS Updates</TabsTrigger>
-            </TabsList>
-            
-            <TabsContent value="all" className="mt-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {regularArticles.map((article, index) => (
-                  <NewsCard
-                    key={article.id}
-                    {...article}
-                    index={index}
-                  />
-                ))}
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="educational-reform" className="mt-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {regularArticles
-                  .filter(article => article.category === 'Educational Reform')
-                  .map((article, index) => (
-                    <NewsCard
-                      key={article.id}
-                      {...article}
-                      index={index}
-                    />
-                  ))}
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="ai-education" className="mt-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {regularArticles
-                  .filter(article => article.category === 'AI in Education')
-                  .map((article, index) => (
-                    <NewsCard
-                      key={article.id}
-                      {...article}
-                      index={index}
-                    />
-                  ))}
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="mors-updates" className="mt-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {regularArticles
-                  .filter(article => article.category === 'MORS Updates')
-                  .map((article, index) => (
-                    <NewsCard
-                      key={article.id}
-                      {...article}
-                      index={index}
-                    />
-                  ))}
-              </div>
-            </TabsContent>
-          </Tabs>
-          
-          {/* Pagination */}
-          <Pagination className="my-10">
-            <PaginationContent>
-              <PaginationItem>
-                <PaginationPrevious href="#" className="bg-black/30 border-white/10 text-gray-300 hover:text-white hover:bg-purple-950/50" />
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationLink href="#" isActive className="bg-purple-900/40 text-white border-white/10">1</PaginationLink>
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationLink href="#" className="bg-black/30 border-white/10 text-gray-300 hover:text-white hover:bg-purple-950/50">2</PaginationLink>
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationLink href="#" className="bg-black/30 border-white/10 text-gray-300 hover:text-white hover:bg-purple-950/50">3</PaginationLink>
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationNext href="#" className="bg-black/30 border-white/10 text-gray-300 hover:text-white hover:bg-purple-950/50" />
-              </PaginationItem>
-            </PaginationContent>
-          </Pagination>
+          </motion.div>
           
           {/* Newsletter signup */}
           <NewsletterSignup />
