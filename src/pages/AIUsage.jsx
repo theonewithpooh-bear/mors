@@ -115,7 +115,7 @@ const AIUsage = () => {
             <p className="text-gray-400 text-xl italic leading-relaxed">"by leveraging AI technology, we can focus our limited resources on what matters most: advocating for meaningful educational reform and building our community. we believe that embracing innovation responsibly is key to creating lasting change in education."
 
 
-- Monty Middleton-Burn, Founder</p>
+ - Monty Middleton-Burn, Founder</p>
           </section>
 
           <AIUsageFAQ />
