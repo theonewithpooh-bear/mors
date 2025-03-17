@@ -9,7 +9,6 @@ import { Pagination, PaginationContent, PaginationItem, PaginationLink, Paginati
 import { Search, Filter, Clock } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import NewsletterSignup from '@/components/newsroom/NewsletterSignup';
 import FeaturedArticle from '@/components/newsroom/FeaturedArticle';
 import { newsData } from '@/data/newsData';
 
@@ -68,9 +67,6 @@ const Newsroom = () => {
               </Button>
             </div>
           </motion.div>
-          
-          {/* Newsletter signup */}
-          <NewsletterSignup />
         </div>
       </main>
     </div>
