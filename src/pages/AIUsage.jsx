@@ -5,18 +5,19 @@ import Footer from '../components/Footer';
 import { Brain, Shield, BookOpen, DollarSign, Zap, Target, Cpu, Binary, Network } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import AIUsageFAQ from '../components/home/AIUsageFAQ';
-
 const AIUsage = () => {
-  return (
-    <div className="min-h-screen bg-black">
+  return <div className="min-h-screen bg-black">
       <Header />
       <div className="container mx-auto px-4 py-24">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto space-y-24"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.8
+      }} className="max-w-4xl mx-auto space-y-24">
           {/* Hero Section with Floating Icons */}
           <section className="relative">
             <div className="absolute inset-0 flex items-center justify-center opacity-10">
@@ -111,17 +112,16 @@ const AIUsage = () => {
           </section>
 
           <section className="text-center">
-            <p className="text-gray-400 text-xl italic leading-relaxed">
-              by leveraging AI technology, we can focus our limited resources on what matters most: advocating for meaningful educational reform and building our community. we believe that embracing innovation responsibly is key to creating lasting change in education.
-            </p>
+            <p className="text-gray-400 text-xl italic leading-relaxed">"by leveraging AI technology, we can focus our limited resources on what matters most: advocating for meaningful educational reform and building our community. we believe that embracing innovation responsibly is key to creating lasting change in education."
+
+
+- Monty Middleton-Burn, Founder</p>
           </section>
 
           <AIUsageFAQ />
         </motion.div>
       </div>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default AIUsage;
