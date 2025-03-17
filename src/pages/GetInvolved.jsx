@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Link, Twitter, Linkedin, Facebook } from 'lucide-react';
+import { ArrowRight, Link, Linkedin, Facebook, Mail, MessageCircle, Instagram, Share, X } from 'lucide-react';
 import { useToast } from "@/components/ui/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import {
@@ -66,7 +66,7 @@ const GetInvolved = () => {
             className="bg-white/10 hover:bg-white/20"
             onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent('Join the movement for real skills and help shape the future of education.')} ${encodeURIComponent(websiteUrl)} %23RealSkills %23EducationReform`, '_blank')}
           >
-            <Twitter className="h-4 w-4" />
+            <X className="h-4 w-4" />
           </Button>
           <Button 
             variant="outline" 
@@ -102,6 +102,29 @@ const GetInvolved = () => {
         description: "Please try again or copy the URL manually.",
         variant: "destructive",
         duration: 2000,
+      });
+    });
+  };
+
+  const openMailShare = () => {
+    const subject = encodeURIComponent('Movement for Real Skills');
+    const body = encodeURIComponent(`Join the movement for real skills and help shape the future of education.\n\n${websiteUrl}\n\n#RealSkills #EducationReform`);
+    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+  };
+
+  const openMessageShare = () => {
+    // Using SMS protocol
+    const body = encodeURIComponent(`Join the movement for real skills: ${websiteUrl}`);
+    window.location.href = `sms:?&body=${body}`;
+  };
+
+  const openInstagramShare = () => {
+    // Instagram doesn't have a direct web sharing API, so we copy the link and show instructions
+    navigator.clipboard.writeText(websiteUrl).then(() => {
+      toast({
+        title: "Link copied for Instagram",
+        description: "Open Instagram app and paste the link in your story or message",
+        duration: 4000,
       });
     });
   };
@@ -165,8 +188,8 @@ const GetInvolved = () => {
                         Copy link
                       </DropdownMenuItem>
                       <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent('Join the movement for real skills and help shape the future of education.')} ${encodeURIComponent(websiteUrl)} %23RealSkills %23EducationReform`, '_blank')}>
-                        <Twitter className="mr-2 h-4 w-4" />
-                        Share to Twitter
+                        <X className="mr-2 h-4 w-4" />
+                        Share to X
                       </DropdownMenuItem>
                       <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(websiteUrl)}`, '_blank')}>
                         <Linkedin className="mr-2 h-4 w-4" />
@@ -175,6 +198,22 @@ const GetInvolved = () => {
                       <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(websiteUrl)}`, '_blank')}>
                         <Facebook className="mr-2 h-4 w-4" />
                         Share to Facebook
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => openMailShare()}>
+                        <Mail className="mr-2 h-4 w-4" />
+                        Share via Email
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => openMessageShare()}>
+                        <MessageCircle className="mr-2 h-4 w-4" />
+                        Share via Message
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => openInstagramShare()}>
+                        <Instagram className="mr-2 h-4 w-4" />
+                        Share to Instagram
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => openInstagramShare()}>
+                        <Share className="mr-2 h-4 w-4" />
+                        Share to Threads
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
