@@ -13,13 +13,14 @@ import {
 
 const GetInvolved = () => {
   const { toast } = useToast();
+  const websiteUrl = "https://mors.org.uk";
 
   const handleShare = async () => {
     // Share content details
     const shareData = {
       title: 'Movement for Real Skills',
       text: 'Join the movement for real skills and help shape the future of education. #RealSkills #EducationReform',
-      url: window.location.href,
+      url: websiteUrl,
     };
 
     // Check if Web Share API is supported
@@ -63,7 +64,7 @@ const GetInvolved = () => {
             variant="outline" 
             size="sm"
             className="bg-white/10 hover:bg-white/20"
-            onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent('Join the movement for real skills and help shape the future of education.')} ${encodeURIComponent(window.location.href)} %23RealSkills %23EducationReform`, '_blank')}
+            onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent('Join the movement for real skills and help shape the future of education.')} ${encodeURIComponent(websiteUrl)} %23RealSkills %23EducationReform`, '_blank')}
           >
             <Twitter className="h-4 w-4" />
           </Button>
@@ -71,7 +72,7 @@ const GetInvolved = () => {
             variant="outline" 
             size="sm"
             className="bg-white/10 hover:bg-white/20"
-            onClick={() => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`, '_blank')}
+            onClick={() => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(websiteUrl)}`, '_blank')}
           >
             <Linkedin className="h-4 w-4" />
           </Button>
@@ -79,7 +80,7 @@ const GetInvolved = () => {
             variant="outline" 
             size="sm"
             className="bg-white/10 hover:bg-white/20"
-            onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank')}
+            onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(websiteUrl)}`, '_blank')}
           >
             <Facebook className="h-4 w-4" />
           </Button>
@@ -89,7 +90,7 @@ const GetInvolved = () => {
   };
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(window.location.href).then(() => {
+    navigator.clipboard.writeText(websiteUrl).then(() => {
       toast({
         title: "Link copied!",
         description: "The link has been copied to your clipboard.",
@@ -163,15 +164,15 @@ const GetInvolved = () => {
                         <Link className="mr-2 h-4 w-4" />
                         Copy link
                       </DropdownMenuItem>
-                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent('Join the movement for real skills and help shape the future of education.')} ${encodeURIComponent(window.location.href)} %23RealSkills %23EducationReform`, '_blank')}>
+                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent('Join the movement for real skills and help shape the future of education.')} ${encodeURIComponent(websiteUrl)} %23RealSkills %23EducationReform`, '_blank')}>
                         <Twitter className="mr-2 h-4 w-4" />
                         Share to Twitter
                       </DropdownMenuItem>
-                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`, '_blank')}>
+                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(websiteUrl)}`, '_blank')}>
                         <Linkedin className="mr-2 h-4 w-4" />
                         Share to LinkedIn
                       </DropdownMenuItem>
-                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank')}>
+                      <DropdownMenuItem className="hover:bg-white/10 focus:bg-white/10 cursor-pointer" onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(websiteUrl)}`, '_blank')}>
                         <Facebook className="mr-2 h-4 w-4" />
                         Share to Facebook
                       </DropdownMenuItem>
