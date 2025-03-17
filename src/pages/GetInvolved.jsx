@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Link, Linkedin, Facebook, Mail, MessageCircle, Instagram, Share, X } from 'lucide-react';
+import { ArrowRight, Link, Linkedin, Facebook, Mail, MessageCircle, Instagram, Share } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useToast } from "@/components/ui/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import {
@@ -16,14 +16,12 @@ const GetInvolved = () => {
   const websiteUrl = "https://mors.org.uk";
 
   const handleShare = async () => {
-    // Share content details
     const shareData = {
       title: 'Movement for Real Skills',
       text: 'Join the movement for real skills and help shape the future of education. #RealSkills #EducationReform',
       url: websiteUrl,
     };
 
-    // Check if Web Share API is supported
     if (navigator.share && navigator.canShare(shareData)) {
       try {
         await navigator.share(shareData);
@@ -33,13 +31,11 @@ const GetInvolved = () => {
           duration: 3000,
         });
       } catch (error) {
-        // Only show toast on actual error, not when user cancels
         if (error.name !== 'AbortError') {
           showSharingOptions();
         }
       }
     } else {
-      // Fallback for browsers that don't support Web Share API
       showSharingOptions();
     }
   };
@@ -113,13 +109,11 @@ const GetInvolved = () => {
   };
 
   const openMessageShare = () => {
-    // Using SMS protocol
     const body = encodeURIComponent(`Join the movement for real skills: ${websiteUrl}`);
     window.location.href = `sms:?&body=${body}`;
   };
 
   const openInstagramShare = () => {
-    // Instagram doesn't have a direct web sharing API, so we copy the link and show instructions
     navigator.clipboard.writeText(websiteUrl).then(() => {
       toast({
         title: "Link copied for Instagram",
@@ -171,7 +165,6 @@ const GetInvolved = () => {
                         variant="outline" 
                         className="group text-sm px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border-white/20"
                         onClick={(e) => {
-                          // Prevent the dropdown from opening if we can use the Share API directly
                           if (navigator.share) {
                             e.preventDefault();
                             handleShare();
