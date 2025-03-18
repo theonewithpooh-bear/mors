@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
@@ -40,8 +41,8 @@ const Index = () => {
         {/* Poster Image */}
         <div className="w-full max-w-4xl mx-auto mb-24">
           <img 
-            src="/lovable-uploads/4722914f-5717-4fa6-a9f2-ade90e377a30.png" 
-            alt="MORS Poster" 
+            src="/lovable-uploads/8164cac9-73ee-4f69-8c50-372a0c23bd5e.png" 
+            alt="Education Shouldn't Burst Under Pressure" 
             className="w-full h-auto rounded-2xl"
           />
         </div>
