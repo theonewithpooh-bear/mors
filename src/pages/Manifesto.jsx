@@ -38,8 +38,7 @@ const Manifesto = () => {
               whileHover={{ y: -5 }}
               whileTap={{ scale: 0.95 }}
             >
-              For {userType === 'Full Manifesto' ? '' : userType}
-              {userType === 'Full Manifesto' ? 'Full Manifesto' : ''}
+              {userType === 'Full Manifesto' ? userType : `For ${userType}`}
             </motion.button>
           ))}
         </div>
