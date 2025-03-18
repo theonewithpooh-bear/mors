@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import ManifestoSection from '../components/manifesto/ManifestoSection';
 import { manifestoSections, teacherManifestoSections, studentManifestoSections } from '../data/manifestoContent';
@@ -14,6 +15,9 @@ const Manifesto = () => {
       case 'Students':
         setCurrentContent(studentManifestoSections);
         break;
+      case 'Full Manifesto':
+        setCurrentContent(manifestoSections);
+        break;
       default:
         setCurrentContent(manifestoSections);
     }
@@ -23,7 +27,7 @@ const Manifesto = () => {
     <div className="min-h-screen bg-black text-white">
       <div className="w-full flex flex-col items-center justify-center py-12 px-4 mt-24">
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 max-w-3xl w-full justify-center">
-          {['Teachers', 'Students', 'Parents'].map((userType) => (
+          {['Teachers', 'Students', 'Full Manifesto'].map((userType) => (
             <motion.button
               key={userType}
               onClick={() => handleButtonClick(userType)}
@@ -34,7 +38,8 @@ const Manifesto = () => {
               whileHover={{ y: -5 }}
               whileTap={{ scale: 0.95 }}
             >
-              For {userType}
+              For {userType === 'Full Manifesto' ? '' : userType}
+              {userType === 'Full Manifesto' ? 'Full Manifesto' : ''}
             </motion.button>
           ))}
         </div>
