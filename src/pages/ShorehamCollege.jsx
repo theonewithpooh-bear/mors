@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Input } from "@/components/ui/input";
@@ -40,7 +39,7 @@ const ShorehamCollege = () => {
                 <img 
                   src="/lovable-uploads/195428ae-1151-47f4-a89e-f9cabbfbf519.png" 
                   alt="Shoreham College Logo" 
-                  className="h-32 md:h-40"
+                  className="h-48 md:h-56 w-auto"
                 />
               </div>
               
@@ -87,7 +86,7 @@ const ShorehamCollege = () => {
                   <img 
                     src="/lovable-uploads/195428ae-1151-47f4-a89e-f9cabbfbf519.png" 
                     alt="Shoreham College Logo" 
-                    className="h-28"
+                    className="h-40 w-auto"
                   />
                 </div>
                 
