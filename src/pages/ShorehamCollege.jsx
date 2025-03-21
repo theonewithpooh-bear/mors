@@ -44,9 +44,10 @@ const ShorehamCollege = () => {
                 />
               </div>
               
-              <h1 className="text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-200">
+              <h1 className="font-serif text-4xl font-bold mb-2 text-center text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-200">
                 Shoreham College Portal
               </h1>
+              <p className="text-center text-sm font-special mb-8 opacity-80">By mors</p>
               
               {error && (
                 <Alert variant="destructive" className="mb-6 bg-red-900/50 border-red-500">
@@ -91,9 +92,10 @@ const ShorehamCollege = () => {
                   />
                 </div>
                 
-                <h1 className="text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-200">
+                <h1 className="font-serif text-4xl font-bold mb-2 text-center text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-200">
                   Shoreham College Resources
                 </h1>
+                <p className="text-center text-sm font-special mb-8 opacity-80">By mors</p>
                 
                 <div className="space-y-6">
                   <h2 className="text-2xl font-semibold">Submit Your Information</h2>

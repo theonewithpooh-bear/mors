@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -16,6 +17,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        'serif': ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+        'special': ['Special Elite', 'cursive'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
