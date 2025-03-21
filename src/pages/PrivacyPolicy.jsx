@@ -1,21 +1,19 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
-
 const PrivacyPolicy = () => {
-  return (
-    <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-black text-white">
       <Header />
       <div className="container mx-auto px-4 py-16">
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto mt-24"
-        >
+        <motion.div initial={{
+        opacity: 0
+      }} animate={{
+        opacity: 1
+      }} transition={{
+        duration: 0.8
+      }} className="max-w-4xl mx-auto mt-24">
           <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
-          <p className="text-gray-400 mb-8">Last updated: May 2024</p>
+          <p className="text-gray-400 mb-8">Last updated: 21 March 2025</p>
           
           <div className="space-y-6 text-gray-300">
             <section>
@@ -93,8 +91,6 @@ const PrivacyPolicy = () => {
           </div>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default PrivacyPolicy;
