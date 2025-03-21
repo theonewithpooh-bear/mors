@@ -38,7 +38,7 @@ const ShorehamCollege = () => {
             <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20 shadow-xl">
               <div className="flex justify-center mb-8">
                 <img 
-                  src="/lovable-uploads/195428ae-1151-47f4-a89e-f9cabbfbf519.png" 
+                  src="/lovable-uploads/b9da7e47-b85f-49bb-9759-848048f982ed.png" 
                   alt="Shoreham College Logo" 
                   className="h-64 md:h-72 w-auto"
                 />
@@ -85,7 +85,7 @@ const ShorehamCollege = () => {
               <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20 shadow-xl">
                 <div className="flex justify-center mb-8">
                   <img 
-                    src="/lovable-uploads/195428ae-1151-47f4-a89e-f9cabbfbf519.png" 
+                    src="/lovable-uploads/b9da7e47-b85f-49bb-9759-848048f982ed.png" 
                     alt="Shoreham College Logo" 
                     className="h-56 w-auto"
                   />
