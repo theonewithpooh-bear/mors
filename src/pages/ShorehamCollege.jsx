@@ -36,6 +36,14 @@ const ShorehamCollege = () => {
         >
           {!isAuthorized ? (
             <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20 shadow-xl">
+              <div className="flex justify-center mb-8">
+                <img 
+                  src="/lovable-uploads/195428ae-1151-47f4-a89e-f9cabbfbf519.png" 
+                  alt="Shoreham College Logo" 
+                  className="h-32 md:h-40"
+                />
+              </div>
+              
               <h1 className="text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-200">
                 Shoreham College Portal
               </h1>
@@ -75,6 +83,14 @@ const ShorehamCollege = () => {
               className="space-y-8"
             >
               <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20 shadow-xl">
+                <div className="flex justify-center mb-8">
+                  <img 
+                    src="/lovable-uploads/195428ae-1151-47f4-a89e-f9cabbfbf519.png" 
+                    alt="Shoreham College Logo" 
+                    className="h-28"
+                  />
+                </div>
+                
                 <h1 className="text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-200">
                   Shoreham College Resources
                 </h1>
