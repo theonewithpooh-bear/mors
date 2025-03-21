@@ -19,6 +19,7 @@ import AIUsage from './pages/AIUsage';
 import Ethics from './pages/Ethics';
 import CookiesPolicy from './pages/CookiesPolicy';
 import NotFound from './pages/NotFound';
+import ShorehamCollege from './pages/ShorehamCollege';
 
 const App = () => {
   return (
@@ -43,6 +44,7 @@ const App = () => {
               <Route path="/ai-usage" element={<AIUsage />} />
               <Route path="/ethics" element={<Ethics />} />
               <Route path="/cookies-policy" element={<CookiesPolicy />} />
+              <Route path="/shoreham-college" element={<ShorehamCollege />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
