@@ -53,7 +53,7 @@ const FounderSpeech = () => {
           <ul className="space-y-4 text-gray-300">
             <li className="flex items-start space-x-2">
               <span className="font-bold text-xl">90%</span>
-              <span>of GCSE knowledge lost within one year</span>
+              <span>of knowledge can be lost within one year without reinforcement</span>
             </li>
             <li className="flex items-start space-x-2">
               <span className="font-bold text-xl">70%</span>
@@ -64,6 +64,7 @@ const FounderSpeech = () => {
               <span>tiers of proposed Foundation Skills Certificates</span>
             </li>
           </ul>
+          <p className="text-xs text-gray-500 mt-4 italic">Derived from Ebbinghaus' forgetting curve model of memory retention.</p>
         </aside>
       </div>
     </div>
