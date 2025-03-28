@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from 'framer-motion';
@@ -53,7 +54,7 @@ const SubjectReforms = () => {
                     </li>
                     <li>
                       <strong>textual analysis through continuous coursework:</strong>
-                      <p>evolve reading assessments to ongoing coursework, analyzing texts throughout the year.</p>
+                      <p>evolve reading assessments to ongoing coursework, analysing texts throughout the year.</p>
                     </li>
                     <li>
                       <strong>integration of spoken language endorsement:</strong>
@@ -76,7 +77,7 @@ const SubjectReforms = () => {
                     </li>
                     <li>
                       <strong>how to ensure consistency in grading with coursework?</strong>
-                      <p>clear, standardized marking criteria and regular external moderation would be implemented.</p>
+                      <p>clear, standardised marking criteria and regular external moderation would be implemented.</p>
                     </li>
                   </ol>
                 </div>
@@ -132,7 +133,7 @@ const SubjectReforms = () => {
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-lg shadow-md">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-white">a-level reforms</h2>
                 <p className="mb-4 text-gray-400">
-                  for a-levels, we're emphasizing interdisciplinary approaches and real-world applications of knowledge.
+                  for a-levels, we're emphasising interdisciplinary approaches and real-world applications of knowledge.
                 </p>
                 <div className="flex space-x-4">
                   <Button 
