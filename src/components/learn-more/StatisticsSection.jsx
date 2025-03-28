@@ -18,8 +18,9 @@ const StatisticsSection = () => {
           >
             <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-2 leading-none">58%</h3>
             <p className="text-gray-300">
-              <span className="font-bold">371,884 UK teachers</span> warn: our education system is failing to prepare students for their future
+              58% of teachers say the current system is failing to prepare students for a digital future.
             </p>
+            <p className="text-xs text-gray-500 mt-2 italic">Source: Microsoft UK, 2019</p>
           </motion.div>
 
           <motion.div
@@ -30,8 +31,9 @@ const StatisticsSection = () => {
           >
             <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-2 leading-none">49%</h3>
             <p className="text-gray-300">
-              <span className="font-bold">314,178 teachers</span> declare GCSEs obsolete and unfit for purpose
+              49% of teachers in England say GCSEs are out-of-date and no longer fit for purpose.
             </p>
+            <p className="text-xs text-gray-500 mt-2 italic">Source: OCR, 2024</p>
           </motion.div>
 
           <motion.div
@@ -42,9 +44,9 @@ const StatisticsSection = () => {
           >
             <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-2 leading-none">80%</h3>
             <p className="text-gray-300">
-              <span className="font-bold">In a 2023 survey by the National Literacy Trust,</span> 80% of educators called for urgent digital skills and AI curriculum reform
+              80% of teachers support adding more digital and AI skills to the curriculum.
             </p>
-            <p className="text-xs text-gray-500 mt-2 italic">Source: National Literacy Trust, 2023</p>
+            <p className="text-xs text-gray-500 mt-2 italic">Source: OCR, 2024</p>
           </motion.div>
 
           <motion.div
@@ -73,7 +75,8 @@ const StatisticsSection = () => {
             className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center border border-white/10 hover:border-white/20 transition-colors"
           >
             <h3 className="text-4xl font-bold text-white mb-2">70%</h3>
-            <p className="text-gray-400">of employers value skills over degrees</p>
+            <p className="text-gray-400">Over 70% of employers now prioritise skills over degrees when hiring.</p>
+            <p className="text-xs text-gray-500 mt-2 italic">Source: LinkedIn/World Economic Forum, 2025</p>
           </motion.div>
 
           <motion.div
@@ -83,7 +86,8 @@ const StatisticsSection = () => {
             className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center border border-white/10 hover:border-white/20 transition-colors"
           >
             <h3 className="text-4xl font-bold text-white mb-2">85%</h3>
-            <p className="text-gray-400">of jobs in 2030 don't exist yet</p>
+            <p className="text-gray-400">Experts predict 85% of the jobs that will exist in 2030 haven't been invented yet.</p>
+            <p className="text-xs text-gray-500 mt-2 italic">Source: Dell Technologies & Institute for the Future, 2017</p>
           </motion.div>
 
           <motion.div
@@ -93,7 +97,8 @@ const StatisticsSection = () => {
             className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center border border-white/10 hover:border-white/20 transition-colors"
           >
             <h3 className="text-4xl font-bold text-white mb-2">92%</h3>
-            <p className="text-gray-400">of students want practical education</p>
+            <p className="text-gray-400">92% of students say they want education to include practical, real-world experience.</p>
+            <p className="text-xs text-gray-500 mt-2 italic">Source: NCUB Student Employability Index, 2014</p>
           </motion.div>
         </div>
       </div>
