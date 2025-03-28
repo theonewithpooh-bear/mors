@@ -11,7 +11,7 @@ import '@fontsource/cormorant';
 
 const ShorehamCollege = () => {
   const [passkey, setPasskey] = useState('');
-  const [isAuthorized, setIsAuthorized] = useState(false);
+  const [isAuthorised, setIsAuthorised] = useState(false);
   const [error, setError] = useState('');
   
   const correctPasskey = '729416';
@@ -19,7 +19,7 @@ const ShorehamCollege = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (passkey === correctPasskey) {
-      setIsAuthorized(true);
+      setIsAuthorised(true);
       setError('');
     } else {
       setError('Invalid passkey. Please try again.');
@@ -35,7 +35,7 @@ const ShorehamCollege = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto mt-24"
         >
-          {!isAuthorized ? (
+          {!isAuthorised ? (
             <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20 shadow-xl">
               <div className="flex justify-center mb-8">
                 <img 

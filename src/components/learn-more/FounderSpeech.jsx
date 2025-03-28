@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -56,7 +57,7 @@ const FounderSpeech = () => {
             </li>
             <li className="flex items-start space-x-2">
               <span className="font-bold text-xl">70%</span>
-              <span>of employers prioritize skills over qualifications</span>
+              <span>of employers prioritise skills over qualifications</span>
             </li>
             <li className="flex items-start space-x-2">
               <span className="font-bold text-xl">2</span>
