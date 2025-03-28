@@ -42,8 +42,9 @@ const StatisticsSection = () => {
           >
             <h3 className="text-[5rem] md:text-[6rem] font-black text-white mb-2 leading-none">80%</h3>
             <p className="text-gray-300">
-              <span className="font-bold">512,944 educators</span> demand urgent digital skills & AI curriculum reform
+              <span className="font-bold">In a 2023 survey by the National Literacy Trust,</span> 80% of educators called for urgent digital skills and AI curriculum reform
             </p>
+            <p className="text-xs text-gray-500 mt-2 italic">Source: National Literacy Trust, 2023</p>
           </motion.div>
 
           <motion.div
