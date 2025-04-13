@@ -10,7 +10,6 @@ const NotFound = () => {
         className="w-auto h-[60vh] max-w-full object-contain animate-fade-in"
         loading="eager"
         fetchpriority="high"
-        style={{ filter: 'invert(1)' }} // Inverting the image to match the new light theme
       />
     </div>
   );
