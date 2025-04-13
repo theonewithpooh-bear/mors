@@ -11,7 +11,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import FeaturedArticle from '@/components/newsroom/FeaturedArticle';
 import { newsData } from '@/data/newsData';
-const Newsroom = () => {
+
+const PressOffice = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
   // Sort news by date (newest first)
@@ -22,6 +23,7 @@ const Newsroom = () => {
 
   // The rest of the articles
   const regularArticles = sortedNews.slice(1);
+
   return <div className="min-h-screen bg-white bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-100/20 via-white to-white">
       <Header />
       <main className="container mx-auto px-4 pt-24 pb-24 relative">
@@ -63,4 +65,4 @@ const Newsroom = () => {
       </main>
     </div>;
 };
-export default Newsroom;
+export default PressOffice;

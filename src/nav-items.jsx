@@ -31,8 +31,8 @@ export const useNavItems = () => {
       icon: FolderIcon,
     },
     {
-      name: "newsroom",
-      url: "/newsroom",
+      name: t("nav.press_office"),
+      url: "/press-office",
       icon: NewspaperIcon,
     },
     {

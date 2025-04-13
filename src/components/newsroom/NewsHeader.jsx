@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const NewsHeader = () => {
+const PressOfficeHeader = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ const NewsHeader = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-5xl md:text-6xl xl:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-gray-600 mb-4 tracking-tight"
         >
-          Newsroom
+          Press Office
         </motion.h1>
         
         <motion.p
@@ -54,4 +54,4 @@ const NewsHeader = () => {
   );
 };
 
-export default NewsHeader;
+export default PressOfficeHeader;

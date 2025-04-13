@@ -1,4 +1,3 @@
-
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -10,7 +9,7 @@ import LearnMore from './pages/LearnMore';
 import GetInvolved from './pages/GetInvolved';
 import Communications from './pages/Communications';
 import Manifesto from './pages/Manifesto';
-import Newsroom from './pages/Newsroom';
+import PressOffice from './pages/Newsroom';
 import Positions from './pages/Positions';
 import PositionsToBeReleased from './pages/Positions';
 import SubjectReforms from './pages/SubjectReforms';
@@ -37,7 +36,7 @@ const App = () => {
               <Route path="/get-involved" element={<GetInvolved />} />
               <Route path="/communications" element={<Communications />} />
               <Route path="/manifesto" element={<Manifesto />} />
-              <Route path="/newsroom" element={<Newsroom />} />
+              <Route path="/press-office" element={<PressOffice />} />
               <Route path="/positions" element={<Positions />} />
               <Route path="/positions_to_be_released" element={<PositionsToBeReleased />} />
               <Route path="/subject-reforms" element={<SubjectReforms />} />
