@@ -25,7 +25,7 @@ const GetInvolved = () => {
                   title="register interest"
                   description="add your name to our volunteers waitlist and be notified when opportunities arise."
                   buttonText="apply now"
-                  buttonLink="/positions"
+                  buttonLink="/typeform-volunteer"
                 />
 
                 <ActionCard 

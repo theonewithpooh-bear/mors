@@ -20,6 +20,7 @@ import Ethics from './pages/Ethics';
 import CookiesPolicy from './pages/CookiesPolicy';
 import NotFound from './pages/NotFound';
 import ShorehamCollege from './pages/ShorehamCollege';
+import TypeformVolunteer from './pages/TypeformVolunteer';
 
 const App = () => {
   return (
@@ -45,6 +46,7 @@ const App = () => {
               <Route path="/ethics" element={<Ethics />} />
               <Route path="/cookies-policy" element={<CookiesPolicy />} />
               <Route path="/shoreham-college" element={<ShorehamCollege />} />
+              <Route path="/typeform-volunteer" element={<TypeformVolunteer />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
