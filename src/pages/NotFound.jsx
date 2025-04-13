@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const NotFound = () => {
@@ -9,6 +10,7 @@ const NotFound = () => {
         className="w-auto h-[60vh] max-w-full object-contain animate-fade-in"
         loading="eager"
         fetchpriority="high"
+        style={{ filter: 'invert(0)' }} // Keep the image as is since it's likely designed for visibility
       />
     </div>
   );

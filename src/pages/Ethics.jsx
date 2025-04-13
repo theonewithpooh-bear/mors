@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Scale, Eye, Users, Brain, BookOpen, Target } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -40,7 +41,7 @@ const Ethics = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-white">
       <main className="container mx-auto px-4 py-24">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -48,7 +49,7 @@ const Ethics = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto space-y-6"
         >
-          <h1 className="text-4xl font-bold text-white mb-12 text-center">ethical principles</h1>
+          <h1 className="text-4xl font-bold text-black mb-12 text-center">ethical principles</h1>
           {principles.map((principle) => (
             <div key={principle.title}>
               <EthicsPrinciple 
