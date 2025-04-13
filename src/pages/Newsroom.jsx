@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
@@ -95,7 +94,7 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
       });
     });
   };
-
+  
   return (
     <div className="min-h-screen bg-white bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-100/20 via-white to-white">
       <Header />
@@ -164,20 +163,20 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
                           <span>Share Statement</span>
                         </Button>
                       </DropdownMenuTrigger>
-                      <DropdownMenuContent align="center" className="w-56">
-                        <DropdownMenuItem onClick={copyStatementToClipboard} className="cursor-pointer">
+                      <DropdownMenuContent align="center" className="w-56 bg-white text-black">
+                        <DropdownMenuItem onClick={copyStatementToClipboard} className="cursor-pointer hover:bg-gray-100">
                           Copy statement
                         </DropdownMenuItem>
-                        <DropdownMenuItem onClick={shareTo.x} className="cursor-pointer">
+                        <DropdownMenuItem onClick={shareTo.x} className="cursor-pointer hover:bg-gray-100">
                           Share to X
                         </DropdownMenuItem>
-                        <DropdownMenuItem onClick={shareTo.linkedin} className="cursor-pointer">
+                        <DropdownMenuItem onClick={shareTo.linkedin} className="cursor-pointer hover:bg-gray-100">
                           Share to LinkedIn
                         </DropdownMenuItem>
-                        <DropdownMenuItem onClick={shareTo.facebook} className="cursor-pointer">
+                        <DropdownMenuItem onClick={shareTo.facebook} className="cursor-pointer hover:bg-gray-100">
                           Share to Facebook
                         </DropdownMenuItem>
-                        <DropdownMenuItem onClick={openMailShare} className="cursor-pointer">
+                        <DropdownMenuItem onClick={openMailShare} className="cursor-pointer hover:bg-gray-100">
                           Share via Email
                         </DropdownMenuItem>
                       </DropdownMenuContent>
