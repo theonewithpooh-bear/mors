@@ -27,7 +27,7 @@ const ShorehamCollege = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-purple-100 via-purple-200 to-purple-100 text-black">
       <div className="container mx-auto px-4 py-16">
         <motion.div 
           initial={{ opacity: 0 }} 
@@ -36,22 +36,23 @@ const ShorehamCollege = () => {
           className="max-w-4xl mx-auto mt-24"
         >
           {!isAuthorised ? (
-            <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20 shadow-xl">
+            <div className="bg-black/10 backdrop-blur-md p-8 rounded-xl border border-black/20 shadow-xl">
               <div className="flex justify-center mb-8">
                 <img 
                   src="/lovable-uploads/b9da7e47-b85f-49bb-9759-848048f982ed.png" 
                   alt="Shoreham College Logo" 
                   className="h-64 md:h-72 w-auto"
+                  style={{ filter: 'invert(1)' }}
                 />
               </div>
               
-              <h1 className="font-serif text-4xl font-bold mb-2 text-center text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-200">
+              <h1 className="font-serif text-4xl font-bold mb-2 text-center text-transparent bg-clip-text bg-gradient-to-r from-black to-purple-800">
                 Shoreham College Portal
               </h1>
               <p className="text-center text-sm font-['Cormorant'] mb-8 opacity-80">By mors</p>
               
               {error && (
-                <Alert variant="destructive" className="mb-6 bg-red-900/50 border-red-500">
+                <Alert variant="destructive" className="mb-6 bg-red-100/50 border-red-500">
                   <AlertCircle className="h-4 w-4" />
                   <AlertDescription>{error}</AlertDescription>
                 </Alert>
@@ -59,19 +60,19 @@ const ShorehamCollege = () => {
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="passkey" className="text-white">Enter Passkey</Label>
+                  <Label htmlFor="passkey" className="text-black">Enter Passkey</Label>
                   <Input 
                     id="passkey"
                     type="password" 
                     value={passkey} 
                     onChange={(e) => setPasskey(e.target.value)}
-                    className="bg-white/5 border-white/20 text-white"
+                    className="bg-black/5 border-black/20 text-black"
                     placeholder="Enter your access code"
                   />
                 </div>
                 <Button 
                   type="submit"
-                  className="w-full bg-purple-600 hover:bg-purple-700 text-white border-none"
+                  className="w-full bg-purple-400 hover:bg-purple-300 text-black border-none"
                 >
                   Access Portal
                 </Button>
@@ -84,16 +85,17 @@ const ShorehamCollege = () => {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="space-y-8"
             >
-              <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20 shadow-xl">
+              <div className="bg-black/10 backdrop-blur-md p-8 rounded-xl border border-black/20 shadow-xl">
                 <div className="flex justify-center mb-8">
                   <img 
                     src="/lovable-uploads/b9da7e47-b85f-49bb-9759-848048f982ed.png" 
                     alt="Shoreham College Logo" 
                     className="h-56 w-auto"
+                    style={{ filter: 'invert(1)' }}
                   />
                 </div>
                 
-                <h1 className="font-serif text-4xl font-bold mb-2 text-center text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-200">
+                <h1 className="font-serif text-4xl font-bold mb-2 text-center text-transparent bg-clip-text bg-gradient-to-r from-black to-purple-800">
                   Shoreham College Resources
                 </h1>
                 <p className="text-center text-sm font-['Cormorant'] mb-8 opacity-80">By mors</p>
@@ -106,7 +108,7 @@ const ShorehamCollege = () => {
                       <Input 
                         id="name" 
                         placeholder="Enter your full name" 
-                        className="bg-white/5 border-white/20 text-white"
+                        className="bg-black/5 border-black/20 text-black"
                       />
                     </div>
                     
@@ -116,7 +118,7 @@ const ShorehamCollege = () => {
                         id="email" 
                         type="email" 
                         placeholder="Enter your email address" 
-                        className="bg-white/5 border-white/20 text-white"
+                        className="bg-black/5 border-black/20 text-black"
                       />
                     </div>
                     
@@ -125,7 +127,7 @@ const ShorehamCollege = () => {
                       <Input 
                         id="year" 
                         placeholder="Enter your year group" 
-                        className="bg-white/5 border-white/20 text-white"
+                        className="bg-black/5 border-black/20 text-black"
                       />
                     </div>
                     
@@ -134,14 +136,14 @@ const ShorehamCollege = () => {
                       <Textarea 
                         id="message" 
                         placeholder="Enter any additional information or requirements" 
-                        className="bg-white/5 border-white/20 text-white"
+                        className="bg-black/5 border-black/20 text-black"
                         rows={4}
                       />
                     </div>
                     
                     <Button 
                       type="submit"
-                      className="w-full bg-purple-600 hover:bg-purple-700 text-white border-none"
+                      className="w-full bg-purple-400 hover:bg-purple-300 text-black border-none"
                     >
                       Submit
                     </Button>

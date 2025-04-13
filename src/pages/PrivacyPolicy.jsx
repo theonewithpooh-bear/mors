@@ -1,8 +1,9 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
 const PrivacyPolicy = () => {
-  return <div className="min-h-screen bg-black text-white">
+  return <div className="min-h-screen bg-white text-black">
       <Header />
       <div className="container mx-auto px-4 py-16">
         <motion.div initial={{
@@ -13,11 +14,11 @@ const PrivacyPolicy = () => {
         duration: 0.8
       }} className="max-w-4xl mx-auto mt-24">
           <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
-          <p className="text-gray-400 mb-8">Last updated: 21 March 2025</p>
+          <p className="text-gray-600 mb-8">Last updated: 21 March 2025</p>
           
-          <div className="space-y-6 text-gray-300">
+          <div className="space-y-6 text-gray-700">
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-white">Introduction</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-black">Introduction</h2>
               <p>
                 This Privacy Policy explains how your data is handled when you use the Movement of Real Skills (MORS) website. 
                 Our website is built and hosted by Lovable, which also manages analytics and form processing on our behalf.
@@ -25,7 +26,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-white">Who We Are</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-black">Who We Are</h2>
               <p>
                 MORS (The Movement of Real Skills) is an education reform organisation. Although we do not directly collect 
                 or store personal data ourselves, we rely on third-party tools and platforms that may do so on our behalf.
@@ -33,7 +34,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-white">What Data Is Collected</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-black">What Data Is Collected</h2>
               <p>
                 We do not collect or store any personal data directly on our servers. However, data may be collected via:
               </p>
@@ -44,7 +45,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-white">Third-Party Services We Use</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-black">Third-Party Services We Use</h2>
               <p>
                 We use the following services, which may collect or process data under their own policies:
               </p>
@@ -58,7 +59,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-white">Cookies</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-black">Cookies</h2>
               <p>
                 Our site may use cookies through Lovable for anonymous analytics. These do not identify you personally. 
                 You can manage cookies through your browser settings at any time.
@@ -66,7 +67,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-white">Your Rights</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-black">Your Rights</h2>
               <p>
                 If you're in the UK or EU, you have rights under the GDPR, including:
               </p>
@@ -82,7 +83,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-white">Contact</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-black">Contact</h2>
               <p>
                 If you have questions about how your data is handled, you can contact Lovable via their website or email us at 
                 info@mors.org.uk. While MORS does not process your data directly, we are happy to help redirect your query to the right place.

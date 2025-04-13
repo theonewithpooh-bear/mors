@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -56,7 +57,7 @@ const ManifestoSection = ({ title, subtitle, content, source, className = "", is
           initial={{ y: 20 }}
           animate={{ y: 0 }}
           transition={{ delay: 0.4 }}
-          className="text-2xl text-gray-400"
+          className="text-2xl text-gray-600"
         >
           {content}
         </motion.p>
@@ -107,7 +108,7 @@ const ManifestoSection = ({ title, subtitle, content, source, className = "", is
         <motion.div 
           initial={{ y: 20 }}
           whileInView={{ y: 0 }}
-          className="space-y-8 text-xl text-gray-300"
+          className="space-y-8 text-xl text-gray-700"
         >
           {renderContent(content)}
           

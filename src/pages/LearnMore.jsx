@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '../components/Header';
 import HeroSection from '../components/learn-more/HeroSection';
@@ -8,7 +9,7 @@ import CallToAction from '../components/learn-more/CallToAction';
 
 const LearnMore = () => {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-black">
       <main className="pt-20">
         <HeroSection />
         <StatisticsSection />

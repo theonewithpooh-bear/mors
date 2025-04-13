@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import Header from '../components/Header';
@@ -6,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Legal = () => {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-black">
       <Header />
       <div className="container mx-auto px-4 py-24">
         <motion.div 
@@ -20,29 +21,29 @@ const Legal = () => {
           <div className="grid gap-8">
             <Link 
               to="/cookies-policy"
-              className="p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
+              className="p-6 bg-black/5 rounded-lg hover:bg-black/10 transition-colors"
             >
               <h2 className="text-2xl font-semibold mb-2">cookies policy</h2>
-              <p className="text-gray-300">
+              <p className="text-gray-700">
                 learn about our commitment to not using cookies and protecting your privacy.
               </p>
             </Link>
 
             <Link 
               to="/ai-usage"
-              className="p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
+              className="p-6 bg-black/5 rounded-lg hover:bg-black/10 transition-colors"
             >
               <h2 className="text-2xl font-semibold mb-2">AI usage policy</h2>
-              <p className="text-gray-300">
+              <p className="text-gray-700">
                 understand how we responsibly use artificial intelligence in our operations.
               </p>
             </Link>
 
             <section>
               <h2 className="text-2xl font-semibold mb-6">contact</h2>
-              <p className="text-gray-300">
+              <p className="text-gray-700">
                 for any questions about our legal policies or privacy practices, please contact us at{' '}
-                <a href="mailto:info@mors.org.uk" className="text-blue-400 hover:text-blue-300">
+                <a href="mailto:info@mors.org.uk" className="text-blue-600 hover:text-blue-700">
                   info@mors.org.uk
                 </a>
               </p>

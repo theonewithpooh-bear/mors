@@ -25,7 +25,7 @@ const SubjectReforms = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-black">
       <Header />
       <AnimatePresence>
         {selectedSubject ? (
@@ -33,15 +33,15 @@ const SubjectReforms = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-start z-50 p-4 overflow-y-auto"
+            className="fixed inset-0 bg-white bg-opacity-90 flex flex-col items-center justify-start z-50 p-4 overflow-y-auto"
           >
             <motion.div
               initial={{ y: -50 }}
               animate={{ y: 0 }}
               exit={{ y: 50 }}
-              className="bg-gray-900/50 backdrop-blur-sm border border-white/10 p-6 rounded-lg shadow-xl max-w-3xl w-full mt-16"
+              className="bg-gray-100/50 backdrop-blur-sm border border-black/10 p-6 rounded-lg shadow-xl max-w-3xl w-full mt-16"
             >
-              <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-black">
                 reforms for {selectedSubject}
               </h2>
               {selectedSubject === "english language" && activeReform === 'gcse' ? (
@@ -82,7 +82,7 @@ const SubjectReforms = () => {
                   </ol>
                 </div>
               ) : (
-                <p className="text-lg text-gray-400">
+                <p className="text-lg text-gray-600">
                   no specific reforms have been uploaded for {selectedSubject} yet. check back later for updates.
                 </p>
               )}
@@ -90,7 +90,7 @@ const SubjectReforms = () => {
                 <Button
                   onClick={() => setSelectedSubject(null)}
                   variant="outline"
-                  className="bg-white/10 hover:bg-white/20 text-white border-white/20"
+                  className="bg-black/10 hover:bg-black/20 text-black border-black/20"
                 >
                   close
                 </Button>
@@ -104,24 +104,24 @@ const SubjectReforms = () => {
             exit={{ opacity: 0 }}
             className="container mx-auto px-4 py-16"
           >
-            <h1 className="text-3xl sm:text-4xl font-bold text-center mb-12 mt-24 text-white">subject reforms</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-center mb-12 mt-24 text-black">subject reforms</h1>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-lg shadow-md">
-                <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-white">gcse reforms</h2>
-                <p className="mb-4 text-gray-400">
+              <div className="bg-black/5 backdrop-blur-sm border border-black/10 p-6 rounded-lg shadow-md">
+                <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-black">gcse reforms</h2>
+                <p className="mb-4 text-gray-600">
                   our proposed reforms for gcse subjects focus on integrating practical skills and project-based learning.
                 </p>
                 <div className="flex space-x-4">
                   <Button 
                     onClick={() => handleViewReforms('gcse')}
-                    className="flex-grow bg-white/10 hover:bg-white/20 text-white"
+                    className="flex-grow bg-black/10 hover:bg-black/20 text-black"
                   >
                     view gcse reforms
                   </Button>
                   <Button
                     variant="outline"
-                    className="flex items-center space-x-2 bg-white/10 hover:bg-white/20 text-white border-white/20"
+                    className="flex items-center space-x-2 bg-black/10 hover:bg-black/20 text-black border-black/20"
                     onClick={() => handleGradingSystemClick('gcse')}
                   >
                     <Star className="w-4 h-4" />
@@ -130,21 +130,21 @@ const SubjectReforms = () => {
                 </div>
               </div>
               
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-lg shadow-md">
-                <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-white">a-level reforms</h2>
-                <p className="mb-4 text-gray-400">
+              <div className="bg-black/5 backdrop-blur-sm border border-black/10 p-6 rounded-lg shadow-md">
+                <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-black">a-level reforms</h2>
+                <p className="mb-4 text-gray-600">
                   for a-levels, we're emphasising interdisciplinary approaches and real-world applications of knowledge.
                 </p>
                 <div className="flex space-x-4">
                   <Button 
                     onClick={() => handleViewReforms('alevel')}
-                    className="flex-grow bg-white/10 hover:bg-white/20 text-white"
+                    className="flex-grow bg-black/10 hover:bg-black/20 text-black"
                   >
                     view a-level reforms
                   </Button>
                   <Button
                     variant="outline"
-                    className="flex items-center space-x-2 bg-white/10 hover:bg-white/20 text-white border-white/20"
+                    className="flex items-center space-x-2 bg-black/10 hover:bg-black/20 text-black border-black/20"
                     onClick={() => handleGradingSystemClick('a-level')}
                   >
                     <Star className="w-4 h-4" />

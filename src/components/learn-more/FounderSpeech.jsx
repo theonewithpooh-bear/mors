@@ -7,22 +7,22 @@ const FounderSpeech = () => {
   
   return (
     <div className="max-w-4xl mx-auto mb-16 px-4">
-      <div className="border-b-2 border-gray-200 mb-6 pb-4">
-        <h1 className="font-serif text-4xl text-center mb-2 text-white">The Daily Reform</h1>
-        <p className="text-center text-gray-400 text-sm">Volume 1, Issue 1 - Education Reform Special Edition</p>
+      <div className="border-b-2 border-gray-800 mb-6 pb-4">
+        <h1 className="font-serif text-4xl text-center mb-2 text-black">The Daily Reform</h1>
+        <p className="text-center text-gray-600 text-sm">Volume 1, Issue 1 - Education Reform Special Edition</p>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8">
-        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 shadow-lg">
-          <h2 className="font-serif text-3xl text-white mb-4 text-center">{t('founder.title')}</h2>
-          <p className="text-sm text-center text-gray-400 mb-6">
+        <div className="bg-black/5 backdrop-blur-sm border border-black/10 rounded-xl p-8 shadow-lg">
+          <h2 className="font-serif text-3xl text-black mb-4 text-center">{t('founder.title')}</h2>
+          <p className="text-sm text-center text-gray-600 mb-6">
             {t('founder.author')}
             <span className="mx-2">|</span>
             {t('founder.role')}
           </p>
           
           <div className="prose prose-invert max-w-none">
-            <div className="font-serif space-y-6 text-gray-300">
+            <div className="font-serif space-y-6 text-gray-700">
               <p className="text-xl leading-relaxed first-letter:text-6xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1">
                 {t('founder.intro')}
               </p>
@@ -48,9 +48,9 @@ const FounderSpeech = () => {
           </div>
         </div>
         
-        <aside className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 shadow-lg h-fit">
-          <h3 className="font-serif text-xl font-bold mb-4 text-white">Key Points</h3>
-          <ul className="space-y-4 text-gray-300">
+        <aside className="bg-black/5 backdrop-blur-sm border border-black/10 rounded-xl p-6 shadow-lg h-fit">
+          <h3 className="font-serif text-xl font-bold mb-4 text-black">Key Points</h3>
+          <ul className="space-y-4 text-gray-700">
             <li className="flex items-start space-x-2">
               <span className="font-bold text-xl">90%</span>
               <span>of knowledge can be lost within one year without reinforcement</span>
