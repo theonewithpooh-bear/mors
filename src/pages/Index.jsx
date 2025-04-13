@@ -2,14 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import '@fontsource/cormorant';
-
 const Index = () => {
   return <div className="min-h-screen bg-white">
       <main className="flex flex-col items-center justify-center min-h-screen text-center px-4 pt-32">
         {/* Hero Section */}
         <div className="max-w-6xl mx-auto space-y-8 animate-fade-in mb-24">
           <p className="text-gray-600 tracking-[0.2em] uppercase text-sm">introducing</p>
-          <h1 className="text-6xl md:text-7xl font-bold text-black mb-4 tracking-normal leading-none" style={{fontFamily: 'Times New Roman, serif'}}>mors</h1>
+          <h1 style={{
+          fontFamily: 'Times New Roman, serif'
+        }} className="text-6xl font-bold text-black mb-4 tracking-normal leading-none md:text-9xl">mors</h1>
           <p className="text-base text-gray-600 tracking-wider mb-4">The Movement of Real Skills</p>
           <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
             revolutionizing education through practical, skills-based learning that prepares students for the real world
