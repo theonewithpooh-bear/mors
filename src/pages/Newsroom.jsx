@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
@@ -5,9 +6,10 @@ import NewsHeader from '@/components/newsroom/NewsHeader';
 import NewsCard from '@/components/newsroom/NewsCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
-import { Search, Filter, Clock, FileText, Newspaper, Quote } from 'lucide-react';
+import { Search, Filter, FileText, Newspaper, Quote, ArrowRight, ChevronRight } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import FeaturedArticle from '@/components/newsroom/FeaturedArticle';
 import { newsData } from '@/data/newsData';
 import { useToast } from "@/components/ui/use-toast";
@@ -27,6 +29,7 @@ import {
 
 const PressOffice = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const [showFullStatement, setShowFullStatement] = useState(false);
   const { toast } = useToast();
 
   // Sort news by date (newest first)
@@ -117,73 +120,114 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
             </div>
             
             <TabsContent value="press-releases" className="focus-visible:outline-none focus-visible:ring-0">
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="mb-16 p-8 rounded-xl border border-gray-500/30 bg-white/30 backdrop-blur-sm"
-              >
-                <div className="max-w-3xl mx-auto">
-                  <div className="mb-8 text-center">
-                    <Badge className="bg-gray-800 text-white mb-4">April 13, 2025</Badge>
-                    <h2 className="text-3xl font-bold text-black mb-3">
-                      Statement on the Passing of Brian Smith
-                    </h2>
-                  </div>
-                  
-                  <div className="prose prose-lg mx-auto text-gray-700">
-                    <p className="mb-4">
-                      It is with immense sadness that MORS acknowledges the recent passing of TikTok creator and remarkable individual, Brian Smith.
-                    </p>
+              {!showFullStatement ? (
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <Card className="mb-8 cursor-pointer hover:shadow-md transition-shadow" onClick={() => setShowFullStatement(true)}>
+                    <CardHeader className="pb-2">
+                      <Badge className="bg-gray-800 text-white mb-2 w-fit">April 13, 2025</Badge>
+                      <CardTitle className="text-2xl font-bold flex items-center justify-between group">
+                        Statement on the Passing of Brian Smith
+                        <ChevronRight className="h-6 w-6 text-gray-500 group-hover:translate-x-1 transition-transform" />
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-600 line-clamp-2">
+                        It is with immense sadness that MORS acknowledges the recent passing of TikTok creator and remarkable individual, Brian Smith.
+                      </p>
+                      <Button 
+                        variant="ghost" 
+                        className="mt-4 text-gray-700 p-0 hover:bg-transparent hover:text-black"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setShowFullStatement(true);
+                        }}
+                      >
+                        Read full statement <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ) : (
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  className="mb-16 p-8 rounded-xl border border-gray-500/30 bg-white/30 backdrop-blur-sm"
+                >
+                  <div className="max-w-3xl mx-auto">
+                    <Button 
+                      variant="ghost" 
+                      className="mb-4 text-gray-600 hover:text-black"
+                      onClick={() => setShowFullStatement(false)}
+                    >
+                      &larr; Back to press releases
+                    </Button>
                     
-                    <p className="mb-4">
-                      Brian was a voice of reason, humour, and compassion for countless young people navigating the pressures of education. His words resonated deeply with our founder, Monty, and with so many others who felt seen, understood, and encouraged by his calm defiance of a broken system.
-                    </p>
+                    <div className="mb-8 text-center">
+                      <Badge className="bg-gray-800 text-white mb-4">April 13, 2025</Badge>
+                      <h2 className="text-3xl font-bold text-black mb-3">
+                        Statement on the Passing of Brian Smith
+                      </h2>
+                    </div>
                     
-                    <p className="mb-4">
-                      Just days before his passing, Brian became the first TikToker to share MORS with his community. That small gesture meant everything to us. For his support, his belief, and his voice—we will be forever grateful.
-                    </p>
-                    
-                    <p className="mb-4">
-                      MORS will honour Brian permanently in an upcoming initiative, ensuring his contribution is never forgotten.
-                    </p>
-                    
-                    <div className="mt-8 text-center">
-                      <div className="inline-block border-t border-gray-300 pt-2 text-sm text-gray-500">
-                        ENDS
+                    <div className="prose prose-lg mx-auto text-gray-700">
+                      <p className="mb-4">
+                        It is with immense sadness that MORS acknowledges the recent passing of TikTok creator and remarkable individual, Brian Smith.
+                      </p>
+                      
+                      <p className="mb-4">
+                        Brian was a voice of reason, humour, and compassion for countless young people navigating the pressures of education. His words resonated deeply with our founder, Monty, and with so many others who felt seen, understood, and encouraged by his calm defiance of a broken system.
+                      </p>
+                      
+                      <p className="mb-4">
+                        Just days before his passing, Brian became the first TikToker to share MORS with his community. That small gesture meant everything to us. For his support, his belief, and his voice—we will be forever grateful.
+                      </p>
+                      
+                      <p className="mb-4">
+                        MORS will honour Brian permanently in an upcoming initiative, ensuring his contribution is never forgotten.
+                      </p>
+                      
+                      <div className="mt-8 text-center">
+                        <div className="inline-block border-t border-gray-300 pt-2 text-sm text-gray-500">
+                          ENDS
+                        </div>
                       </div>
                     </div>
+                    
+                    <div className="mt-8 flex justify-center">
+                      <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                          <Button variant="outline" className="flex items-center gap-2">
+                            <Quote className="h-4 w-4" />
+                            <span>Share Statement</span>
+                          </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="center" className="w-56 bg-white text-black">
+                          <DropdownMenuItem onClick={copyStatementToClipboard} className="cursor-pointer hover:bg-gray-100">
+                            Copy statement
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={shareTo.x} className="cursor-pointer hover:bg-gray-100">
+                            Share to X
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={shareTo.linkedin} className="cursor-pointer hover:bg-gray-100">
+                            Share to LinkedIn
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={shareTo.facebook} className="cursor-pointer hover:bg-gray-100">
+                            Share to Facebook
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={openMailShare} className="cursor-pointer hover:bg-gray-100">
+                            Share via Email
+                          </DropdownMenuItem>
+                        </DropdownMenuContent>
+                      </DropdownMenu>
+                    </div>
                   </div>
-                  
-                  <div className="mt-8 flex justify-center">
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button variant="outline" className="flex items-center gap-2">
-                          <Quote className="h-4 w-4" />
-                          <span>Share Statement</span>
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent align="center" className="w-56 bg-white text-black">
-                        <DropdownMenuItem onClick={copyStatementToClipboard} className="cursor-pointer hover:bg-gray-100">
-                          Copy statement
-                        </DropdownMenuItem>
-                        <DropdownMenuItem onClick={shareTo.x} className="cursor-pointer hover:bg-gray-100">
-                          Share to X
-                        </DropdownMenuItem>
-                        <DropdownMenuItem onClick={shareTo.linkedin} className="cursor-pointer hover:bg-gray-100">
-                          Share to LinkedIn
-                        </DropdownMenuItem>
-                        <DropdownMenuItem onClick={shareTo.facebook} className="cursor-pointer hover:bg-gray-100">
-                          Share to Facebook
-                        </DropdownMenuItem>
-                        <DropdownMenuItem onClick={openMailShare} className="cursor-pointer hover:bg-gray-100">
-                          Share via Email
-                        </DropdownMenuItem>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              )}
             </TabsContent>
             
             <TabsContent value="articles" className="focus-visible:outline-none focus-visible:ring-0">
@@ -199,7 +243,7 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
                   transition={{ repeat: Infinity, repeatType: "reverse", duration: 2 }}
                   className="mb-4 inline-flex items-center justify-center"
                 >
-                  <Clock className="h-12 w-12 text-black" />
+                  <Newspaper className="h-12 w-12 text-black" />
                 </motion.div>
                 <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-700 to-gray-400 mb-3">
                   Articles Coming Soon
