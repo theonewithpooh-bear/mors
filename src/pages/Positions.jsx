@@ -25,20 +25,18 @@ const Positions = () => {
   return (
     <div className="min-h-screen bg-white">
       <div className="relative h-screen w-screen">
-        {/* Desktop Image - Invert filter applied */}
+        {/* Desktop Image - Invert filter removed */}
         <img 
           src="/lovable-uploads/566b091b-7e85-4965-9b51-03bd0a8f2b22.png" 
           alt="Jobs desk in forest" 
           className="hidden md:block w-full h-full object-contain bg-white"
-          style={{ filter: 'invert(1)' }}
         />
         
-        {/* Mobile Image - Invert filter applied */}
+        {/* Mobile Image - Invert filter removed */}
         <img 
           src="/lovable-uploads/387a4d3f-fd1d-439b-a4e3-1331342235ef.png" 
           alt="Jobs desk in forest mobile" 
           className="md:hidden w-full h-full object-contain bg-white"
-          style={{ filter: 'invert(1)' }}
         />
           
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
