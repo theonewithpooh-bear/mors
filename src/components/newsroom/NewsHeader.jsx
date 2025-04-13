@@ -29,7 +29,7 @@ const PressOfficeHeader = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl md:text-6xl xl:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-gray-600 mb-4 tracking-tight"
+          className="text-5xl md:text-6xl xl:text-7xl font-bold text-black mb-4 tracking-tight"
         >
           Press Office
         </motion.h1>
