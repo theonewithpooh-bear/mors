@@ -22,8 +22,8 @@ const GetInvolved = () => {
               
               <div className="mt-8 grid gap-6 sm:grid-cols-2">
                 <ActionCard 
-                  title="become a volunteer"
-                  description="contribute your skills and expertise to our various initiatives and working groups."
+                  title="register interest"
+                  description="add your name to our volunteers waitlist and be notified when opportunities arise."
                   buttonText="apply now"
                   buttonLink="/positions"
                 />
