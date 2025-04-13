@@ -9,7 +9,7 @@ const Index = () => {
         {/* Hero Section */}
         <div className="max-w-6xl mx-auto space-y-8 animate-fade-in mb-24">
           <p className="text-gray-600 tracking-[0.2em] uppercase text-sm">introducing</p>
-          <h1 className="text-6xl md:text-7xl font-bold text-black mb-4 tracking-normal leading-none font-['Times New Roman']">mors</h1>
+          <h1 className="text-6xl md:text-7xl font-bold text-black mb-4 tracking-normal leading-none" style={{fontFamily: 'Times New Roman, serif'}}>mors</h1>
           <p className="text-base text-gray-600 tracking-wider mb-4">The Movement of Real Skills</p>
           <p className="text-base md:text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
             revolutionizing education through practical, skills-based learning that prepares students for the real world
