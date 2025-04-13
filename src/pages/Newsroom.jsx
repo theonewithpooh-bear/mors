@@ -6,14 +6,29 @@ import NewsHeader from '@/components/newsroom/NewsHeader';
 import NewsCard from '@/components/newsroom/NewsCard';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
-import { Search, Filter, Clock, FileText, Newspaper, Calendar, Quote } from 'lucide-react';
+import { Search, Filter, Clock, FileText, Newspaper, Quote } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import FeaturedArticle from '@/components/newsroom/FeaturedArticle';
 import { newsData } from '@/data/newsData';
+import { useToast } from "@/components/ui/use-toast";
+import { 
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { 
+  shareViaWebAPI, 
+  copyToClipboard, 
+  openMailShare, 
+  openMessageShare, 
+  shareTo 
+} from "@/utils/shareUtils";
 
 const PressOffice = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const { toast } = useToast();
 
   // Sort news by date (newest first)
   const sortedNews = [...newsData].sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -23,6 +38,63 @@ const PressOffice = () => {
 
   // The rest of the articles
   const regularArticles = sortedNews.slice(1);
+  
+  // Custom share data for the Brian Smith statement
+  const shareStatement = async () => {
+    const statementShareData = {
+      title: 'MORS: Statement on the Passing of Brian Smith',
+      text: 'MORS acknowledges the recent passing of TikTok creator and remarkable individual, Brian Smith.',
+      url: window.location.href
+    };
+    
+    if (navigator.share && navigator.canShare(statementShareData)) {
+      try {
+        await navigator.share(statementShareData);
+        toast({
+          title: "Shared successfully",
+          description: "Thank you for sharing this statement.",
+          duration: 3000,
+        });
+      } catch (error) {
+        if (error.name !== 'AbortError') {
+          showShareOptions();
+        }
+      }
+    } else {
+      showShareOptions();
+    }
+  };
+  
+  const showShareOptions = () => {
+    // This is handled by the dropdown opening
+  };
+  
+  const copyStatementToClipboard = () => {
+    const statement = `Statement on the Passing of Brian Smith
+
+It is with immense sadness that MORS acknowledges the recent passing of TikTok creator and remarkable individual, Brian Smith.
+
+Brian was a voice of reason, humour, and compassion for countless young people navigating the pressures of education. His words resonated deeply with our founder, Monty, and with so many others who felt seen, understood, and encouraged by his calm defiance of a broken system.
+
+Just days before his passing, Brian became the first TikToker to share MORS with his community. That small gesture meant everything to us. For his support, his belief, and his voice—we will be forever grateful.
+
+MORS will honour Brian permanently in an upcoming initiative, ensuring his contribution is never forgotten.`;
+
+    navigator.clipboard.writeText(statement).then(() => {
+      toast({
+        title: "Statement copied!",
+        description: "The statement has been copied to your clipboard.",
+        duration: 2000,
+      });
+    }).catch(() => {
+      toast({
+        title: "Failed to copy statement",
+        description: "Please try again or copy manually.",
+        variant: "destructive",
+        duration: 2000,
+      });
+    });
+  };
 
   return (
     <div className="min-h-screen bg-white bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-100/20 via-white to-white">
@@ -84,15 +156,32 @@ const PressOffice = () => {
                     </div>
                   </div>
                   
-                  <div className="mt-8 flex justify-center space-x-4">
-                    <Button variant="outline" className="flex items-center gap-2">
-                      <Calendar className="h-4 w-4" />
-                      <span>Add to Calendar</span>
-                    </Button>
-                    <Button variant="outline" className="flex items-center gap-2">
-                      <Quote className="h-4 w-4" />
-                      <span>Share Statement</span>
-                    </Button>
+                  <div className="mt-8 flex justify-center">
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button variant="outline" className="flex items-center gap-2">
+                          <Quote className="h-4 w-4" />
+                          <span>Share Statement</span>
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="center" className="w-56">
+                        <DropdownMenuItem onClick={copyStatementToClipboard} className="cursor-pointer">
+                          Copy statement
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={shareTo.x} className="cursor-pointer">
+                          Share to X
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={shareTo.linkedin} className="cursor-pointer">
+                          Share to LinkedIn
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={shareTo.facebook} className="cursor-pointer">
+                          Share to Facebook
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={openMailShare} className="cursor-pointer">
+                          Share via Email
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
                   </div>
                 </div>
               </motion.div>
