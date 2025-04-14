@@ -33,14 +33,11 @@ const PressOffice = () => {
   const [selectedArticle, setSelectedArticle] = useState(null);
   const { toast } = useToast();
 
-  // Sort news by date (newest first)
-  const sortedNews = [...newsData].sort((a, b) => new Date(b.date) - new Date(a.date));
+  // Filter news to only include "The Case Against GCSEs" article (article with id 11)
+  const filteredNews = newsData.filter(article => article.id === 11);
 
-  // Get the most recent article for featured spot
-  const featuredArticle = sortedNews[0];
-
-  // The rest of the articles
-  const regularArticles = sortedNews.slice(1);
+  // The main article is the only one we have
+  const featuredArticle = filteredNews[0];
   
   // Custom share data for the Brian Smith statement
   const shareStatement = async () => {
@@ -244,10 +241,12 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
                 />
               ) : (
                 <div>
-                  <FeaturedArticle 
-                    article={featuredArticle} 
-                    onClick={() => handleSelectArticle(featuredArticle)}
-                  />
+                  {featuredArticle && (
+                    <FeaturedArticle 
+                      article={featuredArticle} 
+                      onClick={() => handleSelectArticle(featuredArticle)}
+                    />
+                  )}
                   
                   <div className="mt-12 mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center">
                     <h2 className="text-2xl font-bold text-black mb-4 sm:mb-0">Latest Articles</h2>
@@ -268,38 +267,6 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
                       </Button>
                     </div>
                   </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                    {regularArticles.map((article, index) => (
-                      <div 
-                        key={article.id} 
-                        onClick={() => handleSelectArticle(article)}
-                        className="cursor-pointer"
-                      >
-                        <NewsCard {...article} index={index} />
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <Pagination className="mt-8">
-                    <PaginationContent>
-                      <PaginationItem>
-                        <PaginationPrevious href="#" />
-                      </PaginationItem>
-                      <PaginationItem>
-                        <PaginationLink href="#" isActive>1</PaginationLink>
-                      </PaginationItem>
-                      <PaginationItem>
-                        <PaginationLink href="#">2</PaginationLink>
-                      </PaginationItem>
-                      <PaginationItem>
-                        <PaginationLink href="#">3</PaginationLink>
-                      </PaginationItem>
-                      <PaginationItem>
-                        <PaginationNext href="#" />
-                      </PaginationItem>
-                    </PaginationContent>
-                  </Pagination>
                 </div>
               )}
             </TabsContent>
