@@ -38,7 +38,7 @@ const Header = () => {
           items={animeNavItems} 
           defaultActive={location.pathname === "/" ? "home" : ""} 
           showIcons={false}
-          className={isNewsroom ? "mt-2" : ""}
+          className={isNewsroom ? "bg-transparent/50 backdrop-blur-md" : ""}
         />
       </div>
 
