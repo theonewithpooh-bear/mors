@@ -33,13 +33,9 @@ const PressOffice = () => {
   const [selectedArticle, setSelectedArticle] = useState(null);
   const { toast } = useToast();
 
-  // Filter news to only include "The Case Against GCSEs" article (article with id 11)
   const filteredNews = newsData.filter(article => article.id === 11);
-
-  // The main article is the only one we have
   const featuredArticle = filteredNews[0];
-  
-  // Custom share data for the Brian Smith statement
+
   const shareStatement = async () => {
     const statementShareData = {
       title: 'MORS: Statement on the Passing of Brian Smith',
@@ -104,20 +100,20 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
   return (
     <div className="min-h-screen bg-white bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-100/20 via-white to-white">
       <Header />
-      <main className="container mx-auto px-4 pt-24 pb-24 relative">
+      <main className="container mx-auto px-4 pt-28 pb-20 relative">
         <div className="max-w-6xl mx-auto">
           <NewsHeader />
           
           <Tabs defaultValue="press-releases" className="mb-8">
             <div className="flex justify-center mb-6">
               <TabsList className="bg-gray-100 p-1">
-                <TabsTrigger value="press-releases" className="flex items-center gap-2">
-                  <FileText className="w-4 h-4" />
-                  <span>Press Releases</span>
+                <TabsTrigger value="press-releases" className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4">
+                  <FileText className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <span className="text-xs sm:text-sm">Press Releases</span>
                 </TabsTrigger>
-                <TabsTrigger value="articles" className="flex items-center gap-2">
-                  <Newspaper className="w-4 h-4" />
-                  <span>Articles</span>
+                <TabsTrigger value="articles" className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4">
+                  <Newspaper className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <span className="text-xs sm:text-sm">Articles</span>
                 </TabsTrigger>
               </TabsList>
             </div>
@@ -132,24 +128,24 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
                   <Card className="mb-8 cursor-pointer hover:shadow-md transition-shadow" onClick={() => setShowFullStatement(true)}>
                     <CardHeader className="pb-2">
                       <Badge className="bg-gray-800 text-white mb-2 w-fit">April 13, 2025</Badge>
-                      <CardTitle className="text-2xl font-bold flex items-center justify-between group text-black">
+                      <CardTitle className="text-lg sm:text-2xl font-bold flex items-center justify-between group text-black">
                         Statement on the Passing of Brian Smith
-                        <ChevronRight className="h-6 w-6 text-gray-500 group-hover:translate-x-1 transition-transform" />
+                        <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 text-gray-500 group-hover:translate-x-1 transition-transform" />
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-600 line-clamp-2">
+                      <p className="text-sm sm:text-base text-gray-600 line-clamp-2">
                         It is with immense sadness that MORS acknowledges the recent passing of TikTok creator and remarkable individual, Brian Smith.
                       </p>
                       <Button 
                         variant="ghost" 
-                        className="mt-4 text-gray-700 p-0 hover:bg-transparent hover:text-black"
+                        className="mt-4 text-sm sm:text-base text-gray-700 p-0 hover:bg-transparent hover:text-black"
                         onClick={(e) => {
                           e.stopPropagation();
                           setShowFullStatement(true);
                         }}
                       >
-                        Read full statement <ArrowRight className="ml-2 h-4 w-4" />
+                        Read full statement <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
                       </Button>
                     </CardContent>
                   </Card>
@@ -159,25 +155,25 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="mb-16 p-8 rounded-xl border border-gray-500/30 bg-white/30 backdrop-blur-sm"
+                  className="mb-16 p-4 sm:p-8 rounded-xl border border-gray-500/30 bg-white/30 backdrop-blur-sm"
                 >
                   <div className="max-w-3xl mx-auto">
                     <Button 
                       variant="ghost" 
-                      className="mb-4 text-gray-600 hover:text-black"
+                      className="mb-4 text-gray-600 hover:text-black text-sm"
                       onClick={() => setShowFullStatement(false)}
                     >
                       &larr; Back to press releases
                     </Button>
                     
-                    <div className="mb-8 text-center">
-                      <Badge className="bg-gray-800 text-white mb-4">April 13, 2025</Badge>
-                      <h2 className="text-3xl font-bold text-black mb-3">
+                    <div className="mb-6 sm:mb-8 text-center">
+                      <Badge className="bg-gray-800 text-white mb-3 sm:mb-4">April 13, 2025</Badge>
+                      <h2 className="text-xl sm:text-3xl font-bold text-black mb-3">
                         Statement on the Passing of Brian Smith
                       </h2>
                     </div>
                     
-                    <div className="prose prose-lg mx-auto text-gray-700">
+                    <div className="prose prose-sm sm:prose-lg mx-auto text-gray-700">
                       <p className="mb-4">
                         It is with immense sadness that MORS acknowledges the recent passing of TikTok creator and remarkable individual, Brian Smith.
                       </p>
@@ -195,7 +191,7 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
                       </p>
                       
                       <div className="mt-8 text-center">
-                        <div className="inline-block border-t border-gray-300 pt-2 text-sm text-gray-500">
+                        <div className="inline-block border-t border-gray-300 pt-2 text-xs sm:text-sm text-gray-500">
                           ENDS
                         </div>
                       </div>
@@ -204,8 +200,8 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
                     <div className="mt-8 flex justify-center">
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                          <Button variant="outline" className="flex items-center gap-2">
-                            <Quote className="h-4 w-4" />
+                          <Button variant="outline" className="flex items-center gap-2 text-sm">
+                            <Quote className="h-3 w-3 sm:h-4 sm:w-4" />
                             <span>Share Statement</span>
                           </Button>
                         </DropdownMenuTrigger>

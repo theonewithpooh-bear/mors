@@ -40,7 +40,7 @@ export const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
               mass: 0.85,
               delay: 0.05
             }}
-            className="fixed right-0 top-0 h-full w-3/4 max-w-sm neo-blur shadow-2xl"
+            className="fixed right-0 top-0 h-full w-4/5 max-w-sm neo-blur shadow-2xl"
           >
             <div className="absolute inset-0 overflow-hidden">
               <div className="absolute -inset-[200px] opacity-30 blur-3xl">
@@ -70,7 +70,7 @@ export const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
                 stiffness: 300,
                 damping: 15
               }}
-              className="absolute top-6 right-6 text-white/70 hover:text-white transition-all duration-300 p-2 rounded-full bg-white/5 hover:bg-white/15 backdrop-blur-sm border border-white/10 shadow-lg z-10"
+              className="absolute top-4 right-4 text-white/70 hover:text-white transition-all duration-300 p-2 rounded-full bg-white/5 hover:bg-white/15 backdrop-blur-sm border border-white/10 shadow-lg z-10"
               aria-label="Close menu"
               whileHover={{ rotate: 90, scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -78,7 +78,7 @@ export const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
               <X size={20} />
             </motion.button>
 
-            <div className="h-full flex flex-col items-start justify-center px-8 space-y-7 relative">
+            <div className="h-full flex flex-col items-start justify-center px-8 space-y-7 relative pt-16">
               {navItems.map((item, index) => (
                 <motion.button
                   key={item.name}
