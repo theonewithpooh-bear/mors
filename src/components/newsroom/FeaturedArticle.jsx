@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, ArrowRight, Bookmark, Share2 } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Bookmark, Share2, Printer } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -27,6 +27,115 @@ const FeaturedArticle = ({ article, onClick }) => {
       default:
         return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
     }
+  };
+
+  const handlePrint = (e) => {
+    e.stopPropagation();
+    
+    const printWindow = window.open('', '_blank');
+    
+    if (!printWindow) {
+      console.error("Unable to open print window. Please check your popup settings.");
+      return;
+    }
+    
+    const printContent = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>${article.title} - MORS</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+          body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+          }
+          .article-header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 1rem;
+          }
+          .article-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+          }
+          .article-meta {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 1rem;
+          }
+          .article-category {
+            display: inline-block;
+            background-color: #f0f0f0;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            margin-bottom: 1rem;
+          }
+          .article-image {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0 2rem;
+            border-radius: 0.5rem;
+          }
+          .article-content {
+            font-size: 1.125rem;
+          }
+          .article-footer {
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            color: #666;
+            border-top: 1px solid #eaeaea;
+            padding-top: 1rem;
+          }
+          @media print {
+            body {
+              padding: 0;
+            }
+          }
+        </style>
+      </head>
+      <body>
+        <div class="article-header">
+          <div class="article-category">${article.category}</div>
+          <h1 class="article-title">${article.title}</h1>
+          <div class="article-meta">
+            By ${article.author} | ${formattedDate} | ${article.readTime} min read
+          </div>
+        </div>
+        
+        <img src="${article.image}" alt="${article.title}" class="article-image" />
+        
+        <div class="article-content">
+          <p>${article.description}</p>
+          <p><em>Open the full article to read more...</em></p>
+        </div>
+        
+        <div class="article-footer">
+          © ${new Date().getFullYear()} MORS (Movement of Real Skills) | mors.org.uk
+        </div>
+      </body>
+      </html>
+    `;
+    
+    printWindow.document.open();
+    printWindow.document.write(printContent);
+    printWindow.document.close();
+    
+    printWindow.onload = () => {
+      printWindow.print();
+      setTimeout(() => {
+        if (!printWindow.closed) {
+          printWindow.close();
+        }
+      }, 500);
+    };
   };
 
   return (
@@ -117,6 +226,14 @@ const FeaturedArticle = ({ article, onClick }) => {
               }}
             >
               <Bookmark className="w-5 h-5 text-gray-300 hover:text-white" />
+            </motion.button>
+            <motion.button 
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors"
+              onClick={handlePrint}
+            >
+              <Printer className="w-5 h-5 text-gray-300 hover:text-white" />
             </motion.button>
           </div>
         </div>

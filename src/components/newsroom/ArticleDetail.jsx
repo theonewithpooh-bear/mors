@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, ArrowLeft, Share2, Bookmark, Printer } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
@@ -20,6 +20,7 @@ import {
 
 const ArticleDetail = ({ article, onBack }) => {
   const { toast } = useToast();
+  const articleContentRef = useRef(null);
   
   if (!article) return null;
   
@@ -68,7 +69,116 @@ const ArticleDetail = ({ article, onBack }) => {
   };
   
   const handlePrint = () => {
-    window.print();
+    const printWindow = window.open('', '_blank');
+    
+    if (!printWindow) {
+      toast({
+        title: "Print Error",
+        description: "Please allow pop-ups to print this article.",
+        variant: "destructive",
+        duration: 3000,
+      });
+      return;
+    }
+    
+    const printContent = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>${article.title} - MORS</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+          body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+          }
+          .article-header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 1rem;
+          }
+          .article-title {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+          }
+          .article-meta {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 1rem;
+          }
+          .article-category {
+            display: inline-block;
+            background-color: #f0f0f0;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            margin-bottom: 1rem;
+          }
+          .article-image {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0 2rem;
+            border-radius: 0.5rem;
+          }
+          .article-content {
+            font-size: 1.125rem;
+          }
+          .article-footer {
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            color: #666;
+            border-top: 1px solid #eaeaea;
+            padding-top: 1rem;
+          }
+          @media print {
+            body {
+              padding: 0;
+            }
+          }
+        </style>
+      </head>
+      <body>
+        <div class="article-header">
+          <div class="article-category">${article.category}</div>
+          <h1 class="article-title">${article.title}</h1>
+          <div class="article-meta">
+            By ${article.author} | ${formattedDate} | ${article.readTime} min read
+          </div>
+        </div>
+        
+        <img src="${article.image}" alt="${article.title}" class="article-image" />
+        
+        <div class="article-content">
+          ${article.content}
+        </div>
+        
+        <div class="article-footer">
+          © ${new Date().getFullYear()} MORS (Movement of Real Skills) | mors.org.uk
+        </div>
+      </body>
+      </html>
+    `;
+    
+    printWindow.document.open();
+    printWindow.document.write(printContent);
+    printWindow.document.close();
+    
+    printWindow.onload = () => {
+      printWindow.print();
+      // Some browsers will automatically close the window after printing
+      // For those that don't, we'll close it after a short delay
+      setTimeout(() => {
+        if (!printWindow.closed) {
+          printWindow.close();
+        }
+      }, 500);
+    };
   };
 
   return (
@@ -159,7 +269,7 @@ const ArticleDetail = ({ article, onBack }) => {
           </div>
         </div>
         
-        <article className="prose prose-lg max-w-none mb-12">
+        <article className="prose prose-lg max-w-none mb-12" ref={articleContentRef}>
           <div dangerouslySetInnerHTML={{ __html: article.content }} />
         </article>
         
