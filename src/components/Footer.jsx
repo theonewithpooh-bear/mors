@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Instagram, Mail } from 'lucide-react';
@@ -35,8 +34,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/articles" className="text-sm text-gray-600 hover:text-black transition-colors">
-                  articles
+                <Link to="/press-office" className="text-sm text-gray-600 hover:text-black transition-colors">
+                  press office
                 </Link>
               </li>
             </ul>
