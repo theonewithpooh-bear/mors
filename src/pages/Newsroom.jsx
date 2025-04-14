@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
@@ -136,7 +135,7 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
                   <Card className="mb-8 cursor-pointer hover:shadow-md transition-shadow" onClick={() => setShowFullStatement(true)}>
                     <CardHeader className="pb-2">
                       <Badge className="bg-gray-800 text-white mb-2 w-fit">April 13, 2025</Badge>
-                      <CardTitle className="text-2xl font-bold flex items-center justify-between group">
+                      <CardTitle className="text-2xl font-bold flex items-center justify-between group text-black">
                         Statement on the Passing of Brian Smith
                         <ChevronRight className="h-6 w-6 text-gray-500 group-hover:translate-x-1 transition-transform" />
                       </CardTitle>
