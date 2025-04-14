@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
@@ -26,7 +27,7 @@ export const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="fixed inset-0 z-50 backdrop-blur-md bg-black/80"
+          className="fixed inset-0 z-50 backdrop-blur-md bg-black/50"
         >
           <motion.div 
             initial={{ x: '100%' }}
@@ -47,13 +48,13 @@ export const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 0.3 }}
                   transition={{ duration: 1.5 }}
-                  className="absolute top-1/4 right-1/2 w-96 h-96 bg-purple-500/20 rounded-full animate-glow-dance"
+                  className="absolute top-1/4 right-1/2 w-96 h-96 bg-white/20 rounded-full animate-glow-dance"
                 ></motion.div>
                 <motion.div 
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 0.3 }}
                   transition={{ duration: 1.5, delay: 0.2 }}
-                  className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-500/10 rounded-full animate-glow-dance" 
+                  className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-white/10 rounded-full animate-glow-dance" 
                   style={{ animationDelay: "-2s" }}
                 ></motion.div>
               </div>

@@ -135,13 +135,13 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                       ease: "easeInOut"
                     }}
                   >
-                    <div className="absolute inset-0 bg-primary/25 rounded-full blur-md" />
-                    <div className="absolute inset-[-4px] bg-primary/20 rounded-full blur-xl" />
-                    <div className="absolute inset-[-8px] bg-primary/15 rounded-full blur-2xl" />
-                    <div className="absolute inset-[-12px] bg-primary/5 rounded-full blur-3xl" />
+                    <div className="absolute inset-0 bg-white/25 rounded-full blur-md" />
+                    <div className="absolute inset-[-4px] bg-white/20 rounded-full blur-xl" />
+                    <div className="absolute inset-[-8px] bg-white/15 rounded-full blur-2xl" />
+                    <div className="absolute inset-[-12px] bg-white/5 rounded-full blur-3xl" />
                     
                     <div 
-                      className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/20 to-primary/0"
+                      className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0"
                       style={{
                         animation: "shine 3s ease-in-out infinite"
                       }}
