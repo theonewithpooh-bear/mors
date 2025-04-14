@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
@@ -40,7 +39,7 @@ export const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
               mass: 0.85,
               delay: 0.05
             }}
-            className="fixed right-0 top-0 h-full w-3/4 max-w-sm bg-gradient-to-b from-black/95 to-black/85 border-l border-white/10 shadow-2xl"
+            className="fixed right-0 top-0 h-full w-3/4 max-w-sm neo-blur shadow-2xl"
           >
             <div className="absolute inset-0 overflow-hidden">
               <div className="absolute -inset-[200px] opacity-30 blur-3xl">

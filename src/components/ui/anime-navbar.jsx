@@ -36,7 +36,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
     <div className={cn("fixed top-0 left-0 right-0 z-[999] bg-transparent", className)}>
       <div className="flex justify-center pt-2">
         <motion.div 
-          className="flex items-center gap-3 bg-black/50 border border-white/10 backdrop-blur-lg py-2 px-2 rounded-full shadow-lg relative"
+          className="flex items-center gap-3 glass-morphism py-2 px-2 rounded-full shadow-lg relative"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
@@ -68,7 +68,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                       }}
                       className={cn(
                         "relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300",
-                        "text-white/70 hover:text-white",
+                        "text-white/90 hover:text-white",
                         isActive && "text-white"
                       )}
                     >
@@ -84,7 +84,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                     </button>
                   </PopoverTrigger>
                   <PopoverContent 
-                    className="popover-content w-64 bg-black/90 border border-white/10 backdrop-blur-lg p-2 rounded-lg shadow-xl"
+                    className="popover-content neo-blur w-64 p-2 rounded-lg shadow-xl"
                     sideOffset={8}
                     onMouseEnter={() => setOpenPopover(true)}
                     onMouseLeave={() => setOpenPopover(false)}
@@ -117,7 +117,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                 onMouseLeave={() => setHoveredTab(null)}
                 className={cn(
                   "relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300",
-                  "text-white/70 hover:text-white",
+                  "text-white/90 hover:text-white",
                   isActive && "text-white"
                 )}
               >
