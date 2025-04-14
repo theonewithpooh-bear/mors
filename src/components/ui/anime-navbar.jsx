@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -32,7 +33,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
   if (!mounted) return null;
 
   return (
-    <div className={cn("fixed top-0 left-0 right-0 z-[999]", className)}>
+    <div className={cn("fixed top-0 left-0 right-0 z-[999] bg-transparent", className)}>
       <div className="flex justify-center pt-2">
         <motion.div 
           className="flex items-center gap-3 bg-black/50 border border-white/10 backdrop-blur-lg py-2 px-2 rounded-full shadow-lg relative"
