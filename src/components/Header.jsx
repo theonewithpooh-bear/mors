@@ -35,6 +35,7 @@ const Header = () => {
           items={animeNavItems} 
           defaultActive={location.pathname === "/" ? "home" : ""} 
           showIcons={false}
+          className="desktop-nav"
         />
       </div>
 
