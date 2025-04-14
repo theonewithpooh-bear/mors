@@ -4,13 +4,14 @@ import { motion } from 'framer-motion';
 import Header from '@/components/Header';
 import NewsHeader from '@/components/newsroom/NewsHeader';
 import NewsCard from '@/components/newsroom/NewsCard';
+import ArticleDetail from '@/components/newsroom/ArticleDetail';
+import FeaturedArticle from '@/components/newsroom/FeaturedArticle';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 import { Search, Filter, FileText, Newspaper, Quote, ArrowRight, ChevronRight } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import FeaturedArticle from '@/components/newsroom/FeaturedArticle';
 import { newsData } from '@/data/newsData';
 import { useToast } from "@/components/ui/use-toast";
 import { 
@@ -30,6 +31,7 @@ import {
 const PressOffice = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [showFullStatement, setShowFullStatement] = useState(false);
+  const [selectedArticle, setSelectedArticle] = useState(null);
   const { toast } = useToast();
 
   // Sort news by date (newest first)
@@ -96,6 +98,11 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
         duration: 2000,
       });
     });
+  };
+  
+  const handleSelectArticle = (article) => {
+    setSelectedArticle(article);
+    window.scrollTo(0, 0);
   };
   
   return (
@@ -231,27 +238,71 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
             </TabsContent>
             
             <TabsContent value="articles" className="focus-visible:outline-none focus-visible:ring-0">
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="mb-16 p-8 rounded-xl border border-gray-500/30 bg-white/30 backdrop-blur-sm text-center"
-              >
-                <motion.div 
-                  initial={{ scale: 0.9 }}
-                  animate={{ scale: 1 }}
-                  transition={{ repeat: Infinity, repeatType: "reverse", duration: 2 }}
-                  className="mb-4 inline-flex items-center justify-center"
-                >
-                  <Newspaper className="h-12 w-12 text-black" />
-                </motion.div>
-                <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-700 to-gray-400 mb-3">
-                  Articles Coming Soon
-                </h2>
-                <p className="text-gray-700 max-w-2xl mx-auto">
-                  We're preparing insightful articles about educational reform, AI in education, and the latest MORS updates. Check back soon for fresh content that will help shape the future of education.
-                </p>
-              </motion.div>
+              {selectedArticle ? (
+                <ArticleDetail 
+                  article={selectedArticle} 
+                  onBack={() => setSelectedArticle(null)}
+                />
+              ) : (
+                <div>
+                  <FeaturedArticle 
+                    article={featuredArticle} 
+                    onClick={() => handleSelectArticle(featuredArticle)}
+                  />
+                  
+                  <div className="mt-12 mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                    <h2 className="text-2xl font-bold text-black mb-4 sm:mb-0">Latest Articles</h2>
+                    
+                    <div className="flex items-center space-x-2 w-full sm:w-auto">
+                      <div className="relative flex-grow sm:flex-grow-0">
+                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+                        <input
+                          type="text"
+                          placeholder="Search articles..."
+                          className="pl-10 pr-4 py-2 rounded-lg border border-gray-300 w-full"
+                          value={searchQuery}
+                          onChange={(e) => setSearchQuery(e.target.value)}
+                        />
+                      </div>
+                      <Button variant="outline" size="icon">
+                        <Filter className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    {regularArticles.map((article, index) => (
+                      <div 
+                        key={article.id} 
+                        onClick={() => handleSelectArticle(article)}
+                        className="cursor-pointer"
+                      >
+                        <NewsCard {...article} index={index} />
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <Pagination className="mt-8">
+                    <PaginationContent>
+                      <PaginationItem>
+                        <PaginationPrevious href="#" />
+                      </PaginationItem>
+                      <PaginationItem>
+                        <PaginationLink href="#" isActive>1</PaginationLink>
+                      </PaginationItem>
+                      <PaginationItem>
+                        <PaginationLink href="#">2</PaginationLink>
+                      </PaginationItem>
+                      <PaginationItem>
+                        <PaginationLink href="#">3</PaginationLink>
+                      </PaginationItem>
+                      <PaginationItem>
+                        <PaginationNext href="#" />
+                      </PaginationItem>
+                    </PaginationContent>
+                  </Pagination>
+                </div>
+              )}
             </TabsContent>
           </Tabs>
         </div>

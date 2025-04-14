@@ -5,7 +5,7 @@ import { Calendar, Clock, ArrowRight, Bookmark, Share2 } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-const FeaturedArticle = ({ article }) => {
+const FeaturedArticle = ({ article, onClick }) => {
   if (!article) return null;
   
   const formattedDate = new Date(article.date).toLocaleDateString('en-US', {
@@ -39,7 +39,8 @@ const FeaturedArticle = ({ article }) => {
         stiffness: 100,
         damping: 20
       }}
-      className="relative overflow-hidden rounded-2xl border border-white/10 shadow-xl"
+      className="relative overflow-hidden rounded-2xl border border-white/10 shadow-xl cursor-pointer"
+      onClick={onClick}
     >
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent opacity-90 z-10" />
       
@@ -84,7 +85,13 @@ const FeaturedArticle = ({ article }) => {
         </div>
         
         <div className="flex flex-wrap gap-4 items-center">
-          <Button className="bg-purple-600 hover:bg-purple-700 text-white shadow-md shadow-purple-600/20 px-6">
+          <Button 
+            className="bg-purple-600 hover:bg-purple-700 text-white shadow-md shadow-purple-600/20 px-6"
+            onClick={(e) => {
+              e.stopPropagation();
+              onClick();
+            }}
+          >
             Read Full Article <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
           
@@ -93,6 +100,10 @@ const FeaturedArticle = ({ article }) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors"
+              onClick={(e) => {
+                e.stopPropagation();
+                // Share functionality
+              }}
             >
               <Share2 className="w-5 h-5 text-gray-300 hover:text-white" />
             </motion.button>
@@ -100,6 +111,10 @@ const FeaturedArticle = ({ article }) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               className="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors"
+              onClick={(e) => {
+                e.stopPropagation();
+                // Bookmark functionality
+              }}
             >
               <Bookmark className="w-5 h-5 text-gray-300 hover:text-white" />
             </motion.button>
