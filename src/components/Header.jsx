@@ -27,6 +27,9 @@ const Header = () => {
       icon: null
     }));
 
+  // Determine if we're on the press office page to apply special styles
+  const isNewsroom = location.pathname === "/press-office";
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Desktop Navigation */}
@@ -35,6 +38,7 @@ const Header = () => {
           items={animeNavItems} 
           defaultActive={location.pathname === "/" ? "home" : ""} 
           showIcons={false}
+          className={isNewsroom ? "mt-2" : ""}
         />
       </div>
 
