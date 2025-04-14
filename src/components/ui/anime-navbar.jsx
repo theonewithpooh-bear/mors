@@ -68,8 +68,8 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                       }}
                       className={cn(
                         "relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300",
-                        "text-black/90 hover:text-black",
-                        isActive && "text-black"
+                        "text-white/70 hover:text-white",
+                        isActive && "text-white"
                       )}
                     >
                       <span className="relative z-10">{item.name}</span>
@@ -78,7 +78,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
                           exit={{ opacity: 0, scale: 0.8 }}
-                          className="absolute inset-0 bg-white/30 rounded-full -z-10"
+                          className="absolute inset-0 bg-white/10 rounded-full -z-10"
                         />
                       )}
                     </button>
@@ -117,8 +117,8 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                 onMouseLeave={() => setHoveredTab(null)}
                 className={cn(
                   "relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300",
-                  "text-black/90 hover:text-black",
-                  isActive && "text-black"
+                  "text-white/70 hover:text-white",
+                  isActive && "text-white"
                 )}
               >
                 {isActive && (
@@ -135,13 +135,13 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                       ease: "easeInOut"
                     }}
                   >
-                    <div className="absolute inset-0 bg-white/40 rounded-full blur-md" />
-                    <div className="absolute inset-[-4px] bg-white/30 rounded-full blur-xl" />
-                    <div className="absolute inset-[-8px] bg-white/25 rounded-full blur-2xl" />
-                    <div className="absolute inset-[-12px] bg-white/15 rounded-full blur-3xl" />
+                    <div className="absolute inset-0 bg-white/25 rounded-full blur-md" />
+                    <div className="absolute inset-[-4px] bg-white/20 rounded-full blur-xl" />
+                    <div className="absolute inset-[-8px] bg-white/15 rounded-full blur-2xl" />
+                    <div className="absolute inset-[-12px] bg-white/5 rounded-full blur-3xl" />
                     
                     <div 
-                      className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/30 to-white/20"
+                      className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0"
                       style={{
                         animation: "shine 3s ease-in-out infinite"
                       }}
@@ -159,7 +159,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.8 }}
-                      className="absolute inset-0 bg-white/30 rounded-full -z-10"
+                      className="absolute inset-0 bg-white/10 rounded-full -z-10"
                     />
                   )}
                 </AnimatePresence>

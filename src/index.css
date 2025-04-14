@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -39,11 +40,11 @@
 /* Utility classes for glass effect */
 @layer utilities {
   .glass-morphism {
-    @apply backdrop-blur-xl bg-white/30 border border-white/30 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.2)];
+    @apply backdrop-blur-xl bg-black/50 border border-white/10 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.2)];
   }
   
   .neo-blur {
-    @apply backdrop-blur-2xl bg-white/30 border border-white/30;
+    @apply backdrop-blur-2xl bg-black/70 border border-white/10;
   }
 }
 
