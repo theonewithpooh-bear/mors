@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -47,8 +46,12 @@
     @apply backdrop-blur-2xl bg-black/70 border border-white/10;
   }
   
-  /* Fix for press office page navigation */
+  /* Page-specific navigation styling */
   .press-office-header .desktop-nav .glass-morphism {
+    @apply bg-black/50;
+  }
+  
+  .manifesto-header .desktop-nav .glass-morphism {
     @apply bg-black/50;
   }
 }

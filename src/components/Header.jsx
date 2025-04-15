@@ -6,13 +6,25 @@ import { AnimeNavBar } from './ui/anime-navbar';
 import { MobileNav } from './ui/mobile-nav';
 import { Menu } from 'lucide-react';
 
+/**
+ * Header component that provides navigation for the entire application
+ * Handles both desktop and mobile navigation with special styling for specific pages
+ */
 const Header = () => {
   const location = useLocation();
   const navItems = useNavItems();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
-  // Check if we're on the press office page
+  // Page-specific styling flags
   const isPressOfficePage = location.pathname === "/press-office";
+  const isManifestoPage = location.pathname === "/manifesto";
+  
+  // Determine appropriate header class based on current page
+  const getHeaderClass = () => {
+    if (isPressOfficePage) return 'press-office-header';
+    if (isManifestoPage) return 'manifesto-header';
+    return '';
+  };
 
   const handleOpenMobileMenu = () => {
     setIsMobileMenuOpen(true);
@@ -31,14 +43,14 @@ const Header = () => {
     }));
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 ${isPressOfficePage ? 'press-office-header' : ''}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 ${getHeaderClass()}`}>
       {/* Desktop Navigation */}
       <div className="hidden md:block">
         <AnimeNavBar 
           items={animeNavItems} 
           defaultActive={location.pathname === "/" ? "home" : ""} 
           showIcons={false}
-          className={`desktop-nav ${isPressOfficePage ? 'press-office-nav' : ''}`}
+          className={`desktop-nav ${isPressOfficePage ? 'press-office-nav' : ''} ${isManifestoPage ? 'manifesto-nav' : ''}`}
         />
       </div>
 

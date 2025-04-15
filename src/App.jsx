@@ -5,6 +5,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import UpdateNotification from './components/UpdateNotification';
+
+// Import all pages
 import Index from './pages/Index';
 import LearnMore from './pages/LearnMore';
 import GetInvolved from './pages/GetInvolved';
@@ -21,12 +23,18 @@ import CookiesPolicy from './pages/CookiesPolicy';
 import NotFound from './pages/NotFound';
 import ShorehamCollege from './pages/ShorehamCollege';
 import TypeformVolunteer from './pages/TypeformVolunteer';
+import FileStore from './pages/FileStore';
 
+/**
+ * Main App component
+ * Contains the global layout with Header and Footer that wrap all routes
+ */
 const App = () => {
   return (
     <Router>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
+        {/* Global Header - included once for all pages */}
         <Header />
         <UpdateNotification />
         <main>
@@ -47,6 +55,7 @@ const App = () => {
               <Route path="/cookies-policy" element={<CookiesPolicy />} />
               <Route path="/shoreham-college" element={<ShorehamCollege />} />
               <Route path="/typeform-volunteer" element={<TypeformVolunteer />} />
+              <Route path="/file-store" element={<FileStore />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

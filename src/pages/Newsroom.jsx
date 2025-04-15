@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import NewsHeader from '@/components/newsroom/NewsHeader';
@@ -26,6 +27,10 @@ import {
   shareTo 
 } from "@/utils/shareUtils";
 
+/**
+ * Press Office / Newsroom page
+ * Note: This component doesn't need to include a Header as it's already provided by App.jsx
+ */
 const PressOffice = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [showFullStatement, setShowFullStatement] = useState(false);
