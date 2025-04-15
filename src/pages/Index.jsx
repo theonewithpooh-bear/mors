@@ -35,7 +35,11 @@ const Index = () => {
 
         {/* Poster Image */}
         <div className="w-full max-w-4xl mx-auto mb-24">
-          <img src="/lovable-uploads/8164cac9-73ee-4f69-8c50-372a0c23bd5e.png" alt="Education Shouldn't Burst Under Pressure" className="w-full h-auto rounded-2xl" />
+          <img 
+            src="/lovable-uploads/b093febb-5554-48ca-8abb-15f73ed785a0.png" 
+            alt="Education Shouldn't Burst Under Pressure" 
+            className="w-full h-auto rounded-2xl" 
+          />
         </div>
       </main>
     </div>;
