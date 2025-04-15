@@ -10,6 +10,9 @@ const Header = () => {
   const location = useLocation();
   const navItems = useNavItems();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  // Check if we're on the press office page
+  const isPressOfficePage = location.pathname === "/press-office";
 
   const handleOpenMobileMenu = () => {
     setIsMobileMenuOpen(true);
@@ -28,14 +31,14 @@ const Header = () => {
     }));
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className={`fixed top-0 left-0 right-0 z-50 ${isPressOfficePage ? 'press-office-header' : ''}`}>
       {/* Desktop Navigation */}
       <div className="hidden md:block">
         <AnimeNavBar 
           items={animeNavItems} 
           defaultActive={location.pathname === "/" ? "home" : ""} 
           showIcons={false}
-          className="desktop-nav"
+          className={`desktop-nav ${isPressOfficePage ? 'press-office-nav' : ''}`}
         />
       </div>
 

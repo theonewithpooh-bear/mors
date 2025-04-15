@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Header from '@/components/Header';
 import NewsHeader from '@/components/newsroom/NewsHeader';
 import NewsCard from '@/components/newsroom/NewsCard';
 import ArticleDetail from '@/components/newsroom/ArticleDetail';
@@ -99,7 +98,6 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
   
   return (
     <div className="min-h-screen bg-white bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-100/20 via-white to-white">
-      <Header />
       <main className="container mx-auto px-4 pt-28 pb-20 relative">
         <div className="max-w-6xl mx-auto">
           <NewsHeader />
