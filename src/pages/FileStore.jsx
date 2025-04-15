@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Footer from '../components/Footer';
@@ -19,7 +18,7 @@ const FileStore = () => {
           className="text-center space-y-2"
         >
           <h1 className="text-7xl font-serif font-bold">
-            <span className="font-bold">MORS</span>
+            <span>MORS</span>
           </h1>
           <p className="text-3xl font-serif">a future for education</p>
           <p className="text-xl text-gray-400 mt-2">manifesto</p>
