@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import NewsHeader from '@/components/newsroom/NewsHeader';
@@ -7,7 +6,7 @@ import ArticleDetail from '@/components/newsroom/ArticleDetail';
 import FeaturedArticle from '@/components/newsroom/FeaturedArticle';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
-import { Search, Filter, FileText, Newspaper, Quote, ArrowRight, ChevronRight } from 'lucide-react';
+import { Search, Filter, FileText, Newspaper, Quote, ArrowRight, ChevronRight, Mail } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -270,6 +269,27 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
               )}
             </TabsContent>
           </Tabs>
+          
+          <div className="mt-12 bg-gray-50 rounded-lg p-6 border border-gray-200 shadow-sm">
+            <div className="flex items-center mb-4">
+              <Mail className="mr-3 text-gray-600" size={24} />
+              <h2 className="text-2xl font-bold text-black">Contact Press</h2>
+            </div>
+            <p className="text-gray-700 mb-4">
+              Members of the press can reach out to us directly at:
+            </p>
+            <div className="bg-white border border-gray-200 rounded-md p-4 inline-block">
+              <a 
+                href="mailto:press@mors.org.uk" 
+                className="text-lg font-semibold text-blue-600 hover:text-blue-800 transition-colors"
+              >
+                press@mors.org.uk
+              </a>
+            </div>
+            <p className="text-gray-500 mt-3 text-sm">
+              We aim to respond to press inquiries within 48 hours.
+            </p>
+          </div>
         </div>
       </main>
     </div>
