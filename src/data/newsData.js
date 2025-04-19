@@ -1,10 +1,11 @@
+
 export const newsData = [
   {
     id: 11,
     title: "The Case Against GCSEs: Why Today's Exams Are Failing Young People",
     description: "Every year, hundreds of thousands of 16-year-olds across the UK face the intense pressure cooker of GCSE examinations. It's a rite of passage, a system woven into the fabric of our education landscape. But at MORS (Movement of Real Skills), a new youth-led movement, we're asking a fundamental question: Is this system, designed decades ago, truly serving the young people of today?",
-    author: "MORS Education Team",
-    authorImage: "https://randomuser.me/api/portraits/men/75.jpg",
+    author: "Gemini",
+    authorImage: "/lovable-uploads/b093febb-5554-48ca-8abb-15f73ed785a0.png", // Using the specified logo
     date: "2025-04-14",
     readTime: 10,
     image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop",
