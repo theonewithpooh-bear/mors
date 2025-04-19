@@ -281,7 +281,7 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
           <div className="mt-12 bg-gray-50 rounded-lg p-6 border border-gray-200 shadow-sm">
             <div className="flex items-center mb-4">
               <Mail className="mr-3 text-gray-600" size={24} />
-              <h2 className="text-2xl font-bold text-black">Contact Press</h2>
+              <h2 className="text-2xl font-bold text-black">Contact the Press Office</h2>
             </div>
             <p className="text-gray-700 mb-4">
               Members of the press can reach out to us directly at:
