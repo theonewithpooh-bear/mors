@@ -12,12 +12,12 @@ const FAQSection = () => {
         {t('faq.title')}
       </h2>
       
-      <Accordion type="single" collapsible className="w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 shadow-lg">
+      <Accordion type="single" collapsible className="w-full bg-black/20 backdrop-blur-sm border border-white/10 rounded-xl p-6 shadow-lg">
         <AccordionItem value="item-1" className="border-b border-white/10">
-          <AccordionTrigger className="text-white hover:text-gray-200">
+          <AccordionTrigger className="text-white hover:text-gray-200 text-left">
             {t('faq.questions.q1.question')}
           </AccordionTrigger>
-          <AccordionContent className="text-gray-300">
+          <AccordionContent className="text-gray-300 dark:text-white">
             {t('faq.questions.q1.answer')}
           </AccordionContent>
         </AccordionItem>
@@ -29,3 +29,4 @@ const FAQSection = () => {
 };
 
 export default FAQSection;
+
