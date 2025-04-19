@@ -1,37 +1,8 @@
-
 import React from 'react';
-import { File, FileArchive, BookOpen } from 'lucide-react';
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { FileArchive } from 'lucide-react';
+import { Card } from "@/components/ui/card";
 
-const publications = [
-  {
-    title: "MORS Student Manifesto 2025",
-    type: "Manifesto",
-    date: "April 2025",
-    description: "Our comprehensive vision for reforming the education system.",
-    fileSize: "1.2 MB",
-    format: "PDF",
-    icon: BookOpen
-  },
-  {
-    title: "Open Letter to the Department of Education",
-    type: "Open Letter",
-    date: "March 2025",
-    description: "Formal response to the proposed GCSE reforms.",
-    fileSize: "450 KB",
-    format: "PDF",
-    icon: File
-  },
-  {
-    title: "MORS Policy Framework",
-    type: "Policy Document",
-    date: "February 2025",
-    description: "Detailed breakdown of our policy positions and recommendations.",
-    fileSize: "2.1 MB",
-    format: "PDF",
-    icon: FileArchive
-  }
-];
+const publications = [];
 
 const PublicationsTab = () => {
   return (
@@ -43,9 +14,15 @@ const PublicationsTab = () => {
         </p>
       </div>
 
+      {publications.length === 0 && (
+        <div className="text-center py-12 text-gray-500">
+          No publications have been uploaded yet.
+        </div>
+      )}
+
       <div className="grid gap-4">
         {publications.map((pub, index) => {
-          const Icon = pub.icon;
+          const Icon = pub.icon || FileArchive;
           return (
             <Card key={index} className="transition-all hover:shadow-md">
               <CardHeader className="flex flex-row items-center gap-4">
