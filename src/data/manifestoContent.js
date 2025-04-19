@@ -1,11 +1,5 @@
 export const manifestoSections = [
   {
-    title: "mors",
-    subtitle: "a future for education",
-    content: "manifesto",
-    isHero: true
-  },
-  {
     title: "Section One: Introduction & Vision",
     content: [
       {
@@ -95,7 +89,7 @@ export const manifestoSections = [
         ]
       },
       {
-        subtitle: "Mental Health Impact - Staff",
+        subtitle: "Mental Health Impact – Staff",
         text: [
           "The system we experience now is not only affecting the mental health of students, but also of our invaluable teachers.",
           "The Teacher Wellbeing Index 2023 reported that 36% of staff are experiencing burnout. As well as this, a 2019 survey (bearing in mind that this is pre-Covid) found that 70% of teachers felt their job negatively impacted their mental health, 32% of whom had to seek counseling.",

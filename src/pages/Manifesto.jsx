@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import ManifestoSection from '../components/manifesto/ManifestoSection';
+import ManifestoTitle from '../components/manifesto/ManifestoTitle';
 import { manifestoSections, teacherManifestoSections, studentManifestoSections } from '../data/manifestoContent';
 import { motion } from 'framer-motion';
 
@@ -24,7 +25,8 @@ const Manifesto = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-black text-white">
+      <ManifestoTitle />
       <div className="w-full flex flex-col items-center justify-center py-12 px-4 mt-24">
         <div className="flex flex-col md:flex-row gap-4 md:gap-8 max-w-3xl w-full justify-center">
           {['Teachers', 'Students', 'Full Manifesto'].map((userType) => (
@@ -44,7 +46,7 @@ const Manifesto = () => {
         </div>
       </div>
       <main>
-        {currentContent.map((section, index) => (
+        {currentContent.slice(1).map((section, index) => (
           <ManifestoSection
             key={index}
             title={section.title}
