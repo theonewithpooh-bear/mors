@@ -4,9 +4,9 @@ import NewsHeader from '@/components/newsroom/NewsHeader';
 import NewsCard from '@/components/newsroom/NewsCard';
 import ArticleDetail from '@/components/newsroom/ArticleDetail';
 import FeaturedArticle from '@/components/newsroom/FeaturedArticle';
+import PublicationsTab from '@/components/newsroom/PublicationsTab';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
-import { Search, Filter, FileText, Newspaper, Quote, ArrowRight, ChevronRight, Mail } from 'lucide-react';
+import { Search, Filter, FileText, Newspaper, FileArchive, ArrowRight, ChevronRight, Mail } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -116,6 +116,10 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
                 <TabsTrigger value="articles" className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4">
                   <Newspaper className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="text-xs sm:text-sm">Articles</span>
+                </TabsTrigger>
+                <TabsTrigger value="publications" className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4">
+                  <FileArchive className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <span className="text-xs sm:text-sm">Publications</span>
                 </TabsTrigger>
               </TabsList>
             </div>
@@ -267,6 +271,10 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
                   </div>
                 </div>
               )}
+            </TabsContent>
+            
+            <TabsContent value="publications" className="focus-visible:outline-none focus-visible:ring-0">
+              <PublicationsTab />
             </TabsContent>
           </Tabs>
           
