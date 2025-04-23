@@ -5,8 +5,30 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { publications } from '@/data/publicationsData';
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { useToast } from "@/components/ui/use-toast";
 
 const PublicationsTab = () => {
+  const { toast } = useToast();
+
+  const handleDownload = (publication) => {
+    try {
+      window.open(publication.downloadUrl, '_blank');
+      toast({
+        title: "Download started",
+        description: `${publication.title} is now downloading.`,
+        duration: 3000,
+      });
+    } catch (error) {
+      toast({
+        title: "Download failed",
+        description: "There was an issue downloading the file. Please try again.",
+        variant: "destructive",
+        duration: 3000,
+      });
+      console.error("Download error:", error);
+    }
+  };
+
   return (
     <div className="space-y-6">
       <div className="mb-6">
@@ -48,7 +70,7 @@ const PublicationsTab = () => {
                 <Button 
                   variant="outline"
                   className="text-blue-600 hover:text-blue-700"
-                  onClick={() => window.open(pub.downloadUrl, '_blank')}
+                  onClick={() => handleDownload(pub)}
                 >
                   Download
                 </Button>
