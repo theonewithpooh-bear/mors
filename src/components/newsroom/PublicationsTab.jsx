@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { FileText, Info } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
@@ -15,13 +14,13 @@ const PublicationsTab = () => {
       window.open(publication.downloadUrl, '_blank');
       toast({
         title: "Download started",
-        description: `${publication.title} is now downloading.`,
+        description: `Opening ${publication.title} in a new tab.`,
         duration: 3000,
       });
     } catch (error) {
       toast({
         title: "Download failed",
-        description: "There was an issue downloading the file. Please try again.",
+        description: "There was an issue opening the file. Please try again.",
         variant: "destructive",
         duration: 3000,
       });

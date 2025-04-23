@@ -8,6 +8,6 @@ export const publications = [
     description: "Public version of the MORS Trustee Meeting discussing the appointment of CAF Bank and related banking arrangements. Some information has been redacted for security purposes.",
     fileSize: "145 KB",
     format: "PDF",
-    downloadUrl: "#" // Changed to # to prevent 404 errors while keeping the download button functional
+    downloadUrl: "https://drive.google.com/file/d/1Onqjrr2rXUvH9EX_5Uprr1tlanyPSwdP/view?usp=drive_link"
   }
 ];
