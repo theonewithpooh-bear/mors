@@ -5,31 +5,29 @@ import { Button } from "@/components/ui/button";
 import { publications } from '@/data/publicationsData';
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { useToast } from "@/components/ui/use-toast";
-
 const PublicationsTab = () => {
-  const { toast } = useToast();
-
-  const handleDownload = (publication) => {
+  const {
+    toast
+  } = useToast();
+  const handleDownload = publication => {
     try {
       window.open(publication.downloadUrl, '_blank');
       toast({
         title: "Download started",
         description: `Opening ${publication.title} in a new tab.`,
-        duration: 3000,
+        duration: 3000
       });
     } catch (error) {
       toast({
         title: "Download failed",
         description: "There was an issue opening the file. Please try again.",
         variant: "destructive",
-        duration: 3000,
+        duration: 3000
       });
       console.error("Download error:", error);
     }
   };
-
-  return (
-    <div className="space-y-6">
+  return <div className="space-y-6">
       <div className="mb-6">
         <h2 className="text-2xl font-bold text-black mb-2">Publications Archive</h2>
         <p className="text-gray-600">
@@ -45,14 +43,13 @@ const PublicationsTab = () => {
       </Alert>
 
       <div className="grid gap-4">
-        {publications.map((pub) => (
-          <Card key={pub.id} className="transition-all hover:shadow-md">
+        {publications.map(pub => <Card key={pub.id} className="transition-all hover:shadow-md">
             <CardHeader className="flex flex-row items-center gap-4">
               <div className="p-2 bg-gray-100 rounded-lg">
                 <FileText className="h-6 w-6 text-gray-700" />
               </div>
               <div>
-                <CardTitle className="text-lg">{pub.title}</CardTitle>
+                <CardTitle className="text-lg text-zinc-950">{pub.title}</CardTitle>
                 <div className="flex items-center gap-2 mt-1">
                   <span className="text-sm text-gray-500">{pub.type}</span>
                   <span className="text-gray-300">•</span>
@@ -66,26 +63,17 @@ const PublicationsTab = () => {
                 <div className="text-sm text-gray-500">
                   {pub.fileSize} • {pub.format}
                 </div>
-                <Button 
-                  variant="outline"
-                  className="text-blue-600 hover:text-blue-700"
-                  onClick={() => handleDownload(pub)}
-                >
+                <Button variant="outline" className="text-blue-600 hover:text-blue-700" onClick={() => handleDownload(pub)}>
                   Download
                 </Button>
               </div>
             </CardContent>
-          </Card>
-        ))}
+          </Card>)}
 
-        {publications.length === 0 && (
-          <div className="text-center py-12 text-gray-500">
+        {publications.length === 0 && <div className="text-center py-12 text-gray-500">
             No publications have been uploaded yet.
-          </div>
-        )}
+          </div>}
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default PublicationsTab;
