@@ -95,7 +95,7 @@ export const manifestoSections = [
         ]
       },
       {
-        subtitle: "Mental Health Impact - Staff",
+        subtitle: "Mental Health Impact – Staff",
         text: [
           "The system we experience now is not only affecting the mental health of students, but also of our invaluable teachers.",
           "The Teacher Wellbeing Index 2023 reported that 36% of staff are experiencing burnout. As well as this, a 2019 survey (bearing in mind that this is pre-Covid) found that 70% of teachers felt their job negatively impacted their mental health, 32% of whom had to seek counseling.",
@@ -512,7 +512,7 @@ export const teacherManifestoSections = [
       {
         subtitle: "How You Can Help",
         text: [
-          "Contact your MP, spread the word, tell colleagues, and encourage parents to volunteer."
+          "Contact your MP, spread the word, tell colleagues, and encourage students to volunteer."
         ]
       },
       {
@@ -762,7 +762,7 @@ export const studentManifestoSections = [
         subtitle: "How You Can Help",
         text: [
           "Talk to your friends, family, and teachers about these ideas.",
-          "Ask parents to get in touch with MORS or contact MPs."
+          "Ask students to get in touch with MORS or contact MPs."
         ]
       },
       {
