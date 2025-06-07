@@ -1,5 +1,4 @@
-
-import { HomeIcon, BookOpenIcon, UsersIcon, MessageSquareIcon, FolderIcon, Globe2Icon, NewspaperIcon, BrainIcon, CompareIcon } from "lucide-react";
+import { HomeIcon, BookOpenIcon, UsersIcon, MessageSquareIcon, FolderIcon, Globe2Icon, NewspaperIcon, BrainIcon, GitCompare } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export const useNavItems = () => {
@@ -44,7 +43,7 @@ export const useNavItems = () => {
     {
       name: "AI Comparison",
       url: "/ai-comparison",
-      icon: CompareIcon,
+      icon: GitCompare,
     },
     {
       name: "positions",
