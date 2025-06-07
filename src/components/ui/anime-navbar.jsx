@@ -57,18 +57,17 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                   onOpenChange={(open) => setOpenPopover(open ? item.name : null)}
                 >
                   <PopoverTrigger asChild>
-                    <button
+                    <div
                       onMouseEnter={() => {
                         setHoveredTab(item.name);
                         setOpenPopover(item.name);
                       }}
                       onMouseLeave={() => {
                         setHoveredTab(null);
+                        // Small delay to allow moving to dropdown content
                         setTimeout(() => {
-                          if (!document.querySelector(':hover .popover-content')) {
-                            setOpenPopover(null);
-                          }
-                        }, 100);
+                          setOpenPopover(null);
+                        }, 150);
                       }}
                       className={cn(
                         "relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300",
@@ -85,7 +84,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                           className="absolute inset-0 bg-white/10 rounded-full -z-10"
                         />
                       )}
-                    </button>
+                    </div>
                   </PopoverTrigger>
                   <PopoverContent 
                     className="popover-content neo-blur w-64 p-2 rounded-lg shadow-xl"
