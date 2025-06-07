@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, GraduationCap, DollarSign, CheckCircle, XCircle, Star } from 'lucide-react';
+import { Brain, GraduationCap, DollarSign, CheckCircle, XCircle, Star, Users, Crown } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
@@ -60,6 +59,40 @@ const AIComparison = () => {
     }
   ];
 
+  const pricingData = [
+    {
+      provider: "Claude (Anthropic)",
+      plans: [
+        { name: "Free", monthly: "$0", annual: "—", details: "Claude 4 Haiku (short context) with daily message limits" },
+        { name: "Claude Pro", monthly: "$20", annual: "$200 ($17/mo)", details: "5× more usage than free tier; access to Opus 4 (when available)" },
+        { name: "Claude Team", monthly: "$30/seat (min 5)", annual: "—", details: "Shared work-spaces, higher rate-limits, admin console" }
+      ]
+    },
+    {
+      provider: "Gemini (Google)",
+      plans: [
+        { name: "Free", monthly: "$0", annual: "—", details: "Gemini 1.5 Flash with standard limits" },
+        { name: "Google One AI Premium", monthly: "$19.99", annual: "—", details: "2TB Google One storage, Gemini Advanced (Ultra/2.5 Pro), Workspace AI features" }
+      ]
+    },
+    {
+      provider: "Grok 3 (xAI)",
+      plans: [
+        { name: "X Premium+", monthly: "$40", annual: "$395 ($32.92/mo)", details: "Unlimited Grok 3 queries inside X; higher model limits than lower tiers" }
+      ]
+    },
+    {
+      provider: "ChatGPT (OpenAI)",
+      plans: [
+        { name: "Free", monthly: "$0", annual: "—", details: "GPT-3.5 + limited GPT-4o burst" },
+        { name: "ChatGPT Plus", monthly: "$20", annual: "—", details: "Priority access & GPT-4o, Code Interpreter, DALL·E and browsing" },
+        { name: "ChatGPT Team", monthly: "$30/seat", annual: "$300/yr ($25/seat)", details: "Min 2 seats, shared custom GPTs, higher caps" },
+        { name: "ChatGPT Pro", monthly: "$200", annual: "—", details: "Unlimited o1 & GPT-4o, expanded voice & analysis tools" },
+        { name: "ChatGPT Enterprise", monthly: "Custom (~$60-100/seat)", annual: "Contractual", details: "Unlimited GPT-4o, dedicated data-privacy guarantees, admin & SSO" }
+      ]
+    }
+  ];
+
   const freeFeatures = [
     { name: "Research assistance", claude: 7, gemini: 8, chatgpt: 8, grok: 7 },
     { name: "Essay-writing support", claude: 8, gemini: 7, chatgpt: 8, grok: 6 },
@@ -87,6 +120,13 @@ const AIComparison = () => {
     if (score >= 7) return "text-blue-600 font-semibold";
     if (score >= 5) return "text-yellow-600";
     return "text-red-600";
+  };
+
+  const getPlanIcon = (planName) => {
+    if (planName.includes('Free')) return null;
+    if (planName.includes('Pro') || planName.includes('Premium') || planName.includes('Plus')) return <Crown className="w-4 h-4 text-yellow-500" />;
+    if (planName.includes('Team') || planName.includes('Enterprise')) return <Users className="w-4 h-4 text-blue-500" />;
+    return null;
   };
 
   return (
@@ -175,57 +215,104 @@ const AIComparison = () => {
                 </div>
               </TabsContent>
 
-              {/* Pricing Tab */}
+              {/* Updated Pricing Tab */}
               <TabsContent value="pricing" className="space-y-8">
-                <div className="bg-card p-2 rounded-2xl border">
-                  <Table>
-                    <TableHeader>
-                      <TableRow>
-                        <TableHead className="w-48">AI Model</TableHead>
-                        <TableHead>Free Tier</TableHead>
-                        <TableHead>Paid Tier</TableHead>
-                        <TableHead className="text-center">Best For Students</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {aiModels.map((model) => (
-                        <TableRow key={model.name}>
-                          <TableCell className="font-semibold">{model.name}</TableCell>
-                          <TableCell>{model.freeTier}</TableCell>
-                          <TableCell>{model.paidTier}</TableCell>
-                          <TableCell className="text-center">
-                            {model.rating >= 4 ? (
-                              <CheckCircle className="w-5 h-5 text-green-500 mx-auto" />
-                            ) : (
-                              <span className="text-muted-foreground">Good</span>
-                            )}
-                          </TableCell>
-                        </TableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
+                <div className="space-y-8">
+                  {pricingData.map((provider, providerIndex) => (
+                    <motion.div
+                      key={provider.provider}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: providerIndex * 0.1 }}
+                      viewport={{ once: true }}
+                      className="bg-card p-6 rounded-2xl border shadow-lg"
+                    >
+                      <h3 className="text-xl font-bold mb-4 text-primary">{provider.provider}</h3>
+                      <div className="overflow-x-auto">
+                        <Table>
+                          <TableHeader>
+                            <TableRow>
+                              <TableHead>Plan</TableHead>
+                              <TableHead>Monthly</TableHead>
+                              <TableHead>Annual</TableHead>
+                              <TableHead>Key Details</TableHead>
+                            </TableRow>
+                          </TableHeader>
+                          <TableBody>
+                            {provider.plans.map((plan, planIndex) => (
+                              <TableRow key={planIndex}>
+                                <TableCell className="font-semibold">
+                                  <div className="flex items-center space-x-2">
+                                    {getPlanIcon(plan.name)}
+                                    <span>{plan.name}</span>
+                                  </div>
+                                </TableCell>
+                                <TableCell className="font-medium text-green-600">{plan.monthly}</TableCell>
+                                <TableCell className="font-medium text-blue-600">{plan.annual}</TableCell>
+                                <TableCell className="text-sm text-muted-foreground">{plan.details}</TableCell>
+                              </TableRow>
+                            ))}
+                          </TableBody>
+                        </Table>
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
 
-                <div className="bg-gradient-to-r from-green-50/50 to-blue-50/50 p-8 rounded-2xl border">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <DollarSign className="w-8 h-8 text-green-600" />
-                    <h3 className="text-2xl font-bold">Cost Comparison Tips</h3>
+                {/* Pricing Insights */}
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="bg-gradient-to-r from-green-50/50 to-blue-50/50 p-8 rounded-2xl border">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <DollarSign className="w-8 h-8 text-green-600" />
+                      <h3 className="text-2xl font-bold">Key Takeaways</h3>
+                    </div>
+                    <div className="space-y-4 text-sm">
+                      <div>
+                        <h4 className="font-semibold text-green-700 mb-1">Lowest Personal Paywall</h4>
+                        <p className="text-muted-foreground">
+                          Google's AI Premium at $19.99 beats Anthropic and OpenAI by a penny, 
+                          but Claude Pro and ChatGPT Plus sit close behind at $20.
+                        </p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-blue-700 mb-1">Cheapest Multi-Seat Plan</h4>
+                        <p className="text-muted-foreground">
+                          ChatGPT Team's annual $25/seat beats Claude Team's $30, 
+                          though Claude offers larger context windows.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold mb-2">For Students on Budget</h4>
-                      <p className="text-muted-foreground text-sm">
-                        Most AI models offer generous free tiers perfect for educational use. 
-                        Start with free options and upgrade only when needed.
-                      </p>
+                  
+                  <div className="bg-gradient-to-r from-purple-50/50 to-yellow-50/50 p-8 rounded-2xl border">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <Crown className="w-8 h-8 text-purple-600" />
+                      <h3 className="text-2xl font-bold">Premium Insights</h3>
                     </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">For Schools & Teachers</h4>
-                      <p className="text-muted-foreground text-sm">
-                        Consider educational discounts and volume licensing. 
-                        Many providers offer special rates for educational institutions.
-                      </p>
+                    <div className="space-y-4 text-sm">
+                      <div>
+                        <h4 className="font-semibold text-purple-700 mb-1">Highest Individual Tier</h4>
+                        <p className="text-muted-foreground">
+                          ChatGPT Pro's $200/mo dwarfs others—aimed at researchers needing unlimited compute.
+                        </p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-red-700 mb-1">Recent Price Changes</h4>
+                        <p className="text-muted-foreground">
+                          X Premium+ jumped from $22 → $40 in Feb 2025 when Grok 3 launched, 
+                          nearly doubling cost for new subscribers.
+                        </p>
+                      </div>
                     </div>
+                  </div>
+                </div>
+
+                <div className="bg-muted/30 p-6 rounded-2xl border">
+                  <h3 className="text-lg font-bold mb-3">Important Notes</h3>
+                  <div className="text-sm text-muted-foreground space-y-2">
+                    <p>• All figures are USD before tax. Conversions and local taxes vary by country (UK users typically see ~£ price × 0.79).</p>
+                    <p>• All providers bill taxes separately in many regions, and seat-based plans enforce minimum user counts.</p>
+                    <p>• Pricing as of June 2025 - check provider websites for current rates.</p>
                   </div>
                 </div>
               </TabsContent>
