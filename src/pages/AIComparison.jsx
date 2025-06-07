@@ -25,52 +25,73 @@ const AIComparison = () => {
     }
   };
 
-  // Placeholder data - user will fill this in manually
   const aiModels = [
     {
-      name: "Google Gemini",
-      freeTier: "Free tier details here",
-      paidTier: "Paid tier details here",
-      educationalStrengths: "Educational strengths here",
-      limitations: "Limitations here",
+      name: "Claude 4 (Sonnet 4)",
+      freeTier: "Sonnet 4 with 200k-token window, tool-use capabilities",
+      paidTier: "Claude Pro ($20/month) - 5x more usage, priority access, early features",
+      educationalStrengths: "State-of-the-art coding (72% on SWE-bench), excellent multi-step math reasoning",
+      limitations: "Live web search limited without extended thinking mode",
       rating: 5
     },
     {
-      name: "ChatGPT",
-      freeTier: "Free tier details here",
-      paidTier: "Paid tier details here",
-      educationalStrengths: "Educational strengths here",
-      limitations: "Limitations here",
+      name: "Gemini 2.5 Flash",
+      freeTier: "1M-token window, Deep Research mode, fast output",
+      paidTier: "Gemini Advanced ($20/month) - Higher usage limits, Gemini Ultra access",
+      educationalStrengths: "Excellent research capabilities, superior language translation, massive context window",
+      limitations: "Slightly lower coding performance compared to Claude 4",
+      rating: 5
+    },
+    {
+      name: "ChatGPT 4o mini",
+      freeTier: "Full ChatGPT toolbelt: browsing, Python interpreter, file uploads",
+      paidTier: "ChatGPT Plus ($20/month) - GPT-4o access, DALL-E 3, advanced data analysis",
+      educationalStrengths: "Comprehensive tool integration, reliable across broad tasks, excellent explanations",
+      limitations: "Falls back to smaller model (4o-mini) when flagship usage runs out",
       rating: 4
     },
     {
-      name: "Claude",
-      freeTier: "Free tier details here",
-      paidTier: "Paid tier details here",
-      educationalStrengths: "Educational strengths here",
-      limitations: "Limitations here",
+      name: "Grok 3",
+      freeTier: "Excellent STEM performance, DeepSearch option",
+      paidTier: "X Premium+ ($16/month) - Higher quotas, real-time data access",
+      educationalStrengths: "Outstanding mathematical reasoning, strong on AIME 2025 benchmarks",
+      limitations: "Tight free quotas (~15 messages/hour), knowledge cutoff Nov 2024",
       rating: 4
-    },
-    {
-      name: "Grok",
-      freeTier: "Free tier details here",
-      paidTier: "Paid tier details here",
-      educationalStrengths: "Educational strengths here",
-      limitations: "Limitations here",
-      rating: 3
     }
   ];
 
-  const features = [
-    "Research Assistance",
-    "Essay Writing Support",
-    "Math Problem Solving",
-    "Code Learning",
-    "Language Translation",
-    "Study Planning",
-    "Quick Explanations",
-    "Document Analysis"
+  const freeFeatures = [
+    { name: "Research assistance", claude: 7, gemini: 8, chatgpt: 8, grok: 7 },
+    { name: "Essay-writing support", claude: 8, gemini: 7, chatgpt: 8, grok: 6 },
+    { name: "Math problem solving", claude: 9, gemini: 8, chatgpt: 8, grok: 9 },
+    { name: "Code learning / debugging", claude: 9, gemini: 8, chatgpt: 7, grok: 7 },
+    { name: "Language translation", claude: 7, gemini: 9, chatgpt: 8, grok: 6 },
+    { name: "Study planning & schedules", claude: 8, gemini: 7, chatgpt: 8, grok: 6 },
+    { name: "Quick explanations (ELI5, TL;DR)", claude: 7, gemini: 7, chatgpt: 8, grok: 6 },
+    { name: "Document / file analysis", claude: 8, gemini: 9, chatgpt: 7, grok: 6 }
   ];
+
+  const paidFeatures = [
+    { name: "Research assistance", claude: 9, gemini: 9, chatgpt: 9, grok: 8 },
+    { name: "Essay-writing support", claude: 9, gemini: 8, chatgpt: 9, grok: 7 },
+    { name: "Math problem solving", claude: 10, gemini: 9, chatgpt: 9, grok: 10 },
+    { name: "Code learning / debugging", claude: 10, gemini: 9, chatgpt: 8, grok: 8 },
+    { name: "Language translation", claude: 8, gemini: 10, chatgpt: 9, grok: 7 },
+    { name: "Study planning & schedules", claude: 9, gemini: 8, chatgpt: 9, grok: 7 },
+    { name: "Quick explanations (ELI5, TL;DR)", claude: 8, gemini: 8, chatgpt: 9, grok: 7 },
+    { name: "Document / file analysis", claude: 9, gemini: 10, chatgpt: 8, grok: 7 },
+    { name: "Real-time web access", claude: 8, gemini: 9, chatgpt: 9, grok: 9 },
+    { name: "Advanced reasoning", claude: 10, gemini: 8, chatgpt: 9, grok: 9 },
+    { name: "Image generation", claude: 6, gemini: 8, chatgpt: 9, grok: 7 },
+    { name: "Extended conversations", claude: 9, gemini: 9, chatgpt: 8, grok: 8 }
+  ];
+
+  const getScoreColor = (score) => {
+    if (score >= 9) return "text-green-600 font-bold";
+    if (score >= 7) return "text-blue-600 font-semibold";
+    if (score >= 5) return "text-yellow-600";
+    return "text-red-600";
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -98,10 +119,11 @@ const AIComparison = () => {
         <div className="container mx-auto px-4">
           <motion.div {...fadeInUp} className="max-w-7xl mx-auto">
             <Tabs defaultValue="overview" className="w-full">
-              <TabsList className="grid w-full grid-cols-3">
+              <TabsList className="grid w-full grid-cols-4">
                 <TabsTrigger value="overview">Overview</TabsTrigger>
                 <TabsTrigger value="pricing">Pricing</TabsTrigger>
-                <TabsTrigger value="features">Features</TabsTrigger>
+                <TabsTrigger value="free-features">Free Tier</TabsTrigger>
+                <TabsTrigger value="paid-features">Paid Tier</TabsTrigger>
               </TabsList>
 
               {/* Overview Tab */}
@@ -212,28 +234,105 @@ const AIComparison = () => {
                 </div>
               </TabsContent>
 
-              {/* Features Tab */}
-              <TabsContent value="features" className="space-y-8">
+              {/* Free Features Tab */}
+              <TabsContent value="free-features" className="space-y-8">
                 <div className="bg-card p-2 rounded-2xl border">
                   <Table>
                     <TableHeader>
                       <TableRow>
                         <TableHead>Feature</TableHead>
-                        {aiModels.map((model) => (
-                          <TableHead key={model.name} className="text-center">{model.name}</TableHead>
-                        ))}
+                        <TableHead className="text-center">Claude 4</TableHead>
+                        <TableHead className="text-center">Gemini 2.5 Flash</TableHead>
+                        <TableHead className="text-center">ChatGPT 4o mini</TableHead>
+                        <TableHead className="text-center">Grok 3</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
-                      {features.map((feature) => (
-                        <TableRow key={feature}>
-                          <TableCell className="font-medium">{feature}</TableCell>
-                          {aiModels.map((model) => (
-                            <TableCell key={`${model.name}-${feature}`} className="text-center">
-                              {/* Placeholder - user will fill this manually */}
-                              <span className="text-muted-foreground">TBD</span>
-                            </TableCell>
-                          ))}
+                      {freeFeatures.map((feature) => (
+                        <TableRow key={feature.name}>
+                          <TableCell className="font-medium">{feature.name}</TableCell>
+                          <TableCell className={`text-center ${getScoreColor(feature.claude)}`}>
+                            {feature.claude}/10
+                          </TableCell>
+                          <TableCell className={`text-center ${getScoreColor(feature.gemini)}`}>
+                            {feature.gemini}/10
+                          </TableCell>
+                          <TableCell className={`text-center ${getScoreColor(feature.chatgpt)}`}>
+                            {feature.chatgpt}/10
+                          </TableCell>
+                          <TableCell className={`text-center ${getScoreColor(feature.grok)}`}>
+                            {feature.grok}/10
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </div>
+
+                <div className="bg-gradient-to-br from-blue-50/50 to-purple-50/50 p-8 rounded-2xl border">
+                  <h3 className="text-xl font-bold mb-4">Free Tier Scale</h3>
+                  <div className="grid md:grid-cols-2 gap-6 text-sm">
+                    <div>
+                      <div className="space-y-2">
+                        <div className="flex items-center space-x-2">
+                          <div className="w-3 h-3 bg-green-600 rounded"></div>
+                          <span className="font-semibold text-green-600">9-10:</span>
+                          <span>Top of the class – rarely needs a second tool</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-3 h-3 bg-blue-600 rounded"></div>
+                          <span className="font-semibold text-blue-600">7-8:</span>
+                          <span>Very good – reliable day-to-day</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="space-y-2">
+                        <div className="flex items-center space-x-2">
+                          <div className="w-3 h-3 bg-yellow-600 rounded"></div>
+                          <span className="font-semibold text-yellow-600">5-6:</span>
+                          <span>Adequate – works, but expect occasional limits</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-3 h-3 bg-red-600 rounded"></div>
+                          <span className="font-semibold text-red-600">≤4:</span>
+                          <span>Use another chatbot for that task</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </TabsContent>
+
+              {/* Paid Features Tab */}
+              <TabsContent value="paid-features" className="space-y-8">
+                <div className="bg-card p-2 rounded-2xl border">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Feature</TableHead>
+                        <TableHead className="text-center">Claude Pro</TableHead>
+                        <TableHead className="text-center">Gemini Advanced</TableHead>
+                        <TableHead className="text-center">ChatGPT Plus</TableHead>
+                        <TableHead className="text-center">X Premium+</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {paidFeatures.map((feature) => (
+                        <TableRow key={feature.name}>
+                          <TableCell className="font-medium">{feature.name}</TableCell>
+                          <TableCell className={`text-center ${getScoreColor(feature.claude)}`}>
+                            {feature.claude}/10
+                          </TableCell>
+                          <TableCell className={`text-center ${getScoreColor(feature.gemini)}`}>
+                            {feature.gemini}/10
+                          </TableCell>
+                          <TableCell className={`text-center ${getScoreColor(feature.chatgpt)}`}>
+                            {feature.chatgpt}/10
+                          </TableCell>
+                          <TableCell className={`text-center ${getScoreColor(feature.grok)}`}>
+                            {feature.grok}/10
+                          </TableCell>
                         </TableRow>
                       ))}
                     </TableBody>
@@ -241,27 +340,27 @@ const AIComparison = () => {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8">
-                  <div className="bg-gradient-to-br from-blue-50/50 to-purple-50/50 p-8 rounded-2xl border">
-                    <h3 className="text-xl font-bold mb-4">Key Educational Features</h3>
-                    <ul className="space-y-2 text-muted-foreground">
-                      <li>• Ability to explain complex concepts simply</li>
-                      <li>• Support for multiple subjects and disciplines</li>
-                      <li>• Code generation and debugging assistance</li>
-                      <li>• Language learning and translation support</li>
-                      <li>• Research and fact-checking capabilities</li>
-                      <li>• Study plan generation and organization</li>
+                  <div className="bg-gradient-to-br from-green-50/50 to-yellow-50/50 p-8 rounded-2xl border">
+                    <h3 className="text-xl font-bold mb-4">Paid Tier Benefits</h3>
+                    <ul className="space-y-2 text-muted-foreground text-sm">
+                      <li>• Higher usage limits and priority access</li>
+                      <li>• Access to flagship models (GPT-4o, Gemini Ultra)</li>
+                      <li>• Real-time web browsing and data access</li>
+                      <li>• Advanced features like image generation</li>
+                      <li>• Extended conversation memory</li>
+                      <li>• Enhanced reasoning capabilities</li>
                     </ul>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-green-50/50 to-yellow-50/50 p-8 rounded-2xl border">
-                    <h3 className="text-xl font-bold mb-4">What to Look For</h3>
-                    <ul className="space-y-2 text-muted-foreground">
-                      <li>• Accuracy and reliability of information</li>
-                      <li>• Clear citation and source transparency</li>
-                      <li>• Ability to adapt to different learning styles</li>
-                      <li>• Safety features and content filtering</li>
-                      <li>• Integration with educational tools</li>
-                      <li>• Regular updates and improvements</li>
+                  <div className="bg-gradient-to-br from-blue-50/50 to-purple-50/50 p-8 rounded-2xl border">
+                    <h3 className="text-xl font-bold mb-4">Worth the Upgrade?</h3>
+                    <ul className="space-y-2 text-muted-foreground text-sm">
+                      <li>• Heavy users: Definitely worth $16-20/month</li>
+                      <li>• Casual users: Free tiers often sufficient</li>
+                      <li>• Students: Consider educational discounts</li>
+                      <li>• Researchers: Paid tiers offer better web access</li>
+                      <li>• Coders: Claude Pro and ChatGPT Plus excel</li>
+                      <li>• Try free first, upgrade when you hit limits</li>
                     </ul>
                   </div>
                 </div>
@@ -289,7 +388,7 @@ const AIComparison = () => {
                   whileTap={{ scale: 0.95 }}
                   className="bg-card border border-border px-6 py-4 rounded-xl font-semibold hover:bg-accent hover:text-accent-foreground transition-colors shadow-lg hover:shadow-xl cursor-pointer"
                 >
-                  Try {model.name}
+                  Try {model.name.split(' ')[0]}
                 </motion.div>
               ))}
             </div>
