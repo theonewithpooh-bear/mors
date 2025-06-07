@@ -72,18 +72,14 @@ const AIComparison = () => {
   ];
 
   const paidFeatures = [
-    { name: "Research assistance", claude: 9, gemini: 9, chatgpt: 9, grok: 8 },
+    { name: "Research assistance", claude: 8, gemini: 9, chatgpt: 9, grok: 8 },
     { name: "Essay-writing support", claude: 9, gemini: 8, chatgpt: 9, grok: 7 },
-    { name: "Math problem solving", claude: 10, gemini: 9, chatgpt: 9, grok: 10 },
-    { name: "Code learning / debugging", claude: 10, gemini: 9, chatgpt: 8, grok: 8 },
-    { name: "Language translation", claude: 8, gemini: 10, chatgpt: 9, grok: 7 },
-    { name: "Study planning & schedules", claude: 9, gemini: 8, chatgpt: 9, grok: 7 },
-    { name: "Quick explanations (ELI5, TL;DR)", claude: 8, gemini: 8, chatgpt: 9, grok: 7 },
-    { name: "Document / file analysis", claude: 9, gemini: 10, chatgpt: 8, grok: 7 },
-    { name: "Real-time web access", claude: 8, gemini: 9, chatgpt: 9, grok: 9 },
-    { name: "Advanced reasoning", claude: 10, gemini: 8, chatgpt: 9, grok: 9 },
-    { name: "Image generation", claude: 6, gemini: 8, chatgpt: 9, grok: 7 },
-    { name: "Extended conversations", claude: 9, gemini: 9, chatgpt: 8, grok: 8 }
+    { name: "Math problem solving", claude: 9, gemini: 9, chatgpt: 10, grok: 9 },
+    { name: "Code learning / debugging", claude: 10, gemini: 9, chatgpt: 9, grok: 8 },
+    { name: "Language translation", claude: 8, gemini: 10, chatgpt: 8, grok: 6 },
+    { name: "Study planning & schedules", claude: 8, gemini: 8, chatgpt: 9, grok: 7 },
+    { name: "Quick explanations (ELI5, TL;DR)", claude: 8, gemini: 7, chatgpt: 9, grok: 7 },
+    { name: "Document / file analysis", claude: 9, gemini: 9, chatgpt: 9, grok: 7 }
   ];
 
   const getScoreColor = (score) => {
@@ -311,10 +307,10 @@ const AIComparison = () => {
                     <TableHeader>
                       <TableRow>
                         <TableHead>Feature</TableHead>
-                        <TableHead className="text-center">Claude Pro</TableHead>
-                        <TableHead className="text-center">Gemini Advanced</TableHead>
-                        <TableHead className="text-center">ChatGPT Plus</TableHead>
-                        <TableHead className="text-center">X Premium+</TableHead>
+                        <TableHead className="text-center">Claude Opus 4</TableHead>
+                        <TableHead className="text-center">Gemini 2.5 Pro</TableHead>
+                        <TableHead className="text-center">OpenAI o3 + GPT-4.1</TableHead>
+                        <TableHead className="text-center">Grok 3 (SuperGrok)</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -341,27 +337,49 @@ const AIComparison = () => {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="bg-gradient-to-br from-green-50/50 to-yellow-50/50 p-8 rounded-2xl border">
-                    <h3 className="text-xl font-bold mb-4">Paid Tier Benefits</h3>
-                    <ul className="space-y-2 text-muted-foreground text-sm">
-                      <li>• Higher usage limits and priority access</li>
-                      <li>• Access to flagship models (GPT-4o, Gemini Ultra)</li>
-                      <li>• Real-time web browsing and data access</li>
-                      <li>• Advanced features like image generation</li>
-                      <li>• Extended conversation memory</li>
-                      <li>• Enhanced reasoning capabilities</li>
-                    </ul>
+                    <h3 className="text-xl font-bold mb-4">Paid Tier Highlights</h3>
+                    <div className="space-y-3 text-sm text-muted-foreground">
+                      <div>
+                        <h4 className="font-semibold text-foreground">Claude Opus 4</h4>
+                        <p>Extended-thinking mode with web search, 72% SWE-bench coding score, 200k+ context</p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-foreground">Gemini 2.5 Pro</h4>
+                        <p>1M-token context, multimodal capabilities, Google Translate backbone for translation</p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-foreground">OpenAI o3 + GPT-4.1</h4>
+                        <p>98%+ AIME math scores, full tool integration, 1M-token window</p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-foreground">Grok 3 (SuperGrok)</h4>
+                        <p>93% AIME 2025, real-time X/Twitter integration, STEM powerhouse</p>
+                      </div>
+                    </div>
                   </div>
                   
                   <div className="bg-gradient-to-br from-blue-50/50 to-purple-50/50 p-8 rounded-2xl border">
-                    <h3 className="text-xl font-bold mb-4">Worth the Upgrade?</h3>
-                    <ul className="space-y-2 text-muted-foreground text-sm">
-                      <li>• Heavy users: Definitely worth $16-20/month</li>
-                      <li>• Casual users: Free tiers often sufficient</li>
-                      <li>• Students: Consider educational discounts</li>
-                      <li>• Researchers: Paid tiers offer better web access</li>
-                      <li>• Coders: Claude Pro and ChatGPT Plus excel</li>
-                      <li>• Try free first, upgrade when you hit limits</li>
-                    </ul>
+                    <h3 className="text-xl font-bold mb-4">Paid Tier Scale</h3>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-green-600 rounded"></div>
+                        <span className="font-semibold text-green-600">9-10:</span>
+                        <span>Practically the best you'll find today</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-blue-600 rounded"></div>
+                        <span className="font-semibold text-blue-600">7-8:</span>
+                        <span>Very reliable for day-to-day needs</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-yellow-600 rounded"></div>
+                        <span className="font-semibold text-yellow-600">5-6:</span>
+                        <span>Works, but expect the odd hiccup or quota limit</span>
+                      </div>
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-4">
+                      Benchmarks move fast - think of these as today's feel rather than forever numbers.
+                    </p>
                   </div>
                 </div>
               </TabsContent>
