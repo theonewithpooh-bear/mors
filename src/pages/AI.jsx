@@ -1,16 +1,25 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Lightbulb, Users, BookOpen, Target, Shield, ArrowRight, Sparkles } from 'lucide-react';
-
 const AI = () => {
   const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true, margin: "-100px" },
-    transition: { duration: 0.8, ease: "easeOut" }
+    initial: {
+      opacity: 0,
+      y: 60
+    },
+    whileInView: {
+      opacity: 1,
+      y: 0
+    },
+    viewport: {
+      once: true,
+      margin: "-100px"
+    },
+    transition: {
+      duration: 0.8,
+      ease: "easeOut"
+    }
   };
-
   const staggerContainer = {
     initial: {},
     whileInView: {
@@ -19,59 +28,93 @@ const AI = () => {
       }
     }
   };
-
   const slideInLeft = {
-    initial: { opacity: 0, x: -80 },
-    whileInView: { opacity: 1, x: 0 },
-    viewport: { once: true, margin: "-100px" },
-    transition: { duration: 0.8, ease: "easeOut" }
+    initial: {
+      opacity: 0,
+      x: -80
+    },
+    whileInView: {
+      opacity: 1,
+      x: 0
+    },
+    viewport: {
+      once: true,
+      margin: "-100px"
+    },
+    transition: {
+      duration: 0.8,
+      ease: "easeOut"
+    }
   };
-
   const slideInRight = {
-    initial: { opacity: 0, x: 80 },
-    whileInView: { opacity: 1, x: 0 },
-    viewport: { once: true, margin: "-100px" },
-    transition: { duration: 0.8, ease: "easeOut" }
+    initial: {
+      opacity: 0,
+      x: 80
+    },
+    whileInView: {
+      opacity: 1,
+      x: 0
+    },
+    viewport: {
+      once: true,
+      margin: "-100px"
+    },
+    transition: {
+      duration: 0.8,
+      ease: "easeOut"
+    }
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-purple-50/30"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="text-center max-w-5xl mx-auto"
-          >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="mb-8"
-            >
+          <motion.div initial={{
+          opacity: 0,
+          y: 100
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 1,
+          ease: "easeOut"
+        }} className="text-center max-w-5xl mx-auto">
+            <motion.div initial={{
+            scale: 0.8,
+            opacity: 0
+          }} animate={{
+            scale: 1,
+            opacity: 1
+          }} transition={{
+            duration: 0.8,
+            delay: 0.2
+          }} className="mb-8">
               <Brain className="w-20 h-20 mx-auto text-primary mb-6" />
             </motion.div>
             
-            <motion.h1
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent"
-            >
+            <motion.h1 initial={{
+            opacity: 0,
+            y: 50
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            delay: 0.4
+          }} className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
               AI in Education
             </motion.h1>
             
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto"
-            >
-              Transforming learning through intelligent technology that adapts, inspires, and empowers every student to reach their full potential.
-            </motion.p>
+            <motion.p initial={{
+            opacity: 0,
+            y: 30
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.8,
+            delay: 0.6
+          }} className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">how ai needs to be integrated into education</motion.p>
           </motion.div>
         </div>
       </section>
@@ -98,13 +141,10 @@ const AI = () => {
             </p>
           </motion.div>
 
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="whileInView"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid md:grid-cols-2 lg:grid-cols-2 gap-12 max-w-6xl mx-auto"
-          >
+          <motion.div variants={staggerContainer} initial="initial" whileInView="whileInView" viewport={{
+          once: true,
+          margin: "-100px"
+        }} className="grid md:grid-cols-2 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <motion.div variants={fadeInUp} className="group">
               <div className="bg-card p-8 rounded-2xl shadow-sm border hover:shadow-lg transition-all duration-500">
                 <div className="mb-6">
@@ -218,36 +258,23 @@ const AI = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <motion.div
-                variants={slideInLeft}
-                initial="initial"
-                whileInView="whileInView"
-                viewport={{ once: true, margin: "-100px" }}
-                className="space-y-6"
-              >
+              <motion.div variants={slideInLeft} initial="initial" whileInView="whileInView" viewport={{
+              once: true,
+              margin: "-100px"
+            }} className="space-y-6">
                 <h3 className="text-2xl font-bold">Our Commitment</h3>
                 <div className="space-y-4">
-                  {[
-                    "Student privacy and data protection",
-                    "Transparent AI decision-making processes",
-                    "Equity and inclusion in AI-powered tools",
-                    "Maintaining human connection in learning"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start space-x-3">
+                  {["Student privacy and data protection", "Transparent AI decision-making processes", "Equity and inclusion in AI-powered tools", "Maintaining human connection in learning"].map((item, index) => <div key={index} className="flex items-start space-x-3">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-muted-foreground">{item}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </motion.div>
 
-              <motion.div
-                variants={slideInRight}
-                initial="initial"
-                whileInView="whileInView"
-                viewport={{ once: true, margin: "-100px" }}
-                className="bg-card p-8 rounded-2xl border"
-              >
+              <motion.div variants={slideInRight} initial="initial" whileInView="whileInView" viewport={{
+              once: true,
+              margin: "-100px"
+            }} className="bg-card p-8 rounded-2xl border">
                 <h3 className="text-2xl font-bold mb-4">Human-AI Partnership</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   AI enhances human capability rather than replacing it. Teachers remain at the heart of education, supported by intelligent tools that amplify their impact and deepen their connection with students.
@@ -261,26 +288,21 @@ const AI = () => {
       {/* Call to Action */}
       <section className="py-32">
         <div className="container mx-auto px-4">
-          <motion.div
-            {...fadeInUp}
-            className="text-center max-w-4xl mx-auto"
-          >
+          <motion.div {...fadeInUp} className="text-center max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Shape the Future of Education</h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
               Join us in creating an educational future where AI empowers every learner to achieve their dreams and reach their full potential.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-primary text-primary-foreground px-12 py-4 rounded-xl font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
-            >
+            <motion.button whileHover={{
+            scale: 1.05
+          }} whileTap={{
+            scale: 0.95
+          }} className="bg-primary text-primary-foreground px-12 py-4 rounded-xl font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl">
               Get Involved
             </motion.button>
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default AI;
