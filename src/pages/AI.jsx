@@ -548,7 +548,7 @@ const AI = () => {
                 whileTap={{
                   scale: 0.95
                 }}
-                className="bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl block text-center"
+                className="bg-card border border-border text-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:bg-accent hover:text-accent-foreground transition-colors shadow-lg hover:shadow-xl block text-center"
               >
                 Grok
               </motion.a>
@@ -562,7 +562,7 @@ const AI = () => {
                 whileTap={{
                   scale: 0.95
                 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-colors shadow-lg hover:shadow-xl block text-center"
+                className="bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl block text-center"
               >
                 Gemini
               </motion.a>
@@ -576,7 +576,7 @@ const AI = () => {
                 whileTap={{
                   scale: 0.95
                 }}
-                className="bg-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl block text-center"
+                className="bg-secondary text-secondary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:bg-secondary/80 transition-colors shadow-lg hover:shadow-xl block text-center"
               >
                 ChatGPT
               </motion.a>
@@ -590,7 +590,7 @@ const AI = () => {
                 whileTap={{
                   scale: 0.95
                 }}
-                className="bg-orange-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl block text-center"
+                className="bg-muted text-muted-foreground border border-border px-8 py-4 rounded-xl font-semibold text-lg hover:bg-accent hover:text-accent-foreground transition-colors shadow-lg hover:shadow-xl block text-center"
               >
                 Claude
               </motion.a>
