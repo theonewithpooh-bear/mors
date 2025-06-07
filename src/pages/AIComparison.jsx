@@ -71,7 +71,7 @@ const AIComparison = () => {
     {
       provider: "Gemini (Google)",
       plans: [
-        { name: "Free", monthly: "$0", annual: "—", details: "Gemini 1.5 Flash with standard limits" },
+        { name: "Free", monthly: "$0", annual: "—", details: "Gemini 2.5 Flash with standard limits" },
         { name: "Google One AI Premium", monthly: "$19.99", annual: "—", details: "2TB Google One storage, Gemini Advanced (Ultra/2.5 Pro), Workspace AI features" }
       ]
     },
