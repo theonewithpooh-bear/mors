@@ -1,7 +1,95 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Clock, Users, BookOpen, Target, Shield, ArrowRight, Sparkles, AlertTriangle, CheckCircle, Zap } from 'lucide-react';
+
+// Clock component with moving hands
+const AnimatedClock = () => {
+  return (
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5">
+      <div className="relative w-80 h-80">
+        {/* Clock face */}
+        <div className="w-full h-full rounded-full border-4 border-gray-400/20 bg-gray-100/10">
+          {/* Hour markers */}
+          {[...Array(12)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-8 bg-gray-400/30 rounded"
+              style={{
+                top: '10px',
+                left: '50%',
+                transformOrigin: '50% 150px',
+                transform: `translateX(-50%) rotate(${i * 30}deg)`
+              }}
+            />
+          ))}
+          
+          {/* Hour hand */}
+          <motion.div
+            className="absolute w-1.5 bg-gray-400/40 rounded-full origin-bottom"
+            style={{
+              height: '80px',
+              bottom: '50%',
+              left: '50%',
+              transformOrigin: '50% 100%',
+              transform: 'translateX(-50%)'
+            }}
+            animate={{
+              rotate: [0, 360]
+            }}
+            transition={{
+              duration: 43200, // 12 hours
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+          
+          {/* Minute hand */}
+          <motion.div
+            className="absolute w-1 bg-gray-400/50 rounded-full origin-bottom"
+            style={{
+              height: '120px',
+              bottom: '50%',
+              left: '50%',
+              transformOrigin: '50% 100%',
+              transform: 'translateX(-50%)'
+            }}
+            animate={{
+              rotate: [0, 360]
+            }}
+            transition={{
+              duration: 3600, // 1 hour
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+          
+          {/* Second hand */}
+          <motion.div
+            className="absolute w-0.5 bg-gray-400/60 rounded-full origin-bottom"
+            style={{
+              height: '130px',
+              bottom: '50%',
+              left: '50%',
+              transformOrigin: '50% 100%',
+              transform: 'translateX(-50%)'
+            }}
+            animate={{
+              rotate: [0, 360]
+            }}
+            transition={{
+              duration: 60, // 1 minute
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+          
+          {/* Center dot */}
+          <div className="absolute w-3 h-3 bg-gray-400/50 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const AI = () => {
   const fadeInUp = {
@@ -75,6 +163,10 @@ const AI = () => {
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-purple-50/30"></div>
+        
+        {/* Animated Clock Background */}
+        <AnimatedClock />
+        
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{
