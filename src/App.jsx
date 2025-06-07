@@ -18,6 +18,7 @@ import PositionsToBeReleased from './pages/Positions';
 import SubjectReforms from './pages/SubjectReforms';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import AIUsage from './pages/AIUsage';
+import AI from './pages/AI';
 import Ethics from './pages/Ethics';
 import CookiesPolicy from './pages/CookiesPolicy';
 import NotFound from './pages/NotFound';
@@ -51,6 +52,7 @@ const App = () => {
               <Route path="/subject-reforms" element={<SubjectReforms />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/ai-usage" element={<AIUsage />} />
+              <Route path="/ai" element={<AI />} />
               <Route path="/ethics" element={<Ethics />} />
               <Route path="/cookies-policy" element={<CookiesPolicy />} />
               <Route path="/shoreham-college" element={<ShorehamCollege />} />

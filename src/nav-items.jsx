@@ -1,4 +1,5 @@
-import { HomeIcon, BookOpenIcon, UsersIcon, MessageSquareIcon, FolderIcon, Globe2Icon, NewspaperIcon } from "lucide-react";
+
+import { HomeIcon, BookOpenIcon, UsersIcon, MessageSquareIcon, FolderIcon, Globe2Icon, NewspaperIcon, BrainIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export const useNavItems = () => {
@@ -34,6 +35,11 @@ export const useNavItems = () => {
       name: t("nav.press_office"),
       url: "/press-office",
       icon: NewspaperIcon,
+    },
+    {
+      name: t("nav.ai"),
+      url: "/ai",
+      icon: BrainIcon,
     },
     {
       name: "positions",

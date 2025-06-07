@@ -7,7 +7,8 @@
       "get_involved": "get involved",
       "communications": "communications",
       "press_office": "press office",
-      "manifesto": "manifesto"
+      "manifesto": "manifesto",
+      "ai": "AI"
     }
   },
   "cy": {
@@ -17,7 +18,8 @@
       "get_involved": "cymryd rhan",
       "communications": "cyfathrebiadau",
       "press_office": "swyddfa'r wasg",
-      "manifesto": "maniffesto"
+      "manifesto": "maniffesto",
+      "ai": "AI"
     }
   }
 }
