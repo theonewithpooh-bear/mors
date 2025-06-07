@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Clock, Users, BookOpen, Target, Shield, ArrowRight, Sparkles, AlertTriangle, CheckCircle, Zap } from 'lucide-react';
@@ -534,31 +535,65 @@ const AI = () => {
           <motion.div {...fadeInUp} className="text-center max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-8">Don't Wait. Start Today.</h2>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              Every day schools delay AI integration, their students fall further behind. Join the AI education revolution now.
+              Every day schools delay AI integration, their students fall further behind. Choose your AI tool and join the revolution now.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              <motion.a
+                href="https://grok.x.ai"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{
                   scale: 1.05
                 }}
                 whileTap={{
                   scale: 0.95
                 }}
-                className="bg-primary text-primary-foreground px-12 py-4 rounded-xl font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
+                className="bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl block text-center"
               >
-                Get Started with AI
-              </motion.button>
-              <motion.button
+                Grok
+              </motion.a>
+              <motion.a
+                href="https://gemini.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{
                   scale: 1.05
                 }}
                 whileTap={{
                   scale: 0.95
                 }}
-                className="border border-primary text-primary px-12 py-4 rounded-xl font-semibold text-lg hover:bg-primary/5 transition-colors"
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-colors shadow-lg hover:shadow-xl block text-center"
               >
-                Learn More
-              </motion.button>
+                Gemini
+              </motion.a>
+              <motion.a
+                href="https://chat.openai.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{
+                  scale: 1.05
+                }}
+                whileTap={{
+                  scale: 0.95
+                }}
+                className="bg-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl block text-center"
+              >
+                ChatGPT
+              </motion.a>
+              <motion.a
+                href="https://claude.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{
+                  scale: 1.05
+                }}
+                whileTap={{
+                  scale: 0.95
+                }}
+                className="bg-orange-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-orange-600 transition-colors shadow-lg hover:shadow-xl block text-center"
+              >
+                Claude
+              </motion.a>
             </div>
           </motion.div>
         </div>
