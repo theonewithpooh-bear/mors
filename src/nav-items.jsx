@@ -1,3 +1,4 @@
+
 import { HomeIcon, BookOpenIcon, UsersIcon, MessageSquareIcon, FolderIcon, Globe2Icon, NewspaperIcon, BrainIcon, GitCompare } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -39,11 +40,19 @@ export const useNavItems = () => {
       name: t("nav.ai"),
       url: "/ai",
       icon: BrainIcon,
-    },
-    {
-      name: "AI Comparison",
-      url: "/ai-comparison",
-      icon: GitCompare,
+      dropdown: true,
+      items: [
+        {
+          name: "AI Overview",
+          url: "/ai",
+          description: "Learn about AI in education"
+        },
+        {
+          name: "AI Comparison",
+          url: "/ai-comparison",
+          description: "Compare different AI models"
+        }
+      ]
     },
     {
       name: "positions",

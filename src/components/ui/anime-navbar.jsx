@@ -14,7 +14,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
   const [hoveredTab, setHoveredTab] = useState(null);
   const [activeTab, setActiveTab] = useState(defaultActive);
   const [isMobile, setIsMobile] = useState(false);
-  const [openPopover, setOpenPopover] = useState(false);
+  const [openPopover, setOpenPopover] = useState(null);
 
   useEffect(() => {
     setMounted(true);
@@ -51,18 +51,22 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
 
             if (item.dropdown) {
               return (
-                <Popover key={item.name} open={openPopover} onOpenChange={setOpenPopover}>
+                <Popover 
+                  key={item.name} 
+                  open={openPopover === item.name} 
+                  onOpenChange={(open) => setOpenPopover(open ? item.name : null)}
+                >
                   <PopoverTrigger asChild>
                     <button
                       onMouseEnter={() => {
                         setHoveredTab(item.name);
-                        setOpenPopover(true);
+                        setOpenPopover(item.name);
                       }}
                       onMouseLeave={() => {
                         setHoveredTab(null);
                         setTimeout(() => {
-                          if (!document.querySelector(':hover > .popover-content')) {
-                            setOpenPopover(false);
+                          if (!document.querySelector(':hover .popover-content')) {
+                            setOpenPopover(null);
                           }
                         }, 100);
                       }}
@@ -86,8 +90,8 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                   <PopoverContent 
                     className="popover-content neo-blur w-64 p-2 rounded-lg shadow-xl"
                     sideOffset={8}
-                    onMouseEnter={() => setOpenPopover(true)}
-                    onMouseLeave={() => setOpenPopover(false)}
+                    onMouseEnter={() => setOpenPopover(item.name)}
+                    onMouseLeave={() => setOpenPopover(null)}
                   >
                     <div className="flex flex-col space-y-1">
                       {item.items?.map((subItem) => (
@@ -95,6 +99,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                           key={subItem.name}
                           to={subItem.url}
                           className="px-4 py-2 rounded-md hover:bg-white/10 transition-colors text-sm text-white/70 hover:text-white"
+                          onClick={() => setOpenPopover(null)}
                         >
                           <div className="font-medium">{subItem.name}</div>
                           {subItem.description && (
