@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,14 +37,106 @@
   }
 }
 
-/* Utility classes for glass effect */
+/* Liquid Glass (Glassmorphism) Utilities */
 @layer utilities {
+  /* Core Glass Effects */
+  .liquid-glass {
+    @apply backdrop-blur-xl bg-white/30 border border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.12)] rounded-2xl;
+    -webkit-backdrop-filter: blur(16px);
+  }
+  
+  .liquid-glass-light {
+    @apply backdrop-blur-lg bg-white/20 border border-white/40 shadow-[0_4px_20px_rgba(0,0,0,0.08)] rounded-xl;
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .liquid-glass-strong {
+    @apply backdrop-blur-2xl bg-white/40 border border-white/60 shadow-[0_12px_40px_rgba(0,0,0,0.15)] rounded-3xl;
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .liquid-glass-dark {
+    @apply backdrop-blur-xl bg-black/30 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.25)] rounded-2xl;
+    -webkit-backdrop-filter: blur(16px);
+  }
+  
+  /* Specular Highlights */
+  .glass-highlight {
+    position: relative;
+  }
+  
+  .glass-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+    border-radius: inherit;
+  }
+  
+  .glass-shine {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .glass-shine::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+    transform: rotate(-45deg);
+    transition: transform 0.6s ease;
+  }
+  
+  .glass-shine:hover::after {
+    transform: rotate(-45deg) translate(50%, 50%);
+  }
+  
+  /* Adaptive Glass for different backgrounds */
+  .glass-adaptive-light {
+    @apply backdrop-blur-lg bg-white/25 border border-white/50;
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .glass-adaptive-dark {
+    @apply backdrop-blur-lg bg-black/25 border border-white/30;
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  /* Existing glass utilities */
   .glass-morphism {
     @apply backdrop-blur-xl bg-black/50 border border-white/10 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.2)];
   }
   
   .neo-blur {
     @apply backdrop-blur-2xl bg-black/70 border border-white/10;
+  }
+  
+  /* Interactive Glass States */
+  .glass-interactive {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .glass-interactive:hover {
+    @apply backdrop-blur-2xl bg-white/35 border-white/60 shadow-[0_12px_40px_rgba(0,0,0,0.15)] transform scale-[1.02];
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .glass-button {
+    @apply liquid-glass glass-highlight glass-interactive cursor-pointer select-none;
+  }
+  
+  .glass-card {
+    @apply liquid-glass glass-shine transition-all duration-500;
+  }
+  
+  .glass-card:hover {
+    @apply shadow-[0_16px_48px_rgba(0,0,0,0.2)] transform translate-y-[-4px];
   }
   
   /* Page-specific navigation styling */
@@ -132,6 +225,22 @@
     opacity: 0.3;
     transform: translate(0, 0) scale(1);
   }
+}
+
+/* Liquid Glass Animation */
+@keyframes liquid-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-liquid-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background-size: 200% 100%;
+  animation: liquid-shimmer 3s infinite;
 }
 
 .animate-glow-dance {
