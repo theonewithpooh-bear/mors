@@ -73,11 +73,11 @@ module.exports = {
         "gradient-x": {
           "0%, 100%": {
             "background-size": "200% 200%",
-            "background-position": "left center"
+            "background-position": "0% 50%"
           },
           "50%": {
             "background-size": "200% 200%",
-            "background-position": "right center"
+            "background-position": "100% 50%"
           }
         },
         "glow-dance": {
@@ -104,28 +104,12 @@ module.exports = {
         },
         "pulse-slow": {
           '0%, 100%': {
-            opacity: 0.3,
+            transform: 'translateX(-100%)',
           },
           '50%': {
-            opacity: 0.1,
+            transform: 'translateX(100%)',
           },
         },
-        "liquid-shimmer": {
-          "0%": {
-            "background-position": "-200% 0"
-          },
-          "100%": {
-            "background-position": "200% 0"
-          }
-        },
-        "float": {
-          "0%, 100%": {
-            transform: "translateY(0px)"
-          },
-          "50%": {
-            transform: "translateY(-20px)"
-          }
-        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -133,8 +117,6 @@ module.exports = {
         "gradient-x": "gradient-x 15s ease infinite",
         "glow-dance": "glow-dance 4s ease-in-out infinite",
         "pulse-slow": "pulse-slow 3s ease-in-out infinite",
-        "liquid-shimmer": "liquid-shimmer 3s infinite",
-        "float": "float 6s ease-in-out infinite",
       },
     },
   },
