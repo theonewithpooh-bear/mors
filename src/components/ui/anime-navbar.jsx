@@ -36,7 +36,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
     <div className={cn("fixed top-0 left-0 right-0 z-[999]", className)}>
       <div className="flex justify-center pt-6">
         <motion.div 
-          className="flex items-center gap-3 glass-morphism py-2 px-2 rounded-full shadow-lg relative"
+          className="flex items-center gap-3 backdrop-blur-xl bg-white/10 border border-white/20 shadow-lg py-2 px-2 rounded-full relative"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
@@ -71,7 +71,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                       }}
                       className={cn(
                         "relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300",
-                        "text-white/70 hover:text-white",
+                        "text-white/80 hover:text-white",
                         isActive && "text-white"
                       )}
                     >
@@ -87,7 +87,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                     </div>
                   </PopoverTrigger>
                   <PopoverContent 
-                    className="popover-content neo-blur w-64 p-2 rounded-lg shadow-xl"
+                    className="popover-content backdrop-blur-xl bg-white/10 border border-white/20 w-64 p-2 rounded-lg shadow-xl"
                     sideOffset={8}
                     onMouseEnter={() => setOpenPopover(item.name)}
                     onMouseLeave={() => setOpenPopover(null)}
@@ -97,12 +97,12 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                         <Link
                           key={subItem.name}
                           to={subItem.url}
-                          className="px-4 py-2 rounded-md hover:bg-white/10 transition-colors text-sm text-white/70 hover:text-white"
+                          className="px-4 py-2 rounded-md hover:bg-white/10 transition-colors text-sm text-white/80 hover:text-white"
                           onClick={() => setOpenPopover(null)}
                         >
                           <div className="font-medium">{subItem.name}</div>
                           {subItem.description && (
-                            <div className="text-xs text-white/50">{subItem.description}</div>
+                            <div className="text-xs text-white/60">{subItem.description}</div>
                           )}
                         </Link>
                       ))}
@@ -121,7 +121,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                 onMouseLeave={() => setHoveredTab(null)}
                 className={cn(
                   "relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300",
-                  "text-white/70 hover:text-white",
+                  "text-white/80 hover:text-white",
                   isActive && "text-white"
                 )}
               >
