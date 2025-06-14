@@ -36,22 +36,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
     <div className={cn("fixed top-0 left-0 right-0 z-[999]", className)}>
       <div className="flex justify-center pt-6">
         <motion.div 
-          className="flex items-center gap-3 liquid-glass py-3 px-3 rounded-2xl shadow-2xl relative overflow-hidden animate-glass-shimmer"
-          style={{
-            background: `
-              linear-gradient(135deg, 
-                rgba(255, 255, 255, 0.35) 0%,
-                rgba(255, 255, 255, 0.2) 50%,
-                rgba(255, 255, 255, 0.15) 100%
-              ),
-              linear-gradient(90deg, 
-                transparent 0%, 
-                rgba(255, 255, 255, 0.2) 50%, 
-                transparent 100%
-              )
-            `,
-            backgroundSize: "100% 100%, 200% 100%"
-          }}
+          className="flex items-center gap-3 glass-morphism py-2 px-2 rounded-full shadow-lg relative"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
@@ -60,15 +45,6 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
             damping: 20,
           }}
         >
-          {/* Enhanced glass shimmer overlay */}
-          <div 
-            className="absolute inset-0 rounded-2xl opacity-30"
-            style={{
-              background: "linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%)",
-              animation: "glass-shimmer 4s infinite linear"
-            }}
-          />
-          
           {items.map((item) => {
             const isActive = activeTab === item.name;
             const isHovered = hoveredTab === item.name;
@@ -94,24 +70,24 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                         }, 150);
                       }}
                       className={cn(
-                        "relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-xl transition-all duration-300 z-10",
-                        "text-white/80 hover:text-white backdrop-blur-sm",
+                        "relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300",
+                        "text-white/70 hover:text-white",
                         isActive && "text-white"
                       )}
                     >
-                      <span className="relative z-20">{item.name}</span>
+                      <span className="relative z-10">{item.name}</span>
                       {isHovered && !isActive && (
                         <motion.div
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
                           exit={{ opacity: 0, scale: 0.8 }}
-                          className="absolute inset-0 bg-white/15 rounded-xl backdrop-blur-sm border border-white/20 -z-10"
+                          className="absolute inset-0 bg-white/10 rounded-full -z-10"
                         />
                       )}
                     </div>
                   </PopoverTrigger>
                   <PopoverContent 
-                    className="popover-content liquid-glass w-64 p-2 rounded-xl shadow-2xl border-white/30"
+                    className="popover-content neo-blur w-64 p-2 rounded-lg shadow-xl"
                     sideOffset={8}
                     onMouseEnter={() => setOpenPopover(item.name)}
                     onMouseLeave={() => setOpenPopover(null)}
@@ -121,12 +97,12 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                         <Link
                           key={subItem.name}
                           to={subItem.url}
-                          className="px-4 py-2 rounded-lg hover:bg-white/15 transition-colors text-sm text-white/80 hover:text-white backdrop-blur-sm"
+                          className="px-4 py-2 rounded-md hover:bg-white/10 transition-colors text-sm text-white/70 hover:text-white"
                           onClick={() => setOpenPopover(null)}
                         >
                           <div className="font-medium">{subItem.name}</div>
                           {subItem.description && (
-                            <div className="text-xs text-white/60">{subItem.description}</div>
+                            <div className="text-xs text-white/50">{subItem.description}</div>
                           )}
                         </Link>
                       ))}
@@ -144,18 +120,18 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                 onMouseEnter={() => setHoveredTab(item.name)}
                 onMouseLeave={() => setHoveredTab(null)}
                 className={cn(
-                  "relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-xl transition-all duration-300 z-10",
-                  "text-white/80 hover:text-white backdrop-blur-sm",
+                  "relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300",
+                  "text-white/70 hover:text-white",
                   isActive && "text-white"
                 )}
               >
                 {isActive && (
                   <motion.div
-                    className="absolute inset-0 rounded-xl -z-10 overflow-hidden"
+                    className="absolute inset-0 rounded-full -z-10 overflow-hidden"
                     initial={{ opacity: 0 }}
                     animate={{ 
-                      opacity: [0.4, 0.6, 0.4],
-                      scale: [1, 1.02, 1]
+                      opacity: [0.3, 0.5, 0.3],
+                      scale: [1, 1.03, 1]
                     }}
                     transition={{
                       duration: 2,
@@ -163,13 +139,13 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                       ease: "easeInOut"
                     }}
                   >
-                    <div className="absolute inset-0 bg-white/30 rounded-xl backdrop-blur-md border border-white/40" />
-                    <div className="absolute inset-[-2px] bg-white/20 rounded-xl blur-sm" />
-                    <div className="absolute inset-[-4px] bg-white/15 rounded-xl blur-md" />
-                    <div className="absolute inset-[-6px] bg-white/10 rounded-xl blur-lg" />
+                    <div className="absolute inset-0 bg-white/25 rounded-full blur-md" />
+                    <div className="absolute inset-[-4px] bg-white/20 rounded-full blur-xl" />
+                    <div className="absolute inset-[-8px] bg-white/15 rounded-full blur-2xl" />
+                    <div className="absolute inset-[-12px] bg-white/5 rounded-full blur-3xl" />
                     
                     <div 
-                      className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 rounded-xl"
+                      className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0"
                       style={{
                         animation: "shine 3s ease-in-out infinite"
                       }}
@@ -177,7 +153,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                   </motion.div>
                 )}
 
-                <span className="relative z-20">
+                <span className="relative z-10">
                   {item.name}
                 </span>
           
@@ -187,7 +163,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.8 }}
-                      className="absolute inset-0 bg-white/15 rounded-xl backdrop-blur-sm border border-white/20 -z-10"
+                      className="absolute inset-0 bg-white/10 rounded-full -z-10"
                     />
                   )}
                 </AnimatePresence>
