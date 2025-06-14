@@ -36,7 +36,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
     <div className={cn("fixed top-0 left-0 right-0 z-[999]", className)}>
       <div className="flex justify-center pt-6">
         <motion.div 
-          className="flex items-center gap-3 glass-morphism py-2 px-2 rounded-full shadow-lg relative"
+          className="flex items-center gap-3 liquid-glass-dark py-2 px-2 rounded-full shadow-lg relative specular-highlight"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
@@ -87,7 +87,7 @@ export function AnimeNavBar({ items, className, defaultActive = "Home", showIcon
                     </div>
                   </PopoverTrigger>
                   <PopoverContent 
-                    className="popover-content neo-blur w-64 p-2 rounded-lg shadow-xl"
+                    className="popover-content liquid-glass w-64 p-2 rounded-lg shadow-xl"
                     sideOffset={8}
                     onMouseEnter={() => setOpenPopover(item.name)}
                     onMouseLeave={() => setOpenPopover(null)}
