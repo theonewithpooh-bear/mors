@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,14 +37,37 @@
   }
 }
 
-/* Utility classes for glass effect */
+/* Enhanced Glass morphism utilities */
 @layer utilities {
   .glass-morphism {
-    @apply backdrop-blur-xl bg-black/50 border border-white/10 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.2)];
+    @apply backdrop-blur-2xl bg-white/20 border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)];
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+    box-shadow: 
+      0 8px 32px 0 rgba(31, 38, 135, 0.37),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.1);
   }
   
   .neo-blur {
-    @apply backdrop-blur-2xl bg-black/70 border border-white/10;
+    @apply backdrop-blur-3xl bg-black/30 border border-white/20;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    box-shadow: 
+      0 8px 32px 0 rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+  
+  .liquid-glass {
+    @apply backdrop-blur-3xl border border-white/40;
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0.15) 50%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    box-shadow: 
+      0 12px 40px 0 rgba(31, 38, 135, 0.4),
+      0 4px 16px 0 rgba(31, 38, 135, 0.2),
+      inset 0 2px 0 rgba(255, 255, 255, 0.5),
+      inset 0 -2px 0 rgba(255, 255, 255, 0.1);
   }
   
   /* Page-specific navigation styling */
@@ -134,6 +158,19 @@
   }
 }
 
+@keyframes glass-shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
 .animate-glow-dance {
   animation: glow-dance 8s infinite ease-in-out;
+}
+
+.animate-glass-shimmer {
+  animation: glass-shimmer 3s infinite linear;
 }
