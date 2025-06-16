@@ -14,7 +14,7 @@ const GoldenWindow = () => {
         <div className="flex justify-between items-start w-full mb-16">
           <h1 
             className="text-4xl font-bold text-black"
-            style={{ fontFamily: 'Times New Roman, serif' }}
+            style={{ fontFamily: '"Times New Roman", Times, serif' }}
           >
             MORS
           </h1>
