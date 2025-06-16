@@ -1,3 +1,4 @@
+
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -25,6 +26,7 @@ import ShorehamCollege from './pages/ShorehamCollege';
 import TypeformVolunteer from './pages/TypeformVolunteer';
 import FileStore from './pages/FileStore';
 import AIComparison from './pages/AIComparison';
+import GoldenWindow from './pages/GoldenWindow';
 
 /**
  * Main App component
@@ -59,6 +61,7 @@ const App = () => {
               <Route path="/shoreham-college" element={<ShorehamCollege />} />
               <Route path="/typeform-volunteer" element={<TypeformVolunteer />} />
               <Route path="/file-store" element={<FileStore />} />
+              <Route path="/golden-window" element={<GoldenWindow />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
