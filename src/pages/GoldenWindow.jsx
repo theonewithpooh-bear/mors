@@ -12,7 +12,12 @@ const GoldenWindow = () => {
       <div className="max-w-4xl mx-auto text-center space-y-12">
         {/* Header */}
         <div className="flex justify-between items-start w-full mb-16">
-          <h1 className="text-4xl font-bold text-black">MORS</h1>
+          <h1 
+            className="text-4xl font-bold text-black"
+            style={{ fontFamily: 'Times New Roman, serif' }}
+          >
+            MORS
+          </h1>
           <h2 className="text-2xl text-black">The Golden Window</h2>
         </div>
 
