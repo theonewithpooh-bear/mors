@@ -37,7 +37,7 @@ const AIUsageFAQ = () => {
             trigger="what safeguards does MORS have in place?"
           >
             our founder Monty Middleton-Burn personally checks all AI output. text is written in small chunks 
-            for easier fact-checking. we use OpenAI o1 to remove human error, and non-AI software like Canva 
+            for easier fact-checking. we use powerful AI LLMs to remove human error, and non-AI software like Canva 
             for graphic refinement.
           </FAQItem>
 
