@@ -38,48 +38,46 @@ const OpenLetterDfE = () => {
 
               <p className="text-xl leading-relaxed">The GCSE system is no longer fit for purpose.</p>
 
-              <p>This is not a radical statement — it is a consensus quietly held by thousands of teachers, students, parents, and even Department officials. The MORS movement, led by students and supported by educators across the UK, has now documented the deep failure of current assessments to cultivate real-world skills, critical thinking, or psychological well-being.</p>
+              <p>This is not a radical claim. It's a quiet reality recognised by thousands of teachers, students, and parents across the country — including many who feel powerless to act. I'm writing to offer an alternative.</p>
 
-              <p>The purpose of this open letter is not to complain. It is to <strong>offer a path forward</strong>.</p>
+              <p>MORS — the Movement of Real Skills — is a youth-led initiative I've launched to begin reshaping our national approach to assessment. Though still in its early stages, MORS proposes the Foundation Skills Certificate (FSC): a modern, open-book, coursework-based alternative to GCSEs, grounded in long-term understanding, adaptability, and relevant life skills.</p>
 
-              <p>We are calling on the Department for Education to <strong>publicly engage with and review the Foundation Skills Certificate (FSC)</strong> — a modern, open-book, project-led, coursework-based alternative to GCSEs, structured by MORS after extensive consultation with teachers, employers, young people, and existing cognitive science research (including Hermann Ebbinghaus' forgetting curve and the findings of Ofqual and YoungMinds).</p>
+              <div className="my-8 border-l-4 border-black/20 pl-6">
+                <h2 className="text-2xl font-bold mt-8 mb-4">What's wrong with GCSEs:</h2>
+                <ul className="space-y-2 mb-6">
+                  <li>They assess <strong>short-term memory</strong>, not long-term understanding.</li>
+                  <li>They <strong>penalise creativity</strong>, adaptability, and deep thinking.</li>
+                  <li>They encourage <strong>rote learning under pressure</strong>, not knowledge that lasts.</li>
+                  <li>They <strong>harm mental health</strong>, especially for neurodivergent students.</li>
+                </ul>
+              </div>
 
-              <h2 className="text-2xl font-bold mt-8 mb-4">What's wrong with GCSEs:</h2>
-              <ul className="space-y-2 mb-6">
-                <li>They assess <strong>short-term memory</strong>, not long-term understanding.</li>
-                <li>They <strong>penalise creativity</strong>, adaptability, and deep thinking.</li>
-                <li>They encourage <strong>rote learning under pressure</strong>, not knowledge that lasts.</li>
-                <li>They <strong>disproportionately harm</strong> mental health, especially for neurodivergent pupils.</li>
-              </ul>
+              <div className="my-8 border-l-4 border-black/20 pl-6">
+                <h2 className="text-2xl font-bold mt-8 mb-4">What the FSC offers instead:</h2>
+                <ul className="space-y-2 mb-6">
+                  <li>Real-life application of knowledge</li>
+                  <li>Open-book exams, like the real world</li>
+                  <li>Emphasis on collaboration, leadership, and problem-solving</li>
+                  <li>Project-based learning with meaningful outcomes</li>
+                  <li>Classroom-based assessment — not pressure-cooker exam halls</li>
+                  <li>Flexibility for teachers, consistency for the nation</li>
+                </ul>
+              </div>
 
-              <h2 className="text-2xl font-bold mt-8 mb-4">What the FSC offers instead:</h2>
-              <ul className="space-y-2 mb-6">
-                <li>Real-life application of knowledge</li>
-                <li>Open-book exams to mimic how the real world works</li>
-                <li>Emphasis on collaboration, leadership, problem-solving, and media literacy</li>
-                <li>Project-based learning with public showcases</li>
-                <li>Classroom-led assessments, removing the need for high-pressure exam halls</li>
-                <li>Teacher and student freedom — with <strong>national consistency</strong> through a centralised framework</li>
-              </ul>
+              <p>The FSC is not a fantasy. It's a workable framework, shaped from student and teacher perspectives, informed by cognitive science (like Ebbinghaus' forgetting curve), and structured around real-life relevance. It's ready for discussion, consultation, and — one day — trial.</p>
 
-              <p><strong>MORS</strong> exists to give young people a voice in their own education.<br/>
-              We have not simply protested. We have <em>built</em>. The Foundation Skills Certificate is ready to pilot. We invite the Department to meet with our leadership team, review the framework, and consider our offer to trial FSC across a small number of state schools in 2026.</p>
+              <p><strong>I'm not asking for revolution.<br/>
+              I'm asking for evolution</strong> — and for the Department to meet with me, to review the early framework and explore how young people can be meaningfully involved in shaping what replaces a broken system.</p>
 
-              <p>We are not asking you to endorse revolution.<br/>
-              We are asking you to acknowledge evolution.</p>
+              <p>This is the first in a series of weekly open letters I'll be publishing — addressed to officials, educators, unions, and exam bodies — through <a href="https://mors.org.uk" className="text-blue-600 hover:text-blue-800 underline">mors.org.uk</a>. My aim is not to criticise for criticism's sake, but to build momentum toward change.</p>
 
-              <p>The FSC does not replace rigour. It replaces <strong>outdated rituals</strong> with credible, flexible assessment.</p>
-
-              <p>In the coming weeks, we will be releasing open letters every Thursday — to you, to other officials, to headteachers, to unions, to political parties. We will not stop until educational reform becomes more than a footnote in a press release. You'll find the full public record at <a href="https://mors.org.uk" className="text-blue-600 hover:text-blue-800 underline">mors.org.uk</a>.</p>
-
-              <p>Please let your office respond to this letter, either publicly or privately.<br/>
-              We are ready to talk — and to lead.</p>
+              <p>I hope you or your team will respond — publicly or privately. I am ready to listen, learn, and lead.</p>
 
               <div className="mt-8 pt-6 border-t border-black/10">
                 <p><strong>Yours sincerely,</strong><br/>
                 Monty Middleton-Burn<br/>
-                Director General, MORS (Movement of Real Skills)<br/>
-                <a href="https://www.mors.org.uk" className="text-blue-600 hover:text-blue-800 underline">www.mors.org.uk</a></p>
+                Founder, MORS (Movement of Real Skills)<br/>
+                <a href="https://www.mors.org.uk" className="text-blue-600 hover:text-blue-800 underline">🌐 www.mors.org.uk</a></p>
               </div>
             </section>
           </div>
