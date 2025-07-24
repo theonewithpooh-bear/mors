@@ -109,15 +109,15 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
           <Tabs defaultValue="press-releases" className="mb-8">
             <div className="flex justify-center mb-6">
               <TabsList className="bg-gray-100 p-1">
-                <TabsTrigger value="press-releases" className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4">
+                <TabsTrigger value="press-releases" className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 min-h-[48px] touch-manipulation">
                   <FileText className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="text-xs sm:text-sm">Press Releases</span>
                 </TabsTrigger>
-                <TabsTrigger value="articles" className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4">
+                <TabsTrigger value="articles" className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 min-h-[48px] touch-manipulation">
                   <Newspaper className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="text-xs sm:text-sm">Articles</span>
                 </TabsTrigger>
-                <TabsTrigger value="publications" className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 touch-manipulation">
+                <TabsTrigger value="publications" className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 min-h-[48px] touch-manipulation">
                   <FileArchive className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="text-xs sm:text-sm">Reports</span>
                 </TabsTrigger>

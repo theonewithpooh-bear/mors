@@ -7,7 +7,7 @@ export const publications = [
     description: "A comprehensive analysis commissioned by MORS and completed by Google's Gemini, examining the impact of homework on student mental health across educational stages. This report synthesizes 25 years of research to provide evidence-based recommendations for policymakers, educators, and parents.",
     fileSize: "2.1 MB",
     format: "PDF",
-    downloadUrl: "/reports/homework-dilemma-2025.pdf",
+    downloadUrl: "https://drive.google.com/file/d/1homework-report-example/view?usp=sharing",
     content: `
 # The Homework Dilemma: An Evidence-Based Analysis of Student Mental Health, Achievement, and Well-being (2000-2025)
 
