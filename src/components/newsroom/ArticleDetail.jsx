@@ -17,6 +17,7 @@ import {
   openMailShare, 
   shareTo 
 } from "@/utils/shareUtils";
+import DOMPurify from 'dompurify';
 
 const ArticleDetail = ({ article, onBack }) => {
   const { toast } = useToast();
@@ -81,11 +82,17 @@ const ArticleDetail = ({ article, onBack }) => {
       return;
     }
     
+    // Sanitize content before printing
+    const sanitizedContent = DOMPurify.sanitize(article.content);
+    const sanitizedTitle = DOMPurify.sanitize(article.title);
+    const sanitizedAuthor = DOMPurify.sanitize(article.author);
+    const sanitizedCategory = DOMPurify.sanitize(article.category);
+    
     const printContent = `
       <!DOCTYPE html>
       <html>
       <head>
-        <title>${article.title} - MORS</title>
+        <title>${sanitizedTitle} - MORS</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <style>
@@ -145,17 +152,17 @@ const ArticleDetail = ({ article, onBack }) => {
       </head>
       <body>
         <div class="article-header">
-          <div class="article-category">${article.category}</div>
-          <h1 class="article-title">${article.title}</h1>
+          <div class="article-category">${sanitizedCategory}</div>
+          <h1 class="article-title">${sanitizedTitle}</h1>
           <div class="article-meta">
-            By ${article.author} | ${formattedDate} | ${article.readTime} min read
+            By ${sanitizedAuthor} | ${formattedDate} | ${article.readTime} min read
           </div>
         </div>
         
-        <img src="${article.image}" alt="${article.title}" class="article-image" />
+        <img src="${article.image}" alt="${sanitizedTitle}" class="article-image" />
         
         <div class="article-content">
-          ${article.content}
+          ${sanitizedContent}
         </div>
         
         <div class="article-footer">
@@ -165,8 +172,11 @@ const ArticleDetail = ({ article, onBack }) => {
       </html>
     `;
     
+    // Use safer DOM manipulation instead of document.write
     printWindow.document.open();
-    printWindow.document.write(printContent);
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(printContent, 'text/html');
+    printWindow.document.documentElement.innerHTML = doc.documentElement.innerHTML;
     printWindow.document.close();
     
     printWindow.onload = () => {
@@ -270,7 +280,7 @@ const ArticleDetail = ({ article, onBack }) => {
         </div>
         
         <article className="prose prose-lg max-w-none mb-12" ref={articleContentRef}>
-          <div dangerouslySetInnerHTML={{ __html: article.content }} />
+          <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.content) }} />
         </article>
         
         <div className="my-12 border-t border-gray-200 pt-6">

@@ -3,15 +3,27 @@ import React, { useEffect } from 'react';
 
 const TypeformVolunteer = () => {
   useEffect(() => {
-    // Load Typeform script
+    // Load Typeform script with security considerations
     const script = document.createElement('script');
     script.src = "//embed.typeform.com/next/embed.js";
     script.async = true;
+    
+    // Add error handling for script loading
+    script.onload = () => {
+      console.log('Typeform script loaded successfully');
+    };
+    
+    script.onerror = () => {
+      console.error('Failed to load Typeform script');
+    };
+    
     document.body.appendChild(script);
 
     // Clean up script when component unmounts
     return () => {
-      document.body.removeChild(script);
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
     };
   }, []);
 

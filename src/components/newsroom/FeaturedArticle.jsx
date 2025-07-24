@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Calendar, Clock, ArrowRight, Bookmark, Share2, Printer } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import DOMPurify from 'dompurify';
 
 const FeaturedArticle = ({ article, onClick }) => {
   if (!article) return null;
@@ -39,11 +40,17 @@ const FeaturedArticle = ({ article, onClick }) => {
       return;
     }
     
+    // Sanitize content before printing
+    const sanitizedTitle = DOMPurify.sanitize(article.title);
+    const sanitizedAuthor = DOMPurify.sanitize(article.author);
+    const sanitizedCategory = DOMPurify.sanitize(article.category);
+    const sanitizedDescription = DOMPurify.sanitize(article.description);
+    
     const printContent = `
       <!DOCTYPE html>
       <html>
       <head>
-        <title>${article.title} - MORS</title>
+        <title>${sanitizedTitle} - MORS</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <style>
@@ -103,17 +110,17 @@ const FeaturedArticle = ({ article, onClick }) => {
       </head>
       <body>
         <div class="article-header">
-          <div class="article-category">${article.category}</div>
-          <h1 class="article-title">${article.title}</h1>
+          <div class="article-category">${sanitizedCategory}</div>
+          <h1 class="article-title">${sanitizedTitle}</h1>
           <div class="article-meta">
-            By ${article.author} | ${formattedDate} | ${article.readTime} min read
+            By ${sanitizedAuthor} | ${formattedDate} | ${article.readTime} min read
           </div>
         </div>
         
-        <img src="${article.image}" alt="${article.title}" class="article-image" />
+        <img src="${article.image}" alt="${sanitizedTitle}" class="article-image" />
         
         <div class="article-content">
-          <p>${article.description}</p>
+          <p>${sanitizedDescription}</p>
           <p><em>Open the full article to read more...</em></p>
         </div>
         
@@ -124,8 +131,11 @@ const FeaturedArticle = ({ article, onClick }) => {
       </html>
     `;
     
+    // Use safer DOM manipulation instead of document.write
     printWindow.document.open();
-    printWindow.document.write(printContent);
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(printContent, 'text/html');
+    printWindow.document.documentElement.innerHTML = doc.documentElement.innerHTML;
     printWindow.document.close();
     
     printWindow.onload = () => {

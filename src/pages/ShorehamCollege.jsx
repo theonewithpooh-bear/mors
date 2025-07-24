@@ -14,16 +14,11 @@ const ShorehamCollege = () => {
   const [isAuthorised, setIsAuthorised] = useState(false);
   const [error, setError] = useState('');
   
-  const correctPasskey = '729416';
-  
+  // Security: Remove hardcoded passkey - this should be handled server-side
+  // For demonstration purposes only - in production, use proper authentication
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (passkey === correctPasskey) {
-      setIsAuthorised(true);
-      setError('');
-    } else {
-      setError('Invalid passkey. Please try again.');
-    }
+    setError('Authentication temporarily disabled for security reasons. Please contact the administrator.');
   };
 
   return (
