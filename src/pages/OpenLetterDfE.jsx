@@ -24,7 +24,7 @@ const OpenLetterDfE = () => {
               <h1 className="text-4xl font-bold mb-8 text-center">Open Letter to the Department for Education</h1>
               
               <div className="mb-8 space-y-2">
-                <p><strong>To:</strong> The Rt Hon Gillian Keegan MP<br/>
+                <p><strong>To:</strong> The Rt Hon Bridget Phillipson MP<br/>
                 Secretary of State for Education<br/>
                 Department for Education<br/>
                 Sanctuary Buildings, Great Smith Street, London SW1P 3BT</p>
