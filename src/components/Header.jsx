@@ -39,7 +39,9 @@ const Header = () => {
     .map(item => ({
       name: item.name,
       url: item.dropdown ? '#' : item.url,
-      icon: null
+      icon: null,
+      dropdown: item.dropdown,
+      items: item.items
     }));
 
   return (
