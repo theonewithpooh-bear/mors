@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import ActionCard from "@/components/get-involved/ActionCard";
 import ShareDropdown from "@/components/get-involved/ShareDropdown";
