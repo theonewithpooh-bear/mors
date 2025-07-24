@@ -79,7 +79,6 @@ const OpenLetterDfE = () => {
                 <p><strong>Yours sincerely,</strong><br/>
                 Monty Middleton-Burn<br/>
                 Director General, MORS (Movement of Real Skills)<br/>
-                <a href="mailto:monty@mors.org.uk" className="text-blue-600 hover:text-blue-800 underline">monty@mors.org.uk</a><br/>
                 <a href="https://www.mors.org.uk" className="text-blue-600 hover:text-blue-800 underline">www.mors.org.uk</a></p>
               </div>
             </section>
