@@ -46,11 +46,6 @@ export const useNavItems = () => {
           name: "AI Overview",
           url: "/ai",
           description: "Learn about AI in education"
-        },
-        {
-          name: "AI Comparison",
-          url: "/ai-comparison",
-          description: "Compare different AI models"
         }
       ]
     },

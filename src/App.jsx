@@ -24,7 +24,7 @@ import NotFound from './pages/NotFound';
 import ShorehamCollege from './pages/ShorehamCollege';
 import TypeformVolunteer from './pages/TypeformVolunteer';
 import FileStore from './pages/FileStore';
-import AIComparison from './pages/AIComparison';
+
 import OpenLetterDfE from './pages/OpenLetterDfE';
 
 /**
@@ -54,7 +54,7 @@ const App = () => {
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/ai-usage" element={<AIUsage />} />
               <Route path="/ai" element={<AI />} />
-              <Route path="/ai-comparison" element={<AIComparison />} />
+              
               <Route path="/ethics" element={<Ethics />} />
               <Route path="/cookies-policy" element={<CookiesPolicy />} />
               <Route path="/shoreham-college" element={<ShorehamCollege />} />
