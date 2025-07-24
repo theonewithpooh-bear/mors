@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Construction } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const Communications = () => {
@@ -35,17 +34,10 @@ const Communications = () => {
               <Button
                 variant="outline"
                 className="px-8 py-6 text-lg rounded-full bg-[#ddd]/50 hover:bg-[#ccc]/50 text-black/90 border-black/10 hover:border-black/20 transition-all duration-300"
-                disabled
+                onClick={() => window.open('/open-letter-dfe', '_blank')}
               >
                 view this week's letter
               </Button>
-
-              <div className="flex items-center justify-center gap-3">
-                <div className="flex items-center gap-3 px-6 py-2 rounded-full bg-yellow-700/10 text-yellow-700/90">
-                  <Construction className="h-6 w-6" />
-                  <span className="text-base font-medium">coming soon!</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

@@ -25,6 +25,7 @@ import ShorehamCollege from './pages/ShorehamCollege';
 import TypeformVolunteer from './pages/TypeformVolunteer';
 import FileStore from './pages/FileStore';
 import AIComparison from './pages/AIComparison';
+import OpenLetterDfE from './pages/OpenLetterDfE';
 
 /**
  * Main App component
@@ -59,6 +60,7 @@ const App = () => {
               <Route path="/shoreham-college" element={<ShorehamCollege />} />
               <Route path="/typeform-volunteer" element={<TypeformVolunteer />} />
               <Route path="/file-store" element={<FileStore />} />
+              <Route path="/open-letter-dfe" element={<OpenLetterDfE />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
