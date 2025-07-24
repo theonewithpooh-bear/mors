@@ -12,7 +12,7 @@ import GetInvolved from './pages/GetInvolved';
 import Communications from './pages/Communications';
 import Manifesto from './pages/Manifesto';
 import PressOffice from './pages/Newsroom';
-import Positions from './pages/Positions';
+import Positions from './pages/Positions2';
 import PositionsToBeReleased from './pages/Positions';
 import SubjectReforms from './pages/SubjectReforms';
 import PrivacyPolicy from './pages/PrivacyPolicy';

@@ -8,7 +8,8 @@
       "communications": "communications",
       "press_office": "press office",
       "manifesto": "manifesto",
-      "ai": "AI"
+      "ai": "AI",
+      "positions": "positions"
     }
   },
   "cy": {
@@ -19,7 +20,8 @@
       "communications": "cyfathrebiadau",
       "press_office": "swyddfa'r wasg",
       "manifesto": "maniffesto",
-      "ai": "AI"
+      "ai": "AI",
+      "positions": "swyddi"
     }
   }
 }

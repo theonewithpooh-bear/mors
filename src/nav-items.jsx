@@ -40,17 +40,9 @@ export const useNavItems = () => {
       name: t("nav.ai"),
       url: "/ai",
       icon: BrainIcon,
-      dropdown: true,
-      items: [
-        {
-          name: "AI Overview",
-          url: "/ai",
-          description: "Learn about AI in education"
-        }
-      ]
     },
     {
-      name: "positions",
+      name: t("nav.positions"),
       url: "/positions",
       icon: Globe2Icon,
     },

@@ -14,7 +14,7 @@ const PrivacyPolicy = () => {
         duration: 0.8
       }} className="max-w-4xl mx-auto mt-24">
           <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
-          <p className="text-gray-600 mb-8">Last updated: 21 March 2025</p>
+          <p className="text-gray-600 mb-8">Last updated: 21 March 2024</p>
           
           <div className="space-y-6 text-gray-700">
             <section>

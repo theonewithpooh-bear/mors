@@ -4,15 +4,23 @@ import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import ActionCard from "@/components/get-involved/ActionCard";
 import ShareDropdown from "@/components/get-involved/ShareDropdown";
+import SEOHead from "@/components/SEOHead";
 
 const GetInvolved = () => {
   const { toast } = useToast();
 
   return (
     <div className="min-h-screen bg-white text-black">
+      <SEOHead 
+        title="Get Involved - MORS | Join the Education Reform Movement"
+        description="Join MORS and help revolutionize education in the UK. Register your interest, volunteer, or spread the word about our education reform movement."
+        canonical="/get-involved"
+      />
       <main className="container mx-auto px-4 py-24 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl font-bold mb-8">get involved</h1>
+        <article className="max-w-4xl mx-auto">
+          <header>
+            <h1 className="text-5xl font-bold mb-8">get involved</h1>
+          </header>
           
           <div className="space-y-12">
             <section className="prose max-w-none">
@@ -37,7 +45,7 @@ const GetInvolved = () => {
               </div>
             </section>
           </div>
-        </div>
+        </article>
       </main>
       <Toaster />
     </div>
