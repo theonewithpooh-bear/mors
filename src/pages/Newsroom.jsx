@@ -117,9 +117,9 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
                   <Newspaper className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="text-xs sm:text-sm">Articles</span>
                 </TabsTrigger>
-                <TabsTrigger value="publications" className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4">
+                <TabsTrigger value="publications" className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 touch-manipulation">
                   <FileArchive className="w-3 h-3 sm:w-4 sm:h-4" />
-                  <span className="text-xs sm:text-sm">Publications</span>
+                  <span className="text-xs sm:text-sm">Reports</span>
                 </TabsTrigger>
               </TabsList>
             </div>

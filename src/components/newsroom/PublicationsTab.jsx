@@ -29,9 +29,9 @@ const PublicationsTab = () => {
   };
   return <div className="space-y-6">
       <div className="mb-6">
-        <h2 className="text-2xl font-bold text-black mb-2">Publications Archive</h2>
+        <h2 className="text-2xl font-bold text-black mb-2">Reports Archive</h2>
         <p className="text-gray-600">
-          Access our official publications, including meeting minutes, manifestos, open letters, and policy documents.
+          Access our official reports, including research studies, meeting minutes, manifestos, open letters, and policy documents.
         </p>
       </div>
 
@@ -63,7 +63,11 @@ const PublicationsTab = () => {
                 <div className="text-sm text-gray-500">
                   {pub.fileSize} • {pub.format}
                 </div>
-                <Button variant="outline" className="text-blue-600 hover:text-blue-700" onClick={() => handleDownload(pub)}>
+                <Button 
+                  variant="outline" 
+                  className="text-blue-600 hover:text-blue-700 touch-manipulation min-h-[44px]" 
+                  onClick={() => handleDownload(pub)}
+                >
                   Download
                 </Button>
               </div>
@@ -71,7 +75,7 @@ const PublicationsTab = () => {
           </Card>)}
 
         {publications.length === 0 && <div className="text-center py-12 text-gray-500">
-            No publications have been uploaded yet.
+            No reports have been uploaded yet.
           </div>}
       </div>
     </div>;
