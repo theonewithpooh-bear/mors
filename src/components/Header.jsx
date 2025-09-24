@@ -38,7 +38,7 @@ const Header = () => {
     .filter(item => !item.hidden)
     .map(item => ({
       name: item.name,
-      url: item.dropdown ? '#' : item.url,
+      url: item.url,
       icon: null,
       dropdown: item.dropdown,
       items: item.items
