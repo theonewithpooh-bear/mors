@@ -13,7 +13,7 @@ const SignatureSection = () => {
             <img 
               src="/monty-signature.jpeg" 
               alt="Monty Middleton-Burn's signature"
-              className="mx-auto max-w-xs h-auto filter invert dark:invert-0"
+              className="mx-auto max-w-xs h-auto"
             />
           </div>
           <p className="text-2xl font-serif mb-2">Monty Middleton-Burn</p>
