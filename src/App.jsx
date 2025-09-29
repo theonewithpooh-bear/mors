@@ -1,9 +1,11 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './contexts/AuthContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import UpdateNotification from './components/UpdateNotification';
+import AuthGuard from './components/AuthGuard';
 
 // Import all pages
 import Index from './pages/Index';
@@ -24,6 +26,8 @@ import NotFound from './pages/NotFound';
 import ShorehamCollege from './pages/ShorehamCollege';
 import TypeformVolunteer from './pages/TypeformVolunteer';
 import FileStore from './pages/FileStore';
+import Login from './pages/Login';
+import ChangePassword from './pages/ChangePassword';
 
 import OpenLetterDfE from './pages/OpenLetterDfE';
 
@@ -33,41 +37,55 @@ import OpenLetterDfE from './pages/OpenLetterDfE';
  */
 const App = () => {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
-        {/* Global Header - included once for all pages */}
-        <Header />
-        <UpdateNotification />
-        <main>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/learn-more" element={<LearnMore />} />
-              <Route path="/get-involved" element={<GetInvolved />} />
-              <Route path="/communications" element={<Communications />} />
-              <Route path="/manifesto" element={<Manifesto />} />
-              <Route path="/press-office" element={<PressOffice />} />
-              <Route path="/positions" element={<Positions />} />
-              <Route path="/positions_to_be_released" element={<PositionsToBeReleased />} />
-              <Route path="/subject-reforms" element={<SubjectReforms />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/ai-usage" element={<AIUsage />} />
-              <Route path="/ai" element={<AI />} />
-              
-              <Route path="/ethics" element={<Ethics />} />
-              <Route path="/cookies-policy" element={<CookiesPolicy />} />
-              <Route path="/shoreham-college" element={<ShorehamCollege />} />
-              <Route path="/typeform-volunteer" element={<TypeformVolunteer />} />
-              <Route path="/file-store" element={<FileStore />} />
-              <Route path="/open-letter-dfe" element={<OpenLetterDfE />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="flex flex-col min-h-screen">
+          <Routes>
+            {/* Public login routes */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/change-password" element={<ChangePassword />} />
+            
+            {/* Protected routes with AuthGuard */}
+            <Route path="/*" element={
+              <AuthGuard>
+                <>
+                  {/* Global Header - included once for all pages */}
+                  <Header />
+                  <UpdateNotification />
+                  <main>
+                    <Suspense fallback={<div>Loading...</div>}>
+                      <Routes>
+                        <Route path="/" element={<Index />} />
+                        <Route path="/learn-more" element={<LearnMore />} />
+                        <Route path="/get-involved" element={<GetInvolved />} />
+                        <Route path="/communications" element={<Communications />} />
+                        <Route path="/manifesto" element={<Manifesto />} />
+                        <Route path="/press-office" element={<PressOffice />} />
+                        <Route path="/positions" element={<Positions />} />
+                        <Route path="/positions_to_be_released" element={<PositionsToBeReleased />} />
+                        <Route path="/subject-reforms" element={<SubjectReforms />} />
+                        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                        <Route path="/ai-usage" element={<AIUsage />} />
+                        <Route path="/ai" element={<AI />} />
+                        <Route path="/ethics" element={<Ethics />} />
+                        <Route path="/cookies-policy" element={<CookiesPolicy />} />
+                        <Route path="/shoreham-college" element={<ShorehamCollege />} />
+                        <Route path="/typeform-volunteer" element={<TypeformVolunteer />} />
+                        <Route path="/file-store" element={<FileStore />} />
+                        <Route path="/open-letter-dfe" element={<OpenLetterDfE />} />
+                        <Route path="*" element={<NotFound />} />
+                      </Routes>
+                    </Suspense>
+                  </main>
+                  <Footer />
+                </>
+              </AuthGuard>
+            } />
+          </Routes>
+        </div>
+      </Router>
+    </AuthProvider>
   );
 };
 

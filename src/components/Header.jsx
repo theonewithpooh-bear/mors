@@ -2,9 +2,11 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useNavItems } from '../nav-items';
+import { useAuth } from '../contexts/AuthContext';
 import { AnimeNavBar } from './ui/anime-navbar';
 import { MobileNav } from './ui/mobile-nav';
-import { Menu } from 'lucide-react';
+import { Button } from './ui/button';
+import { Menu, LogOut } from 'lucide-react';
 
 /**
  * Header component that provides navigation for the entire application
@@ -13,6 +15,7 @@ import { Menu } from 'lucide-react';
 const Header = () => {
   const location = useLocation();
   const navItems = useNavItems();
+  const { signOut, user, profile } = useAuth();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   // Page-specific styling flags
@@ -34,6 +37,10 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const handleSignOut = async () => {
+    await signOut();
+  };
+
   const animeNavItems = navItems
     .filter(item => !item.hidden)
     .map(item => ({
@@ -48,12 +55,27 @@ const Header = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 ${getHeaderClass()}`}>
       {/* Desktop Navigation */}
       <div className="hidden md:block">
-        <AnimeNavBar 
-          items={animeNavItems} 
-          defaultActive={location.pathname === "/" ? "home" : ""} 
-          showIcons={false}
-          className={`desktop-nav ${isPressOfficePage ? 'press-office-nav' : ''} ${isManifestoPage ? 'manifesto-nav' : ''}`}
-        />
+        <div className="flex items-center justify-between">
+          <AnimeNavBar 
+            items={animeNavItems} 
+            defaultActive={location.pathname === "/" ? "home" : ""} 
+            showIcons={false}
+            className={`desktop-nav ${isPressOfficePage ? 'press-office-nav' : ''} ${isManifestoPage ? 'manifesto-nav' : ''}`}
+          />
+          {user && (
+            <div className="fixed top-4 right-4 z-50">
+              <Button
+                onClick={handleSignOut}
+                variant="outline"
+                size="sm"
+                className="glass-morphism text-white border-white/20 hover:bg-white/10 gap-2"
+              >
+                <LogOut size={16} />
+                Sign Out
+              </Button>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Mobile Navigation */}
