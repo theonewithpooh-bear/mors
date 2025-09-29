@@ -28,6 +28,7 @@ import TypeformVolunteer from './pages/TypeformVolunteer';
 import FileStore from './pages/FileStore';
 import Login from './pages/Login';
 import ChangePassword from './pages/ChangePassword';
+import InitialSetup from './pages/InitialSetup';
 
 import OpenLetterDfE from './pages/OpenLetterDfE';
 
@@ -45,6 +46,7 @@ const App = () => {
             {/* Public login routes */}
             <Route path="/login" element={<Login />} />
             <Route path="/change-password" element={<ChangePassword />} />
+            <Route path="/setup" element={<InitialSetup />} />
             
             {/* Protected routes with AuthGuard */}
             <Route path="/*" element={
