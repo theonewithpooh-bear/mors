@@ -39,16 +39,17 @@ const Index = () => {
         <section className="w-full max-w-4xl mx-auto mb-24">
           <picture>
             <source 
-              srcSet="/lovable-uploads/b093febb-5554-48ca-8abb-15f73ed785a0-optimized.webp" 
+              srcSet="/lovable-uploads/b093febb-5554-48ca-8abb-15f73ed785a0-896w.webp 896w, /lovable-uploads/b093febb-5554-48ca-8abb-15f73ed785a0-optimized.webp 1536w" 
+              sizes="(max-width: 896px) 100vw, 896px"
               type="image/webp" 
             />
             <img 
-              src="/lovable-uploads/b093febb-5554-48ca-8abb-15f73ed785a0.png" 
+              src="/lovable-uploads/b093febb-5554-48ca-8abb-15f73ed785a0-896w.webp" 
               alt="Education Shouldn't Burst Under Pressure - MORS campaign poster" 
               className="w-full h-auto rounded-2xl"
               fetchpriority="high"
-              width="1536"
-              height="1024"
+              width="896"
+              height="597"
             />
           </picture>
         </section>
