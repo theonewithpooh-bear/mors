@@ -39,7 +39,7 @@
 /* Utility classes for glass effect */
 @layer utilities {
   .glass-morphism {
-    @apply backdrop-blur-xl bg-black/50 border border-white/10 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.2)];
+    @apply backdrop-blur-xl bg-black/80 border border-white/20 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.2)] text-white;
   }
   
   .neo-blur {
@@ -48,11 +48,11 @@
   
   /* Page-specific navigation styling */
   .press-office-header .desktop-nav .glass-morphism {
-    @apply bg-black/50;
+    @apply bg-black/80 text-white;
   }
   
   .manifesto-header .desktop-nav .glass-morphism {
-    @apply bg-black/50;
+    @apply bg-black/80 text-white;
   }
 }
 
