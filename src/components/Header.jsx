@@ -6,7 +6,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { AnimeNavBar } from './ui/anime-navbar';
 import { MobileNav } from './ui/mobile-nav';
 import { Button } from './ui/button';
-import { Menu, LogOut } from 'lucide-react';
+import { Menu, LogOut, Settings } from 'lucide-react';
 
 /**
  * Header component that provides navigation for the entire application
@@ -63,7 +63,16 @@ const Header = () => {
             className={`desktop-nav ${isPressOfficePage ? 'press-office-nav' : ''} ${isManifestoPage ? 'manifesto-nav' : ''}`}
           />
           {user && (
-            <div className="fixed top-4 right-4 z-50">
+            <div className="fixed top-4 right-4 z-50 flex gap-2">
+              <Button
+                onClick={() => window.location.href = '/account-settings'}
+                variant="outline"
+                size="sm"
+                className="glass-morphism text-white border-white/20 hover:bg-white/10 gap-2"
+              >
+                <Settings size={16} />
+                Account
+              </Button>
               <Button
                 onClick={handleSignOut}
                 variant="outline"

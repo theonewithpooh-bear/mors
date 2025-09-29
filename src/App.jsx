@@ -29,6 +29,7 @@ import TypeformVolunteer from './pages/TypeformVolunteer';
 import FileStore from './pages/FileStore';
 import Login from './pages/Login';
 import ChangePassword from './pages/ChangePassword';
+import AccountSettings from './pages/AccountSettings';
 import InitialSetup from './pages/InitialSetup';
 
 import OpenLetterDfE from './pages/OpenLetterDfE';
@@ -74,10 +75,11 @@ const App = () => {
                         <Route path="/ethics" element={<Ethics />} />
                         <Route path="/cookies-policy" element={<CookiesPolicy />} />
                         <Route path="/shoreham-college" element={<ShorehamCollege />} />
-                        <Route path="/typeform-volunteer" element={<TypeformVolunteer />} />
-                        <Route path="/file-store" element={<FileStore />} />
-                        <Route path="/open-letter-dfe" element={<OpenLetterDfE />} />
-                        <Route path="*" element={<NotFound />} />
+                         <Route path="/typeform-volunteer" element={<TypeformVolunteer />} />
+                         <Route path="/file-store" element={<FileStore />} />
+                         <Route path="/account-settings" element={<AccountSettings />} />
+                         <Route path="/open-letter-dfe" element={<OpenLetterDfE />} />
+                         <Route path="*" element={<NotFound />} />
                       </Routes>
                     </Suspense>
                   </main>
