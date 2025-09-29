@@ -37,11 +37,20 @@ const Index = () => {
 
         {/* Poster Image */}
         <section className="w-full max-w-4xl mx-auto mb-24">
-          <img 
-            src="/lovable-uploads/b093febb-5554-48ca-8abb-15f73ed785a0.png" 
-            alt="Education Shouldn't Burst Under Pressure - MORS campaign poster" 
-            className="w-full h-auto rounded-2xl" 
-          />
+          <picture>
+            <source 
+              srcSet="/lovable-uploads/b093febb-5554-48ca-8abb-15f73ed785a0-optimized.webp" 
+              type="image/webp" 
+            />
+            <img 
+              src="/lovable-uploads/b093febb-5554-48ca-8abb-15f73ed785a0.png" 
+              alt="Education Shouldn't Burst Under Pressure - MORS campaign poster" 
+              className="w-full h-auto rounded-2xl"
+              loading="lazy"
+              width="1536"
+              height="1024"
+            />
+          </picture>
         </section>
       </main>
     </div>;
