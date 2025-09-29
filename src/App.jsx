@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import UpdateNotification from './components/UpdateNotification';
 import AuthGuard from './components/AuthGuard';
+import { Toaster } from './components/ui/toaster';
 
 // Import all pages
 import Index from './pages/Index';
@@ -86,6 +87,7 @@ const App = () => {
             } />
           </Routes>
         </div>
+        <Toaster />
       </Router>
     </AuthProvider>
   );
