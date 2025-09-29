@@ -22,7 +22,10 @@ const Index = () => {
           </p>
           
           <div className="flex flex-wrap justify-center gap-8 mt-12">
-            <Link to="/learn-more">
+            <Link 
+              to="/learn-more" 
+              aria-label="learn more about MORS movement and education reform"
+            >
               <Button variant="outline" className="text-black border-black hover:bg-black hover:text-white text-sm px-5 py-3 h-auto rounded-full transition-all">
                 learn more →
               </Button>
