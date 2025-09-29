@@ -46,7 +46,7 @@ const Index = () => {
               src="/lovable-uploads/b093febb-5554-48ca-8abb-15f73ed785a0.png" 
               alt="Education Shouldn't Burst Under Pressure - MORS campaign poster" 
               className="w-full h-auto rounded-2xl"
-              loading="lazy"
+              fetchPriority="high"
               width="1536"
               height="1024"
             />
