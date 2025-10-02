@@ -14,6 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
+      file_metadata: {
+        Row: {
+          description: string | null
+          file_path: string
+          file_size: number
+          file_type: string
+          filename: string
+          id: string
+          title: string
+          updated_at: string | null
+          uploaded_at: string | null
+        }
+        Insert: {
+          description?: string | null
+          file_path: string
+          file_size: number
+          file_type: string
+          filename: string
+          id?: string
+          title: string
+          updated_at?: string | null
+          uploaded_at?: string | null
+        }
+        Update: {
+          description?: string | null
+          file_path?: string
+          file_size?: number
+          file_type?: string
+          filename?: string
+          id?: string
+          title?: string
+          updated_at?: string | null
+          uploaded_at?: string | null
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string | null
