@@ -67,8 +67,8 @@ export function AnimeNavBar({ items, className, defaultActive = "home" }: NavBar
                 onMouseLeave={() => setHoveredTab(null)}
                 className={cn(
                   "relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300",
-                  "text-white/90 hover:text-white",
-                  isActive && "text-white"
+                  "text-black/80 hover:text-black",
+                  isActive && "text-black"
                 )}
               >
                 {isActive && (
@@ -85,13 +85,13 @@ export function AnimeNavBar({ items, className, defaultActive = "home" }: NavBar
                       ease: "easeInOut"
                     }}
                   >
-                    <div className="absolute inset-0 bg-white/25 rounded-full blur-md" />
-                    <div className="absolute inset-[-4px] bg-white/20 rounded-full blur-xl" />
-                    <div className="absolute inset-[-8px] bg-white/15 rounded-full blur-2xl" />
-                    <div className="absolute inset-[-12px] bg-white/5 rounded-full blur-3xl" />
+                    <div className="absolute inset-0 bg-black/10 rounded-full blur-md" />
+                    <div className="absolute inset-[-4px] bg-black/8 rounded-full blur-xl" />
+                    <div className="absolute inset-[-8px] bg-black/6 rounded-full blur-2xl" />
+                    <div className="absolute inset-[-12px] bg-black/3 rounded-full blur-3xl" />
                     
                     <div 
-                      className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0"
+                      className="absolute inset-0 bg-gradient-to-r from-black/0 via-black/10 to-black/0"
                       style={{
                         animation: "shine 3s ease-in-out infinite"
                       }}
@@ -121,7 +121,7 @@ export function AnimeNavBar({ items, className, defaultActive = "home" }: NavBar
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.8 }}
-                      className="absolute inset-0 bg-white/10 rounded-full -z-10"
+                      className="absolute inset-0 bg-black/5 rounded-full -z-10"
                     />
                   )}
                 </AnimatePresence>
