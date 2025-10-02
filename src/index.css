@@ -39,20 +39,20 @@
 /* Utility classes for glass effect */
 @layer utilities {
   .glass-morphism {
-    @apply backdrop-blur-xl bg-black/80 border border-white/20 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.2)] text-white;
+    @apply backdrop-blur-2xl bg-white/10 border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] text-white;
   }
   
   .neo-blur {
-    @apply backdrop-blur-2xl bg-black/70 border border-white/10;
+    @apply backdrop-blur-2xl bg-white/5 border border-white/10;
   }
   
   /* Page-specific navigation styling */
   .press-office-header .desktop-nav .glass-morphism {
-    @apply bg-black/80 text-white;
+    @apply bg-white/10 text-white;
   }
   
   .manifesto-header .desktop-nav .glass-morphism {
-    @apply bg-black/80 text-white;
+    @apply bg-white/10 text-white;
   }
 }
 
