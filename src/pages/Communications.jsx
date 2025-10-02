@@ -16,6 +16,16 @@ const Communications = () => {
             <p className="text-xl leading-relaxed text-gray-900">
               mors plans to send open letters at least once a week to various stakeholders in education - from the department of education to influential organisations, political parties and MPs. these open letters, being public and transparent communications, will allow us to openly advocate for change while fostering public dialogue about educational reform.
             </p>
+            
+            <div className="flex justify-center mt-6">
+              <Button
+                variant="outline"
+                className="px-6 py-4 text-lg rounded-full bg-white hover:bg-gray-100 text-black border-black/20 hover:border-black/40 transition-all duration-300"
+                onClick={() => window.location.href = '/file-store'}
+              >
+                view all documents
+              </Button>
+            </div>
           </div>
         </div>
         
