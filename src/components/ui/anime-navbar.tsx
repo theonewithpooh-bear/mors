@@ -139,7 +139,7 @@ export function AnimeNavBar({ items, className, defaultActive = "home" }: NavBar
                   >
                     <div className="relative w-12 h-12">
                       <motion.div 
-                        className="absolute w-10 h-10 bg-white rounded-full left-1/2 -translate-x-1/2"
+                        className="absolute w-10 h-10 bg-black rounded-full left-1/2 -translate-x-1/2"
                         animate={
                           hoveredTab ? {
                             scale: [1, 1.1, 1],
@@ -159,7 +159,7 @@ export function AnimeNavBar({ items, className, defaultActive = "home" }: NavBar
                         }
                       >
                         <motion.div 
-                          className="absolute w-2 h-2 bg-black rounded-full"
+                          className="absolute w-2 h-2 bg-white rounded-full"
                           animate={
                             hoveredTab ? {
                               scaleY: [1, 0.2, 1],
@@ -172,7 +172,7 @@ export function AnimeNavBar({ items, className, defaultActive = "home" }: NavBar
                           style={{ left: '25%', top: '40%' }}
                         />
                         <motion.div 
-                          className="absolute w-2 h-2 bg-black rounded-full"
+                          className="absolute w-2 h-2 bg-white rounded-full"
                           animate={
                             hoveredTab ? {
                               scaleY: [1, 0.2, 1],
@@ -200,7 +200,7 @@ export function AnimeNavBar({ items, className, defaultActive = "home" }: NavBar
                         />
                         
                         <motion.div 
-                          className="absolute w-4 h-2 border-b-2 border-black rounded-full"
+                          className="absolute w-4 h-2 border-b-2 border-white rounded-full"
                           animate={
                             hoveredTab ? {
                               scaleY: 1.5,
@@ -237,7 +237,7 @@ export function AnimeNavBar({ items, className, defaultActive = "home" }: NavBar
                         </AnimatePresence>
                       </motion.div>
                       <motion.div
-                        className="absolute -bottom-1 left-1/2 w-4 h-4 -translate-x-1/2"
+                        className="absolute -bottom-1 left-1/2 w-4 h-4 -translate-x-1/2 bg-black"
                         animate={
                           hoveredTab ? {
                             y: [0, -4, 0],
@@ -257,7 +257,7 @@ export function AnimeNavBar({ items, className, defaultActive = "home" }: NavBar
                           }
                         }
                       >
-                        <div className="w-full h-full bg-white rotate-45 transform origin-center" />
+                        <div className="w-full h-full bg-black rotate-45 transform origin-center" />
                       </motion.div>
                     </div>
                   </motion.div>
