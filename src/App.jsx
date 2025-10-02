@@ -26,6 +26,7 @@ import ShorehamCollege from './pages/ShorehamCollege';
 import TypeformVolunteer from './pages/TypeformVolunteer';
 import FileStore from './pages/FileStore';
 import OpenLetterDfE from './pages/OpenLetterDfE';
+import AdminUpload from './pages/AdminUpload';
 
 /**
  * Main App component
@@ -59,6 +60,7 @@ const App = () => {
               <Route path="/typeform-volunteer" element={<TypeformVolunteer />} />
               <Route path="/file-store" element={<FileStore />} />
               <Route path="/open-letter-dfe" element={<OpenLetterDfE />} />
+              <Route path="/admin-upload" element={<AdminUpload />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
