@@ -70,7 +70,7 @@ export const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
                 stiffness: 300,
                 damping: 15
               }}
-              className="absolute top-4 right-4 text-white/70 hover:text-white transition-all duration-300 p-2 rounded-full bg-white/5 hover:bg-white/15 backdrop-blur-sm border border-white/10 shadow-lg z-10"
+              className="absolute top-4 right-4 text-black/70 hover:text-black transition-all duration-300 p-2 rounded-full bg-black/5 hover:bg-black/15 backdrop-blur-sm border border-black/10 shadow-lg z-10"
               aria-label="Close menu"
               whileHover={{ rotate: 90, scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -93,13 +93,13 @@ export const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
                     damping: 20
                   }}
                   onClick={() => handleNavigation(item.url)}
-                  className="text-lg tracking-wider text-white/70 hover:text-white transition-all duration-300 relative group uppercase text-left w-full"
+                  className="text-lg tracking-wider text-black/70 hover:text-black transition-all duration-300 relative group uppercase text-left w-full"
                   whileHover={{ x: 10 }}
                   whileTap={{ scale: 0.97 }}
                 >
                   <div className="flex items-center space-x-3">
                     <motion.span 
-                      className="w-0 h-[1px] bg-white/50"
+                      className="w-0 h-[1px] bg-black/50"
                       whileHover={{ width: "20px" }}
                       transition={{ duration: 0.2 }}
                     ></motion.span>
@@ -107,7 +107,7 @@ export const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
                   </div>
                   <div className="overflow-hidden">
                     <motion.span 
-                      className="absolute -bottom-1 left-0 w-full h-[1px] bg-gradient-to-r from-white/40 via-white/20 to-transparent"
+                      className="absolute -bottom-1 left-0 w-full h-[1px] bg-gradient-to-r from-black/40 via-black/20 to-transparent"
                       initial={{ scaleX: 0 }}
                       whileHover={{ scaleX: 1 }}
                       transition={{ duration: 0.3 }}
