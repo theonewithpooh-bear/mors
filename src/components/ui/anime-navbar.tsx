@@ -30,7 +30,7 @@ export function AnimeNavBar({ items, className, defaultActive = "home" }: NavBar
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768)
+      setIsMobile(window.innerWidth < 1024)
     }
 
     handleResize()
@@ -41,10 +41,10 @@ export function AnimeNavBar({ items, className, defaultActive = "home" }: NavBar
   if (!mounted) return null
 
   return (
-    <div className="fixed top-5 left-0 right-0 z-[9999]">
+    <div className="fixed top-5 left-0 right-0 z-[9999] px-4">
       <div className="flex justify-center pt-6">
         <motion.div 
-          className="flex items-center gap-3 glass-morphism py-2 px-2 rounded-full shadow-lg relative"
+          className="flex items-center gap-1 sm:gap-2 glass-morphism py-2 px-2 rounded-full shadow-lg relative max-w-full overflow-x-auto scrollbar-hide"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
@@ -66,7 +66,7 @@ export function AnimeNavBar({ items, className, defaultActive = "home" }: NavBar
                 onMouseEnter={() => setHoveredTab(item.name)}
                 onMouseLeave={() => setHoveredTab(null)}
                 className={cn(
-                  "relative cursor-pointer text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300",
+                  "relative cursor-pointer text-xs sm:text-sm font-semibold px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-full transition-all duration-300 whitespace-nowrap",
                   "text-black/80 hover:text-black",
                   isActive && "text-black"
                 )}
@@ -100,19 +100,12 @@ export function AnimeNavBar({ items, className, defaultActive = "home" }: NavBar
                 )}
 
                 <motion.span
-                  className="hidden md:inline relative z-10"
+                  className="relative z-10"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.2 }}
                 >
                   {item.name}
-                </motion.span>
-                <motion.span 
-                  className="md:hidden relative z-10"
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  {Icon && <Icon size={18} strokeWidth={2.5} />}
                 </motion.span>
           
                 <AnimatePresence>

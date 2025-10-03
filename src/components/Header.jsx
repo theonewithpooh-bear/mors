@@ -46,8 +46,8 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 ${getHeaderClass()}`}>
-      {/* Desktop Navigation */}
-      <div className="hidden md:block">
+      {/* Desktop Navigation - shows on larger screens */}
+      <div className="hidden lg:block">
         <AnimeNavBar 
           items={animeNavItems} 
           defaultActive={location.pathname === "/" ? "home" : ""} 
@@ -56,8 +56,8 @@ const Header = () => {
         />
       </div>
 
-      {/* Mobile Navigation */}
-      <div className="md:hidden">
+      {/* Mobile Navigation - shows on smaller screens */}
+      <div className="lg:hidden">
         <button 
           onClick={handleOpenMobileMenu}
           className="fixed top-4 right-4 z-50 glass-morphism p-3 rounded-full text-black/70 hover:text-black transition-all duration-300 hover:bg-black/10 shadow-lg"
