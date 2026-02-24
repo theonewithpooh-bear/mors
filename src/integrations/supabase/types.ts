@@ -85,10 +85,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      create_initial_mors_user: {
-        Args: Record<PropertyKey, never>
-        Returns: undefined
-      }
+      create_initial_mors_user: { Args: never; Returns: undefined }
     }
     Enums: {
       [_ in never]: never

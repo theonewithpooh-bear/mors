@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import UpdateNotification from './components/UpdateNotification';
+import RetirementOverlay from './components/RetirementOverlay';
 import { Toaster } from './components/ui/toaster';
 
 // Import all pages
@@ -35,6 +36,7 @@ import AdminUpload from './pages/AdminUpload';
 const App = () => {
   return (
     <Router>
+      <RetirementOverlay />
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Header />
