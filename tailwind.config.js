@@ -1,11 +1,10 @@
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./pages/**/*.{js,jsx}",
     "./components/**/*.{js,jsx}",
     "./app/**/*.{js,jsx}",
-    "./src/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -18,7 +17,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        'serif': ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        'serif': ['Playfair Display', 'Georgia', 'serif'],
+        'display': ['Playfair Display', 'Georgia', 'serif'],
         'special': ['Special Elite', 'cursive'],
       },
       colors: {
@@ -70,53 +71,15 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "gradient-x": {
-          "0%, 100%": {
-            "background-size": "200% 200%",
-            "background-position": "0% 50%"
-          },
-          "50%": {
-            "background-size": "200% 200%",
-            "background-position": "100% 50%"
-          }
-        },
-        "glow-dance": {
-          "0%": { 
-            transform: "scale(1) translateY(0) rotate(0deg)",
-            opacity: 0.15
-          },
-          "25%": {
-            transform: "translateY(-25px) scale(1.2) rotate(5deg)",
-            opacity: 0.2
-          },
-          "50%": { 
-            transform: "scale(0.9) translateY(15px) rotate(-5deg)",
-            opacity: 0.15
-          },
-          "75%": {
-            transform: "translateY(-25px) scale(1.2) rotate(5deg)",
-            opacity: 0.2
-          },
-          "100%": { 
-            transform: "scale(1) translateY(0) rotate(0deg)",
-            opacity: 0.15
-          }
-        },
-        "pulse-slow": {
-          '0%, 100%': {
-            transform: 'translateX(-100%)',
-          },
-          '50%': {
-            transform: 'translateX(100%)',
-          },
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(8px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "gradient-x": "gradient-x 15s ease infinite",
-        "glow-dance": "glow-dance 4s ease-in-out infinite",
-        "pulse-slow": "pulse-slow 3s ease-in-out infinite",
+        "fade-in": "fade-in 0.6s ease-out forwards",
       },
     },
   },
