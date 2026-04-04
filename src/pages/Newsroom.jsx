@@ -278,23 +278,21 @@ MORS will honour Brian permanently in an upcoming initiative, ensuring his contr
             </TabsContent>
           </Tabs>
           
-          <div className="mt-12 bg-gray-50 rounded-lg p-6 border border-gray-200 shadow-sm">
+          <div className="mt-12 modern-card p-8">
             <div className="flex items-center mb-4">
-              <Mail className="mr-3 text-gray-600" size={24} />
-              <h2 className="text-2xl font-bold text-black">Contact the Press Office</h2>
+              <Mail className="mr-3 text-muted-foreground" size={22} />
+              <h2 className="text-xl font-bold text-foreground">Contact the Press Office</h2>
             </div>
-            <p className="text-gray-700 mb-4">
+            <p className="text-muted-foreground mb-4 text-sm">
               Members of the press can reach out to us directly at:
             </p>
-            <div className="bg-white border border-gray-200 rounded-md p-4 inline-block">
-              <a 
-                href="mailto:press@mors.org.uk" 
-                className="text-lg font-semibold text-blue-600 hover:text-blue-800 transition-colors"
-              >
-                press@mors.org.uk
-              </a>
-            </div>
-            <p className="text-gray-500 mt-3 text-sm">
+            <a 
+              href="mailto:press@mors.org.uk" 
+              className="inline-flex items-center px-4 py-2.5 rounded-lg bg-secondary border border-border hover:border-foreground/20 text-sm font-medium text-foreground transition-all duration-200"
+            >
+              press@mors.org.uk
+            </a>
+            <p className="text-muted-foreground/60 mt-3 text-xs">
               We aim to respond to press inquiries within 48 hours.
             </p>
           </div>
