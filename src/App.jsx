@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import UpdateNotification from './components/UpdateNotification';
-import RetirementOverlay from './components/RetirementOverlay';
+
 import { Toaster } from './components/ui/toaster';
 
 // Import all pages
