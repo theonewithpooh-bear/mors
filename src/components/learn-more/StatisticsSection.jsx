@@ -1,107 +1,49 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const StatCard = ({ value, description, source, delay = 0 }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay, duration: 0.5 }}
+    className="modern-card p-8 accent-border-left flex flex-col items-center justify-center text-center"
+  >
+    <h3 className="text-5xl md:text-6xl font-bold text-foreground mb-3 leading-none tracking-tight">{value}</h3>
+    <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
+    {source && <p className="text-xs text-muted-foreground/60 mt-3 italic">{source}</p>}
+  </motion.div>
+);
+
 const StatisticsSection = () => {
   return (
-    <div className="mb-16">
-      <div className="bg-blue-500/10 backdrop-blur-sm rounded-xl p-8 border border-blue-500/20 mb-12">
-        <div className="flex items-center justify-center gap-2 mb-6">
-          <h2 className="text-2xl font-bold text-center">shocking state of UK education</h2>
+    <div className="mb-20 space-y-12">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-2xl font-bold text-center mb-8 text-foreground">shocking state of UK education</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <StatCard value="58%" description="58% of teachers say the current system is failing to prepare students for a digital future." source="Source: Microsoft UK, 2019" delay={0.1} />
+          <StatCard value="49%" description="49% of teachers in England say GCSEs are out-of-date and no longer fit for purpose." source="Source: OCR, 2024" delay={0.2} />
+          <StatCard value="80%" description="80% of teachers support adding more digital and AI skills to the curriculum." source="Source: OCR, 2024" delay={0.3} />
+          <StatCard value="Trapped" description="The Times Education Commission reveals: UK teachers are shackled by outdated curricula, stifling creativity and real-world skills" delay={0.4} />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-            className="bg-black/5 rounded-lg p-8 backdrop-blur-sm border border-blue-500/20 hover:border-blue-500/40 transition-colors flex flex-col items-center justify-center text-center"
-          >
-            <h3 className="text-[5rem] md:text-[6rem] font-black text-black mb-2 leading-none">58%</h3>
-            <p className="text-gray-700">
-              58% of teachers say the current system is failing to prepare students for a digital future.
-            </p>
-            <p className="text-xs text-gray-500 mt-2 italic">Source: Microsoft UK, 2019</p>
-          </motion.div>
+      </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 }}
-            className="bg-black/5 rounded-lg p-8 backdrop-blur-sm border border-blue-500/20 hover:border-blue-500/40 transition-colors flex flex-col items-center justify-center text-center"
-          >
-            <h3 className="text-[5rem] md:text-[6rem] font-black text-black mb-2 leading-none">49%</h3>
-            <p className="text-gray-700">
-              49% of teachers in England say GCSEs are out-of-date and no longer fit for purpose.
-            </p>
-            <p className="text-xs text-gray-500 mt-2 italic">Source: OCR, 2024</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.6 }}
-            className="bg-black/5 rounded-lg p-8 backdrop-blur-sm border border-blue-500/20 hover:border-blue-500/40 transition-colors flex flex-col items-center justify-center text-center"
-          >
-            <h3 className="text-[5rem] md:text-[6rem] font-black text-black mb-2 leading-none">80%</h3>
-            <p className="text-gray-700">
-              80% of teachers support adding more digital and AI skills to the curriculum.
-            </p>
-            <p className="text-xs text-gray-500 mt-2 italic">Source: OCR, 2024</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.8 }}
-            className="bg-black/5 rounded-lg p-8 backdrop-blur-sm border border-blue-500/20 hover:border-blue-500/40 transition-colors flex flex-col items-center justify-center text-center"
-          >
-            <div className="flex items-center justify-center mb-4">
-              <h3 className="text-[4.5rem] md:text-[5.5rem] font-black text-black mb-2 leading-none">Trapped</h3>
-            </div>
-            <p className="text-gray-700">
-              The Times Education Commission reveals: UK teachers are shackled by outdated curricula, stifling creativity and real-world skills
-            </p>
-          </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-2xl font-bold mb-8 text-center text-foreground">the future of work</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <StatCard value="70%" description="Over 70% of employers now prioritise skills over degrees when hiring." source="Source: LinkedIn/World Economic Forum, 2025" delay={0} />
+          <StatCard value="85%" description="Experts predict 85% of the jobs that will exist in 2030 haven't been invented yet." source="Source: Dell Technologies & Institute for the Future, 2017" delay={0.1} />
+          <StatCard value="92%" description="92% of students say they want education to include practical, real-world experience." source="Source: NCUB Student Employability Index, 2014" delay={0.2} />
         </div>
-      </div>
-
-      <div className="bg-black/5 backdrop-blur-sm rounded-xl p-8 border border-black/10">
-        <h2 className="text-2xl font-bold mb-8 text-center">the future of work</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0 }}
-            className="bg-black/5 backdrop-blur-sm rounded-lg p-6 text-center border border-black/10 hover:border-black/20 transition-colors"
-          >
-            <h3 className="text-4xl font-bold text-black mb-2">70%</h3>
-            <p className="text-gray-600">Over 70% of employers now prioritise skills over degrees when hiring.</p>
-            <p className="text-xs text-gray-500 mt-2 italic">Source: LinkedIn/World Economic Forum, 2025</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="bg-black/5 backdrop-blur-sm rounded-lg p-6 text-center border border-black/10 hover:border-black/20 transition-colors"
-          >
-            <h3 className="text-4xl font-bold text-black mb-2">85%</h3>
-            <p className="text-gray-600">Experts predict 85% of the jobs that will exist in 2030 haven't been invented yet.</p>
-            <p className="text-xs text-gray-500 mt-2 italic">Source: Dell Technologies & Institute for the Future, 2017</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="bg-black/5 backdrop-blur-sm rounded-lg p-6 text-center border border-black/10 hover:border-black/20 transition-colors"
-          >
-            <h3 className="text-4xl font-bold text-black mb-2">92%</h3>
-            <p className="text-gray-600">92% of students say they want education to include practical, real-world experience.</p>
-            <p className="text-xs text-gray-500 mt-2 italic">Source: NCUB Student Employability Index, 2014</p>
-          </motion.div>
-        </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
