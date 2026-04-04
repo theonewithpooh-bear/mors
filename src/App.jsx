@@ -36,7 +36,7 @@ import AdminUpload from './pages/AdminUpload';
 const App = () => {
   return (
     <Router>
-      <RetirementOverlay />
+      
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Header />
